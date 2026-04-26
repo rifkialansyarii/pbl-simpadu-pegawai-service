@@ -2,6 +2,7 @@
 
 namespace App\Contracts;
 
+use App\Models\Employee;
 
 interface EmployeeRepositoryInterface
 {

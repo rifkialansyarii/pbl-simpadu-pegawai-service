@@ -2,14 +2,14 @@
 
 namespace App\Repositories;
 
-use App\Contract\EmployeeRepositoryInterface;
+use App\Contracts\EmployeeRepositoryInterface;
 use App\Models\Employee;
 
 class EmployeeRepository implements EmployeeRepositoryInterface
 {
-    public function getAllEmployee()
+    public function getAllEmployees()
     {
-        $employee = Employee::get([
+        $employee = Employee::select([
             'id',
             'nip',
             'nik',
@@ -20,18 +20,18 @@ class EmployeeRepository implements EmployeeRepositoryInterface
             'gender',
             'phone_number',
             'avatar',
-            'village_id',
-            'district_id',
-            'city_id',
-            'province_id',
-        ]);
+            'village_code',
+            'district_code',
+            'city_code',
+            'province_code',
+        ])->paginate(10);
 
-        return $employee->load(['village','district', 'city', 'province']);
+        return $employee->load(['village', 'district', 'city', 'province']);
     }
 
     public function getEmployeeById(Employee $employee)
     {
-        return $employee->load(['village','district', 'city', 'province']);
+        return $employee->load(['village', 'district', 'city', 'province']);
     }
 
     public function deleteEmployee(Employee $employee)
@@ -41,12 +41,12 @@ class EmployeeRepository implements EmployeeRepositoryInterface
 
     public function createEmployee(array $attributes)
     {
-        return Employee::create($attributes)->load(['village','district', 'city', 'province']);
+        return Employee::create($attributes)->load(['village', 'district', 'city', 'province']);
     }
 
     public function updateEmployee(Employee $employee, array $attributes)
     {
         $employee->update($attributes);
-        return $employee->refresh()->load(['village','district', 'city', 'province']);
+        return $employee->refresh()->load(['village', 'district', 'city', 'province']);
     }
 }

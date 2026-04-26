@@ -29,10 +29,10 @@ class ChangeRequestFactory extends Factory
             'gender',
             'phone_number',
             'avatar',
-            'village_id',
-            'district_id',
-            'city_id',
-            'province_id',
+            'village_code',
+            'district_code',
+            'city_code',
+            'province_code',
             'created_at',
             'updated_at'
         ]);

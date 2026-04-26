@@ -32,10 +32,10 @@ class EmployeeFactory extends Factory
             'gender' => $genderInstance->value,
             'phone_number' => fake()->numerify('08##########'),
             'avatar' => null,
-            'village_id' => $village->id,
-            'district_id' => $village->district->id,
-            'city_id' => $village->district->city->id,
-            'province_id' => $village->district->city->province->id,
+            'village_code' => $village->id,
+            'district_code' => $village->district->id,
+            'city_code' => $village->district->city->id,
+            'province_code' => $village->district->city->province->id,
         ];
     }
 }

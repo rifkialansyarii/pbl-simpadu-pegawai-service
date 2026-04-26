@@ -1,0 +1,73 @@
+<?php
+
+namespace App\Http\Requests;
+
+use App\Enums\Gender;
+use App\Enums\JenisKelamin;
+use App\Models\Employee;
+use Illuminate\Contracts\Validation\ValidationRule;
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+
+class UpdateEmployeeRequest extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     */
+    public function authorize(): bool
+    {
+        return true;
+    }
+
+    public function prepareForValidation(): void
+    {
+        $this->merge([
+            'header_content_type' => $this->header('Content-Type'),
+        ]);
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array<string, ValidationRule|array<mixed>|string>
+     */
+    public function rules(): array
+    {
+        return [
+            'header_content_type' => 'required|in:application/json',
+
+            'nip' => [
+                'sometimes',
+                'required',
+                'string',
+                'size:18',
+                Rule::unique(Employee::class)->ignore($this->route('employee')),
+            ],
+            'nik' => [
+                'sometimes',
+                'required',
+                'string',
+                'size:16',
+                Rule::unique(Employee::class)->ignore($this->route('employee')),
+            ],
+            'employee_name' => 'required|string|max:255',
+            'address' => 'string|max:255',
+            'birth_place' => 'string|max:255',
+            'birth_date' => [Rule::date()->format('Y-m-d')],
+            'gender' => [Rule::enum(Gender::class)],
+            'phone_number' => [
+                'sometimes',
+                'required',
+                'string',
+                'min:10',
+                'max:15',
+                Rule::unique(Employee::class)->ignore($this->route('employee')),
+            ],
+            'avatar' => 'string|max:255',
+            'village_code' => 'string|size:10',
+            'district_code' => 'string|size:6',
+            'city_code' => 'string|size:4',
+            'province_code' => 'string|size:2',
+        ];
+    }
+}
