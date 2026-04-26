@@ -26,10 +26,10 @@ class Employee extends Model
         'gender',
         'phone_number',
         'avatar',
-        'village_id',
-        'district_id',
-        'city_id',
-        'province_id',
+        'village_code',
+        'district_code',
+        'city_code',
+        'province_code',
     ];
 
     protected $guarded = [
@@ -40,22 +40,22 @@ class Employee extends Model
 
     public function village(): BelongsTo
     {
-        return $this->belongsTo(Village::class, 'village_id');
+        return $this->belongsTo(Village::class, 'village_code', 'code');
     }
 
     public function district(): BelongsTo
     {
-        return $this->belongsTo(District::class, 'district_id');
+        return $this->belongsTo(District::class, 'district_code', 'code');
     }
 
     public function city(): BelongsTo
     {
-        return $this->belongsTo(City::class, 'city_id');
+        return $this->belongsTo(City::class, 'city_code', 'code');
     }
 
     public function province(): BelongsTo
     {
-        return $this->belongsTo(Province::class, 'province_id');
+        return $this->belongsTo(Province::class, 'province_code', 'code');
     }
 
     public function changeRequests(): HasMany
