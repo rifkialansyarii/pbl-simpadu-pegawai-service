@@ -13,7 +13,7 @@ class ChangeRequestPolicy
      */
     public function viewAny(User $user): bool
     {
-        return false;
+        return $user->role === 'dosen' || $user->role === 'admin';
     }
 
     /**
@@ -29,7 +29,7 @@ class ChangeRequestPolicy
      */
     public function create(User $user): bool
     {
-        return $user->role == 'dosen';
+        return $user->role === 'dosen';
     }
 
     /**

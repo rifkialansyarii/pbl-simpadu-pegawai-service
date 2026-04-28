@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\User;
 use Auth;
+use Exception;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 use Illuminate\Http\Request;
@@ -25,16 +26,24 @@ class AppServiceProvider extends ServiceProvider
             'custom-auth-jwt',
             function (Request $request) {
                 $jwtToken = $request->bearerToken();
-                $key = env('JWT_SECRET');
-                
 
-                $jwtTokenDecode = JWT::decode($jwtToken, new Key($key, 'HS256'));
+                if(!$jwtToken){
+                    return null;
+                }
 
-                $user = new User();
-                $user->id = $jwtTokenDecode->id;
-                $user->role = $jwtTokenDecode->role;
+                try {
+                    $key = env('JWT_SECRET');
+                    $jwtTokenDecode = JWT::decode($jwtToken, new Key($key, 'HS256'));
 
-                return $user;
+                    $user = new User();
+                    $user->id = $jwtTokenDecode->id;
+                    $user->role = $jwtTokenDecode->role;
+
+                    return $user;
+                } catch (Exception $e) {
+                    return null;
+                }
+
             }
         );
     }

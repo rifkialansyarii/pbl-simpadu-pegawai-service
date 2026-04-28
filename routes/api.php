@@ -12,7 +12,7 @@ Route::put('/employee/{employee}', [EmployeeController::class, 'update']);
 Route::delete('/employee/{employee}', [EmployeeController::class, 'destroy']);
 
 Route::middleware(['auth:auth-jwt'])->group(function () {
-    Route::get('/change-request', [ChangeRequestController::class, 'index']);
-    Route::get('/change-request/{changeRequest}', [ChangeRequestController::class, 'show']);
+    Route::get('/change-request', [ChangeRequestController::class, 'index'])->middleware('can:viewAny, App\Models\ChangeRequest');
+    Route::post('/change-request', [ChangeRequestController::class, 'store'])->middleware('can:create,App\Models\ChangeRequest');
     Route::put('/change-request/{changeRequest}', [ChangeRequestController::class, 'update'])->middleware('can:update,changeRequest');
 });
