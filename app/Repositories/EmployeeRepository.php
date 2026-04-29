@@ -19,7 +19,6 @@ class EmployeeRepository implements EmployeeRepositoryInterface
             'birth_date',
             'gender',
             'phone_number',
-            'avatar',
             'village_code',
             'district_code',
             'city_code',
