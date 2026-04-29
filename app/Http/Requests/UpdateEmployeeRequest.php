@@ -37,27 +37,21 @@ class UpdateEmployeeRequest extends FormRequest
             'header_content_type' => 'required|in:application/json',
 
             'nip' => [
-                'sometimes',
-                'required',
                 'string',
                 'size:18',
                 Rule::unique(Employee::class)->ignore($this->route('employee')),
             ],
             'nik' => [
-                'sometimes',
-                'required',
                 'string',
                 'size:16',
                 Rule::unique(Employee::class)->ignore($this->route('employee')),
             ],
-            'employee_name' => 'required|string|max:255',
+            'employee_name' => 'string|max:255',
             'address' => 'string|max:255',
             'birth_place' => 'string|max:255',
             'birth_date' => [Rule::date()->format('Y-m-d')],
             'gender' => [Rule::enum(Gender::class)],
             'phone_number' => [
-                'sometimes',
-                'required',
                 'string',
                 'min:10',
                 'max:15',
