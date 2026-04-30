@@ -31,7 +31,6 @@ class EmployeeFactory extends Factory
             'birth_date' => fake()->dateTimeBetween(startDate: '-30 years', endDate: '-20 years'),
             'gender' => $genderInstance->value,
             'phone_number' => fake()->numerify('08##########'),
-            'avatar' => null,
             'village_code' => $village->id,
             'district_code' => $village->district->id,
             'city_code' => $village->district->city->id,

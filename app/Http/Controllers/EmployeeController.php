@@ -11,6 +11,10 @@ use App\Traits\ApiResponse;
 use Exception;
 use Illuminate\Http\JsonResponse;
 
+/**
+ * @group Employee Management
+ * 
+ */
 class EmployeeController extends Controller
 {
     use ApiResponse;
@@ -20,6 +24,9 @@ class EmployeeController extends Controller
     ) {
     }
 
+    /**
+     * @queryParam page int Field to display employee per page.
+     */
     public function index(): JsonResponse
     {
         try {
