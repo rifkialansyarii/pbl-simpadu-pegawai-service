@@ -6,9 +6,10 @@ use App\Models\Employee;
 
 interface EmployeeRepositoryInterface
 {
-    public function getAllEmployees();
-    public function getEmployeeById(Employee $employee);
-    public function deleteEmployee(Employee $employee);
-    public function createEmployee(array $attributes);
-    public function updateEmployee(Employee $employee, array $attributes);
+    public function getAll();
+    public function getById(Employee $employee);
+    public function getTotal();
+    public function delete(Employee $employee);
+    public function create(array $attributes);
+    public function update(Employee $employee, array $attributes);
 }

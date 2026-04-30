@@ -38,22 +38,21 @@ class UpdateEmployeeRequest extends FormRequest
      */
     public function rules(): array
     {
-        $isAdmin = $this->user()->role === 'admin';
 
         return [
             'header_content_type' => 'required|in:application/json',
 
-            'nip' => $isAdmin ? [
+            'nip' => [
                 'string',
                 'size:18',
                 Rule::unique(Employee::class)->ignore($this->route('employee')),
-            ] : 'prohibited',
-            'nik' => $isAdmin ? [
+            ],
+            'nik' => [
                 'string',
                 'size:16',
                 Rule::unique(Employee::class)->ignore($this->route('employee')),
-            ] : 'prohibited',
-            'employee_name' => $isAdmin ? 'string|max:255' : 'prohibited',
+            ],
+            'employee_name' => 'string|max:255',
             'address' => 'string|max:255',
             'birth_place' => 'string|max:255',
             'birth_date' => [Rule::date()->format('Y-m-d')],
@@ -71,14 +70,6 @@ class UpdateEmployeeRequest extends FormRequest
         ];
     }
 
-    public function messages()
-    {
-        return [
-            'nip.prohibited' => ':attribute is unauthorized',
-            'nik.prohibited' => ':attribute is unauthorized',
-            'employee_name.prohibited' => ':attribute is unauthorized',
-        ];
-    }
 
     protected function failedValidation(Validator $validator)
     {
