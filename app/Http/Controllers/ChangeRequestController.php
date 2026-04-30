@@ -7,25 +7,26 @@ use App\Http\Requests\StoreChangeRequest;
 use App\Http\Requests\UpdateChangeRequest;
 use App\Http\Resources\ChangeRequestResource;
 use App\Models\ChangeRequest;
+use App\Services\ChangeRequestService;
 use App\Traits\ApiResponse;
 use Exception;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
 class ChangeRequestController extends Controller
 {
     use ApiResponse;
 
     public function __construct(
-        private ChangeRequestRepositoryInterface $repository
+        private ChangeRequestService $service
     ) {
     }
 
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
         try {
-
             return $this->sendSuccess(
-                data: ChangeRequestResource::collection($this->repository->getAllChangeRequests()),
+                data: ChangeRequestResource::collection($this->service->getAllChangeRequest($request->user())),
                 message: 'Data retrieved successfully',
             );
 
@@ -43,13 +44,8 @@ class ChangeRequestController extends Controller
             $attributes = $request->validated();
             $user = $request->user();
 
-            $attributes['employee_id'] = $user->id;
-
-
-            $changeRequest = $this->repository->createChangeRequest($attributes);
-
             return $this->sendSuccess(
-                data: new ChangeRequestResource($changeRequest),
+                data: new ChangeRequestResource($this->service->createChangeRequest($attributes, $user)),
                 message: 'Data created successfully',
                 code: 201,
             );
@@ -66,11 +62,39 @@ class ChangeRequestController extends Controller
         try {
             $attributes = $request->validated();
 
-            $newChangeRequest = $this->repository->updateChangeRequest($changeRequest, $attributes);
-
             return $this->sendSuccess(
-                data: new ChangeRequestResource($newChangeRequest),
+                data: new ChangeRequestResource($this->service->updateChangeRequest($changeRequest, $attributes)),
                 message: 'Data updated successfully',
+            );
+
+        } catch (Exception $e) {
+            return $this->sendError(
+                message: $e->getMessage(),
+            );
+        }
+    }
+
+    public function showNewly()
+    {
+        try {
+            return $this->sendSuccess(
+                data: new ChangeRequestResource($this->service->getNewlyData()),
+                message: 'Data retrieved successfully',
+            );
+
+        } catch (Exception $e) {
+            return $this->sendError(
+                message: $e->getMessage(),
+            );
+        }
+    }
+
+    public function showTotalPendingStatus()
+    {
+        try {
+            return $this->sendSuccess(
+                data: [ ["total_pending" => $this->service->getTotalPendingStatus()] ],
+                message: 'Data retrieved successfully',
             );
 
         } catch (Exception $e) {

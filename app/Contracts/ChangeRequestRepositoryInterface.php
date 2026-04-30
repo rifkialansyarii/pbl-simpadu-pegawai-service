@@ -3,12 +3,14 @@
 namespace App\Contracts;
 
 use App\Models\ChangeRequest;
+use App\Models\User;
 
 interface ChangeRequestRepositoryInterface
 {
-    public function getAllChangeRequests();
-    public function getChangeRequestById(ChangeRequest $ChangeRequest);
-    public function deleteChangeRequest(ChangeRequest $ChangeRequest);
-    public function createChangeRequest(array $attributes);
-    public function updateChangeRequest(ChangeRequest $ChangeRequest, array $attributes);
+    public function getAll();
+    public function getAllByUser(User $user);
+    public function getNewlyData();
+    public function getTotalPendingStatus();
+    public function create(array $attributes);
+    public function update(ChangeRequest $ChangeRequest, array $attributes);
 }
