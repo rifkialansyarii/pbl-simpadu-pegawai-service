@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Contracts\ChangeRequestRepositoryInterface;
 use App\Models\ChangeRequest;
+use App\Models\Employee;
 use App\Models\User;
 
 final class ChangeRequestService
@@ -30,6 +31,14 @@ final class ChangeRequestService
 
     public function updateChangeRequest(ChangeRequest $changeRequest, array $attributes)
     {
+        if($attributes['status'] === 'approved')
+        {
+            $employee = Employee::find($changeRequest->employee_id);
+            $employee->update([
+                $changeRequest->field_name => $changeRequest->new_value,
+            ]);
+        }
+
         return $this->repository->update($changeRequest, $attributes);
     }
 
