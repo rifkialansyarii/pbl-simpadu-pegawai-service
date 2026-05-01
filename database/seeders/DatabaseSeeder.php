@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         Artisan::call('laravolt:indonesia:seed');
 
         $this->call([
+            CountrySeeder::class,
             EmployeeSeeder::class,
             ChangeRequestSeeder::class,
         ]);   

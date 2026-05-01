@@ -33,6 +33,7 @@ class ChangeRequestFactory extends Factory
             'district_code',
             'city_code',
             'province_code',
+            'citizen_code',
             'created_at',
             'updated_at'
         ]);

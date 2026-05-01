@@ -58,6 +58,11 @@ class Employee extends Model
         return $this->belongsTo(Province::class, 'province_code', 'code');
     }
 
+    public function country(): BelongsTo
+    {
+        return $this->belongsTo(Country::class, 'citizen_code', 'code');
+    }
+
     public function changeRequests(): HasMany
     {
         return $this->hasMany(ChangeRequest::class);
