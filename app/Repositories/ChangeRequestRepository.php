@@ -4,10 +4,11 @@ namespace App\Repositories;
 
 use App\Contracts\ChangeRequestRepositoryInterface;
 use App\Models\ChangeRequest;
+use App\Models\User;
 
 class ChangeRequestRepository implements ChangeRequestRepositoryInterface
 {
-    public function getAllChangeRequests()
+    public function getAll()
     {
         $changeRequest = ChangeRequest::select([
             'id',
@@ -16,27 +17,52 @@ class ChangeRequestRepository implements ChangeRequestRepositoryInterface
             'old_value',
             'new_value',
             'status',
-        ])->paginate(10);
+        ])->latest()->paginate(10);
 
         return $changeRequest->load(['employee']);
     }
 
-    public function getChangeRequestById(ChangeRequest $changeRequest)
+    public function getAllByUser(User $user)
     {
-        return $changeRequest->load(['employee']);
+        $userChangeRequest = ChangeRequest::select([
+            'id',
+            'employee_id',
+            'field_name',
+            'old_value',
+            'new_value',
+            'status',
+        ])->latest()->where('employee_id', $user->id)->paginate(10);
+
+        return $userChangeRequest->load(['employee']);
     }
 
-    public function deleteChangeRequest(ChangeRequest $changeRequest)
+    public function getNewlyData()
     {
-        $changeRequest->delete();
+        $newlyChangeRequest = ChangeRequest::select([
+            'id',
+            'employee_id',
+            'field_name',
+            'old_value',
+            'new_value',
+            'status',
+        ])->latest()->limit(5);
+
+        return $newlyChangeRequest->load(['employee']);
     }
 
-    public function createChangeRequest(array $attributes)
+    public function getTotalPendingStatus()
+    {
+        $totalPendingChangeRequest = ChangeRequest::where('status', 'pending')->count();
+
+        return $totalPendingChangeRequest;
+    }
+
+    public function create(array $attributes)
     {
         return ChangeRequest::create($attributes)->load(['employee']);
     }
 
-    public function updateChangeRequest(ChangeRequest $changeRequest, array $attributes)
+    public function update(ChangeRequest $changeRequest, array $attributes)
     {
         $changeRequest->update($attributes);
         return $changeRequest->refresh()->load(['employee']);

@@ -13,7 +13,7 @@ class ChangeRequestPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->role === 'dosen' || $user->role === 'admin';
+        return $user->role === 'admin' || $user->role === 'dosen';
     }
 
     /**
@@ -62,5 +62,15 @@ class ChangeRequestPolicy
     public function forceDelete(User $user, ChangeRequest $changeRequest): bool
     {
         return false;
+    }
+
+    public function viewNewly(User $user): bool
+    {
+        return $user->role === 'admin';
+    }
+
+    public function viewTotalPendingStatus(User $user): bool
+    {
+        return $user->role === 'admin';
     }
 }
