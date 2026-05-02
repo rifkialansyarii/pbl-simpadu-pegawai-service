@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\CountryResource;
-use App\Services\CountryService;
+use App\Http\Resources\DistrictResource;
+use App\Services\DistrictService;
 use App\Traits\ApiResponse;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
-class CountryController extends Controller
+class DistrictController extends Controller
 {
     use ApiResponse;
 
     public function __construct(
-        private CountryService $service
+        private DistrictService $service
     ) {
     }
 
@@ -23,7 +23,7 @@ class CountryController extends Controller
         try {
 
             return $this->sendSuccess(
-                data: CountryResource::collection($this->service->getAllCountry()),
+                data: DistrictResource::collection($this->service->getAllDistrict()),
                 message: 'Data retrieved successfully',
             );
 

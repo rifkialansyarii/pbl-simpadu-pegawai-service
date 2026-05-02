@@ -1,7 +1,12 @@
 <?php
 
 use App\Http\Controllers\ChangeRequestController;
+use App\Http\Controllers\CityController;
+use App\Http\Controllers\CountryController;
+use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\ProvinceController;
+use App\Http\Controllers\VillageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +23,10 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
     Route::get('/change-requests/newly', [ChangeRequestController::class, 'showTotalPendingStatus'])->middleware('can:viewTotalPendingStatus, App\Models\ChangeRequest');
     Route::post('/change-requests', [ChangeRequestController::class, 'store'])->middleware('can:create,App\Models\ChangeRequest');
     Route::put('/change-requests/{changeRequest}', [ChangeRequestController::class, 'update'])->middleware('can:update,changeRequest');
-    
-
 });
+
+Route::get('/countries', [CountryController::class, 'index']);
+Route::get('/provinces', [ProvinceController::class, 'index']);
+Route::get('/cities', [CityController::class, 'index']);
+Route::get('/districts', [DistrictController::class, 'index']);
+Route::get('/villages', [VillageController::class, 'index']);
