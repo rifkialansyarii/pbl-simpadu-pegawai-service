@@ -15,4 +15,9 @@ final class DistrictService
     {
         return $this->repository->getAll();
     }
+
+    public function getDistrictByCity(string $cityCode)
+    {
+        return $this->repository->getByParent($cityCode);
+    }
 }

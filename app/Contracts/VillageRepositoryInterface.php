@@ -2,9 +2,8 @@
 
 namespace App\Contracts;
 
-use App\Models;
-
 interface VillageRepositoryInterface
 {
     public function getAll();
+    public function getByParent(string $districtCode);
 }

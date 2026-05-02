@@ -32,5 +32,21 @@ class VillageController extends Controller
                 message: $e->getMessage()
             );
         }
+
+    }
+
+    public function showByDistrict(string $districtCode): JsonResponse
+    {        
+        try {
+            return $this->sendSuccess(
+                data: VillageResource::collection($this->service->getVillageByDistrict($districtCode)),
+                message: 'Data retrieved successfully',
+            );
+
+        } catch (Exception $e) {
+            return $this->sendError(
+                message: $e->getMessage()
+            );
+        }
     }
 }

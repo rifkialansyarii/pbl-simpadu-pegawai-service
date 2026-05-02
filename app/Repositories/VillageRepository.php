@@ -18,4 +18,15 @@ class VillageRepository implements VillageRepositoryInterface
         return $Village;
     }
 
+    public function getByParent(string $districtCode)
+    {          
+        $village = Village::select([
+            'id',
+            'code',
+            'name',
+            'district_code'
+        ])->where('district_code', $districtCode)->paginate(10);
+
+        return $village->load('district');
+    }
 }

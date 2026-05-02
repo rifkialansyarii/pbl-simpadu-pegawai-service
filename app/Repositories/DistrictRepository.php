@@ -18,4 +18,15 @@ class DistrictRepository implements DistrictRepositoryInterface
         return $District;
     }
 
+    public function getByParent(string $cityCode)
+    {          
+        $district = District::select([
+            'id',
+            'code',
+            'name',
+            'city_code'
+        ])->where('city_code', $cityCode)->paginate(10);
+
+        return $district->load('city');
+    }
 }

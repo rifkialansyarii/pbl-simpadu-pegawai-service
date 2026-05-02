@@ -27,6 +27,12 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
 
 Route::get('/countries', [CountryController::class, 'index']);
 Route::get('/provinces', [ProvinceController::class, 'index']);
+
 Route::get('/cities', [CityController::class, 'index']);
+Route::get('/cities/{provinceCode}', [CityController::class, 'showByProvince']);
+
 Route::get('/districts', [DistrictController::class, 'index']);
+Route::get('/districts/{cityCode}', [DistrictController::class, 'showByCity']);
+
 Route::get('/villages', [VillageController::class, 'index']);
+Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);

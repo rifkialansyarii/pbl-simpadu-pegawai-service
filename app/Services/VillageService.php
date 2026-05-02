@@ -15,4 +15,9 @@ final class VillageService
     {
         return $this->repository->getAll();
     }
+
+    public function getVillageByDistrict(string $districtCode)
+    {
+        return $this->repository->getByParent($districtCode);
+    }
 }
