@@ -8,19 +8,21 @@ return new class extends Migration {
     /**
      * Run the migrations.
      */
-    private function updateForeignId(string $tableName)
+    
+    private function updateForeignId(string $tableName, int $lenColumn)
     {
-        Schema::table("employees", function (Blueprint $table) use ($tableName) {
+       Schema::table("employees", function (Blueprint $table) use ($tableName, $lenColumn){
             $table->dropForeign(["{$tableName}_code"]);
 
-            $table->char("{$tableName}_code")->nullable()->change();
+            $table->char("{$tableName}_code", $lenColumn)->nullable()->change();
 
             $table->foreign("{$tableName}_code")
                 ->references("code")
                 ->on($tableName == 'city' ? 'indonesia_cities' : "indonesia_" . $tableName . "s");
-
+                
         });
     }
+
 
     public function up(): void
     {
@@ -30,16 +32,15 @@ return new class extends Migration {
         });
 
         $tableList = [
-            'village',
-            'district',
-            'city',
-            'province'
+            10 => 'village',
+            6 => 'district', 
+            4 => 'city', 
+            2 => 'province'
         ];
 
-        foreach ($tableList as $t) {
-            $this->updateForeignId($t);
-        }
-
+       foreach ($tableList as $key => $value) {
+        $this->updateForeignId($value, $key);
+       }
     }
 
     /**

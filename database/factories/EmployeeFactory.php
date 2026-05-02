@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Enums\Gender;
+use App\Models\Country;
 use App\Models\Employee;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Laravolt\Indonesia\Models\Village;
@@ -20,6 +21,7 @@ class EmployeeFactory extends Factory
     public function definition(): array
     {
         $village = Village::with('district.city.province')->inRandomOrder()->first();
+        $country = Country::inRandomOrder()->first();
         $genderInstance = fake()->randomElement(Gender::cases());
 
         return [
@@ -31,10 +33,11 @@ class EmployeeFactory extends Factory
             'birth_date' => fake()->dateTimeBetween(startDate: '-30 years', endDate: '-20 years'),
             'gender' => $genderInstance->value,
             'phone_number' => fake()->numerify('08##########'),
-            'village_code' => $village->id,
-            'district_code' => $village->district->id,
-            'city_code' => $village->district->city->id,
-            'province_code' => $village->district->city->province->id,
+            'village_code' => $village->code,
+            'district_code' => $village->district->code,
+            'city_code' => $village->district->city->code,
+            'province_code' => $village->district->city->province->code,
+            'citizen_code' => $country->code,
         ];
     }
 }
