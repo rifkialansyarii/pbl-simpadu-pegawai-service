@@ -36,8 +36,8 @@ class AppServiceProvider extends ServiceProvider
                     $jwtTokenDecode = JWT::decode($jwtToken, new Key($key, 'HS256'));
 
                     $user = new User();
-                    $user->id = $jwtTokenDecode->id;
-                    $user->role = $jwtTokenDecode->role;
+                    $user->id = $jwtTokenDecode->detail_id;
+                    $user->role = $jwtTokenDecode->role_name;
 
                     return $user;
                 } catch (Exception $e) {
