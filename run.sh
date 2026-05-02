@@ -25,6 +25,6 @@ echo -e "\nmariadb is started, enjoy"
 
 sail artisan migrate:fresh --seed
 
-sail artisan serve
-
 echo -e "Enjoy, access at:\n- IP ADDRESS: http://127.0.0.1:1234/api/<endpoint_name>"
+
+sail artisan serve
