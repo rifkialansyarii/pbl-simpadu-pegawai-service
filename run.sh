@@ -19,7 +19,7 @@ echo " "
 echo -n "wait until mariadb is starting "
 for i in {1..15}; do
     echo -n "."
-    sleep 1
+    sleep 2
 done
 echo -e "\nmariadb is started, enjoy"
 
