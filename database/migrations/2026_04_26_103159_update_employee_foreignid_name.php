@@ -26,11 +26,11 @@ return new class extends Migration {
     public function up(): void
     {
        $tableList = [
-        10 => 'village',
-        6 => 'district', 
-        4 => 'city', 
-        2 => 'province'
-    ];
+            10 => 'village',
+            6 => 'district', 
+            4 => 'city', 
+            2 => 'province'
+        ];
 
        foreach ($tableList as $key => $value) {
         $this->updateForeignId($value, $key);
