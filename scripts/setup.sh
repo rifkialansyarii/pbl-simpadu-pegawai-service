@@ -9,8 +9,11 @@ fi
 
 if [ ! -f .env ]; then
     echo "Copying environment file..."
-    cp .env.docker .env
+    cp .env.example .env
     sed -i 's/APP_FAKER_LOCALE=en_US/APP_FAKER_LOCALE=id_ID/' .env
+    sed -i 's/# DB_DATABASE=laravel/DB_DATABASE=app/' .env
+    sed -i 's/# DB_USERNAME=root/DB_USERNAME=laravel/' .env
+    sed -i 's/# DB_PASSWORD=/DB_PASSWORD=secret/' .env
     echo -e "\n\n#JWT_SECRET\nJWT_SECRET=your-jwt-secret-key" >> .env
 else
     echo ".env file already exists. Skipping copy."
@@ -20,11 +23,11 @@ echo "Building and starting Docker containers..."
 docker compose up -d --build
 
 echo -n "Waiting for services to initialize."
-for i in {1..30}; do
+until docker exec laravel_php nc mysql 3306; do
     echo -n "."
     sleep 1
 done
-echo -e "\n"
+echo -e "\nServices are initialized."
 
 if ! grep -q "APP_KEY=base64:" .env; then
     echo "Generating application key..."
@@ -33,8 +36,8 @@ fi
 
 # Run migrations and seeders
 echo "Running database migrations and seeders..."
-docker exec laravel_php php artisan migrate --force
-docker exec laravel_php php artisan db:seed --force
+docker exec laravel_php php artisan migrate:fresh --force
+docker exec laravel_php php artisan db:seed
 
 # Clear and cache configs
 echo "Optimizing Laravel..."
