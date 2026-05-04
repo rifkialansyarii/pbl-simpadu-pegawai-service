@@ -16,8 +16,6 @@ else
     echo ".env file already exists. Skipping copy."
 fi
 
-
-
 echo "Building and starting Docker containers..."
 docker compose up -d --build
 
