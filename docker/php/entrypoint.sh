@@ -1,5 +1,7 @@
 #!/bin/sh
 
+composer install --optimize-autoloader
+
 mkdir -p /var/www/html/storage/framework/cache/data \
          /var/www/html/storage/framework/views \
          /var/www/html/storage/framework/sessions \

@@ -36,8 +36,6 @@ WORKDIR /var/www/html
 
 COPY . .
 
-RUN composer install --optimize-autoloader
-
 COPY docker/php/entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
