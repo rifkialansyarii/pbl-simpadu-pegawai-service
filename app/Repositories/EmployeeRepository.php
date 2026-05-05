@@ -23,9 +23,12 @@ class EmployeeRepository implements EmployeeRepositoryInterface
             'district_code',
             'city_code',
             'province_code',
+            'citizen_code',
         ])->paginate(10);
 
-        return $employee->load(['village', 'district', 'city', 'province']);
+        $employee->load(['village', 'district', 'city', 'province', 'citizen']);
+
+        return $employee;
     }
 
     public function getTotal()
@@ -49,9 +52,12 @@ class EmployeeRepository implements EmployeeRepositoryInterface
             'district_code',
             'city_code',
             'province_code',
+            'citizen_code',
         ])->where('id', $employee->id)->first();
 
-        return $employee->load(['village', 'district', 'city', 'province']);
+        $employee->load(['village', 'district', 'city', 'province', 'citizen']);
+
+        return $employee;
     }
 
     public function delete(Employee $employee)
@@ -61,12 +67,12 @@ class EmployeeRepository implements EmployeeRepositoryInterface
 
     public function create(array $attributes)
     {
-        return Employee::create($attributes)->load(['village', 'district', 'city', 'province']);
+        return Employee::create($attributes)->load(['village', 'district', 'city', 'province', 'citizen']);
     }
 
     public function update(Employee $employee, array $attributes)
     {
         $employee->update($attributes);
-        return $employee->refresh()->load(['village', 'district', 'city', 'province']);
+        return $employee->refresh()->load(['village', 'district', 'city', 'province', 'citizen']);
     }
 }

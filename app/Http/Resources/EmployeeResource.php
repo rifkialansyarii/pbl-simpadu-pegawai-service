@@ -8,6 +8,10 @@ use Laravolt\Indonesia\Models\Village;
 
 class EmployeeResource extends JsonResource
 {
+    public function __construct(private bool $success = true, private int $code = 200, private string $message, public $resource) 
+    {
+        parent::__construct($resource);
+    }
     /**
      * Transform the resource into an array.
      *
@@ -15,24 +19,33 @@ class EmployeeResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return [
-            'id' => $this->id,
-            'nip' => $this->nip,
-            'nik' => $this->nik,
-            'employee_name' => $this->employee_name,
-            'address' => $this->address,
-            'birth_place' => $this->birth_place,
-            'birth_date' => $this->birth_date,
-            'gender' => $this->gender,
-            'phone_number' => $this->phone_number,
-            'village_code' => $this->village_code,
-            'district_code' => $this->district_code,
-            'city_code' => $this->city_code,
-            'province_code' => $this->province_code,
-            'village' => new VillageResource($this->whenLoaded('village')),
-            'district' => new DistrictResource($this->whenLoaded('district')),
-            'city' => new CityResource($this->whenLoaded('city')),
-            'province' => new ProvinceResource($this->whenLoaded('province')),
-        ];
+        return parent::toArray($request);
+    }
+
+    /**
+     * 2. Gunakan withResponse untuk mencegat dan menyusun ulang JSON!
+     */
+    public function withResponse(Request $request, $response): void
+    {
+        $originalData = $response->getData(true);
+
+        $response->setData([
+            'success' => $this->success,
+            'message' => $this->message,
+            'code' => $this->code,
+            
+            'data'    => $originalData['data'] ?? [],
+            'first_page_url'    => $originalData['first_page_url'] ?? [],
+            'from'    => $originalData['from'] ?? [],
+            'last_page'    => $originalData['last_page'] ?? [],
+            'last_page_url'    => $originalData['last_page_url'] ?? [],
+            'links'   => $originalData['links'] ?? [],
+            'next_page_url'    => $originalData['next_page_url'] ?? [],
+            'path'    => $originalData['path'] ?? [],
+            'per_page'    => $originalData['per_page'] ?? [],
+            'prev_page_url'    => $originalData['prev_page_url'] ?? [],
+            'to'    => $originalData['to'] ?? [],
+            'total'    => $originalData['total'] ?? [],
+        ]);
     }
 }

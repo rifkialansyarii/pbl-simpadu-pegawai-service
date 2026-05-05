@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreEmployeeRequest;
 use App\Http\Requests\UpdateEmployeeRequest;
+use App\Http\Resources\EmployeeDetailResource;
 use App\Http\Resources\EmployeeResource;
 use App\Models\Employee;
 use App\Services\ChangeRequestService;
@@ -19,101 +20,71 @@ use Illuminate\Http\Request;
  */
 class EmployeeController extends Controller
 {
-    use ApiResponse;
-
     public function __construct(
         private EmployeeService $service,
         private ChangeRequestService $changeRequestService
     ) {
     }
 
-    public function index(): JsonResponse
+    public function index()
     {
-        try {
-
-            return $this->sendSuccess(
-                data: EmployeeResource::collection($this->service->getAllEmployees()),
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
+        return new EmployeeResource(
+            success: true,
+            message: 'Data retrieved successfully',
+            code: 200,
+            resource: $this->service->getAllEmployees()
+        );
     }
 
-    public function show(Employee $employee): JsonResponse
+    public function show(Employee $employee)
     {
-        try {
-            return $this->sendSuccess(
-                data: new EmployeeResource($this->service->getEmployeeById($employee)),
-                message: 'Data retrieved successfully ',
-            );
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
+        return new EmployeeDetailResource(
+            success: true,
+            message: 'Data retrieved successfully',
+            code: 200,
+            resource: $this->service->getEmployeeById($employee)
+        );
     }
 
-    public function store(StoreEmployeeRequest $request): JsonResponse
+    public function store(StoreEmployeeRequest $request)
     {
-        try {
-            return $this->sendSuccess(
-                data: new EmployeeResource($this->service->createEmployee($request->validated())),
-                message: 'Data created successfully',
-                code: 201,
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage(),
-            );
-        }
+        return new EmployeeDetailResource(
+            success: true,
+            message: 'Data created successfully',
+            code: 201,
+            resource: $this->service->createEmployee($request->validated())
+        );
     }
 
-    public function update(UpdateEmployeeRequest $request, Employee $employee): JsonResponse
+    public function update(UpdateEmployeeRequest $request, Employee $employee)
     {
-        try {
-            return $this->sendSuccess(
-                data: new EmployeeResource($this->service->updateEmployee($request, $employee)),
-                message: 'Data updated successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage(),
-            );
-        }
+        return new EmployeeDetailResource(
+            success: true,
+            message: 'Data updated successfully',
+            code: 200,
+            resource: $this->service->updateEmployee($request, $employee)
+        );
     }
 
-    public function destroy(Employee $employee): JsonResponse
+    public function destroy(Employee $employee)
     {
-        try {
-            $this->service->deleteEmployee($employee);
-            return $this->sendSuccess(
-                data: [],
-                message: 'Data deleted successfully ',
-            );
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
+        $this->service->deleteEmployee($employee);
+        return response()->json([
+            'success' => true,
+            'message' => 'Data deleted successfully',
+            'code' => 200,
+        ]);
     }
 
-    public function showTotal(): JsonResponse
+    public function showTotal()
     {
-        try {
-            return $this->sendSuccess(
-                data: [['total_employee' => $this->service->getTotalEmployee()]],
-                message: 'Data retrieved successfully ',
-            );
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
+        return response()->json([
+            'success' => true,
+            'message' => 'Data retrieved successfully',
+            'code' => 200,
+            'data' => [
+                'total_employee' => $this->service->getTotalEmployee()
+            ]
+        ]);
     }
 }
