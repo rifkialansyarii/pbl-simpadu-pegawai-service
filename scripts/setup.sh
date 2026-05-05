@@ -10,11 +10,9 @@ fi
 if [ ! -f .env ]; then
     echo "Copying environment file..."
     cp .env.example .env
-    sed -i 's/APP_FAKER_LOCALE=en_US/APP_FAKER_LOCALE=id_ID/' .env
     sed -i 's/# DB_DATABASE=laravel/DB_DATABASE=app/' .env
     sed -i 's/# DB_USERNAME=root/DB_USERNAME=laravel/' .env
     sed -i 's/# DB_PASSWORD=/DB_PASSWORD=secret/' .env
-    echo -e "\n\n#JWT_SECRET\nJWT_SECRET=your-jwt-secret-key" >> .env
 else
     echo ".env file already exists. Skipping copy."
 fi
