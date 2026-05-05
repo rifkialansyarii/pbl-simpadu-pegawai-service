@@ -12,7 +12,6 @@ use Illuminate\Validation\Rule;
 
 class StoreEmployeeRequest extends FormRequest
 {
-    use ApiResponse;
     /**
      * Determine if the user is authorized to make this request.
      */
@@ -57,11 +56,12 @@ class StoreEmployeeRequest extends FormRequest
     protected function failedValidation(Validator $validator)
     {
         throw new HttpResponseException(
-            $this->sendError(
-                message: "The given data was invalid",
-                code: 422,
-                errors: $validator->errors()->toArray()
-            )
+            $this->response()->json([
+                'success' => false,
+                'message' => "The given data was invalid",
+                'code' => 422,
+                'errors' => $validator->errors()->toArray()
+            ])
         );
     }
 }
