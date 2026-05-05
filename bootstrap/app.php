@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -18,18 +19,47 @@ return Application::configure(basePath: dirname(__DIR__))
     })
 
     ->withExceptions(function (Exceptions $exceptions): void {
+        $exceptions->render(function (AuthenticationException $e, Request $request) {
+            if ($request->is('api/*')) {
+
+                $isDebug = config('app.debug');
+
+                $response = [
+                    'success' => false,
+                    'code' => 401,
+                    'message' => 'You are not logged in',
+                ];
+
+                if ($isDebug) {
+                    $response['errors'] = $e->getMessage();
+                    $response['trace'] = $e->getTrace();
+                }
+
+                return response()->json($response, 401);
+            }
+        });
+    })
+
+    ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->render(function (AccessDeniedHttpException $e, Request $request) {
             if ($request->is('api/*')) {
 
                 $isDebug = config('app.debug');
 
-                return response()->json([
+                $response = [
                     'success' => false,
                     'code' => 403,
                     'message' => 'Forbidden',
-                    'errors' => $isDebug ? $e->getMessage() : 'Unauthorized',
-                    'trace' => $isDebug ? $e->getTrace() : null,
-                ], 403);
+                ];
+
+                if ($isDebug) {
+                    $response['errors'] = $e->getMessage();
+                    $response['trace'] = $e->getTrace();
+                }
+
+                return response()->json($response, 403);
             }
         });
-    })->create();
+    })
+    
+    ->create();
