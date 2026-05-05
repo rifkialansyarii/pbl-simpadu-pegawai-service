@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -15,6 +16,7 @@ class Employee extends Model
 {
     /** @use HasFactory<\Database\Factories\EmployeeFactory> */
     use HasFactory;
+    use HasUuids;
 
     protected $fillable = [
         'nip',
@@ -30,6 +32,7 @@ class Employee extends Model
         'district_code',
         'city_code',
         'province_code',
+        'citizen_code',
     ];
 
     protected $guarded = [
@@ -58,7 +61,7 @@ class Employee extends Model
         return $this->belongsTo(Province::class, 'province_code', 'code');
     }
 
-    public function country(): BelongsTo
+    public function citizen(): BelongsTo
     {
         return $this->belongsTo(Country::class, 'citizen_code', 'code');
     }

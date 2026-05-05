@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('change_requests', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('employee_id')->constrained(
+            $table->uuid('id')->primary();
+            $table->foreignUuid('employee_id')->constrained(
                 table: 'employees'
             )->restrictOnDelete();
             $table->string('field_name');
