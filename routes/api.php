@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['auth:auth-jwt'])->group(function () {
 
     Route::get('/employees', [EmployeeController::class, 'index'])->middleware('can:viewAny, App\Models\Employee');
-    Route::get('/employees/count', [EmployeeController::class, 'showTotal']);
+    Route::get('/employees/count', [EmployeeController::class, 'showTotal'])->middleware('can:viewAny, App\Models\Employee');
     Route::get('/employees/{employee}', [EmployeeController::class, 'show'])->middleware('can:view,employee');
     Route::post('/employees', [EmployeeController::class, 'store'])->middleware('can:create, App\Models\Employee');
     Route::put('/employees/{employee}', [EmployeeController::class, 'update'])->middleware('can:update,employee');

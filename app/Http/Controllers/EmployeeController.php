@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreEmployeeRequest;
 use App\Http\Requests\UpdateEmployeeRequest;
-use App\Http\Resources\EmployeeDetailResource;
 use App\Http\Resources\EmployeeResource;
+use App\Http\Resources\EmployeeCollection;
 use App\Models\Employee;
 use App\Services\ChangeRequestService;
 use App\Services\EmployeeService;
@@ -28,42 +28,47 @@ class EmployeeController extends Controller
 
     public function index()
     {
-        return new EmployeeResource(
-            success: true,
-            message: 'Data retrieved successfully',
-            code: 200,
-            resource: $this->service->getAllEmployees()
-        );
+        $employeCollection = new EmployeeCollection($this->service->getAllEmployees());
+        return $employeCollection->additional([
+            'success' => true,
+            'message' => 'Data retrieved successfully',
+            'code' => 200,
+        ]);
+        ;
     }
 
     public function show(Employee $employee)
     {
-        return new EmployeeDetailResource(
-            success: true,
-            message: 'Data retrieved successfully',
-            code: 200,
-            resource: $this->service->getEmployeeById($employee)
-        );
+        $employeeResource = new EmployeeResource($this->service->getEmployeeById($employee));
+        $employeeResource->additional([
+            'success' => true,
+            'message' => 'Data retrieved successfully',
+            'code' => 200,
+        ]);
+        return $employeeResource;
     }
 
     public function store(StoreEmployeeRequest $request)
     {
-        return new EmployeeDetailResource(
-            success: true,
-            message: 'Data created successfully',
-            code: 201,
-            resource: $this->service->createEmployee($request->validated())
-        );
+        $employeeResource = new EmployeeResource($this->service->createEmployee($request->validated()));
+        $employeeResource->additional([
+            'success' => true,
+            'message' => 'Data created successfully',
+            'code' => 201,
+        ]);
+        return $employeeResource;
     }
+
 
     public function update(UpdateEmployeeRequest $request, Employee $employee)
     {
-        return new EmployeeDetailResource(
-            success: true,
-            message: 'Data updated successfully',
-            code: 200,
-            resource: $this->service->updateEmployee($request, $employee)
-        );
+        $employeeResource = new EmployeeResource($this->service->updateEmployee($request, $employee));
+        $employeeResource->additional([
+            'success' => true,
+            'message' => 'Data updated successfully',
+            'code' => 200,
+        ]);
+        return $employeeResource;
     }
 
     public function destroy(Employee $employee)

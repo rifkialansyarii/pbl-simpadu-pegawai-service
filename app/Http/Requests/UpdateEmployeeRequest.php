@@ -73,7 +73,7 @@ class UpdateEmployeeRequest extends FormRequest
     protected function failedValidation(Validator $validator)
     {
         throw new HttpResponseException(
-            $this->response()->json([
+            response()->json([
                 'success' => false,
                 'message' => "The given data was invalid",
                 'code' => 422,
