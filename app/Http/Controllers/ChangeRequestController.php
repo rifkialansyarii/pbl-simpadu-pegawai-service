@@ -2,105 +2,69 @@
 
 namespace App\Http\Controllers;
 
-use App\Contracts\ChangeRequestRepositoryInterface;
 use App\Http\Requests\StoreChangeRequest;
 use App\Http\Requests\UpdateChangeRequest;
 use App\Http\Resources\ChangeRequestResource;
 use App\Models\ChangeRequest;
 use App\Services\ChangeRequestService;
-use App\Traits\ApiResponse;
 use Exception;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class ChangeRequestController extends Controller
 {
-    use ApiResponse;
 
     public function __construct(
         private ChangeRequestService $service
     ) {
     }
 
-    public function index(Request $request): JsonResponse
+    public function index(Request $request)
     {
-        try {
-            return $this->sendSuccess(
-                data: ChangeRequestResource::collection($this->service->getAllChangeRequest($request->user())),
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
+        $changeRequestResource = new ChangeRequestResource($this->service->getAllChangeRequest($request->user()));
+        return $changeRequestResource->additional([
+            'success' => true,
+            'code' => 200,
+            'message' => 'Data retrieved successfully',
+        ]);
     }
 
-    public function store(StoreChangeRequest $request): JsonResponse
+    public function store(StoreChangeRequest $request)
     {
-        try {
-
-            $attributes = $request->validated();
-            $user = $request->user();
-
-            return $this->sendSuccess(
-                data: new ChangeRequestResource($this->service->createChangeRequest($attributes, $user)),
-                message: 'Data created successfully',
-                code: 201,
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage(),
-            );
-        }
+        $changeRequestResource = new ChangeRequestResource($this->service->createChangeRequest($request->validated(), $request->user()));
+        return $changeRequestResource->additional([
+            'success' => true,
+            'code' => 201,
+            'message' => 'Data created successfully',
+        ]);
     }
 
-    public function update(UpdateChangeRequest $request, ChangeRequest $changeRequest): JsonResponse
+    public function update(UpdateChangeRequest $request, ChangeRequest $changeRequest)
     {
-        try {
-            $attributes = $request->validated();
-
-            return $this->sendSuccess(
-                data: new ChangeRequestResource($this->service->updateChangeRequest($changeRequest, $attributes)),
-                message: 'Data updated successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage(),
-            );
-        }
+        $changeRequestResource = new ChangeRequestResource($this->service->updateChangeRequest($changeRequest, $request->validated()));
+        return $changeRequestResource->additional([
+            'success' => true,
+            'code' => 200,
+            'message' => 'Data updated successfully',
+        ]);
     }
 
     public function showNewly()
     {
-        try {
-            return $this->sendSuccess(
-                data: new ChangeRequestResource($this->service->getNewlyData()),
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage(),
-            );
-        }
+        $changeRequestResource = new ChangeRequestResource($this->service->getNewlyData());
+        return $changeRequestResource->additional([
+            'success' => true,
+            'code' => 200,
+            'message' => 'Data retrieved successfully',
+        ]);
     }
 
     public function showTotalPendingStatus()
     {
-        try {
-            return $this->sendSuccess(
-                data: [ ["total_pending" => $this->service->getTotalPendingStatus()] ],
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage(),
-            );
-        }
+        $changeRequestResource = new ChangeRequestResource($this->service->getTotalPendingStatus());
+        return $changeRequestResource->additional([
+            'success' => true,
+            'code' => 200,
+            'message' => 'Data retrieved successfully',
+        ]);
     }
 }

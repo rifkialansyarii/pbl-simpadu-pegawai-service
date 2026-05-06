@@ -13,42 +13,21 @@ use Laravolt\Indonesia\Models\Province;
 
 class CityController extends Controller
 {
-    use ApiResponse;
 
     public function __construct(
         private CityService $service
     ) {
     }
 
-    public function index(): JsonResponse
+    public function index()
     {
-        try {
+        return CityResource::collection($this->service->getAllCity());
 
-            return $this->sendSuccess(
-                data: CityResource::collection($this->service->getAllCity()),
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
     }
 
-    public function showByProvince(string $provinceCode): JsonResponse
+    public function showByProvince(string $provinceCode)
     {        
-        try {
 
-            return $this->sendSuccess(
-                data: CityResource::collection($this->service->getCityByProvince($provinceCode)),
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
+        return CityResource::collection($this->service->getCityByProvince($provinceCode));
     }
 }

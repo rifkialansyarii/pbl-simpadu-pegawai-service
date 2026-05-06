@@ -12,41 +12,20 @@ use Illuminate\Http\Request;
 
 class DistrictController extends Controller
 {
-    use ApiResponse;
 
     public function __construct(
         private DistrictService $service
     ) {
     }
 
-    public function index(): JsonResponse
+    public function index()
     {
-        try {
 
-            return $this->sendSuccess(
-                data: DistrictResource::collection($this->service->getAllDistrict()),
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
+        return DistrictResource::collection($this->service->getAllDistrict());
     }
 
-    public function showByCity(string $cityCode): JsonResponse
+    public function showByCity(string $cityCode)
     {        
-        try {
-            return $this->sendSuccess(
-                data: DistrictResource::collection($this->service->getDistrictByCity($cityCode)),
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
+        return DistrictResource::collection($this->service->getDistrictByCity($cityCode));
     }
 }

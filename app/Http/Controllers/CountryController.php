@@ -11,26 +11,14 @@ use Illuminate\Http\Request;
 
 class CountryController extends Controller
 {
-    use ApiResponse;
-
     public function __construct(
         private CountryService $service
     ) {
     }
 
-    public function index(): JsonResponse
+    public function index()
     {
-        try {
+            return CountryResource::collection($this->service->getAllCountry());
 
-            return $this->sendSuccess(
-                data: CountryResource::collection($this->service->getAllCountry()),
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
     }
 }

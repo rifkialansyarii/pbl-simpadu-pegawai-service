@@ -1,0 +1,1120 @@
+name: Employee
+description: |-
+
+  Endpoint terkait operasi data pegawai SIMPADU.
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/employees
+    metadata:
+      custom: []
+      groupName: Employee
+      groupDescription: |-
+
+        Endpoint terkait operasi data pegawai SIMPADU.
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      page:
+        custom: []
+        name: page
+        description: 'Nomor Halaman, required: false, Default: 1'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanQueryParameters:
+      page: 16
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: |-
+          {
+              "success": true,
+              "message": "Data retrieved successfully",
+              "code": 200,
+              "data": [
+                  {
+                      "id": "019df6c9-97bb-7295-a954-884fdfaec6e9",
+                      "nip": "350661066055483856",
+                      "nik": "7406980408239916",
+                      "employee_name": "Salimah Zulaika",
+                      "address": "Jln. Elang No. 856, Sabang 82360, Papua",
+                      "birth_place": "Batam",
+                      "birth_date": "2000-07-02",
+                      "gender": "female",
+                      "phone_number": "084331744670",
+                      "village_code": "7409082013",
+                      "district_code": "740908",
+                      "city_code": "7409",
+                      "province_code": "74",
+                      "citizen_code": "74",
+                      "village": {
+                          "id": "71884",
+                          "code": "7409082013",
+                          "district_code": "740908",
+                          "name": "LAMEORU"
+                      },
+                      "district": {
+                          "id": "6035",
+                          "code": "740908",
+                          "city_code": "7409",
+                          "name": "OHEO"
+                      },
+                      "city": {
+                          "id": "431",
+                          "code": "7409",
+                          "name": "KABUPATEN KONAWE UTARA"
+                      },
+                      "province": {
+                          "id": "28",
+                          "code": "74",
+                          "name": "SULAWESI TENGGARA"
+                      },
+                      "citizen": {
+                          "id": 37,
+                          "name": "Bhutan",
+                          "code": "BT"
+                      }
+                  }
+              ],
+              "meta": {
+                  "current_page": 3,
+                  "from": 21,
+                  "last_page": 6,
+                  "links": [
+                      {
+                          "url": "http://127.0.0.1:1234/api/employees?page=2",
+                          "label": "&laquo; Previous",
+                          "page": 2,
+                          "active": false
+                      },
+                      {
+                          "url": "http://127.0.0.1:1234/api/employees?page=1",
+                          "label": "1",
+                          "page": 1,
+                          "active": false
+                      },
+                      {
+                          "url": "http://127.0.0.1:1234/api/employees?page=2",
+                          "label": "2",
+                          "page": 2,
+                          "active": false
+                      },
+                      {
+                          "url": "http://127.0.0.1:1234/api/employees?page=3",
+                          "label": "3",
+                          "page": 3,
+                          "active": true
+                      },
+                      {
+                          "url": "http://127.0.0.1:1234/api/employees?page=4",
+                          "label": "4",
+                          "page": 4,
+                          "active": false
+                      },
+                      {
+                          "url": "http://127.0.0.1:1234/api/employees?page=5",
+                          "label": "5",
+                          "page": 5,
+                          "active": false
+                      },
+                      {
+                          "url": "http://127.0.0.1:1234/api/employees?page=6",
+                          "label": "6",
+                          "page": 6,
+                          "active": false
+                      },
+                      {
+                          "url": "http://127.0.0.1:1234/api/employees?page=4",
+                          "label": "Next &raquo;",
+                          "page": 4,
+                          "active": false
+                      }
+                  ],
+                  "path": "http://127.0.0.1:1234/api/employees",
+                  "per_page": 10,
+                  "to": 30,
+                  "total": 54
+              }
+          }
+        headers: []
+        description: 'Sukses mendapatkan data pegawai'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "You are not logged in"
+          }
+        headers: []
+        description: 'Tidak terotentikasi'
+      -
+        custom: []
+        status: 403
+        content: |-
+          {
+              "success": false,
+              "code": 403,
+              "message": "Forbidden"
+          }
+        headers: []
+        description: 'Tidak memiliki izin'
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/employees/{employee_id}'
+    metadata:
+      custom: []
+      groupName: Employee
+      groupDescription: |-
+
+        Endpoint terkait operasi data pegawai SIMPADU.
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      employee_id:
+        custom: []
+        name: employee_id
+        description: 'The ID of the employee.'
+        required: true
+        example: 019df6c9-8f19-73d7-b9db-a0d11acce3bb
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      employee:
+        custom: []
+        name: employee
+        description: 'UUID Pegawai'
+        required: true
+        example: 123e4567-e89b-12d3-a456-426614174000
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      employee_id: 019df6c9-8f19-73d7-b9db-a0d11acce3bb
+      employee: 123e4567-e89b-12d3-a456-426614174000
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: |-
+          {
+              "success": true,
+              "message": "Data retrieved successfully",
+              "code": 200,
+              "data": {
+                  "id": "019df6c9-97bb-7295-a954-884fdfaec6e9",
+                  "nip": "350661066055483856",
+                  "nik": "7406980408239916",
+                  "employee_name": "Salimah Zulaika",
+                  "address": "Jln. Elang No. 856, Sabang 82360, Papua",
+                  "birth_place": "Batam",
+                  "birth_date": "2000-07-02",
+                  "gender": "female",
+                  "phone_number": "084331744670",
+                  "village_code": "7409082013",
+                  "district_code": "740908",
+                  "city_code": "7409",
+                  "province_code": "74",
+                  "citizen_code": "74",
+                  "village": {
+                      "id": "71884",
+                      "code": "7409082013",
+                      "district_code": "740908",
+                      "name": "LAMEORU"
+                  },
+                  "district": {
+                      "id": "6035",
+                      "code": "740908",
+                      "city_code": "7409",
+                      "name": "OHEO"
+                  },
+                  "city": {
+                      "id": "431",
+                      "code": "7409",
+                      "name": "KABUPATEN KONAWE UTARA"
+                  },
+                  "province": {
+                      "id": "28",
+                      "code": "74",
+                      "name": "SULAWESI TENGGARA"
+                  },
+                  "citizen": {
+                      "id": 37,
+                      "name": "Bhutan",
+                      "code": "BT"
+                  }
+              }
+          }
+        headers: []
+        description: 'Sukses mendapatkan detail pegawai'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "You are not logged in"
+          }
+        headers: []
+        description: 'Tidak terotentikasi'
+      -
+        custom: []
+        status: 403
+        content: |-
+          {
+              "success": false,
+              "code": 403,
+              "message": "Forbidden"
+          }
+        headers: []
+        description: 'Tidak memiliki izin'
+      -
+        custom: []
+        status: 404
+        content: |-
+          {
+              "success": false,
+              "code": 404,
+              "message": "Resource not found"
+          }
+        headers: []
+        description: 'Data tidak ditemukan'
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/employees/info/count
+    metadata:
+      custom: []
+      groupName: Employee
+      groupDescription: |-
+
+        Endpoint terkait operasi data pegawai SIMPADU.
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: |-
+          {
+              "success": true,
+              "message": "Data retrieved successfully",
+              "code": 200,
+              "data": {
+                  "total_employee": 54
+              }
+          }
+        headers: []
+        description: 'Sukses mendapatkan total data pegawai'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "You are not logged in"
+          }
+        headers: []
+        description: 'Tidak terotentikasi'
+      -
+        custom: []
+        status: 403
+        content: |-
+          {
+              "success": false,
+              "code": 403,
+              "message": "Forbidden"
+          }
+        headers: []
+        description: 'Tidak memiliki izin'
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/employees
+    metadata:
+      custom: []
+      groupName: Employee
+      groupDescription: |-
+
+        Endpoint terkait operasi data pegawai SIMPADU.
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      header_content_type:
+        custom: []
+        name: header_content_type
+        description: ''
+        required: true
+        example: application/json
+        type: string
+        enumValues:
+          - application/json
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      nip:
+        custom: []
+        name: nip
+        description: 'Must be 18 characters.'
+        required: true
+        example: bngzmiyvdljnikhway
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      nik:
+        custom: []
+        name: nik
+        description: 'Must be 16 characters.'
+        required: true
+        example: kcmyuwpwlvqwrsit
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      employee_name:
+        custom: []
+        name: employee_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: c
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      address:
+        custom: []
+        name: address
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: p
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      birth_place:
+        custom: []
+        name: birth_place
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: s
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      birth_date:
+        custom: []
+        name: birth_date
+        description: 'Must be a valid date in the format <code>Y-m-d</code>.'
+        required: false
+        example: '2026-05-06'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      gender:
+        custom: []
+        name: gender
+        description: ''
+        required: false
+        example: female
+        type: string
+        enumValues:
+          - male
+          - female
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      phone_number:
+        custom: []
+        name: phone_number
+        description: 'Must be at least 10 characters. Must not be greater than 15 characters.'
+        required: false
+        example: c
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      village_code:
+        custom: []
+        name: village_code
+        description: 'Must be 10 characters.'
+        required: false
+        example: qldzsnrwtu
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      district_code:
+        custom: []
+        name: district_code
+        description: 'Must be 6 characters.'
+        required: false
+        example: jwvlxj
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      city_code:
+        custom: []
+        name: city_code
+        description: 'Must be 4 characters.'
+        required: false
+        example: klqp
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      province_code:
+        custom: []
+        name: province_code
+        description: 'Must be 2 characters.'
+        required: false
+        example: pw
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      citizen_code:
+        custom: []
+        name: citizen_code
+        description: 'Must be 2 characters.'
+        required: false
+        example: qb
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      header_content_type: application/json
+      nip: bngzmiyvdljnikhway
+      nik: kcmyuwpwlvqwrsit
+      employee_name: c
+      address: p
+      birth_place: s
+      birth_date: '2026-05-06'
+      gender: female
+      phone_number: c
+      village_code: qldzsnrwtu
+      district_code: jwvlxj
+      city_code: klqp
+      province_code: pw
+      citizen_code: qb
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 201
+        content: |-
+          {
+              "success": true,
+              "message": "Data retrieved successfully",
+              "code": 200,
+              "data": {
+                  "id": "019df6c9-97bb-7295-a954-884fdfaec6e9",
+                  "nip": "350661066055483856",
+                  "nik": "7406980408239916",
+                  "employee_name": "Salimah Zulaika",
+                  "address": "Jln. Elang No. 856, Sabang 82360, Papua",
+                  "birth_place": "Batam",
+                  "birth_date": "2000-07-02",
+                  "gender": "female",
+                  "phone_number": "084331744670",
+                  "village_code": "7409082013",
+                  "district_code": "740908",
+                  "city_code": "7409",
+                  "province_code": "74",
+                  "citizen_code": "74",
+                  "village": {
+                      "id": "71884",
+                      "code": "7409082013",
+                      "district_code": "740908",
+                      "name": "LAMEORU"
+                  },
+                  "district": {
+                      "id": "6035",
+                      "code": "740908",
+                      "city_code": "7409",
+                      "name": "OHEO"
+                  },
+                  "city": {
+                      "id": "431",
+                      "code": "7409",
+                      "name": "KABUPATEN KONAWE UTARA"
+                  },
+                  "province": {
+                      "id": "28",
+                      "code": "74",
+                      "name": "SULAWESI TENGGARA"
+                  },
+                  "citizen": {
+                      "id": 37,
+                      "name": "Bhutan",
+                      "code": "BT"
+                  }
+              }
+          }
+        headers: []
+        description: 'Sukses menambahkan data pegawai'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "You are not logged in"
+          }
+        headers: []
+        description: 'Tidak terotentikasi'
+      -
+        custom: []
+        status: 403
+        content: |-
+          {
+              "success": false,
+              "code": 403,
+              "message": "Forbidden"
+          }
+        headers: []
+        description: 'Tidak memiliki izin'
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PUT
+    uri: 'api/employees/{employee_id}'
+    metadata:
+      custom: []
+      groupName: Employee
+      groupDescription: |-
+
+        Endpoint terkait operasi data pegawai SIMPADU.
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      employee_id:
+        custom: []
+        name: employee_id
+        description: 'The ID of the employee.'
+        required: true
+        example: 019df6c9-8f19-73d7-b9db-a0d11acce3bb
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      employee:
+        custom: []
+        name: employee
+        description: 'UUID Pegawai'
+        required: true
+        example: 123e4567-e89b-12d3-a456-426614174000
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      employee_id: 019df6c9-8f19-73d7-b9db-a0d11acce3bb
+      employee: 123e4567-e89b-12d3-a456-426614174000
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      header_content_type:
+        custom: []
+        name: header_content_type
+        description: ''
+        required: true
+        example: application/json
+        type: string
+        enumValues:
+          - application/json
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      nip:
+        custom: []
+        name: nip
+        description: 'Must be 18 characters.'
+        required: false
+        example: bngzmiyvdljnikhway
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      nik:
+        custom: []
+        name: nik
+        description: 'Must be 16 characters.'
+        required: false
+        example: kcmyuwpwlvqwrsit
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      employee_name:
+        custom: []
+        name: employee_name
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: c
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      address:
+        custom: []
+        name: address
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: p
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      birth_place:
+        custom: []
+        name: birth_place
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: s
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      birth_date:
+        custom: []
+        name: birth_date
+        description: 'Must be a valid date in the format <code>Y-m-d</code>.'
+        required: false
+        example: '2026-05-06'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      gender:
+        custom: []
+        name: gender
+        description: ''
+        required: false
+        example: male
+        type: string
+        enumValues:
+          - male
+          - female
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      phone_number:
+        custom: []
+        name: phone_number
+        description: 'Must be at least 10 characters. Must not be greater than 15 characters.'
+        required: false
+        example: c
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      village_code:
+        custom: []
+        name: village_code
+        description: 'Must be 10 characters.'
+        required: false
+        example: qldzsnrwtu
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      district_code:
+        custom: []
+        name: district_code
+        description: 'Must be 6 characters.'
+        required: false
+        example: jwvlxj
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      city_code:
+        custom: []
+        name: city_code
+        description: 'Must be 4 characters.'
+        required: false
+        example: klqp
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      province_code:
+        custom: []
+        name: province_code
+        description: 'Must be 2 characters.'
+        required: false
+        example: pw
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      citizen_code:
+        custom: []
+        name: citizen_code
+        description: 'Must be 2 characters.'
+        required: false
+        example: qb
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      header_content_type: application/json
+      nip: bngzmiyvdljnikhway
+      nik: kcmyuwpwlvqwrsit
+      employee_name: c
+      address: p
+      birth_place: s
+      birth_date: '2026-05-06'
+      gender: male
+      phone_number: c
+      village_code: qldzsnrwtu
+      district_code: jwvlxj
+      city_code: klqp
+      province_code: pw
+      citizen_code: qb
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: |-
+          {
+              "success": true,
+              "message": "Data retrieved successfully",
+              "code": 200,
+              "data": {
+                  "id": "019df6c9-97bb-7295-a954-884fdfaec6e9",
+                  "nip": "350661066055483856",
+                  "nik": "7406980408239916",
+                  "employee_name": "Salimah Zulaika",
+                  "address": "Jln. Elang No. 856, Sabang 82360, Papua",
+                  "birth_place": "Batam",
+                  "birth_date": "2000-07-02",
+                  "gender": "female",
+                  "phone_number": "084331744670",
+                  "village_code": "7409082013",
+                  "district_code": "740908",
+                  "city_code": "7409",
+                  "province_code": "74",
+                  "citizen_code": "74",
+                  "village": {
+                      "id": "71884",
+                      "code": "7409082013",
+                      "district_code": "740908",
+                      "name": "LAMEORU"
+                  },
+                  "district": {
+                      "id": "6035",
+                      "code": "740908",
+                      "city_code": "7409",
+                      "name": "OHEO"
+                  },
+                  "city": {
+                      "id": "431",
+                      "code": "7409",
+                      "name": "KABUPATEN KONAWE UTARA"
+                  },
+                  "province": {
+                      "id": "28",
+                      "code": "74",
+                      "name": "SULAWESI TENGGARA"
+                  },
+                  "citizen": {
+                      "id": 37,
+                      "name": "Bhutan",
+                      "code": "BT"
+                  }
+              }
+          }
+        headers: []
+        description: 'Sukses mengubah data pegawai'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "You are not logged in"
+          }
+        headers: []
+        description: 'Tidak terotentikasi'
+      -
+        custom: []
+        status: 403
+        content: |-
+          {
+              "success": false,
+              "code": 403,
+              "message": "Forbidden"
+          }
+        headers: []
+        description: 'Tidak memiliki izin'
+      -
+        custom: []
+        status: 404
+        content: |-
+          {
+              "success": false,
+              "code": 404,
+              "message": "Resource not found"
+          }
+        headers: []
+        description: 'Data tidak ditemukan'
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - DELETE
+    uri: 'api/employees/{employee_id}'
+    metadata:
+      custom: []
+      groupName: Employee
+      groupDescription: |-
+
+        Endpoint terkait operasi data pegawai SIMPADU.
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      employee_id:
+        custom: []
+        name: employee_id
+        description: 'The ID of the employee.'
+        required: true
+        example: 019df6c9-8f19-73d7-b9db-a0d11acce3bb
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      employee:
+        custom: []
+        name: employee
+        description: 'UUID Pegawai'
+        required: true
+        example: 123e4567-e89b-12d3-a456-426614174000
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      employee_id: 019df6c9-8f19-73d7-b9db-a0d11acce3bb
+      employee: 123e4567-e89b-12d3-a456-426614174000
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: |-
+          {
+              "success": true,
+              "message": "Data deleted successfully",
+              "code": 200
+          }
+        headers: []
+        description: 'Sukses menghapus data pegawai'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "You are not logged in"
+          }
+        headers: []
+        description: 'Tidak terotentikasi'
+      -
+        custom: []
+        status: 403
+        content: |-
+          {
+              "success": false,
+              "code": 403,
+              "message": "Forbidden"
+          }
+        headers: []
+        description: 'Tidak memiliki izin'
+      -
+        custom: []
+        status: 404
+        content: |-
+          {
+              "success": false,
+              "code": 404,
+              "message": "Resource not found"
+          }
+        headers: []
+        description: 'Data tidak ditemukan'
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null

@@ -13,10 +13,14 @@ use App\Traits\ApiResponse;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\QueryParam;
+use Knuckles\Scribe\Attributes\ResponseFromFile;
+use Knuckles\Scribe\Attributes\UrlParam;
 
 /**
- * @group Employee Management
+ * @group Employee
  * 
+ * Endpoint terkait operasi data pegawai SIMPADU.
  */
 class EmployeeController extends Controller
 {
@@ -26,6 +30,10 @@ class EmployeeController extends Controller
     ) {
     }
 
+    #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
+    #[ResponseFromFile(file: 'responses/get_employees.json', status: 200, description: 'Sukses mendapatkan data pegawai')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     public function index()
     {
         $employeCollection = new EmployeeCollection($this->service->getAllEmployees());
@@ -37,6 +45,11 @@ class EmployeeController extends Controller
         ;
     }
 
+    #[ResponseFromFile(file: 'responses/detail_employee.json', status: 200, description: 'Sukses mendapatkan detail pegawai')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
+    #[ResponseFromFile(file: 'responses/not_found.json', status: 404, description: 'Data tidak ditemukan')]
+    #[UrlParam("employee", "string", "UUID Pegawai", example: "123e4567-e89b-12d3-a456-426614174000")]
     public function show(Employee $employee)
     {
         $employeeResource = new EmployeeResource($this->service->getEmployeeById($employee));
@@ -48,6 +61,9 @@ class EmployeeController extends Controller
         return $employeeResource;
     }
 
+    #[ResponseFromFile(file: 'responses/detail_employee.json', status: 201, description: 'Sukses menambahkan data pegawai')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     public function store(StoreEmployeeRequest $request)
     {
         $employeeResource = new EmployeeResource($this->service->createEmployee($request->validated()));
@@ -60,6 +76,11 @@ class EmployeeController extends Controller
     }
 
 
+    #[ResponseFromFile(file: 'responses/detail_employee.json', status: 200, description: 'Sukses mengubah data pegawai')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
+    #[ResponseFromFile(file: 'responses/not_found.json', status: 404, description: 'Data tidak ditemukan')]
+    #[UrlParam("employee", "string", "UUID Pegawai", example: "123e4567-e89b-12d3-a456-426614174000")]
     public function update(UpdateEmployeeRequest $request, Employee $employee)
     {
         $employeeResource = new EmployeeResource($this->service->updateEmployee($request, $employee));
@@ -71,6 +92,11 @@ class EmployeeController extends Controller
         return $employeeResource;
     }
 
+    #[ResponseFromFile(file: 'responses/success_delete_employee.json', status: 200, description: 'Sukses menghapus data pegawai')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
+    #[ResponseFromFile(file: 'responses/not_found.json', status: 404, description: 'Data tidak ditemukan')]
+    #[UrlParam("employee", "string", "UUID Pegawai", example: "123e4567-e89b-12d3-a456-426614174000")]
     public function destroy(Employee $employee)
     {
         $this->service->deleteEmployee($employee);
@@ -81,6 +107,9 @@ class EmployeeController extends Controller
         ]);
     }
 
+    #[ResponseFromFile(file: 'responses/total_employee.json', status: 200, description: 'Sukses mendapatkan total data pegawai')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     public function showTotal()
     {
         return response()->json([

@@ -11,42 +11,21 @@ use Illuminate\Http\Request;
 
 class VillageController extends Controller
 {
-    use ApiResponse;
-
     public function __construct(
         private VillageService $service
     ) {
     }
 
-    public function index(): JsonResponse
+    public function index()
     {
-        try {
+            return VillageResource::collection($this->service->getAllVillage());
 
-            return $this->sendSuccess(
-                data: VillageResource::collection($this->service->getAllVillage()),
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
 
     }
 
-    public function showByDistrict(string $districtCode): JsonResponse
+    public function showByDistrict(string $districtCode)
     {        
-        try {
-            return $this->sendSuccess(
-                data: VillageResource::collection($this->service->getVillageByDistrict($districtCode)),
-                message: 'Data retrieved successfully',
-            );
+            return VillageResource::collection($this->service->getVillageByDistrict($districtCode));
 
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
     }
 }
