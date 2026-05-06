@@ -107,34 +107,34 @@
                             </li>
                                                                         </ul>
                             </ul>
-                    <ul id="tocify-header-endpoints" class="tocify-header">
-                <li class="tocify-item level-1" data-unique="endpoints">
-                    <a href="#endpoints">Endpoints</a>
+                    <ul id="tocify-header-wilayah" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="wilayah">
+                    <a href="#wilayah">Wilayah</a>
                 </li>
-                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-countries">
-                                <a href="#endpoints-GETapi-countries">GET api/countries</a>
+                                    <ul id="tocify-subheader-wilayah" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="wilayah-GETapi-countries">
+                                <a href="#wilayah-GETapi-countries">GET api/countries</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-provinces">
-                                <a href="#endpoints-GETapi-provinces">GET api/provinces</a>
+                                                                                <li class="tocify-item level-2" data-unique="wilayah-GETapi-provinces">
+                                <a href="#wilayah-GETapi-provinces">GET api/provinces</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-cities">
-                                <a href="#endpoints-GETapi-cities">GET api/cities</a>
+                                                                                <li class="tocify-item level-2" data-unique="wilayah-GETapi-cities">
+                                <a href="#wilayah-GETapi-cities">GET api/cities</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-cities--provinceCode-">
-                                <a href="#endpoints-GETapi-cities--provinceCode-">GET api/cities/{provinceCode}</a>
+                                                                                <li class="tocify-item level-2" data-unique="wilayah-GETapi-cities--provinceCode-">
+                                <a href="#wilayah-GETapi-cities--provinceCode-">GET api/cities/{provinceCode}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-districts">
-                                <a href="#endpoints-GETapi-districts">GET api/districts</a>
+                                                                                <li class="tocify-item level-2" data-unique="wilayah-GETapi-districts">
+                                <a href="#wilayah-GETapi-districts">GET api/districts</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-districts--cityCode-">
-                                <a href="#endpoints-GETapi-districts--cityCode-">GET api/districts/{cityCode}</a>
+                                                                                <li class="tocify-item level-2" data-unique="wilayah-GETapi-districts--cityCode-">
+                                <a href="#wilayah-GETapi-districts--cityCode-">GET api/districts/{cityCode}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-villages">
-                                <a href="#endpoints-GETapi-villages">GET api/villages</a>
+                                                                                <li class="tocify-item level-2" data-unique="wilayah-GETapi-villages">
+                                <a href="#wilayah-GETapi-villages">GET api/villages</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-villages--districtCode-">
-                                <a href="#endpoints-GETapi-villages--districtCode-">GET api/villages/{districtCode}</a>
+                                                                                <li class="tocify-item level-2" data-unique="wilayah-GETapi-villages--districtCode-">
+                                <a href="#wilayah-GETapi-villages--districtCode-">GET api/villages/{districtCode}</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -2187,7 +2187,7 @@ Must be one of:
     \"address\": \"p\",
     \"birth_place\": \"s\",
     \"birth_date\": \"2026-05-06\",
-    \"gender\": \"female\",
+    \"gender\": \"male\",
     \"phone_number\": \"c\",
     \"village_code\": \"qldzsnrwtu\",
     \"district_code\": \"jwvlxj\",
@@ -2217,7 +2217,7 @@ let body = {
     "address": "p",
     "birth_place": "s",
     "birth_date": "2026-05-06",
-    "gender": "female",
+    "gender": "male",
     "phone_number": "c",
     "village_code": "qldzsnrwtu",
     "district_code": "jwvlxj",
@@ -2525,10 +2525,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="gender"                data-endpoint="PUTapi-employees--employee_id-"
-               value="female"
+               value="male"
                data-component="body">
     <br>
-<p>Example: <code>female</code></p>
+<p>Example: <code>male</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>male</code></li> <li><code>female</code></li></ul>
         </div>
@@ -2606,14 +2606,13 @@ Must be one of:
         </div>
         </form>
 
-                <h1 id="endpoints">Endpoints</h1>
+                <h1 id="wilayah">Wilayah</h1>
 
     
 
-                                <h2 id="endpoints-GETapi-countries">GET api/countries</h2>
+                                <h2 id="wilayah-GETapi-countries">GET api/countries</h2>
 
 <p>
-<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -2624,8 +2623,7 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:1234/api/countries" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --get "http://localhost:1234/api/countries?page=16" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -2635,8 +2633,13 @@ Must be one of:
     "http://localhost:1234/api/countries"
 );
 
+const params = {
+    "page": "16",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
 const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -2651,19 +2654,126 @@ fetch(url, {
 
 <span id="example-responses-GETapi-countries">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200, Sukses mendapatkan data negara):</p>
         </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
+                <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data retrieved successfully&quot;,
+    &quot;code&quot;: 200,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;Aruba&quot;,
+            &quot;code&quot;: &quot;AW&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;name&quot;: &quot;Afghanistan&quot;,
+            &quot;code&quot;: &quot;AF&quot;
+        }
+    ],
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 25,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/countries?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;page&quot;: 1,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/countries?page=2&quot;,
+                &quot;label&quot;: &quot;2&quot;,
+                &quot;page&quot;: 2,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/countries?page=3&quot;,
+                &quot;label&quot;: &quot;3&quot;,
+                &quot;page&quot;: 3,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/countries?page=4&quot;,
+                &quot;label&quot;: &quot;4&quot;,
+                &quot;page&quot;: 4,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/countries?page=5&quot;,
+                &quot;label&quot;: &quot;5&quot;,
+                &quot;page&quot;: 5,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/countries?page=6&quot;,
+                &quot;label&quot;: &quot;6&quot;,
+                &quot;page&quot;: 6,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/countries?page=7&quot;,
+                &quot;label&quot;: &quot;7&quot;,
+                &quot;page&quot;: 7,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/countries?page=8&quot;,
+                &quot;label&quot;: &quot;8&quot;,
+                &quot;page&quot;: 8,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/countries?page=9&quot;,
+                &quot;label&quot;: &quot;9&quot;,
+                &quot;page&quot;: 9,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/countries?page=10&quot;,
+                &quot;label&quot;: &quot;10&quot;,
+                &quot;page&quot;: 10,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;...&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/countries?page=24&quot;,
+                &quot;label&quot;: &quot;24&quot;,
+                &quot;page&quot;: 24,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/countries?page=25&quot;,
+                &quot;label&quot;: &quot;25&quot;,
+                &quot;page&quot;: 25,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/countries?page=2&quot;,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;page&quot;: 2,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://127.0.0.1:1234/api/countries&quot;,
+        &quot;per_page&quot;: 10,
+        &quot;to&quot;: 10,
+        &quot;total&quot;: 250
+    }
 }</code>
  </pre>
     </span>
@@ -2684,7 +2794,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-countries" data-method="GET"
       data-path="api/countries"
-      data-authed="1"
+      data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -2715,18 +2825,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="GETapi-countries"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -2750,12 +2848,24 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                            <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="page"                data-endpoint="GETapi-countries"
+               value="16"
+               data-component="query">
+    <br>
+<p>Nomor Halaman, required: false, Default: 1 Example: <code>16</code></p>
+            </div>
+                </form>
 
-                    <h2 id="endpoints-GETapi-provinces">GET api/provinces</h2>
+                    <h2 id="wilayah-GETapi-provinces">GET api/provinces</h2>
 
 <p>
-<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -2766,8 +2876,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:1234/api/provinces" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --get "http://localhost:1234/api/provinces?page=16" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -2777,8 +2886,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
     "http://localhost:1234/api/provinces"
 );
 
+const params = {
+    "page": "16",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
 const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -2793,18 +2907,14 @@ fetch(url, {
 
 <span id="example-responses-GETapi-provinces">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (200, Sukses mendapatkan data provinsi):</p>
         </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
+                <pre>
 
 <code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data retrieved successfully&quot;,
+    &quot;code&quot;: 200,
     &quot;data&quot;: [
         {
             &quot;id&quot;: &quot;1&quot;,
@@ -2815,54 +2925,8 @@ access-control-allow-origin: *
             &quot;id&quot;: &quot;2&quot;,
             &quot;code&quot;: &quot;12&quot;,
             &quot;name&quot;: &quot;SUMATERA UTARA&quot;
-        },
-        {
-            &quot;id&quot;: &quot;3&quot;,
-            &quot;code&quot;: &quot;13&quot;,
-            &quot;name&quot;: &quot;SUMATERA BARAT&quot;
-        },
-        {
-            &quot;id&quot;: &quot;4&quot;,
-            &quot;code&quot;: &quot;14&quot;,
-            &quot;name&quot;: &quot;RIAU&quot;
-        },
-        {
-            &quot;id&quot;: &quot;5&quot;,
-            &quot;code&quot;: &quot;15&quot;,
-            &quot;name&quot;: &quot;JAMBI&quot;
-        },
-        {
-            &quot;id&quot;: &quot;6&quot;,
-            &quot;code&quot;: &quot;16&quot;,
-            &quot;name&quot;: &quot;SUMATERA SELATAN&quot;
-        },
-        {
-            &quot;id&quot;: &quot;7&quot;,
-            &quot;code&quot;: &quot;17&quot;,
-            &quot;name&quot;: &quot;BENGKULU&quot;
-        },
-        {
-            &quot;id&quot;: &quot;8&quot;,
-            &quot;code&quot;: &quot;18&quot;,
-            &quot;name&quot;: &quot;LAMPUNG&quot;
-        },
-        {
-            &quot;id&quot;: &quot;9&quot;,
-            &quot;code&quot;: &quot;19&quot;,
-            &quot;name&quot;: &quot;KEPULAUAN BANGKA BELITUNG&quot;
-        },
-        {
-            &quot;id&quot;: &quot;10&quot;,
-            &quot;code&quot;: &quot;21&quot;,
-            &quot;name&quot;: &quot;KEPULAUAN RIAU&quot;
         }
     ],
-    &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost:1234/api/provinces?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:1234/api/provinces?page=4&quot;,
-        &quot;prev&quot;: null,
-        &quot;next&quot;: &quot;http://localhost:1234/api/provinces?page=2&quot;
-    },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
         &quot;from&quot;: 1,
@@ -2875,37 +2939,37 @@ access-control-allow-origin: *
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:1234/api/provinces?page=1&quot;,
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/provinces?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;page&quot;: 1,
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: &quot;http://localhost:1234/api/provinces?page=2&quot;,
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/provinces?page=2&quot;,
                 &quot;label&quot;: &quot;2&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:1234/api/provinces?page=3&quot;,
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/provinces?page=3&quot;,
                 &quot;label&quot;: &quot;3&quot;,
                 &quot;page&quot;: 3,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:1234/api/provinces?page=4&quot;,
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/provinces?page=4&quot;,
                 &quot;label&quot;: &quot;4&quot;,
                 &quot;page&quot;: 4,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:1234/api/provinces?page=2&quot;,
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/provinces?page=2&quot;,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost:1234/api/provinces&quot;,
+        &quot;path&quot;: &quot;http://127.0.0.1:1234/api/provinces&quot;,
         &quot;per_page&quot;: 10,
         &quot;to&quot;: 10,
         &quot;total&quot;: 38
@@ -2930,7 +2994,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-provinces" data-method="GET"
       data-path="api/provinces"
-      data-authed="1"
+      data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -2961,18 +3025,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="GETapi-provinces"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -2996,12 +3048,24 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                            <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="page"                data-endpoint="GETapi-provinces"
+               value="16"
+               data-component="query">
+    <br>
+<p>Nomor Halaman, required: false, Default: 1 Example: <code>16</code></p>
+            </div>
+                </form>
 
-                    <h2 id="endpoints-GETapi-cities">GET api/cities</h2>
+                    <h2 id="wilayah-GETapi-cities">GET api/cities</h2>
 
 <p>
-<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -3012,8 +3076,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:1234/api/cities" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --get "http://localhost:1234/api/cities?page=16" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -3023,8 +3086,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
     "http://localhost:1234/api/cities"
 );
 
+const params = {
+    "page": "16",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
 const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -3039,76 +3107,36 @@ fetch(url, {
 
 <span id="example-responses-GETapi-cities">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (200, Sukses mendapatkan data kota):</p>
         </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
+                <pre>
 
 <code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data retrieved successfully&quot;,
+    &quot;code&quot;: 200,
     &quot;data&quot;: [
         {
             &quot;id&quot;: &quot;1&quot;,
             &quot;code&quot;: &quot;1101&quot;,
-            &quot;name&quot;: &quot;KABUPATEN ACEH SELATAN&quot;
+            &quot;name&quot;: &quot;KABUPATEN ACEH SELATAN&quot;,
+            &quot;province_code&quot;: {
+                &quot;id&quot;: &quot;1&quot;,
+                &quot;code&quot;: &quot;11&quot;,
+                &quot;name&quot;: &quot;ACEH&quot;
+            }
         },
         {
             &quot;id&quot;: &quot;2&quot;,
             &quot;code&quot;: &quot;1102&quot;,
-            &quot;name&quot;: &quot;KABUPATEN ACEH TENGGARA&quot;
-        },
-        {
-            &quot;id&quot;: &quot;3&quot;,
-            &quot;code&quot;: &quot;1103&quot;,
-            &quot;name&quot;: &quot;KABUPATEN ACEH TIMUR&quot;
-        },
-        {
-            &quot;id&quot;: &quot;4&quot;,
-            &quot;code&quot;: &quot;1104&quot;,
-            &quot;name&quot;: &quot;KABUPATEN ACEH TENGAH&quot;
-        },
-        {
-            &quot;id&quot;: &quot;5&quot;,
-            &quot;code&quot;: &quot;1105&quot;,
-            &quot;name&quot;: &quot;KABUPATEN ACEH BARAT&quot;
-        },
-        {
-            &quot;id&quot;: &quot;6&quot;,
-            &quot;code&quot;: &quot;1106&quot;,
-            &quot;name&quot;: &quot;KABUPATEN ACEH BESAR&quot;
-        },
-        {
-            &quot;id&quot;: &quot;7&quot;,
-            &quot;code&quot;: &quot;1107&quot;,
-            &quot;name&quot;: &quot;KABUPATEN PIDIE&quot;
-        },
-        {
-            &quot;id&quot;: &quot;8&quot;,
-            &quot;code&quot;: &quot;1108&quot;,
-            &quot;name&quot;: &quot;KABUPATEN ACEH UTARA&quot;
-        },
-        {
-            &quot;id&quot;: &quot;9&quot;,
-            &quot;code&quot;: &quot;1109&quot;,
-            &quot;name&quot;: &quot;KABUPATEN SIMEULUE&quot;
-        },
-        {
-            &quot;id&quot;: &quot;10&quot;,
-            &quot;code&quot;: &quot;1110&quot;,
-            &quot;name&quot;: &quot;KABUPATEN ACEH SINGKIL&quot;
+            &quot;name&quot;: &quot;KABUPATEN ACEH TENGGARA&quot;,
+            &quot;province_code&quot;: {
+                &quot;id&quot;: &quot;1&quot;,
+                &quot;code&quot;: &quot;11&quot;,
+                &quot;name&quot;: &quot;ACEH&quot;
+            }
         }
     ],
-    &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost:1234/api/cities?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:1234/api/cities?page=52&quot;,
-        &quot;prev&quot;: null,
-        &quot;next&quot;: &quot;http://localhost:1234/api/cities?page=2&quot;
-    },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
         &quot;from&quot;: 1,
@@ -3229,7 +3257,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-cities" data-method="GET"
       data-path="api/cities"
-      data-authed="1"
+      data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -3260,18 +3288,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="GETapi-cities"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -3295,12 +3311,24 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                            <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="page"                data-endpoint="GETapi-cities"
+               value="16"
+               data-component="query">
+    <br>
+<p>Nomor Halaman, required: false, Default: 1 Example: <code>16</code></p>
+            </div>
+                </form>
 
-                    <h2 id="endpoints-GETapi-cities--provinceCode-">GET api/cities/{provinceCode}</h2>
+                    <h2 id="wilayah-GETapi-cities--provinceCode-">GET api/cities/{provinceCode}</h2>
 
 <p>
-<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -3311,19 +3339,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:1234/api/cities/architecto" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --get "http://localhost:1234/api/cities/63" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/cities/architecto"
+    "http://localhost:1234/api/cities/63"
 );
 
 const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -3338,19 +3364,136 @@ fetch(url, {
 
 <span id="example-responses-GETapi-cities--provinceCode-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (200, Sukses mendapatkan data kota):</p>
         </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
+                <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: []
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data retrieved successfully&quot;,
+    &quot;code&quot;: 200,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;1&quot;,
+            &quot;code&quot;: &quot;1101&quot;,
+            &quot;name&quot;: &quot;KABUPATEN ACEH SELATAN&quot;,
+            &quot;province_code&quot;: {
+                &quot;id&quot;: &quot;1&quot;,
+                &quot;code&quot;: &quot;11&quot;,
+                &quot;name&quot;: &quot;ACEH&quot;
+            }
+        },
+        {
+            &quot;id&quot;: &quot;2&quot;,
+            &quot;code&quot;: &quot;1102&quot;,
+            &quot;name&quot;: &quot;KABUPATEN ACEH TENGGARA&quot;,
+            &quot;province_code&quot;: {
+                &quot;id&quot;: &quot;1&quot;,
+                &quot;code&quot;: &quot;11&quot;,
+                &quot;name&quot;: &quot;ACEH&quot;
+            }
+        }
+    ],
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 52,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/cities?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;page&quot;: 1,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/cities?page=2&quot;,
+                &quot;label&quot;: &quot;2&quot;,
+                &quot;page&quot;: 2,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/cities?page=3&quot;,
+                &quot;label&quot;: &quot;3&quot;,
+                &quot;page&quot;: 3,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/cities?page=4&quot;,
+                &quot;label&quot;: &quot;4&quot;,
+                &quot;page&quot;: 4,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/cities?page=5&quot;,
+                &quot;label&quot;: &quot;5&quot;,
+                &quot;page&quot;: 5,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/cities?page=6&quot;,
+                &quot;label&quot;: &quot;6&quot;,
+                &quot;page&quot;: 6,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/cities?page=7&quot;,
+                &quot;label&quot;: &quot;7&quot;,
+                &quot;page&quot;: 7,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/cities?page=8&quot;,
+                &quot;label&quot;: &quot;8&quot;,
+                &quot;page&quot;: 8,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/cities?page=9&quot;,
+                &quot;label&quot;: &quot;9&quot;,
+                &quot;page&quot;: 9,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/cities?page=10&quot;,
+                &quot;label&quot;: &quot;10&quot;,
+                &quot;page&quot;: 10,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;...&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/cities?page=51&quot;,
+                &quot;label&quot;: &quot;51&quot;,
+                &quot;page&quot;: 51,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/cities?page=52&quot;,
+                &quot;label&quot;: &quot;52&quot;,
+                &quot;page&quot;: 52,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/cities?page=2&quot;,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;page&quot;: 2,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://localhost:1234/api/cities&quot;,
+        &quot;per_page&quot;: 10,
+        &quot;to&quot;: 10,
+        &quot;total&quot;: 514
+    }
 }</code>
  </pre>
     </span>
@@ -3371,7 +3514,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-cities--provinceCode-" data-method="GET"
       data-path="api/cities/{provinceCode}"
-      data-authed="1"
+      data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -3401,18 +3544,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/cities/{provinceCode}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="GETapi-cities--provinceCode-"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -3445,17 +3576,16 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="provinceCode"                data-endpoint="GETapi-cities--provinceCode-"
-               value="architecto"
+               value="63"
                data-component="url">
     <br>
-<p>Example: <code>architecto</code></p>
+<p>Kode Provinsi Example: <code>63</code></p>
             </div>
                     </form>
 
-                    <h2 id="endpoints-GETapi-districts">GET api/districts</h2>
+                    <h2 id="wilayah-GETapi-districts">GET api/districts</h2>
 
 <p>
-<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -3466,8 +3596,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:1234/api/districts" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --get "http://localhost:1234/api/districts?page=16" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -3477,8 +3606,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
     "http://localhost:1234/api/districts"
 );
 
+const params = {
+    "page": "16",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
 const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -3493,86 +3627,36 @@ fetch(url, {
 
 <span id="example-responses-GETapi-districts">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (200, Sukses mendapatkan data kecamatan):</p>
         </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
+                <pre>
 
 <code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data retrieved successfully&quot;,
+    &quot;code&quot;: 200,
     &quot;data&quot;: [
         {
             &quot;id&quot;: &quot;1&quot;,
             &quot;code&quot;: &quot;110101&quot;,
-            &quot;city_code&quot;: null,
-            &quot;name&quot;: &quot;BAKONGAN&quot;
+            &quot;name&quot;: &quot;BAKONGAN&quot;,
+            &quot;city_code&quot;: {
+                &quot;id&quot;: &quot;1&quot;,
+                &quot;code&quot;: &quot;1101&quot;,
+                &quot;name&quot;: &quot;KABUPATEN ACEH SELATAN&quot;
+            }
         },
         {
             &quot;id&quot;: &quot;2&quot;,
             &quot;code&quot;: &quot;110102&quot;,
-            &quot;city_code&quot;: null,
-            &quot;name&quot;: &quot;KLUET UTARA&quot;
-        },
-        {
-            &quot;id&quot;: &quot;3&quot;,
-            &quot;code&quot;: &quot;110103&quot;,
-            &quot;city_code&quot;: null,
-            &quot;name&quot;: &quot;KLUET SELATAN&quot;
-        },
-        {
-            &quot;id&quot;: &quot;4&quot;,
-            &quot;code&quot;: &quot;110104&quot;,
-            &quot;city_code&quot;: null,
-            &quot;name&quot;: &quot;LABUHANHAJI&quot;
-        },
-        {
-            &quot;id&quot;: &quot;5&quot;,
-            &quot;code&quot;: &quot;110105&quot;,
-            &quot;city_code&quot;: null,
-            &quot;name&quot;: &quot;MEUKEK&quot;
-        },
-        {
-            &quot;id&quot;: &quot;6&quot;,
-            &quot;code&quot;: &quot;110106&quot;,
-            &quot;city_code&quot;: null,
-            &quot;name&quot;: &quot;SAMADUA&quot;
-        },
-        {
-            &quot;id&quot;: &quot;7&quot;,
-            &quot;code&quot;: &quot;110107&quot;,
-            &quot;city_code&quot;: null,
-            &quot;name&quot;: &quot;SAWANG&quot;
-        },
-        {
-            &quot;id&quot;: &quot;8&quot;,
-            &quot;code&quot;: &quot;110108&quot;,
-            &quot;city_code&quot;: null,
-            &quot;name&quot;: &quot;TAPAKTUAN&quot;
-        },
-        {
-            &quot;id&quot;: &quot;9&quot;,
-            &quot;code&quot;: &quot;110109&quot;,
-            &quot;city_code&quot;: null,
-            &quot;name&quot;: &quot;TRUMON&quot;
-        },
-        {
-            &quot;id&quot;: &quot;10&quot;,
-            &quot;code&quot;: &quot;110110&quot;,
-            &quot;city_code&quot;: null,
-            &quot;name&quot;: &quot;PASIE RAJA&quot;
+            &quot;name&quot;: &quot;KLUET UTARA&quot;,
+            &quot;city_code&quot;: {
+                &quot;id&quot;: &quot;1&quot;,
+                &quot;code&quot;: &quot;1101&quot;,
+                &quot;name&quot;: &quot;KABUPATEN ACEH SELATAN&quot;
+            }
         }
     ],
-    &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost:1234/api/districts?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:1234/api/districts?page=729&quot;,
-        &quot;prev&quot;: null,
-        &quot;next&quot;: &quot;http://localhost:1234/api/districts?page=2&quot;
-    },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
         &quot;from&quot;: 1,
@@ -3693,7 +3777,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-districts" data-method="GET"
       data-path="api/districts"
-      data-authed="1"
+      data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -3724,18 +3808,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="GETapi-districts"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -3759,9 +3831,22 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                            <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="page"                data-endpoint="GETapi-districts"
+               value="16"
+               data-component="query">
+    <br>
+<p>Nomor Halaman, required: false, Default: 1 Example: <code>16</code></p>
+            </div>
+                </form>
 
-                    <h2 id="endpoints-GETapi-districts--cityCode-">GET api/districts/{cityCode}</h2>
+                    <h2 id="wilayah-GETapi-districts--cityCode-">GET api/districts/{cityCode}</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -3775,7 +3860,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:1234/api/districts/architecto" \
+    --get "http://localhost:1234/api/districts/6301" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3783,7 +3868,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/districts/architecto"
+    "http://localhost:1234/api/districts/6301"
 );
 
 const headers = {
@@ -3802,19 +3887,136 @@ fetch(url, {
 
 <span id="example-responses-GETapi-districts--cityCode-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (200, Sukses mendapatkan data kecamatan):</p>
         </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
+                <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: []
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data retrieved successfully&quot;,
+    &quot;code&quot;: 200,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;1&quot;,
+            &quot;code&quot;: &quot;110101&quot;,
+            &quot;name&quot;: &quot;BAKONGAN&quot;,
+            &quot;city_code&quot;: {
+                &quot;id&quot;: &quot;1&quot;,
+                &quot;code&quot;: &quot;1101&quot;,
+                &quot;name&quot;: &quot;KABUPATEN ACEH SELATAN&quot;
+            }
+        },
+        {
+            &quot;id&quot;: &quot;2&quot;,
+            &quot;code&quot;: &quot;110102&quot;,
+            &quot;name&quot;: &quot;KLUET UTARA&quot;,
+            &quot;city_code&quot;: {
+                &quot;id&quot;: &quot;1&quot;,
+                &quot;code&quot;: &quot;1101&quot;,
+                &quot;name&quot;: &quot;KABUPATEN ACEH SELATAN&quot;
+            }
+        }
+    ],
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 729,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/districts?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;page&quot;: 1,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/districts?page=2&quot;,
+                &quot;label&quot;: &quot;2&quot;,
+                &quot;page&quot;: 2,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/districts?page=3&quot;,
+                &quot;label&quot;: &quot;3&quot;,
+                &quot;page&quot;: 3,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/districts?page=4&quot;,
+                &quot;label&quot;: &quot;4&quot;,
+                &quot;page&quot;: 4,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/districts?page=5&quot;,
+                &quot;label&quot;: &quot;5&quot;,
+                &quot;page&quot;: 5,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/districts?page=6&quot;,
+                &quot;label&quot;: &quot;6&quot;,
+                &quot;page&quot;: 6,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/districts?page=7&quot;,
+                &quot;label&quot;: &quot;7&quot;,
+                &quot;page&quot;: 7,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/districts?page=8&quot;,
+                &quot;label&quot;: &quot;8&quot;,
+                &quot;page&quot;: 8,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/districts?page=9&quot;,
+                &quot;label&quot;: &quot;9&quot;,
+                &quot;page&quot;: 9,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/districts?page=10&quot;,
+                &quot;label&quot;: &quot;10&quot;,
+                &quot;page&quot;: 10,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;...&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/districts?page=728&quot;,
+                &quot;label&quot;: &quot;728&quot;,
+                &quot;page&quot;: 728,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/districts?page=729&quot;,
+                &quot;label&quot;: &quot;729&quot;,
+                &quot;page&quot;: 729,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/districts?page=2&quot;,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;page&quot;: 2,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://localhost:1234/api/districts&quot;,
+        &quot;per_page&quot;: 10,
+        &quot;to&quot;: 10,
+        &quot;total&quot;: 7285
+    }
 }</code>
  </pre>
     </span>
@@ -3909,17 +4111,16 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="cityCode"                data-endpoint="GETapi-districts--cityCode-"
-               value="architecto"
+               value="6301"
                data-component="url">
     <br>
-<p>Example: <code>architecto</code></p>
+<p>Kode Kota Example: <code>6301</code></p>
             </div>
                     </form>
 
-                    <h2 id="endpoints-GETapi-villages">GET api/villages</h2>
+                    <h2 id="wilayah-GETapi-villages">GET api/villages</h2>
 
 <p>
-<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -3930,8 +4131,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:1234/api/villages" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --get "http://localhost:1234/api/villages?page=16" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -3941,8 +4141,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
     "http://localhost:1234/api/villages"
 );
 
+const params = {
+    "page": "16",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
 const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -3957,86 +4162,36 @@ fetch(url, {
 
 <span id="example-responses-GETapi-villages">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (200, Sukses mendapatkan data desa/kelurahan):</p>
         </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
+                <pre>
 
 <code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data retrieved successfully&quot;,
+    &quot;code&quot;: 200,
     &quot;data&quot;: [
         {
             &quot;id&quot;: &quot;1&quot;,
             &quot;code&quot;: &quot;1101012001&quot;,
-            &quot;district_code&quot;: null,
-            &quot;name&quot;: &quot;KEUDE BAKONGAN&quot;
+            &quot;name&quot;: &quot;KEUDE BAKONGAN&quot;,
+            &quot;district_code&quot;: {
+                &quot;id&quot;: &quot;1&quot;,
+                &quot;code&quot;: &quot;110101&quot;,
+                &quot;name&quot;: &quot;BAKONGAN&quot;
+            }
         },
         {
             &quot;id&quot;: &quot;2&quot;,
             &quot;code&quot;: &quot;1101012002&quot;,
-            &quot;district_code&quot;: null,
-            &quot;name&quot;: &quot;UJONG MANGKI&quot;
-        },
-        {
-            &quot;id&quot;: &quot;3&quot;,
-            &quot;code&quot;: &quot;1101012003&quot;,
-            &quot;district_code&quot;: null,
-            &quot;name&quot;: &quot;UJONG PADANG&quot;
-        },
-        {
-            &quot;id&quot;: &quot;4&quot;,
-            &quot;code&quot;: &quot;1101012004&quot;,
-            &quot;district_code&quot;: null,
-            &quot;name&quot;: &quot;GAMPONG DRIEN&quot;
-        },
-        {
-            &quot;id&quot;: &quot;5&quot;,
-            &quot;code&quot;: &quot;1101012015&quot;,
-            &quot;district_code&quot;: null,
-            &quot;name&quot;: &quot;DARUL IKHSAN&quot;
-        },
-        {
-            &quot;id&quot;: &quot;6&quot;,
-            &quot;code&quot;: &quot;1101012016&quot;,
-            &quot;district_code&quot;: null,
-            &quot;name&quot;: &quot;PADANG BEURAHAN&quot;
-        },
-        {
-            &quot;id&quot;: &quot;7&quot;,
-            &quot;code&quot;: &quot;1101012017&quot;,
-            &quot;district_code&quot;: null,
-            &quot;name&quot;: &quot;GAMPONG BARO&quot;
-        },
-        {
-            &quot;id&quot;: &quot;8&quot;,
-            &quot;code&quot;: &quot;1101022001&quot;,
-            &quot;district_code&quot;: null,
-            &quot;name&quot;: &quot;FAJAR HARAPAN&quot;
-        },
-        {
-            &quot;id&quot;: &quot;9&quot;,
-            &quot;code&quot;: &quot;1101022002&quot;,
-            &quot;district_code&quot;: null,
-            &quot;name&quot;: &quot;KRUENG BATEE&quot;
-        },
-        {
-            &quot;id&quot;: &quot;10&quot;,
-            &quot;code&quot;: &quot;1101022003&quot;,
-            &quot;district_code&quot;: null,
-            &quot;name&quot;: &quot;PASI KUALA ASAHAN&quot;
+            &quot;name&quot;: &quot;UJONG MANGKI&quot;,
+            &quot;district_code&quot;: {
+                &quot;id&quot;: &quot;1&quot;,
+                &quot;code&quot;: &quot;110101&quot;,
+                &quot;name&quot;: &quot;BAKONGAN&quot;
+            }
         }
     ],
-    &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost:1234/api/villages?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:1234/api/villages?page=8377&quot;,
-        &quot;prev&quot;: null,
-        &quot;next&quot;: &quot;http://localhost:1234/api/villages?page=2&quot;
-    },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
         &quot;from&quot;: 1,
@@ -4157,7 +4312,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-villages" data-method="GET"
       data-path="api/villages"
-      data-authed="1"
+      data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -4188,18 +4343,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="GETapi-villages"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -4223,9 +4366,22 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                            <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="page"                data-endpoint="GETapi-villages"
+               value="16"
+               data-component="query">
+    <br>
+<p>Nomor Halaman, required: false, Default: 1 Example: <code>16</code></p>
+            </div>
+                </form>
 
-                    <h2 id="endpoints-GETapi-villages--districtCode-">GET api/villages/{districtCode}</h2>
+                    <h2 id="wilayah-GETapi-villages--districtCode-">GET api/villages/{districtCode}</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -4239,7 +4395,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:1234/api/villages/architecto" \
+    --get "http://localhost:1234/api/villages/630101" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -4247,7 +4403,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/villages/architecto"
+    "http://localhost:1234/api/villages/630101"
 );
 
 const headers = {
@@ -4266,19 +4422,136 @@ fetch(url, {
 
 <span id="example-responses-GETapi-villages--districtCode-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (200, Sukses mendapatkan data desa/kelurahan):</p>
         </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
+                <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: []
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data retrieved successfully&quot;,
+    &quot;code&quot;: 200,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;1&quot;,
+            &quot;code&quot;: &quot;1101012001&quot;,
+            &quot;name&quot;: &quot;KEUDE BAKONGAN&quot;,
+            &quot;district_code&quot;: {
+                &quot;id&quot;: &quot;1&quot;,
+                &quot;code&quot;: &quot;110101&quot;,
+                &quot;name&quot;: &quot;BAKONGAN&quot;
+            }
+        },
+        {
+            &quot;id&quot;: &quot;2&quot;,
+            &quot;code&quot;: &quot;1101012002&quot;,
+            &quot;name&quot;: &quot;UJONG MANGKI&quot;,
+            &quot;district_code&quot;: {
+                &quot;id&quot;: &quot;1&quot;,
+                &quot;code&quot;: &quot;110101&quot;,
+                &quot;name&quot;: &quot;BAKONGAN&quot;
+            }
+        }
+    ],
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 8377,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/villages?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;page&quot;: 1,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/villages?page=2&quot;,
+                &quot;label&quot;: &quot;2&quot;,
+                &quot;page&quot;: 2,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/villages?page=3&quot;,
+                &quot;label&quot;: &quot;3&quot;,
+                &quot;page&quot;: 3,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/villages?page=4&quot;,
+                &quot;label&quot;: &quot;4&quot;,
+                &quot;page&quot;: 4,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/villages?page=5&quot;,
+                &quot;label&quot;: &quot;5&quot;,
+                &quot;page&quot;: 5,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/villages?page=6&quot;,
+                &quot;label&quot;: &quot;6&quot;,
+                &quot;page&quot;: 6,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/villages?page=7&quot;,
+                &quot;label&quot;: &quot;7&quot;,
+                &quot;page&quot;: 7,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/villages?page=8&quot;,
+                &quot;label&quot;: &quot;8&quot;,
+                &quot;page&quot;: 8,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/villages?page=9&quot;,
+                &quot;label&quot;: &quot;9&quot;,
+                &quot;page&quot;: 9,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/villages?page=10&quot;,
+                &quot;label&quot;: &quot;10&quot;,
+                &quot;page&quot;: 10,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;...&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/villages?page=8376&quot;,
+                &quot;label&quot;: &quot;8376&quot;,
+                &quot;page&quot;: 8376,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/villages?page=8377&quot;,
+                &quot;label&quot;: &quot;8377&quot;,
+                &quot;page&quot;: 8377,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:1234/api/villages?page=2&quot;,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;page&quot;: 2,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://localhost:1234/api/villages&quot;,
+        &quot;per_page&quot;: 10,
+        &quot;to&quot;: 10,
+        &quot;total&quot;: 83762
+    }
 }</code>
  </pre>
     </span>
@@ -4373,10 +4646,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="districtCode"                data-endpoint="GETapi-villages--districtCode-"
-               value="architecto"
+               value="630101"
                data-component="url">
     <br>
-<p>Example: <code>architecto</code></p>
+<p>Kode Kecamatan Example: <code>630101</code></p>
             </div>
                     </form>
 

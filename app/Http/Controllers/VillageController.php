@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\VillageResource;
+use App\Http\Resources\VillageCollection;
 use App\Services\VillageService;
-use App\Traits\ApiResponse;
-use Exception;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\QueryParam;
+use Knuckles\Scribe\Attributes\ResponseFromFile;
+use Knuckles\Scribe\Attributes\UrlParam;
 
+/**
+ * Endpoint untuk wilayah.
+ *
+ * @group Wilayah
+ */
 class VillageController extends Controller
 {
     public function __construct(
@@ -16,16 +20,31 @@ class VillageController extends Controller
     ) {
     }
 
+    /**
+     * @unauthenticated
+     */
+    #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
+    #[ResponseFromFile(file: 'responses/region/success_get_village.json', status: 200, description: 'Sukses mendapatkan data desa/kelurahan')]
     public function index()
     {
-            return VillageResource::collection($this->service->getAllVillage());
-
+        $villageCollection = new VillageCollection($this->service->getAllVillage());
+        return $villageCollection->additional([
+            'success' => true,
+            'message' => "Data retrieved successfully",
+            'code' => 200,
+        ]);
 
     }
 
+    #[UrlParam("districtCode", "string", "Kode Kecamatan", example: "630101")]
+    #[ResponseFromFile(file: 'responses/region/success_get_village.json', status: 200, description: 'Sukses mendapatkan data desa/kelurahan')]
     public function showByDistrict(string $districtCode)
-    {        
-            return VillageResource::collection($this->service->getVillageByDistrict($districtCode));
-
+    {
+        $villageCollection = new VillageCollection($this->service->getVillageByDistrict($districtCode));
+        return $villageCollection->additional([
+            'success' => true,
+            'message' => "Data retrieved successfully",
+            'code' => 200,
+        ]);
     }
 }

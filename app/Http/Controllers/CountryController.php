@@ -2,13 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\CountryResource;
+use App\Http\Resources\CountryCollection;
 use App\Services\CountryService;
 use App\Traits\ApiResponse;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\QueryParam;
+use Knuckles\Scribe\Attributes\ResponseFromFile;
 
+/**
+ * Endpoint untuk wilayah.
+ *
+ * @group Wilayah
+ */
 class CountryController extends Controller
 {
     public function __construct(
@@ -16,9 +23,19 @@ class CountryController extends Controller
     ) {
     }
 
+    /**
+     * @unauthenticated
+     */
+    #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
+    #[ResponseFromFile(file: 'responses/region/success_get_country.json', status: 200, description: 'Sukses mendapatkan data negara')]
     public function index()
     {
-            return CountryResource::collection($this->service->getAllCountry());
+        $countryCollection = new CountryCollection($this->service->getAllCountry());
+        return $countryCollection->additional([
+            'success' => true,
+            'message' => "Data retrieved successfully",
+            'code' => 200,
+        ]);
 
     }
 }

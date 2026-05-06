@@ -17,8 +17,22 @@ class DistrictResource extends JsonResource
         return [
             'id' => $this->id,
             'code' => $this->code,
-            'city_code' => $this->city_code,
             'name' => $this->name,
+            'city_code' => new CityResource($this->whenLoaded('city')),
         ];
+    }
+
+    public function withResponse(Request $request, $response): void
+    {
+        $originalData = $response->getData(true);
+        $response->setData([
+            'success' => $originalData['success'] ?? true,
+            'message' => $originalData['message'] ?? "Data retrieved successfully",
+            'code' => $originalData['code'] ?? 200,
+
+            'data' => $originalData['data'] ?? [],
+        ]);
+
+        $response->setStatusCode($originalData['code'] ?? 200);
     }
 }

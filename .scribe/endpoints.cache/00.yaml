@@ -829,7 +829,7 @@ endpoints:
         name: gender
         description: ''
         required: false
-        example: female
+        example: male
         type: string
         enumValues:
           - male
@@ -911,7 +911,7 @@ endpoints:
       address: p
       birth_place: s
       birth_date: '2026-05-06'
-      gender: female
+      gender: male
       phone_number: c
       village_code: qldzsnrwtu
       district_code: jwvlxj

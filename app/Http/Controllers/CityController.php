@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\CityResource;
+use App\Http\Resources\CityCollection;
 use App\Services\CityService;
-use App\Traits\ApiResponse;
-use Exception;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
-use Laravolt\Indonesia\Models\City;
-use Laravolt\Indonesia\Models\Province;
+use Knuckles\Scribe\Attributes\QueryParam;
+use Knuckles\Scribe\Attributes\ResponseFromFile;
+use Knuckles\Scribe\Attributes\UrlParam;
 
+/**
+ * Endpoint untuk wilayah.
+ *
+ * @group Wilayah
+ */
 class CityController extends Controller
 {
 
@@ -19,15 +21,35 @@ class CityController extends Controller
     ) {
     }
 
+    /**
+     * @unauthenticated
+     */
+    #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
+    #[ResponseFromFile(file: 'responses/region/success_get_city.json', status: 200, description: 'Sukses mendapatkan data kota')]
     public function index()
     {
-        return CityResource::collection($this->service->getAllCity());
-
+        $cityCollection = new CityCollection($this->service->getAllCity());
+        return $cityCollection->additional([
+            'success' => true,
+            'message' => "Data retrieved successfully",
+            'code' => 200,
+        ]);
     }
 
+
+     /**
+     * @unauthenticated
+     */
+    #[UrlParam("provinceCode", "string", "Kode Provinsi", example: "63")]
+    #[ResponseFromFile(file: 'responses/region/success_get_city.json', status: 200, description: 'Sukses mendapatkan data kota')]
     public function showByProvince(string $provinceCode)
     {        
 
-        return CityResource::collection($this->service->getCityByProvince($provinceCode));
+        $cityCollection = new CityCollection($this->service->getCityByProvince($provinceCode));
+        return $cityCollection->additional([
+            'success' => true,
+            'message' => "Data retrieved successfully",
+            'code' => 200,
+        ]);
     }
 }

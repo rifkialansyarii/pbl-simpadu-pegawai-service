@@ -9,24 +9,27 @@ class VillageRepository implements VillageRepositoryInterface
 {
     public function getAll()
     {
-        $Village = Village::select([
+        $village = Village::select([
             'id',
             'name',
             'code',
+            'district_code',
         ])->paginate(10);
 
-        return $Village;
+        $village->load('district');
+        return $village;
     }
 
     public function getByParent(string $districtCode)
-    {          
+    {         
         $village = Village::select([
             'id',
             'code',
             'name',
             'district_code'
         ])->where('district_code', $districtCode)->paginate(10);
-
-        return $village->load('district');
+        
+        $village->load('district');
+        return $village;
     }
 }

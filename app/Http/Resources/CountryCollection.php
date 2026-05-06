@@ -3,33 +3,32 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class CountryResource extends JsonResource
+class CountryCollection extends ResourceCollection
 {
+    public $collects = CountryResource::class;
     /**
-     * Transform the resource into an array.
+     * Transform the resource collection into an array.
      *
-     * @return array<string, mixed>
+     * @return array<int|string, mixed>
      */
     public function toArray(Request $request): array
     {
-        return [
-            "id" => $this->id,
-            "name" => $this->name,
-            "code" => $this->code,
-        ];
+        return parent::toArray($request);
     }
 
     public function withResponse(Request $request, $response): void
     {
         $originalData = $response->getData(true);
+
         $response->setData([
             'success' => $originalData['success'] ?? true,
             'message' => $originalData['message'] ?? "Data retrieved successfully",
             'code' => $originalData['code'] ?? 200,
 
             'data' => $originalData['data'] ?? [],
+            'meta' => $originalData['meta'] ?? [],
         ]);
 
         $response->setStatusCode($originalData['code'] ?? 200);
