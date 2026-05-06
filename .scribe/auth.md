@@ -1,7 +1,10 @@
-# Authenticating requests
+# Melakukan Authentication / Otentikasi
 
-To authenticate requests, include an **`Authorization`** header with the value **`"Bearer {YOUR_AUTH_KEY}"`**.
+Untuk melakukan otentikasi, sertakan header **`Authorization`** dengan nilai **`"Bearer {JWT here}"`** pada HTTP request. 
 
-All authenticated endpoints are marked with a `requires authentication` badge in the documentation below.
+**Noted:**
+Setiap endpoint yang memerlukan otentikasi sudah menyediakan sebuah form untuk menyertakan header **`Authorization`** beserta nilai **`"Bearer {JWT here}"`**, posisi form ini berada di sebelah kanan dan pastikan kamu memanfaatkan fitur ini.
 
-Kamu dapat mendapatkan JWT token dengan melakukan login pada service 1 atau craft sendiri JWT Tokennya
+API ini menggunakan JWT, pastikan JWT yang kamu kirimkan valid. 
+
+Kamu dapat mendapatkan JWT dengan melakukan login pada service 1 atau melakukan membuat JWT secara manual menggunakan [jwt.io](https://www.jwt.io/) pada bagian JWT encoder.

@@ -9,7 +9,6 @@ use Knuckles\Scribe\Attributes\ResponseFromFile;
 use Knuckles\Scribe\Attributes\UrlParam;
 
 /**
- * Endpoint untuk wilayah.
  *
  * @group Wilayah
  */

@@ -11,7 +11,21 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rule;
+use Knuckles\Scribe\Attributes\BodyParam;
 
+#[BodyParam("nip", "string", "NIP harus unik dan terdiri dari 18 karakter", example: "691651594659009703", required: false) ]
+#[BodyParam("nik", "string", "NIK harus unik dan terdiri dari 16 karakter", example: "1801160204072477", required: false)]
+#[BodyParam("employee_name", "string", "Nama pegawai", example: "John Doe", required: false)]
+#[BodyParam("address", "string", "Alamat Pegawai", example: "Gg. Casablanca No. 249, Administrasi Jakarta Timur 83230, Sulteng", required: false)]
+#[BodyParam("birth_place", "string", "Tempat lahir", example: "Jakarta", required: false)]
+#[BodyParam("birth_date", "string", "Tanggal lahir", example: "1990-01-01", required: false)]
+#[BodyParam("gender", "string", "Jenis kelamin", example: "laki-laki, perempuan", required: false)]
+#[BodyParam("phone_number", "string", "Nomor telepon harus unik", example: "081234567890", required: false)]
+#[BodyParam("village_code", "string", "Kode desa / kelurahan", example: "1111082017", required: false)]
+#[BodyParam("district_code", "string", "Kode kecamatan", example: "1111082", required: false)]
+#[BodyParam("city_code", "string", "Kode kota", example: "111108", required: false)]
+#[BodyParam("province_code", "string", "Kode provinsi", example: "11", required: false)]
+#[BodyParam("citizen_code", "string", "Kode warga negara", example: "ID", required: false)]
 class UpdateEmployeeRequest extends FormRequest
 {
     /**
@@ -20,13 +34,6 @@ class UpdateEmployeeRequest extends FormRequest
     public function authorize(): bool
     {
         return true;
-    }
-
-    public function prepareForValidation(): void
-    {
-        $this->merge([
-            'header_content_type' => $this->header('Content-Type'),
-        ]);
     }
 
     /**
@@ -38,8 +45,6 @@ class UpdateEmployeeRequest extends FormRequest
     {
 
         return [
-            'header_content_type' => 'required|in:application/json',
-
             'nip' => [
                 'string',
                 'size:18',

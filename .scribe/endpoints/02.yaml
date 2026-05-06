@@ -1,5 +1,7 @@
 name: Wilayah
-description: ''
+description: |-
+
+  Endpoint yang menyediakan data wilayah-wilayah pada indonesia dan seluruh negara dunia.
 endpoints:
   -
     custom: []
@@ -9,7 +11,9 @@ endpoints:
     metadata:
       custom: []
       groupName: Wilayah
-      groupDescription: ''
+      groupDescription: |-
+
+        Endpoint yang menyediakan data wilayah-wilayah pada indonesia dan seluruh negara dunia.
       subgroup: ''
       subgroupDescription: ''
       title: ''
@@ -824,7 +828,7 @@ endpoints:
       authenticated: true
       deprecated: false
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Authorization: 'Bearer {JWT here}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -1180,7 +1184,7 @@ endpoints:
       authenticated: true
       deprecated: false
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Authorization: 'Bearer {JWT here}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:

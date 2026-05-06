@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreChangeRequest;
 use App\Http\Requests\UpdateChangeRequest;
 use App\Http\Resources\ChangeRequestCollection;
 use App\Http\Resources\ChangeRequestResource;
@@ -14,9 +13,9 @@ use Knuckles\Scribe\Attributes\ResponseFromFile;
 use Knuckles\Scribe\Attributes\UrlParam;
 
 /**
- * @group ChangeRequest
+ * @group Verifikasi / Permintaan Perubahan
  * 
- * Endpoint terkait operasi permintaan perubahan data pegawai tertentu SIMPADU.
+ * Endpoint terkait operasi verifikasi / permintaan perubahan data pegawai tertentu SIMPADU.
  */
 class ChangeRequestController extends Controller
 {

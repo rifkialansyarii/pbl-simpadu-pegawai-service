@@ -16,7 +16,6 @@ use Knuckles\Scribe\Attributes\UrlParam;
 class DistrictController extends Controller
 {
     /**
-     * Endpoint untuk wilayah.
      *
      * @group Wilayah
      */

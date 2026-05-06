@@ -9,18 +9,14 @@ use App\Http\Resources\EmployeeCollection;
 use App\Models\Employee;
 use App\Services\ChangeRequestService;
 use App\Services\EmployeeService;
-use App\Traits\ApiResponse;
-use Exception;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\QueryParam;
 use Knuckles\Scribe\Attributes\ResponseFromFile;
 use Knuckles\Scribe\Attributes\UrlParam;
 
 /**
- * @group Employee
  * 
- * Endpoint terkait operasi data pegawai SIMPADU.
+ * @group Pegawai
+ * Endpoint terkait operasi CRUD untuk data pegawai, termasuk penambahan, pembaruan, penghapusan, dan pengambilan data pegawai.
  */
 class EmployeeController extends Controller
 {
@@ -80,7 +76,7 @@ class EmployeeController extends Controller
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     #[ResponseFromFile(file: 'responses/not_found.json', status: 404, description: 'Data tidak ditemukan')]
-    #[UrlParam("employee", "string", "UUID Pegawai", example: "123e4567-e89b-12d3-a456-426614174000")]
+    #[UrlParam("employee_id", "string", "UUID Pegawai", example: "123e4567-e89b-12d3-a456-426614174000")]
     public function update(UpdateEmployeeRequest $request, Employee $employee)
     {
         $employeeResource = new EmployeeResource($this->service->updateEmployee($request, $employee));
@@ -92,7 +88,7 @@ class EmployeeController extends Controller
         return $employeeResource;
     }
 
-    #[ResponseFromFile(file: 'responses/employee/success_delete_employee.json', status: 200, description: 'Sukses menghapus data pegawai')]
+    #[ResponseFromFile(file: 'responses/success_delete.json', status: 200, description: 'Sukses menghapus data pegawai')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     #[ResponseFromFile(file: 'responses/not_found.json', status: 404, description: 'Data tidak ditemukan')]

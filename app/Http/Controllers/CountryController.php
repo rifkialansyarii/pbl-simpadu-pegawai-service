@@ -12,9 +12,11 @@ use Knuckles\Scribe\Attributes\QueryParam;
 use Knuckles\Scribe\Attributes\ResponseFromFile;
 
 /**
- * Endpoint untuk wilayah.
  *
  * @group Wilayah
+ * 
+ * Endpoint yang menyediakan data wilayah-wilayah pada indonesia dan seluruh negara dunia.
+ * 
  */
 class CountryController extends Controller
 {

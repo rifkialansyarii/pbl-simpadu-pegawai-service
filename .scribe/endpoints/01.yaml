@@ -1,7 +1,7 @@
-name: ChangeRequest
+name: 'Verifikasi / Permintaan Perubahan'
 description: |-
 
-  Endpoint terkait operasi permintaan perubahan data pegawai tertentu SIMPADU.
+  Endpoint terkait operasi verifikasi / permintaan perubahan data pegawai tertentu SIMPADU.
 endpoints:
   -
     custom: []
@@ -10,10 +10,10 @@ endpoints:
     uri: api/change-requests
     metadata:
       custom: []
-      groupName: ChangeRequest
+      groupName: 'Verifikasi / Permintaan Perubahan'
       groupDescription: |-
 
-        Endpoint terkait operasi permintaan perubahan data pegawai tertentu SIMPADU.
+        Endpoint terkait operasi verifikasi / permintaan perubahan data pegawai tertentu SIMPADU.
       subgroup: ''
       subgroupDescription: ''
       title: ''
@@ -21,7 +21,7 @@ endpoints:
       authenticated: true
       deprecated: false
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Authorization: 'Bearer {JWT here}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -168,10 +168,10 @@ endpoints:
     uri: api/change-requests/info/newly
     metadata:
       custom: []
-      groupName: ChangeRequest
+      groupName: 'Verifikasi / Permintaan Perubahan'
       groupDescription: |-
 
-        Endpoint terkait operasi permintaan perubahan data pegawai tertentu SIMPADU.
+        Endpoint terkait operasi verifikasi / permintaan perubahan data pegawai tertentu SIMPADU.
       subgroup: ''
       subgroupDescription: ''
       title: ''
@@ -179,7 +179,7 @@ endpoints:
       authenticated: true
       deprecated: false
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Authorization: 'Bearer {JWT here}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -311,10 +311,10 @@ endpoints:
     uri: api/change-requests/info/pending
     metadata:
       custom: []
-      groupName: ChangeRequest
+      groupName: 'Verifikasi / Permintaan Perubahan'
       groupDescription: |-
 
-        Endpoint terkait operasi permintaan perubahan data pegawai tertentu SIMPADU.
+        Endpoint terkait operasi verifikasi / permintaan perubahan data pegawai tertentu SIMPADU.
       subgroup: ''
       subgroupDescription: ''
       title: ''
@@ -322,7 +322,7 @@ endpoints:
       authenticated: true
       deprecated: false
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Authorization: 'Bearer {JWT here}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -384,10 +384,10 @@ endpoints:
     uri: 'api/change-requests/{changeRequest_id}'
     metadata:
       custom: []
-      groupName: ChangeRequest
+      groupName: 'Verifikasi / Permintaan Perubahan'
       groupDescription: |-
 
-        Endpoint terkait operasi permintaan perubahan data pegawai tertentu SIMPADU.
+        Endpoint terkait operasi verifikasi / permintaan perubahan data pegawai tertentu SIMPADU.
       subgroup: ''
       subgroupDescription: ''
       title: ''
@@ -395,7 +395,7 @@ endpoints:
       authenticated: true
       deprecated: false
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Authorization: 'Bearer {JWT here}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -427,18 +427,6 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      header_content_type:
-        custom: []
-        name: header_content_type
-        description: ''
-        required: true
-        example: application/json
-        type: string
-        enumValues:
-          - application/json
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
       status:
         custom: []
         name: status
@@ -454,7 +442,6 @@ endpoints:
         nullable: false
         deprecated: false
     cleanBodyParameters:
-      header_content_type: application/json
       status: rejected
     fileParameters: []
     responses:

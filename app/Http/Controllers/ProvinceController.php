@@ -12,7 +12,6 @@ use Knuckles\Scribe\Attributes\QueryParam;
 use Knuckles\Scribe\Attributes\ResponseFromFile;
 
 /**
- * Endpoint untuk wilayah.
  *
  * @group Wilayah
  */

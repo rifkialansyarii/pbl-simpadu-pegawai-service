@@ -11,18 +11,15 @@ use function Knuckles\Scribe\Config\removeStrategies;
 
 return [
     // The HTML <title> for the generated documentation.
-    'title' => config('app.name') . ' API Documentation',
+    'title' => 'Dokumentasi API ' . config('app.name'),
 
     // A short description of your API. Will be included in the docs webpage, Postman collection and OpenAPI spec.
-    'description' => '',
+    'description' => 'Dokumentasi ini bertujuan untuk memberikan semua informasi yang kamu butuhkan untuk bekerja dengan API Service 2 (Pegawai) pada PBL SIMPADU.',
 
     // Text to place in the "Introduction" section, right after the `description`. Markdown and HTML are supported.
     'intro_text' => <<<'INTRO'
-            This documentation aims to provide all the information you need to work with our API.
-
-            <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
-            You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
-        INTRO,
+        Scroll ke bawah untuk melihat semua endpoint yang tersedia, atau bisa juga langsung klik section pada sidebar kiri. Setiap endpoint menyertakan contoh permintaan dan respons, serta informasi tentang parameter yang diperlukan dan otentikasi.
+    INTRO,
 
     // The base URL displayed in the docs.
     // If you're using `laravel` type, you can set this to a dynamic string, like '{{ config("app.tenant_url") }}' to get a dynamic base URL.
@@ -58,7 +55,7 @@ return [
     'type' => 'laravel',
 
     // See https://scribe.knuckles.wtf/laravel/reference/config#theme for supported options
-    'theme' => 'default',
+    'theme' => 'elements',
 
     'static' => [
         // HTML documentation, assets and Postman collection will be generated to this folder.
@@ -123,7 +120,9 @@ return [
 
         // Placeholder your users will see for the auth parameter in the example requests.
         // Set this to null if you want Scribe to use a random value as placeholder instead.
-        'placeholder' => '{YOUR_AUTH_KEY}',
+        'placeholder' => '{JWT here}',
+
+        'description' => 'API ini menggunakan JWT untuk otentikasi. Pastikan untuk menyertakan token JWT yang valid di header Authorization',
 
         // Any extra authentication-related info for your users. Markdown and HTML are supported.
         'extra_info' => 'Kamu dapat mendapatkan JWT token dengan melakukan login pada service 1 atau craft sendiri JWT Tokennya',
