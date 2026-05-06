@@ -827,7 +827,7 @@ endpoints:
         name: gender
         description: ''
         required: false
-        example: male
+        example: female
         type: string
         enumValues:
           - male
@@ -909,7 +909,7 @@ endpoints:
       address: p
       birth_place: s
       birth_date: '2026-05-06'
-      gender: male
+      gender: female
       phone_number: c
       village_code: qldzsnrwtu
       district_code: jwvlxj
@@ -972,111 +972,6 @@ endpoints:
           }
         headers: []
         description: 'Sukses mengubah data pegawai'
-      -
-        custom: []
-        status: 401
-        content: |-
-          {
-              "success": false,
-              "code": 401,
-              "message": "You are not logged in"
-          }
-        headers: []
-        description: 'Tidak terotentikasi'
-      -
-        custom: []
-        status: 403
-        content: |-
-          {
-              "success": false,
-              "code": 403,
-              "message": "Forbidden"
-          }
-        headers: []
-        description: 'Tidak memiliki izin'
-      -
-        custom: []
-        status: 404
-        content: |-
-          {
-              "success": false,
-              "code": 404,
-              "message": "Resource not found"
-          }
-        headers: []
-        description: 'Data tidak ditemukan'
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - DELETE
-    uri: 'api/employees/{employee_id}'
-    metadata:
-      custom: []
-      groupName: Employee
-      groupDescription: |-
-
-        Endpoint terkait operasi data pegawai SIMPADU.
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      deprecated: false
-    headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      employee_id:
-        custom: []
-        name: employee_id
-        description: 'The ID of the employee.'
-        required: true
-        example: 019df6c9-8f19-73d7-b9db-a0d11acce3bb
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      employee:
-        custom: []
-        name: employee
-        description: 'UUID Pegawai'
-        required: true
-        example: 123e4567-e89b-12d3-a456-426614174000
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanUrlParameters:
-      employee_id: 019df6c9-8f19-73d7-b9db-a0d11acce3bb
-      employee: 123e4567-e89b-12d3-a456-426614174000
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        custom: []
-        status: 200
-        content: |-
-          {
-              "success": true,
-              "message": "Data deleted successfully",
-              "code": 200
-          }
-        headers: []
-        description: 'Sukses menghapus data pegawai'
       -
         custom: []
         status: 401

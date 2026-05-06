@@ -23,12 +23,6 @@ final class ChangeRequestService
         return $this->repository->getAllByUser($user);
     }
 
-    public function createChangeRequest(array $attributes, User $user)
-    {
-        $attributes['employee_id'] = $user->id;
-        return $this->repository->create($attributes);
-    }
-
     public function updateChangeRequest(ChangeRequest $changeRequest, array $attributes)
     {
         if($attributes['status'] === 'approved')

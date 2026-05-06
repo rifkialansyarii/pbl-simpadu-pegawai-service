@@ -3,37 +3,32 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class ChangeRequestResource extends JsonResource
+class ChangeRequestCollection extends ResourceCollection
 {
+    public $collects = ChangeRequestResource::class;
     /**
-     * Transform the resource into an array.
+     * Transform the resource collection into an array.
      *
-     * @return array<string, mixed>
+     * @return array<int|string, mixed>
      */
     public function toArray(Request $request): array
     {
-        return [
-            'id' => $this->id,
-            'field_name' => $this->field_name,
-            'old_value' => $this->old_value,
-            'new_value' => $this->new_value,
-            'status' => $this->status,
-            'employee_id' => $this->employee_id,
-            'employee' => new EmployeeResource($this->whenLoaded('employee')),
-        ];
+        return parent::toArray($request);
     }
 
     public function withResponse(Request $request, $response): void
     {
         $originalData = $response->getData(true);
+
         $response->setData([
             'success' => $originalData['success'] ?? true,
             'message' => $originalData['message'] ?? "Data retrieved successfully",
             'code' => $originalData['code'] ?? 200,
 
             'data' => $originalData['data'] ?? [],
+            'meta' => $originalData['meta'] ?? [],
         ]);
 
         $response->setStatusCode($originalData['code'] ?? 200);

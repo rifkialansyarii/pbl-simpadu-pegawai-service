@@ -66,6 +66,25 @@
                     <a href="#authenticating-requests">Authenticating requests</a>
                 </li>
                             </ul>
+                    <ul id="tocify-header-changerequest" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="changerequest">
+                    <a href="#changerequest">ChangeRequest</a>
+                </li>
+                                    <ul id="tocify-subheader-changerequest" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="changerequest-GETapi-change-requests">
+                                <a href="#changerequest-GETapi-change-requests">GET api/change-requests</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="changerequest-GETapi-change-requests-info-newly">
+                                <a href="#changerequest-GETapi-change-requests-info-newly">GET api/change-requests/info/newly</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="changerequest-GETapi-change-requests-info-pending">
+                                <a href="#changerequest-GETapi-change-requests-info-pending">GET api/change-requests/info/pending</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="changerequest-PUTapi-change-requests--changeRequest_id-">
+                                <a href="#changerequest-PUTapi-change-requests--changeRequest_id-">PUT api/change-requests/{changeRequest_id}</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
                     <ul id="tocify-header-employee" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="employee">
                     <a href="#employee">Employee</a>
@@ -86,9 +105,6 @@
                                                                                 <li class="tocify-item level-2" data-unique="employee-PUTapi-employees--employee_id-">
                                 <a href="#employee-PUTapi-employees--employee_id-">PUT api/employees/{employee_id}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="employee-DELETEapi-employees--employee_id-">
-                                <a href="#employee-DELETEapi-employees--employee_id-">DELETE api/employees/{employee_id}</a>
-                            </li>
                                                                         </ul>
                             </ul>
                     <ul id="tocify-header-endpoints" class="tocify-header">
@@ -96,19 +112,7 @@
                     <a href="#endpoints">Endpoints</a>
                 </li>
                                     <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-change-requests">
-                                <a href="#endpoints-GETapi-change-requests">GET api/change-requests</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-change-requests-newly">
-                                <a href="#endpoints-GETapi-change-requests-newly">GET api/change-requests/newly</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-change-requests">
-                                <a href="#endpoints-POSTapi-change-requests">POST api/change-requests</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-PUTapi-change-requests--changeRequest_id-">
-                                <a href="#endpoints-PUTapi-change-requests--changeRequest_id-">PUT api/change-requests/{changeRequest_id}</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-countries">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-countries">
                                 <a href="#endpoints-GETapi-countries">GET api/countries</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-provinces">
@@ -164,7 +168,905 @@ You can switch the language used with the tabs at the top right (or from the nav
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>Kamu dapat mendapatkan JWT token dengan melakukan login pada service 1 atau craft sendiri JWT Tokennya</p>
 
-        <h1 id="employee">Employee</h1>
+        <h1 id="changerequest">ChangeRequest</h1>
+
+    <p>Endpoint terkait operasi permintaan perubahan data pegawai tertentu SIMPADU.</p>
+
+                                <h2 id="changerequest-GETapi-change-requests">GET api/change-requests</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-change-requests">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:1234/api/change-requests?page=16" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:1234/api/change-requests"
+);
+
+const params = {
+    "page": "16",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-change-requests">
+            <blockquote>
+            <p>Example response (200, Sukses mendapatkan data permintaan perubahan. Note:
+                      Jika role admin akan menampilkan semua data, 
+                      Jika role dosen hanya menampilkan data miliknya sendiri):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data retrieved successfully&quot;,
+    &quot;code&quot;: 200,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;019df6c9-badf-734e-91ad-e51cd9649cf0&quot;,
+            &quot;field_name&quot;: &quot;nik&quot;,
+            &quot;old_value&quot;: &quot;8106080403076841&quot;,
+            &quot;new_value&quot;: &quot;1952765217638904&quot;,
+            &quot;status&quot;: &quot;rejected&quot;,
+            &quot;employee_id&quot;: &quot;019df6c9-9ff0-726b-b94a-a688f3321eb4&quot;,
+            &quot;employee&quot;: {
+                &quot;id&quot;: &quot;019df6c9-9ff0-726b-b94a-a688f3321eb4&quot;,
+                &quot;nip&quot;: &quot;113885585713262403&quot;,
+                &quot;nik&quot;: &quot;8106080403076841&quot;,
+                &quot;employee_name&quot;: &quot;Warsita Uwais&quot;,
+                &quot;address&quot;: &quot;Kpg. Untung Suropati No. 955, Pariaman 22832, DIY&quot;,
+                &quot;birth_place&quot;: &quot;Kendari&quot;,
+                &quot;birth_date&quot;: &quot;2006-03-20&quot;,
+                &quot;gender&quot;: &quot;female&quot;,
+                &quot;phone_number&quot;: &quot;085592483500&quot;,
+                &quot;village_code&quot;: &quot;6402192001&quot;,
+                &quot;district_code&quot;: &quot;640219&quot;,
+                &quot;city_code&quot;: &quot;6402&quot;,
+                &quot;province_code&quot;: &quot;64&quot;,
+                &quot;citizen_code&quot;: &quot;64&quot;
+            }
+        }
+    ],
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 4,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;page&quot;: 1,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=2&quot;,
+                &quot;label&quot;: &quot;2&quot;,
+                &quot;page&quot;: 2,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=3&quot;,
+                &quot;label&quot;: &quot;3&quot;,
+                &quot;page&quot;: 3,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=4&quot;,
+                &quot;label&quot;: &quot;4&quot;,
+                &quot;page&quot;: 4,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=2&quot;,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;page&quot;: 2,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://127.0.0.1:1234/api/change-requests&quot;,
+        &quot;per_page&quot;: 10,
+        &quot;to&quot;: 10,
+        &quot;total&quot;: 34
+    }
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (401, Tidak terotentikasi):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;You are not logged in&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (403, Tidak memiliki izin):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 403,
+    &quot;message&quot;: &quot;Forbidden&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-change-requests" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-change-requests"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-change-requests"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-change-requests" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-change-requests">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-change-requests" data-method="GET"
+      data-path="api/change-requests"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-change-requests', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-change-requests"
+                    onclick="tryItOut('GETapi-change-requests');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-change-requests"
+                    onclick="cancelTryOut('GETapi-change-requests');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-change-requests"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/change-requests</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-change-requests"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-change-requests"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-change-requests"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="page"                data-endpoint="GETapi-change-requests"
+               value="16"
+               data-component="query">
+    <br>
+<p>Nomor Halaman, required: false, Default: 1 Example: <code>16</code></p>
+            </div>
+                </form>
+
+                    <h2 id="changerequest-GETapi-change-requests-info-newly">GET api/change-requests/info/newly</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-change-requests-info-newly">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:1234/api/change-requests/info/newly" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:1234/api/change-requests/info/newly"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-change-requests-info-newly">
+            <blockquote>
+            <p>Example response (200, Sukses mengubah data permintaan perubahan):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data retrieved successfully&quot;,
+    &quot;code&quot;: 200,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;019df6c9-badf-734e-91ad-e51cd9649cf0&quot;,
+            &quot;field_name&quot;: &quot;nik&quot;,
+            &quot;old_value&quot;: &quot;8106080403076841&quot;,
+            &quot;new_value&quot;: &quot;1952765217638904&quot;,
+            &quot;status&quot;: &quot;rejected&quot;,
+            &quot;employee_id&quot;: &quot;019df6c9-9ff0-726b-b94a-a688f3321eb4&quot;,
+            &quot;employee&quot;: {
+                &quot;id&quot;: &quot;019df6c9-9ff0-726b-b94a-a688f3321eb4&quot;,
+                &quot;nip&quot;: &quot;113885585713262403&quot;,
+                &quot;nik&quot;: &quot;8106080403076841&quot;,
+                &quot;employee_name&quot;: &quot;Warsita Uwais&quot;,
+                &quot;address&quot;: &quot;Kpg. Untung Suropati No. 955, Pariaman 22832, DIY&quot;,
+                &quot;birth_place&quot;: &quot;Kendari&quot;,
+                &quot;birth_date&quot;: &quot;2006-03-20&quot;,
+                &quot;gender&quot;: &quot;female&quot;,
+                &quot;phone_number&quot;: &quot;085592483500&quot;,
+                &quot;village_code&quot;: &quot;6402192001&quot;,
+                &quot;district_code&quot;: &quot;640219&quot;,
+                &quot;city_code&quot;: &quot;6402&quot;,
+                &quot;province_code&quot;: &quot;64&quot;,
+                &quot;citizen_code&quot;: &quot;64&quot;
+            }
+        }
+    ],
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 4,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;page&quot;: 1,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=2&quot;,
+                &quot;label&quot;: &quot;2&quot;,
+                &quot;page&quot;: 2,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=3&quot;,
+                &quot;label&quot;: &quot;3&quot;,
+                &quot;page&quot;: 3,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=4&quot;,
+                &quot;label&quot;: &quot;4&quot;,
+                &quot;page&quot;: 4,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=2&quot;,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;page&quot;: 2,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://127.0.0.1:1234/api/change-requests&quot;,
+        &quot;per_page&quot;: 10,
+        &quot;to&quot;: 10,
+        &quot;total&quot;: 34
+    }
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (401, Tidak terotentikasi):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;You are not logged in&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (403, Tidak memiliki izin):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 403,
+    &quot;message&quot;: &quot;Forbidden&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-change-requests-info-newly" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-change-requests-info-newly"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-change-requests-info-newly"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-change-requests-info-newly" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-change-requests-info-newly">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-change-requests-info-newly" data-method="GET"
+      data-path="api/change-requests/info/newly"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-change-requests-info-newly', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-change-requests-info-newly"
+                    onclick="tryItOut('GETapi-change-requests-info-newly');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-change-requests-info-newly"
+                    onclick="cancelTryOut('GETapi-change-requests-info-newly');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-change-requests-info-newly"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/change-requests/info/newly</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-change-requests-info-newly"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-change-requests-info-newly"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-change-requests-info-newly"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="changerequest-GETapi-change-requests-info-pending">GET api/change-requests/info/pending</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-change-requests-info-pending">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:1234/api/change-requests/info/pending" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:1234/api/change-requests/info/pending"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-change-requests-info-pending">
+            <blockquote>
+            <p>Example response (200, Sukses mendapatkan total data pegawai):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data retrieved successfully&quot;,
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;total_pending&quot;: 14
+    }
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (401, Tidak terotentikasi):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;You are not logged in&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (403, Tidak memiliki izin):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 403,
+    &quot;message&quot;: &quot;Forbidden&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-change-requests-info-pending" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-change-requests-info-pending"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-change-requests-info-pending"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-change-requests-info-pending" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-change-requests-info-pending">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-change-requests-info-pending" data-method="GET"
+      data-path="api/change-requests/info/pending"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-change-requests-info-pending', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-change-requests-info-pending"
+                    onclick="tryItOut('GETapi-change-requests-info-pending');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-change-requests-info-pending"
+                    onclick="cancelTryOut('GETapi-change-requests-info-pending');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-change-requests-info-pending"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/change-requests/info/pending</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-change-requests-info-pending"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-change-requests-info-pending"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-change-requests-info-pending"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="changerequest-PUTapi-change-requests--changeRequest_id-">PUT api/change-requests/{changeRequest_id}</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-change-requests--changeRequest_id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:1234/api/change-requests/019df6c9-aafe-728b-9054-210f086ead95" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"header_content_type\": \"application\\/json\",
+    \"status\": \"rejected\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:1234/api/change-requests/019df6c9-aafe-728b-9054-210f086ead95"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "header_content_type": "application\/json",
+    "status": "rejected"
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-change-requests--changeRequest_id-">
+            <blockquote>
+            <p>Example response (200, Sukses mengubah data permintaan perubahan):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data updated successfully&quot;,
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;id&quot;: &quot;019df6c9-acd7-736a-883a-13863afd302c&quot;,
+        &quot;field_name&quot;: &quot;employee_name&quot;,
+        &quot;old_value&quot;: &quot;Mahdi Harjasa Mahendra M.Ak&quot;,
+        &quot;new_value&quot;: &quot;Diah Eka Mulyani S.H.&quot;,
+        &quot;status&quot;: &quot;approved&quot;,
+        &quot;employee_id&quot;: &quot;019df6c9-8f63-70c8-97d4-8f03a63be8d5&quot;,
+        &quot;employee&quot;: {
+            &quot;id&quot;: &quot;019df6c9-8f63-70c8-97d4-8f03a63be8d5&quot;,
+            &quot;nip&quot;: &quot;691651594659009703&quot;,
+            &quot;nik&quot;: &quot;1801160204072477&quot;,
+            &quot;employee_name&quot;: &quot;Diah Eka Mulyani S.H.&quot;,
+            &quot;address&quot;: &quot;Gg. Casablanca No. 249, Administrasi Jakarta Timur 83230, Sulteng&quot;,
+            &quot;birth_place&quot;: &quot;Sungai Penuh&quot;,
+            &quot;birth_date&quot;: &quot;2003-12-31&quot;,
+            &quot;gender&quot;: &quot;male&quot;,
+            &quot;phone_number&quot;: &quot;087480210541&quot;,
+            &quot;village_code&quot;: &quot;9403152001&quot;,
+            &quot;district_code&quot;: &quot;940315&quot;,
+            &quot;city_code&quot;: &quot;9403&quot;,
+            &quot;province_code&quot;: &quot;94&quot;,
+            &quot;citizen_code&quot;: &quot;94&quot;
+        }
+    }
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (401, Tidak terotentikasi):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;You are not logged in&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (403, Tidak memiliki izin):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 403,
+    &quot;message&quot;: &quot;Forbidden&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-change-requests--changeRequest_id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-change-requests--changeRequest_id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-change-requests--changeRequest_id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-PUTapi-change-requests--changeRequest_id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-change-requests--changeRequest_id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-PUTapi-change-requests--changeRequest_id-" data-method="PUT"
+      data-path="api/change-requests/{changeRequest_id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-change-requests--changeRequest_id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-change-requests--changeRequest_id-"
+                    onclick="tryItOut('PUTapi-change-requests--changeRequest_id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-change-requests--changeRequest_id-"
+                    onclick="cancelTryOut('PUTapi-change-requests--changeRequest_id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-change-requests--changeRequest_id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/change-requests/{changeRequest_id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-change-requests--changeRequest_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="PUTapi-change-requests--changeRequest_id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="PUTapi-change-requests--changeRequest_id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>changeRequest_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="changeRequest_id"                data-endpoint="PUTapi-change-requests--changeRequest_id-"
+               value="019df6c9-aafe-728b-9054-210f086ead95"
+               data-component="url">
+    <br>
+<p>The ID of the changeRequest. Example: <code>019df6c9-aafe-728b-9054-210f086ead95</code></p>
+            </div>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>change-request</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="change-request"                data-endpoint="PUTapi-change-requests--changeRequest_id-"
+               value="123e4567-e89b-12d3-a456-426614174000"
+               data-component="url">
+    <br>
+<p>UUID Permintaan Perubahan Example: <code>123e4567-e89b-12d3-a456-426614174000</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>header_content_type</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="header_content_type"                data-endpoint="PUTapi-change-requests--changeRequest_id-"
+               value="application/json"
+               data-component="body">
+    <br>
+<p>Example: <code>application/json</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>application/json</code></li></ul>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="status"                data-endpoint="PUTapi-change-requests--changeRequest_id-"
+               value="rejected"
+               data-component="body">
+    <br>
+<p>Example: <code>rejected</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>pending</code></li> <li><code>approved</code></li> <li><code>rejected</code></li></ul>
+        </div>
+        </form>
+
+                <h1 id="employee">Employee</h1>
 
     <p>Endpoint terkait operasi data pegawai SIMPADU.</p>
 
@@ -1285,7 +2187,7 @@ Must be one of:
     \"address\": \"p\",
     \"birth_place\": \"s\",
     \"birth_date\": \"2026-05-06\",
-    \"gender\": \"male\",
+    \"gender\": \"female\",
     \"phone_number\": \"c\",
     \"village_code\": \"qldzsnrwtu\",
     \"district_code\": \"jwvlxj\",
@@ -1315,7 +2217,7 @@ let body = {
     "address": "p",
     "birth_place": "s",
     "birth_date": "2026-05-06",
-    "gender": "male",
+    "gender": "female",
     "phone_number": "c",
     "village_code": "qldzsnrwtu",
     "district_code": "jwvlxj",
@@ -1623,10 +2525,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="gender"                data-endpoint="PUTapi-employees--employee_id-"
-               value="male"
+               value="female"
                data-component="body">
     <br>
-<p>Example: <code>male</code></p>
+<p>Example: <code>female</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>male</code></li> <li><code>female</code></li></ul>
         </div>
@@ -1704,863 +2606,11 @@ Must be one of:
         </div>
         </form>
 
-                    <h2 id="employee-DELETEapi-employees--employee_id-">DELETE api/employees/{employee_id}</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-DELETEapi-employees--employee_id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:1234/api/employees/019df6c9-8f19-73d7-b9db-a0d11acce3bb" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/employees/019df6c9-8f19-73d7-b9db-a0d11acce3bb"
-);
-
-const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-
-fetch(url, {
-    method: "DELETE",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-DELETEapi-employees--employee_id-">
-            <blockquote>
-            <p>Example response (200, Sukses menghapus data pegawai):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: true,
-    &quot;message&quot;: &quot;Data deleted successfully&quot;,
-    &quot;code&quot;: 200
-}</code>
- </pre>
-            <blockquote>
-            <p>Example response (401, Tidak terotentikasi):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;code&quot;: 401,
-    &quot;message&quot;: &quot;You are not logged in&quot;
-}</code>
- </pre>
-            <blockquote>
-            <p>Example response (403, Tidak memiliki izin):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;code&quot;: 403,
-    &quot;message&quot;: &quot;Forbidden&quot;
-}</code>
- </pre>
-            <blockquote>
-            <p>Example response (404, Data tidak ditemukan):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;code&quot;: 404,
-    &quot;message&quot;: &quot;Resource not found&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-DELETEapi-employees--employee_id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-DELETEapi-employees--employee_id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-DELETEapi-employees--employee_id-"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-DELETEapi-employees--employee_id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-DELETEapi-employees--employee_id-">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-DELETEapi-employees--employee_id-" data-method="DELETE"
-      data-path="api/employees/{employee_id}"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-employees--employee_id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-DELETEapi-employees--employee_id-"
-                    onclick="tryItOut('DELETEapi-employees--employee_id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-DELETEapi-employees--employee_id-"
-                    onclick="cancelTryOut('DELETEapi-employees--employee_id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-DELETEapi-employees--employee_id-"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-red">DELETE</small>
-            <b><code>api/employees/{employee_id}</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="DELETEapi-employees--employee_id-"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="DELETEapi-employees--employee_id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="DELETEapi-employees--employee_id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>employee_id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="employee_id"                data-endpoint="DELETEapi-employees--employee_id-"
-               value="019df6c9-8f19-73d7-b9db-a0d11acce3bb"
-               data-component="url">
-    <br>
-<p>The ID of the employee. Example: <code>019df6c9-8f19-73d7-b9db-a0d11acce3bb</code></p>
-            </div>
-                    <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>employee</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="employee"                data-endpoint="DELETEapi-employees--employee_id-"
-               value="123e4567-e89b-12d3-a456-426614174000"
-               data-component="url">
-    <br>
-<p>UUID Pegawai Example: <code>123e4567-e89b-12d3-a456-426614174000</code></p>
-            </div>
-                    </form>
-
                 <h1 id="endpoints">Endpoints</h1>
 
     
 
-                                <h2 id="endpoints-GETapi-change-requests">GET api/change-requests</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-GETapi-change-requests">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:1234/api/change-requests" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/change-requests"
-);
-
-const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-change-requests">
-            <blockquote>
-            <p>Example response (401):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;code&quot;: 401,
-    &quot;message&quot;: &quot;You are not logged in&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-change-requests" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-change-requests"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-change-requests"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-GETapi-change-requests" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-change-requests">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-GETapi-change-requests" data-method="GET"
-      data-path="api/change-requests"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-change-requests', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-change-requests"
-                    onclick="tryItOut('GETapi-change-requests');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-change-requests"
-                    onclick="cancelTryOut('GETapi-change-requests');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-change-requests"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/change-requests</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="GETapi-change-requests"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-change-requests"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-change-requests"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-GETapi-change-requests-newly">GET api/change-requests/newly</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-GETapi-change-requests-newly">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:1234/api/change-requests/newly" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/change-requests/newly"
-);
-
-const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-change-requests-newly">
-            <blockquote>
-            <p>Example response (401):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;code&quot;: 401,
-    &quot;message&quot;: &quot;You are not logged in&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-change-requests-newly" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-change-requests-newly"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-change-requests-newly"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-GETapi-change-requests-newly" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-change-requests-newly">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-GETapi-change-requests-newly" data-method="GET"
-      data-path="api/change-requests/newly"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-change-requests-newly', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-change-requests-newly"
-                    onclick="tryItOut('GETapi-change-requests-newly');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-change-requests-newly"
-                    onclick="cancelTryOut('GETapi-change-requests-newly');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-change-requests-newly"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/change-requests/newly</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="GETapi-change-requests-newly"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-change-requests-newly"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-change-requests-newly"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-POSTapi-change-requests">POST api/change-requests</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-POSTapi-change-requests">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost:1234/api/change-requests" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"header_content_type\": \"application\\/json\",
-    \"field_name\": \"b\",
-    \"old_value\": \"n\",
-    \"new_value\": \"architecto\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/change-requests"
-);
-
-const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "header_content_type": "application\/json",
-    "field_name": "b",
-    "old_value": "n",
-    "new_value": "architecto"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-change-requests">
-</span>
-<span id="execution-results-POSTapi-change-requests" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-change-requests"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-change-requests"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-POSTapi-change-requests" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-change-requests">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-POSTapi-change-requests" data-method="POST"
-      data-path="api/change-requests"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-change-requests', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-change-requests"
-                    onclick="tryItOut('POSTapi-change-requests');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-change-requests"
-                    onclick="cancelTryOut('POSTapi-change-requests');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-change-requests"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/change-requests</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-change-requests"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-change-requests"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-change-requests"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>header_content_type</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="header_content_type"                data-endpoint="POSTapi-change-requests"
-               value="application/json"
-               data-component="body">
-    <br>
-<p>Example: <code>application/json</code></p>
-Must be one of:
-<ul style="list-style-type: square;"><li><code>application/json</code></li></ul>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>field_name</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="field_name"                data-endpoint="POSTapi-change-requests"
-               value="b"
-               data-component="body">
-    <br>
-<p>Must not be greater than 255 characters. Example: <code>b</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>old_value</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="old_value"                data-endpoint="POSTapi-change-requests"
-               value="n"
-               data-component="body">
-    <br>
-<p>Must not be greater than 255 characters. Example: <code>n</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>new_value</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="new_value"                data-endpoint="POSTapi-change-requests"
-               value="architecto"
-               data-component="body">
-    <br>
-<p>Example: <code>architecto</code></p>
-        </div>
-        </form>
-
-                    <h2 id="endpoints-PUTapi-change-requests--changeRequest_id-">PUT api/change-requests/{changeRequest_id}</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-PUTapi-change-requests--changeRequest_id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:1234/api/change-requests/019df6c9-aafe-728b-9054-210f086ead95" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"header_content_type\": \"application\\/json\",
-    \"status\": \"rejected\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/change-requests/019df6c9-aafe-728b-9054-210f086ead95"
-);
-
-const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "header_content_type": "application\/json",
-    "status": "rejected"
-};
-
-fetch(url, {
-    method: "PUT",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-PUTapi-change-requests--changeRequest_id-">
-</span>
-<span id="execution-results-PUTapi-change-requests--changeRequest_id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-PUTapi-change-requests--changeRequest_id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-PUTapi-change-requests--changeRequest_id-"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-PUTapi-change-requests--changeRequest_id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-PUTapi-change-requests--changeRequest_id-">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-PUTapi-change-requests--changeRequest_id-" data-method="PUT"
-      data-path="api/change-requests/{changeRequest_id}"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('PUTapi-change-requests--changeRequest_id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PUTapi-change-requests--changeRequest_id-"
-                    onclick="tryItOut('PUTapi-change-requests--changeRequest_id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PUTapi-change-requests--changeRequest_id-"
-                    onclick="cancelTryOut('PUTapi-change-requests--changeRequest_id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PUTapi-change-requests--changeRequest_id-"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-darkblue">PUT</small>
-            <b><code>api/change-requests/{changeRequest_id}</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-change-requests--changeRequest_id-"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="PUTapi-change-requests--changeRequest_id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="PUTapi-change-requests--changeRequest_id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>changeRequest_id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="changeRequest_id"                data-endpoint="PUTapi-change-requests--changeRequest_id-"
-               value="019df6c9-aafe-728b-9054-210f086ead95"
-               data-component="url">
-    <br>
-<p>The ID of the changeRequest. Example: <code>019df6c9-aafe-728b-9054-210f086ead95</code></p>
-            </div>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>header_content_type</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="header_content_type"                data-endpoint="PUTapi-change-requests--changeRequest_id-"
-               value="application/json"
-               data-component="body">
-    <br>
-<p>Example: <code>application/json</code></p>
-Must be one of:
-<ul style="list-style-type: square;"><li><code>application/json</code></li></ul>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="status"                data-endpoint="PUTapi-change-requests--changeRequest_id-"
-               value="rejected"
-               data-component="body">
-    <br>
-<p>Example: <code>rejected</code></p>
-Must be one of:
-<ul style="list-style-type: square;"><li><code>pending</code></li> <li><code>approved</code></li> <li><code>rejected</code></li></ul>
-        </div>
-        </form>
-
-                    <h2 id="endpoints-GETapi-countries">GET api/countries</h2>
+                                <h2 id="endpoints-GETapi-countries">GET api/countries</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
