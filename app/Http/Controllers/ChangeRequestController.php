@@ -7,7 +7,6 @@ use App\Http\Requests\UpdateChangeRequest;
 use App\Http\Resources\ChangeRequestResource;
 use App\Models\ChangeRequest;
 use App\Services\ChangeRequestService;
-use Exception;
 use Illuminate\Http\Request;
 
 class ChangeRequestController extends Controller

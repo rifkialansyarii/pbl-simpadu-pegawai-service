@@ -31,7 +31,7 @@ class EmployeeController extends Controller
     }
 
     #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
-    #[ResponseFromFile(file: 'responses/get_employees.json', status: 200, description: 'Sukses mendapatkan data pegawai')]
+    #[ResponseFromFile(file: 'responses/employee/get_employees.json', status: 200, description: 'Sukses mendapatkan data pegawai')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     public function index()
@@ -45,7 +45,7 @@ class EmployeeController extends Controller
         ;
     }
 
-    #[ResponseFromFile(file: 'responses/detail_employee.json', status: 200, description: 'Sukses mendapatkan detail pegawai')]
+    #[ResponseFromFile(file: 'responses/employee/detail_employee.json', status: 200, description: 'Sukses mendapatkan detail pegawai')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     #[ResponseFromFile(file: 'responses/not_found.json', status: 404, description: 'Data tidak ditemukan')]
@@ -61,7 +61,7 @@ class EmployeeController extends Controller
         return $employeeResource;
     }
 
-    #[ResponseFromFile(file: 'responses/detail_employee.json', status: 201, description: 'Sukses menambahkan data pegawai')]
+    #[ResponseFromFile(file: 'responses/employee/detail_employee.json', status: 201, description: 'Sukses menambahkan data pegawai')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     public function store(StoreEmployeeRequest $request)
@@ -76,7 +76,7 @@ class EmployeeController extends Controller
     }
 
 
-    #[ResponseFromFile(file: 'responses/detail_employee.json', status: 200, description: 'Sukses mengubah data pegawai')]
+    #[ResponseFromFile(file: 'responses/employee/detail_employee.json', status: 200, description: 'Sukses mengubah data pegawai')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     #[ResponseFromFile(file: 'responses/not_found.json', status: 404, description: 'Data tidak ditemukan')]
@@ -92,7 +92,7 @@ class EmployeeController extends Controller
         return $employeeResource;
     }
 
-    #[ResponseFromFile(file: 'responses/success_delete_employee.json', status: 200, description: 'Sukses menghapus data pegawai')]
+    #[ResponseFromFile(file: 'responses/employee/success_delete_employee.json', status: 200, description: 'Sukses menghapus data pegawai')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     #[ResponseFromFile(file: 'responses/not_found.json', status: 404, description: 'Data tidak ditemukan')]
@@ -107,7 +107,7 @@ class EmployeeController extends Controller
         ]);
     }
 
-    #[ResponseFromFile(file: 'responses/total_employee.json', status: 200, description: 'Sukses mendapatkan total data pegawai')]
+    #[ResponseFromFile(file: 'responses/employee/total_employee.json', status: 200, description: 'Sukses mendapatkan total data pegawai')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     public function showTotal()
