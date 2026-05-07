@@ -17,13 +17,6 @@ class UpdateChangeRequest extends FormRequest
         return true;
     }
 
-    public function prepareForValidation(): void
-    {
-        $this->merge([
-            'header_content_type' => $this->header('Content-Type'),
-        ]);
-    }
-
     /**
      * Get the validation rules that apply to the request.
      *
@@ -32,8 +25,6 @@ class UpdateChangeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'header_content_type' => 'required|in:application/json',
-
             'status' => [
                 'required',
                 Rule::enum(ChangeRequestStatus::class),

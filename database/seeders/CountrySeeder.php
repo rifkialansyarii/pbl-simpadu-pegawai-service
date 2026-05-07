@@ -21,7 +21,7 @@ class CountrySeeder extends Seeder
 
         foreach ($data as $country) {
             $attributes = [
-                'country_name' => $country['name']['common'],
+                'name' => $country['name']['common'],
                 'code' => $country['cca2'],
             ];
             Country::create($attributes);

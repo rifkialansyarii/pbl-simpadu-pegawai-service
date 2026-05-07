@@ -14,7 +14,10 @@ class CityRepository implements CityRepositoryInterface
             'id',
             'name',
             'code',
+            'province_code',
         ])->paginate(10);
+
+        $city->load('province');
 
         return $city;
     }
@@ -28,7 +31,8 @@ class CityRepository implements CityRepositoryInterface
             'province_code'
         ])->where('province_code', $provinceCode)->paginate(10);
 
-        return $city->load('province');
+        $city->load('province');
+        return $city;
     }
 
 

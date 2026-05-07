@@ -1,0 +1,48 @@
+{
+    "success": true,
+    "message": "Data retrieved successfully",
+    "code": 200,
+    "data": {
+        "id": "019df6c9-97bb-7295-a954-884fdfaec6e9",
+        "nip": "350661066055483856",
+        "nik": "7406980408239916",
+        "employee_name": "Salimah Zulaika",
+        "address": "Jln. Elang No. 856, Sabang 82360, Papua",
+        "birth_place": "Batam",
+        "birth_date": "2000-07-02",
+        "gender": "female",
+        "phone_number": "084331744670",
+        "village_code": "7409082013",
+        "district_code": "740908",
+        "city_code": "7409",
+        "province_code": "74",
+        "citizen_code": "74",
+        "village": {
+            "id": "71884",
+            "code": "7409082013",
+            "district_code": "740908",
+            "name": "LAMEORU"
+        },
+        "district": {
+            "id": "6035",
+            "code": "740908",
+            "city_code": "7409",
+            "name": "OHEO"
+        },
+        "city": {
+            "id": "431",
+            "code": "7409",
+            "name": "KABUPATEN KONAWE UTARA"
+        },
+        "province": {
+            "id": "28",
+            "code": "74",
+            "name": "SULAWESI TENGGARA"
+        },
+        "citizen": {
+            "id": 37,
+            "name": "Bhutan",
+            "code": "BT"
+        }
+    }
+}

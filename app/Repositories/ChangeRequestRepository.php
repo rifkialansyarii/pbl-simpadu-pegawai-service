@@ -19,7 +19,9 @@ class ChangeRequestRepository implements ChangeRequestRepositoryInterface
             'status',
         ])->latest()->paginate(10);
 
-        return $changeRequest->load(['employee']);
+        $changeRequest->load(['employee']);
+        
+        return $changeRequest;
     }
 
     public function getAllByUser(User $user)
@@ -33,7 +35,8 @@ class ChangeRequestRepository implements ChangeRequestRepositoryInterface
             'status',
         ])->latest()->where('employee_id', $user->id)->paginate(10);
 
-        return $userChangeRequest->load(['employee']);
+        $userChangeRequest->load(['employee']);
+        return $userChangeRequest;
     }
 
     public function getNewlyData()
@@ -45,7 +48,7 @@ class ChangeRequestRepository implements ChangeRequestRepositoryInterface
             'old_value',
             'new_value',
             'status',
-        ])->latest()->limit(5);
+        ])->latest()->limit(5)->get();
 
         return $newlyChangeRequest->load(['employee']);
     }

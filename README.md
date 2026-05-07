@@ -37,8 +37,7 @@ copy .env.example .env
 Copy-Item .env.example .env
 ```
 
-- Ganti `APP_FAKER_LOCALE=en_US` menjadi `APP_FAKER_LOCALE=id_ID` pada `.env`.
-- Tambahkan `JWT_SECRET=your-jwt-secret-key` pada bagian bawah `.env`.
+- Atur bagian DATABASE pada .env, sesuaikan dengan kebutuhan.
 
 
 ### 2. Run Docker Containers:

@@ -17,8 +17,22 @@ class VillageResource extends JsonResource
         return [
             'id' => $this->id,
             'code' => $this->code,
-            'district_code' => $this->district_code,
             'name' => $this->name,
+            'district_code' => new DistrictResource($this->whenLoaded('district')),
         ];
+    }
+
+    public function withResponse(Request $request, $response): void
+    {
+        $originalData = $response->getData(true);
+        $response->setData([
+            'success' => $originalData['success'] ?? true,
+            'message' => $originalData['message'] ?? "Data retrieved successfully",
+            'code' => $originalData['code'] ?? 200,
+
+            'data' => $originalData['data'] ?? [],
+        ]);
+
+        $response->setStatusCode($originalData['code'] ?? 200);
     }
 }

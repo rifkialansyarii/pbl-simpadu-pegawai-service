@@ -2,51 +2,53 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\CityResource;
-use App\Http\Resources\DistrictResource;
+use App\Http\Resources\DistrictCollection;
 use App\Services\DistrictService;
-use App\Traits\ApiResponse;
-use Exception;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\QueryParam;
+use Knuckles\Scribe\Attributes\ResponseFromFile;
+use Knuckles\Scribe\Attributes\UrlParam;
 
+/**
+ * Endpoint untuk wilayah.
+ *
+ * @group Wilayah
+ */
 class DistrictController extends Controller
 {
-    use ApiResponse;
-
+    /**
+     *
+     * @group Wilayah
+     */
     public function __construct(
         private DistrictService $service
     ) {
     }
 
-    public function index(): JsonResponse
+    /**
+     * @unauthenticated
+     */
+    #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
+    #[ResponseFromFile(file: 'responses/region/success_get_district.json', status: 200, description: 'Sukses mendapatkan data kecamatan')]
+    public function index()
     {
-        try {
 
-            return $this->sendSuccess(
-                data: DistrictResource::collection($this->service->getAllDistrict()),
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
+        $districtCollection = new DistrictCollection($this->service->getAllDistrict());
+        return $districtCollection->additional([
+            'success' => true,
+            'message' => "Data retrieved successfully",
+            'code' => 200,
+        ]);
     }
 
-    public function showByCity(string $cityCode): JsonResponse
-    {        
-        try {
-            return $this->sendSuccess(
-                data: DistrictResource::collection($this->service->getDistrictByCity($cityCode)),
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
+    #[UrlParam("cityCode", "string", "Kode Kota", example: "6301")]
+    #[ResponseFromFile(file: 'responses/region/success_get_district.json', status: 200, description: 'Sukses mendapatkan data kecamatan')]
+    public function showByCity(string $cityCode)
+    {
+        $districtCollection = new DistrictCollection($this->service->getDistrictByCity($cityCode));
+        return $districtCollection->additional([
+            'success' => true,
+            'message' => "Data retrieved successfully",
+            'code' => 200,
+        ]);
     }
 }

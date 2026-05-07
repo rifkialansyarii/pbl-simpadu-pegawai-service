@@ -11,7 +11,7 @@ class CountryRepository implements CountryRepositoryInterface
     {
         $country = Country::select([
             'id',
-            'country_name',
+            'name',
             'code',
         ])->paginate(10);
 

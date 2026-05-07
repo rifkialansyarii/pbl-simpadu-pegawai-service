@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('employees', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->char('nip', 18)->unique();
             $table->char('nik', 16)->unique();
             $table->string('employee_name');
@@ -21,19 +21,22 @@ return new class extends Migration
             $table->date('birth_date')->nullable();
             $table->enum('gender', ['male', 'female']);
             $table->string('phone_number', 20)->nullable();
-            $table->string('avatar')->nullable();
-            $table->foreignId('village_id')->constrained(
-                table: 'indonesia_villages'
-            );
-            $table->foreignId('district_id')->nullable()->constrained(
-                table: 'indonesia_districts'
-            );
-            $table->foreignId('city_id')->nullable()->constrained(
-                table: 'indonesia_cities'
-            );
-            $table->foreignId('province_id')->nullable()->constrained(
-                table: 'indonesia_provinces'
-            );
+
+            $table->char('village_code', 10)->nullable();
+            $table->foreign('village_code')->references('code')->on('indonesia_villages');
+
+            $table->char('district_code', 6)->nullable();
+            $table->foreign('district_code')->references('code')->on('indonesia_districts');
+
+            $table->char('city_code', 4)->nullable();
+            $table->foreign('city_code')->references('code')->on('indonesia_cities');
+
+            $table->char('province_code', 2)->nullable();
+            $table->foreign('province_code')->references('code')->on('indonesia_provinces');
+
+            $table->char('citizen_code', 2)->nullable();
+            $table->foreign('citizen_code')->references('code')->on('countries');
+
             $table->timestamps();
         });
     }

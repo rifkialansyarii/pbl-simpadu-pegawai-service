@@ -2,35 +2,41 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\ProvinceResource;
+use App\Http\Resources\ProvinceCollection;
 use App\Services\ProvinceService;
 use App\Traits\ApiResponse;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\QueryParam;
+use Knuckles\Scribe\Attributes\ResponseFromFile;
 
+/**
+ *
+ * @group Wilayah
+ */
 class ProvinceController extends Controller
 {
-    use ApiResponse;
 
     public function __construct(
         private ProvinceService $service
     ) {
     }
 
-    public function index(): JsonResponse
+    /**
+     * @unauthenticated
+     */
+    #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
+    #[ResponseFromFile(file: 'responses/region/success_get_province.json', status: 200, description: 'Sukses mendapatkan data provinsi')]
+    public function index()
     {
-        try {
 
-            return $this->sendSuccess(
-                data: ProvinceResource::collection($this->service->getAllProvince()),
-                message: 'Data retrieved successfully',
-            );
+        $provinceCollection = new ProvinceCollection($this->service->getAllProvince());
+        return $provinceCollection->additional([
+            'success' => true,
+            'message' => "Data retrieved successfully",
+            'code' => 200,
+        ]);
 
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
     }
 }

@@ -9,13 +9,15 @@ class DistrictRepository implements DistrictRepositoryInterface
 {
     public function getAll()
     {
-        $District = District::select([
+        $district = District::select([
             'id',
             'name',
             'code',
+            'city_code',
         ])->paginate(10);
 
-        return $District;
+        $district->load('city');
+        return $district;
     }
 
     public function getByParent(string $cityCode)
@@ -27,6 +29,8 @@ class DistrictRepository implements DistrictRepositoryInterface
             'city_code'
         ])->where('city_code', $cityCode)->paginate(10);
 
-        return $district->load('city');
+        
+        $district->load('city');
+        return $district;
     }
 }

@@ -2,105 +2,88 @@
 
 namespace App\Http\Controllers;
 
-use App\Contracts\ChangeRequestRepositoryInterface;
-use App\Http\Requests\StoreChangeRequest;
 use App\Http\Requests\UpdateChangeRequest;
+use App\Http\Resources\ChangeRequestCollection;
 use App\Http\Resources\ChangeRequestResource;
 use App\Models\ChangeRequest;
 use App\Services\ChangeRequestService;
-use App\Traits\ApiResponse;
-use Exception;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\QueryParam;
+use Knuckles\Scribe\Attributes\ResponseFromFile;
+use Knuckles\Scribe\Attributes\UrlParam;
 
+/**
+ * @group Verifikasi / Permintaan Perubahan
+ * 
+ * Endpoint terkait operasi verifikasi / permintaan perubahan data pegawai tertentu SIMPADU.
+ */
 class ChangeRequestController extends Controller
 {
-    use ApiResponse;
 
     public function __construct(
         private ChangeRequestService $service
     ) {
     }
 
-    public function index(Request $request): JsonResponse
+    #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
+    #[ResponseFromFile(
+        file: 'responses/change_request/success_get_all.json', 
+        status: 200, 
+        description: 'Sukses mendapatkan data permintaan perubahan. Note:
+                      Jika role admin akan menampilkan semua data, 
+                      Jika role dosen hanya menampilkan data miliknya sendiri'
+    )]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
+    public function index(Request $request)
     {
-        try {
-            return $this->sendSuccess(
-                data: ChangeRequestResource::collection($this->service->getAllChangeRequest($request->user())),
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
+        $changeRequestCollection = new ChangeRequestCollection($this->service->getAllChangeRequest($request->user()));
+        return $changeRequestCollection->additional([
+            'success' => true,
+            'code' => 200,
+            'message' => 'Data retrieved successfully',
+        ]);
     }
 
-    public function store(StoreChangeRequest $request): JsonResponse
+    #[ResponseFromFile(file: 'responses/change_request/success_get_detail.json', status: 200, description: 'Sukses mengubah data permintaan perubahan')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
+    #[UrlParam("change-request", "string", "UUID Permintaan Perubahan", example: "123e4567-e89b-12d3-a456-426614174000")]
+    public function update(UpdateChangeRequest $request, ChangeRequest $changeRequest)
     {
-        try {
-
-            $attributes = $request->validated();
-            $user = $request->user();
-
-            return $this->sendSuccess(
-                data: new ChangeRequestResource($this->service->createChangeRequest($attributes, $user)),
-                message: 'Data created successfully',
-                code: 201,
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage(),
-            );
-        }
+        $changeRequestResource = new ChangeRequestResource($this->service->updateChangeRequest($changeRequest, $request->validated()));
+        return $changeRequestResource->additional([
+            'success' => true,
+            'code' => 200,
+            'message' => 'Data updated successfully',
+        ]);
     }
 
-    public function update(UpdateChangeRequest $request, ChangeRequest $changeRequest): JsonResponse
-    {
-        try {
-            $attributes = $request->validated();
-
-            return $this->sendSuccess(
-                data: new ChangeRequestResource($this->service->updateChangeRequest($changeRequest, $attributes)),
-                message: 'Data updated successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage(),
-            );
-        }
-    }
-
+    #[ResponseFromFile(file: 'responses/change_request/success_get_all.json', status: 200, description: 'Sukses mengubah data permintaan perubahan')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     public function showNewly()
     {
-        try {
-            return $this->sendSuccess(
-                data: new ChangeRequestResource($this->service->getNewlyData()),
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage(),
-            );
-        }
+        $changeRequestResource = new ChangeRequestCollection($this->service->getNewlyData());
+        return $changeRequestResource->additional([
+            'success' => true,
+            'code' => 200,
+            'message' => 'Data retrieved successfully',
+        ]);
     }
 
+    #[ResponseFromFile(file: 'responses/change_request/success_get_total_pending.json', status: 200, description: 'Sukses mendapatkan total data pegawai')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     public function showTotalPendingStatus()
     {
-        try {
-            return $this->sendSuccess(
-                data: [ ["total_pending" => $this->service->getTotalPendingStatus()] ],
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage(),
-            );
-        }
+        return response()->json([
+            'success' => true,
+            'message' => 'Data retrieved successfully',
+            'code' => 200,
+            'data' => [
+                'total_pending' => $this->service->getTotalPendingStatus()
+            ]
+        ]);
     }
 }

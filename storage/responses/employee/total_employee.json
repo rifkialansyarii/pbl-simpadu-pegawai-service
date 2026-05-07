@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Data retrieved successfully",
+    "code": 200,
+    "data": {
+        "total_employee": 54
+    }
+}

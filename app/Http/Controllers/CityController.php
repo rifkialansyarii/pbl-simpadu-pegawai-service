@@ -2,53 +2,54 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\CityResource;
+use App\Http\Resources\CityCollection;
 use App\Services\CityService;
-use App\Traits\ApiResponse;
-use Exception;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
-use Laravolt\Indonesia\Models\City;
-use Laravolt\Indonesia\Models\Province;
+use Knuckles\Scribe\Attributes\QueryParam;
+use Knuckles\Scribe\Attributes\ResponseFromFile;
+use Knuckles\Scribe\Attributes\UrlParam;
 
+/**
+ * Endpoint untuk wilayah.
+ *
+ * @group Wilayah
+ */
 class CityController extends Controller
 {
-    use ApiResponse;
 
     public function __construct(
         private CityService $service
     ) {
     }
 
-    public function index(): JsonResponse
+    /**
+     * @unauthenticated
+     */
+    #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
+    #[ResponseFromFile(file: 'responses/region/success_get_city.json', status: 200, description: 'Sukses mendapatkan data kota')]
+    public function index()
     {
-        try {
-
-            return $this->sendSuccess(
-                data: CityResource::collection($this->service->getAllCity()),
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
+        $cityCollection = new CityCollection($this->service->getAllCity());
+        return $cityCollection->additional([
+            'success' => true,
+            'message' => "Data retrieved successfully",
+            'code' => 200,
+        ]);
     }
 
-    public function showByProvince(string $provinceCode): JsonResponse
+
+     /**
+     * @unauthenticated
+     */
+    #[UrlParam("provinceCode", "string", "Kode Provinsi", example: "63")]
+    #[ResponseFromFile(file: 'responses/region/success_get_city.json', status: 200, description: 'Sukses mendapatkan data kota')]
+    public function showByProvince(string $provinceCode)
     {        
-        try {
 
-            return $this->sendSuccess(
-                data: CityResource::collection($this->service->getCityByProvince($provinceCode)),
-                message: 'Data retrieved successfully',
-            );
-
-        } catch (Exception $e) {
-            return $this->sendError(
-                message: $e->getMessage()
-            );
-        }
+        $cityCollection = new CityCollection($this->service->getCityByProvince($provinceCode));
+        return $cityCollection->additional([
+            'success' => true,
+            'message' => "Data retrieved successfully",
+            'code' => 200,
+        ]);
     }
 }
