@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Setup laravel docker environment"
+echo "Setup laravel docker local environment"
 
 if ! docker info > /dev/null 2>&1; then
     echo "Docker is not running. Please start Docker first."
@@ -18,31 +18,31 @@ else
 fi
 
 echo "Building and starting Docker containers..."
-docker compose up -d --build
+docker compose -f docker-compose.local.yml up -d --build
 
 echo -n "Waiting for services to initialize."
-until docker exec laravel_php nc mysql 3306; do
+until docker compose -f docker-compose.local.yml exec -T mysql mysqladmin ping -h"127.0.0.1" --silent; do
     echo -n "."
-    sleep 1
+    sleep 2
 done
-echo -e "\nServices are initialized."
+echo -e "\nDatabase is ready to accept connections!"
 
 if ! grep -q "APP_KEY=base64:" .env; then
     echo "Generating application key..."
-    docker exec laravel_php php artisan key:generate
+    docker compose -f docker-compose.local.yml exec php php artisan key:generate
 fi
 
 # Run migrations and seeders
 echo "Running database migrations and seeders..."
-docker exec laravel_php php artisan migrate:fresh --force
-docker exec laravel_php php artisan db:seed
+docker compose -f docker-compose.local.yml exec php php artisan migrate:fresh --force
+docker compose -f docker-compose.local.yml exec php php artisan db:seed
 
 # Clear and cache configs
 echo "Optimizing Laravel..."
-docker exec laravel_php php artisan config:clear
-docker exec laravel_php php artisan cache:clear
-docker exec laravel_php php artisan route:clear
-docker exec laravel_php php artisan view:clear
+docker compose -f docker-compose.local.yml exec php php artisan config:clear
+docker compose -f docker-compose.local.yml exec php php artisan cache:clear
+docker compose -f docker-compose.local.yml exec php php artisan route:clear
+docker compose -f docker-compose.local.yml exec php php artisan view:clear
 
 echo "Setup complete!"
 echo "Your application is running at: http://localhost:1234"

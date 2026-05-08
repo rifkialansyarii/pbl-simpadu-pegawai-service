@@ -46,13 +46,6 @@ class ChangeRequestController extends Controller
         ]);
     }
 
-
-    #[Endpoint("Add a word to the list.", <<<DESC
-         This endpoint allows you to add a word to the list.
-         It's a really useful endpoint, and you should play around 
-         with it for a bit.
-         <aside class="notice">We mean it; you really should.😕</aside>
-    DESC)]
     #[ResponseFromFile(file: 'responses/change_request/success_get_detail.json', status: 200, description: 'Sukses mengubah data permintaan perubahan')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]

@@ -575,7 +575,7 @@
 
         </div>
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
-            Last updated: May 6, 2026
+            Last updated: May 8, 2026
         </div>
 
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
@@ -1316,7 +1316,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019df6c9-8f19-73d7-b9db-a0d11acce3bb
+                        019e06d6-0d5e-708c-b75e-c236bdcdcecb
                     </div>
                 </div>
             </div>
@@ -1475,7 +1475,7 @@ fetch(url, {
                                         <input aria-label="employee_id" name="employee_id"
                                                id="urlparam-GETapi-employees--employee_id--employee_id"
                                                placeholder="The ID of the employee."
-                                               value="019df6c9-8f19-73d7-b9db-a0d11acce3bb" data-component="url"
+                                               value="019e06d6-0d5e-708c-b75e-c236bdcdcecb" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -1583,7 +1583,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:1234/api/employees/019df6c9-8f19-73d7-b9db-a0d11acce3bb" \
+    --get "http://localhost:1234/api/employees/019e06d6-0d5e-708c-b75e-c236bdcdcecb" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -1594,7 +1594,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/employees/019df6c9-8f19-73d7-b9db-a0d11acce3bb"
+    "http://localhost:1234/api/employees/019e06d6-0d5e-708c-b75e-c236bdcdcecb"
 );
 
 const headers = {
@@ -3128,7 +3128,7 @@ fetch(url, {
                                     </div>
                                         </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>NIP harus unik dan terdiri dari 18 karakter</p>
+            <p>NIP harus unik dan terdiri dari 18 karakter (Perubahan pada field ini akan berlaku jika admin menyetujui)</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
@@ -3153,7 +3153,7 @@ fetch(url, {
                                     </div>
                                         </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>NIK harus unik dan terdiri dari 16 karakter</p>
+            <p>NIK harus unik dan terdiri dari 16 karakter (Perubahan pada field ini akan berlaku jika admin menyetujui)</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
@@ -3178,7 +3178,7 @@ fetch(url, {
                                     </div>
                                         </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>Nama pegawai</p>
+            <p>Nama pegawai (Perubahan pada field ini akan berlaku jika admin menyetujui)</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
@@ -4014,7 +4014,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019df6c9-8f19-73d7-b9db-a0d11acce3bb
+                        019e06d6-0d5e-708c-b75e-c236bdcdcecb
                     </div>
                 </div>
             </div>
@@ -4173,7 +4173,7 @@ fetch(url, {
                                         <input aria-label="employee_id" name="employee_id"
                                                id="urlparam-DELETEapi-employees--employee_id--employee_id"
                                                placeholder="The ID of the employee."
-                                               value="019df6c9-8f19-73d7-b9db-a0d11acce3bb" data-component="url"
+                                               value="019e06d6-0d5e-708c-b75e-c236bdcdcecb" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -4281,7 +4281,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:1234/api/employees/019df6c9-8f19-73d7-b9db-a0d11acce3bb" \
+    "http://localhost:1234/api/employees/019e06d6-0d5e-708c-b75e-c236bdcdcecb" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -4292,7 +4292,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/employees/019df6c9-8f19-73d7-b9db-a0d11acce3bb"
+    "http://localhost:1234/api/employees/019e06d6-0d5e-708c-b75e-c236bdcdcecb"
 );
 
 const headers = {
@@ -5917,7 +5917,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019df6c9-aafe-728b-9054-210f086ead95
+                        019e06d6-3073-72d8-9a30-8a680d82dded
                     </div>
                 </div>
             </div>
@@ -5978,7 +5978,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        rejected
+                        pending
                     </div>
                 </div>
             </div>
@@ -6110,7 +6110,7 @@ fetch(url, {
                                         <input aria-label="changeRequest_id" name="changeRequest_id"
                                                id="urlparam-PUTapi-change-requests--changeRequest_id--changeRequest_id"
                                                placeholder="The ID of the changeRequest."
-                                               value="019df6c9-aafe-728b-9054-210f086ead95" data-component="url"
+                                               value="019e06d6-3073-72d8-9a30-8a680d82dded" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -6153,7 +6153,7 @@ fetch(url, {
                                      id="json-body-PUTapi-change-requests--changeRequest_id-"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "status": "rejected"
+    "status": "pending"
 }</div>
                             </div>
                                             </div>
@@ -6245,12 +6245,12 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:1234/api/change-requests/019df6c9-aafe-728b-9054-210f086ead95" \
+    "http://localhost:1234/api/change-requests/019e06d6-3073-72d8-9a30-8a680d82dded" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"status\": \"rejected\"
+    \"status\": \"pending\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -6260,7 +6260,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/change-requests/019df6c9-aafe-728b-9054-210f086ead95"
+    "http://localhost:1234/api/change-requests/019e06d6-3073-72d8-9a30-8a680d82dded"
 );
 
 const headers = {
@@ -6270,7 +6270,7 @@ const headers = {
 };
 
 let body = {
-    "status": "rejected"
+    "status": "pending"
 };
 
 fetch(url, {
