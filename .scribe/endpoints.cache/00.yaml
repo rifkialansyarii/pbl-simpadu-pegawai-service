@@ -212,7 +212,7 @@ endpoints:
         name: employee_id
         description: 'The ID of the employee.'
         required: true
-        example: 019df6c9-8f19-73d7-b9db-a0d11acce3bb
+        example: 019e06d6-0d5e-708c-b75e-c236bdcdcecb
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -230,7 +230,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      employee_id: 019df6c9-8f19-73d7-b9db-a0d11acce3bb
+      employee_id: 019e06d6-0d5e-708c-b75e-c236bdcdcecb
       employee: 123e4567-e89b-12d3-a456-426614174000
     queryParameters: []
     cleanQueryParameters: []
@@ -710,7 +710,7 @@ endpoints:
       nip:
         custom: []
         name: nip
-        description: 'NIP harus unik dan terdiri dari 18 karakter'
+        description: 'NIP harus unik dan terdiri dari 18 karakter (Perubahan pada field ini akan berlaku jika admin menyetujui)'
         required: false
         example: '691651594659009703'
         type: string
@@ -721,7 +721,7 @@ endpoints:
       nik:
         custom: []
         name: nik
-        description: 'NIK harus unik dan terdiri dari 16 karakter'
+        description: 'NIK harus unik dan terdiri dari 16 karakter (Perubahan pada field ini akan berlaku jika admin menyetujui)'
         required: false
         example: '1801160204072477'
         type: string
@@ -732,7 +732,7 @@ endpoints:
       employee_name:
         custom: []
         name: employee_name
-        description: 'Nama pegawai'
+        description: 'Nama pegawai (Perubahan pada field ini akan berlaku jika admin menyetujui)'
         required: false
         example: 'John Doe'
         type: string
@@ -986,7 +986,7 @@ endpoints:
         name: employee_id
         description: 'The ID of the employee.'
         required: true
-        example: 019df6c9-8f19-73d7-b9db-a0d11acce3bb
+        example: 019e06d6-0d5e-708c-b75e-c236bdcdcecb
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1004,7 +1004,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      employee_id: 019df6c9-8f19-73d7-b9db-a0d11acce3bb
+      employee_id: 019e06d6-0d5e-708c-b75e-c236bdcdcecb
       employee: 123e4567-e89b-12d3-a456-426614174000
     queryParameters: []
     cleanQueryParameters: []
