@@ -8,6 +8,7 @@ use App\Http\Resources\ChangeRequestResource;
 use App\Models\ChangeRequest;
 use App\Services\ChangeRequestService;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\QueryParam;
 use Knuckles\Scribe\Attributes\ResponseFromFile;
 use Knuckles\Scribe\Attributes\UrlParam;
@@ -27,8 +28,8 @@ class ChangeRequestController extends Controller
 
     #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
     #[ResponseFromFile(
-        file: 'responses/change_request/success_get_all.json', 
-        status: 200, 
+        file: 'responses/change_request/success_get_all.json',
+        status: 200,
         description: 'Sukses mendapatkan data permintaan perubahan. Note:
                       Jika role admin akan menampilkan semua data, 
                       Jika role dosen hanya menampilkan data miliknya sendiri'
@@ -45,6 +46,13 @@ class ChangeRequestController extends Controller
         ]);
     }
 
+
+    #[Endpoint("Add a word to the list.", <<<DESC
+         This endpoint allows you to add a word to the list.
+         It's a really useful endpoint, and you should play around 
+         with it for a bit.
+         <aside class="notice">We mean it; you really should.😕</aside>
+    DESC)]
     #[ResponseFromFile(file: 'responses/change_request/success_get_detail.json', status: 200, description: 'Sukses mengubah data permintaan perubahan')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
