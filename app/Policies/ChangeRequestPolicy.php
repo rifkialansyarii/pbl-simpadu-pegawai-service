@@ -13,7 +13,7 @@ class ChangeRequestPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->role === 'admin' || $user->role === 'dosen';
+        return $user->role === 'admin-pegawai' || $user->role === 'super-admin' || $user->role === 'dosen';
     }
 
     /**
@@ -37,7 +37,7 @@ class ChangeRequestPolicy
      */
     public function update(User $user, ChangeRequest $changeRequest): bool
     {
-        return $user->role === 'admin';
+        return $user->role === 'admin-pegawai' || $user->role === 'super-admin';
     }
 
     /**
@@ -66,11 +66,11 @@ class ChangeRequestPolicy
 
     public function viewNewly(User $user): bool
     {
-        return $user->role === 'admin';
+        return $user->role === 'admin-pegawai' || $user->role === 'super-admin';
     }
 
     public function viewTotalPendingStatus(User $user): bool
     {
-        return $user->role === 'admin';
+        return $user->role === 'admin-pegawai' || $user->role === 'super-admin';
     }
 }
