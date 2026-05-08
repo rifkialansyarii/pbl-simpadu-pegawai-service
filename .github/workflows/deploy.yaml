@@ -15,7 +15,7 @@ jobs:
           username: root
           key: ${{ secrets.PBL_VPS_SSH_KEY }}
           script: |
-            cd ~/kelompok-2/pbl-work
+            cd /root/kelompok-2/pbl-work
             
             git pull origin main
             
