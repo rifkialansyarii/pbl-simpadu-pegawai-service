@@ -1,0 +1,30 @@
+name: Deploy API to PBL VPS
+
+  on:
+    push:
+      branches:
+        - main
+    pull_request:
+      branches:
+        - main
+
+  jobs:
+    deploy-to-vps-pbl:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Deploy di PBL VPS
+          uses: appleboy/ssh-action@v1.0.3
+          with:
+            host: ${{ secrets.PBL_VPS_HOST }}
+            username: root
+            key: ${{ secrets.PBL_VPS_SSH_KEY }}
+            script: |
+              cd ~/kelompok-2/pbl-work
+              
+              git pull origin main
+              
+              docker compose exec -T php composer install --no-interaction --prefer-dist --optimize-autoloader
+              
+              docker compose exec -T php php artisan migrate --force
+              
+              docker compose exec -T php php artisan optimize:clear
