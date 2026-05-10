@@ -1,0 +1,64 @@
+#!/bin/bash
+
+echo "Setup laravel docker local environment"
+
+if ! docker info > /dev/null 2>&1; then
+    echo "Docker is not running. Please start Docker first."
+    exit 1
+fi
+
+if [ ! -f .env ]; then
+    echo "Copying environment file..."
+    cp .env.example .env
+    sed -i 's/# DB_DATABASE=laravel/DB_DATABASE=app/' .env
+    sed -i 's/# DB_USERNAME=root/DB_USERNAME=laravel/' .env
+    sed -i 's/# DB_PASSWORD=/DB_PASSWORD=secret/' .env
+
+    set -o allexport
+    source .env
+    set +o allexport
+else
+    echo ".env file already exists. Skipping copy."
+fi
+
+echo "Building Docker containers..."
+docker compose -f docker-compose.prod.yml --build --no-cache
+
+echo9 "Issue Certificate for SSL..."
+docker compose run --rm certbot certonly \ 
+    --webroot -w /var/www/certbot \ 
+    -d api-pegawai-4a.akufarish.my.id \
+    --email $EMAIL \
+    --agree-tos \
+    --no-eff-email
+
+echo "Starting Docker containers..."
+docker compose -f docker-compose.prod.yml up -d
+
+echo -n "Waiting for services to initialize."
+until docker compose -f docker-compose.prod.yml exec -T mysql mysqladmin ping -h"127.0.0.1" --silent; do
+    echo -n "."
+    sleep 2
+done
+echo -e "\nDatabase is ready to accept connections!"
+
+if ! grep -q "APP_KEY=base64:" .env; then
+    echo "Generating application key..."
+    docker compose -f docker-compose.prod.yml exec php php artisan key:generate
+fi
+
+# Run migrations and seeders
+echo "Running database migrations and seeders..."
+docker compose -f docker-compose.prod.yml exec php php artisan migrate:fresh --force
+docker compose -f docker-compose.prod.yml exec php php artisan db:seed
+
+# Clear and cache configs
+echo "Optimizing Laravel..."
+docker compose -f docker-compose.prod.yml exec php php artisan config:clear
+docker compose -f docker-compose.prod.yml exec php php artisan cache:clear
+docker compose -f docker-compose.prod.yml exec php php artisan route:clear
+docker compose -f docker-compose.prod.yml exec php php artisan view:clear
+
+echo "Setup complete!"
+echo "Your application is running at: https://api-pegawai-4a.akufarish.my.id:1234"
+echo "Database is available at: localhost:33060"
