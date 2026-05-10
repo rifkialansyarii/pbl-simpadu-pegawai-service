@@ -71,4 +71,9 @@ class Employee extends Model
         return $this->hasMany(ChangeRequest::class);
     }
 
+    public function classSessions(): HasMany
+    {
+        return $this->hasMany(ClassSession::class);
+    }
+
 }
