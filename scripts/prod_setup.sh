@@ -17,6 +17,10 @@ if [ ! -f .env ]; then
     set -o allexport
     source .env
     set +o allexport
+
+    read -p "Input your email for issue SSL certificate:  " email
+
+    export EMAIL=$email
 else
     echo ".env file already exists. Skipping copy."
 fi
