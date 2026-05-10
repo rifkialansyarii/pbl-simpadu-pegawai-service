@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ChangeRequestController;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\ClassSessionController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\EmployeeController;
@@ -36,3 +37,5 @@ Route::get('/districts/{cityCode}', [DistrictController::class, 'showByCity']);
 
 Route::get('/villages', [VillageController::class, 'index']);
 Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);
+
+Route::get('/class-sessions', [ClassSessionController::class, 'index']);
