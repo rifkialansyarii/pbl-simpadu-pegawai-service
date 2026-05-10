@@ -26,7 +26,7 @@ else
 fi
 
 echo "Building Docker containers..."
-docker compose -f docker-compose.prod.yml --build --no-cache
+docker compose -f docker-compose.prod.yml build --no-cache
 
 echo "Issue Certificate for SSL..."
 docker compose run --rm certbot certonly \ 
