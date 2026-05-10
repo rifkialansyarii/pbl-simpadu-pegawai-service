@@ -28,7 +28,7 @@ fi
 echo "Building Docker containers..."
 docker compose -f docker-compose.prod.yml --build --no-cache
 
-echo9 "Issue Certificate for SSL..."
+echo "Issue Certificate for SSL..."
 docker compose run --rm certbot certonly \ 
     --webroot -w /var/www/certbot \ 
     -d api-pegawai-4a.akufarish.my.id \
