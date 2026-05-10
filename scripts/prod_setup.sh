@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Setup laravel docker local environment"
+echo "Setup laravel docker production environment"
 
 if ! docker info > /dev/null 2>&1; then
     echo "Docker is not running. Please start Docker first."
@@ -28,7 +28,7 @@ fi
 echo "Building Docker containers..."
 docker compose -f docker-compose.prod.yml --build --no-cache
 
-echo9 "Issue Certificate for SSL..."
+echo "Issue Certificate for SSL..."
 docker compose run --rm certbot certonly \ 
     --webroot -w /var/www/certbot \ 
     -d api-pegawai-4a.akufarish.my.id \
