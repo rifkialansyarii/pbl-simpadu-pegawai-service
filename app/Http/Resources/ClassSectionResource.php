@@ -14,6 +14,32 @@ class ClassSectionResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'pengampu_id' => $this->pengampu_id,
+            'lecturer_id' => $this->lecturer_id,
+            'class_id' => $this->class_id,
+            'class_name' => $this->class_name,
+            'topic' => $this->topic,
+            'session_date' => $this->session_date,
+            'start_time' => $this->start_time,
+            'end_time' => $this->end_time,
+            'status' => $this->status,
+            'is_already_opened' => $this->is_already_opened,
+        ];
+    }
+
+    public function withResponse(Request $request, $response): void
+    {
+        $originalData = $response->getData(true);
+        $response->setData([
+            'success' => $originalData['success'] ?? true,
+            'message' => $originalData['message'] ?? "Data retrieved successfully",
+            'code' => $originalData['code'] ?? 200,
+
+            'data' => $originalData['data'] ?? [],
+        ]);
+
+        $response->setStatusCode($originalData['code'] ?? 200);
     }
 }
