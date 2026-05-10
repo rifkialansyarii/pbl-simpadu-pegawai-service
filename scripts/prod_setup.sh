@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Setup laravel docker local environment"
+echo "Setup laravel docker production environment"
 
 if ! docker info > /dev/null 2>&1; then
     echo "Docker is not running. Please start Docker first."
