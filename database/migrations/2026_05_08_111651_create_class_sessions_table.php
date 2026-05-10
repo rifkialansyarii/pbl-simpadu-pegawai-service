@@ -11,9 +11,9 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('class_sessions', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->uuid('pengampu_id');
-            $table->foreignUuid('employee_id')->constrained(
+            $table->foreignUuid('lecturer_id')->constrained(
                 table: 'employees'
             );
             $table->uuid('class_id');
@@ -24,7 +24,7 @@ return new class extends Migration {
             $table->time('start_time');
             $table->time('end_time');
             $table->enum('status', ['opened', 'closed']);
-            $table->bool('is_already_opened')->default(false);
+            $table->boolean('is_already_opened')->default(false);
             $table->timestamps();
         });
     }
