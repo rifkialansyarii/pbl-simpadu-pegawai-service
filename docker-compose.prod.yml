@@ -5,7 +5,7 @@ services:
     build:
       context: .                          
       dockerfile: docker/php/Dockerfile   
-    container_name: laravel_php
+    container_name: laravel_php_kelompok_2
     restart: unless-stopped               
     working_dir: /var/www/html
 
@@ -22,7 +22,7 @@ services:
 
   nginx:
     image: nginx:alpine
-    container_name: laravel_nginx
+    container_name: laravel_nginx_kelompok_2
     restart: unless-stopped
 
     ports:
@@ -43,6 +43,7 @@ services:
 
   certbot:
     image: certbot/certbot
+    container_name: laravel_certbot_kelompok_2
     volumes:
       - ./certbot/www:/var/www/certbot
       - ./data:/etc/letsencrypt
