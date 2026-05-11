@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   php:
     build:
@@ -26,7 +24,7 @@ services:
     restart: unless-stopped
 
     ports:
-      - "80:80"
+      - "8080:80"
       - "1234:443"
 
     volumes:
@@ -37,9 +35,6 @@ services:
 
     networks:
       - laravel_network
-
-    depends_on:
-      - php
 
   certbot:
     image: certbot/certbot
