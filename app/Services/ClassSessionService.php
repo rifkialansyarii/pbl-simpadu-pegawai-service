@@ -6,6 +6,8 @@ use App\Contracts\ClassSessionRepositoryInterface;
 use App\Http\Requests\UpdateClassSessionRequest;
 use App\Models\ClassSession;
 use Arr;
+use Carbon\Carbon;
+use DB;
 
 final class ClassSessionService
 {
@@ -22,6 +24,33 @@ final class ClassSessionService
     public function getClassSessionById(ClassSession $classSession)
     {
         return $this->repository->getById($classSession);
+    }
+
+    public function generateClassSession(array $attributes)
+    {
+        $data = array();
+
+        $sessionDate = Carbon::createFromFormat('d/m/Y', $attributes['start_date'])->format('Y-m-d');
+
+        for ($i = 0; $i < $attributes['session_amount']; $i++) {
+
+            array_push($data, [
+                "pengampu_id" => $attributes['pengampu_id'],
+                "lecturer_id" => $attributes['lecturer_id'],
+                "class_id" => $attributes['class_id'],
+                "class_name" => $attributes['class_name'],
+                "course_name" => $attributes['course_name'],
+                "session_date" => $sessionDate,
+                "start_time" => $attributes['start_time'],
+                "end_time" => $attributes['end_time'],
+            ]);
+
+            $sessionDate = Carbon::parse($sessionDate)->addDays(7)->toDateString();
+        }
+
+        DB::transaction(function () use ($data) {
+            return $this->repository->generate($data);
+        });
     }
 
     public function createClassSession(array $attributes)

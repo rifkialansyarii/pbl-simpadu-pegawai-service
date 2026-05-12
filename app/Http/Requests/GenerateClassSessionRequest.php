@@ -24,16 +24,15 @@ class GenerateClassSessionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'class_session' => ['required', 'array', 'min:14', 'max:16'],
-
-            'class_session.*.pengampu_id' => ['required', 'string', 'max:36'],
-            'class_session.*.lecturer_id' => ['required', 'string', 'max:36'],
-            'class_session.*.course_name' => ['required', 'string', 'max:255'],
-            'class_session.*.class_id' => ['required', 'string', 'max:36'],
-            'class_session.*.session_amount' => ['required', 'integer', 'max:16'],
-            'class_session.*.start_date' => ['required', Rule::date()->format('d-m-Y')],
-            'class_session.*.start_time' => ['required',Rule::date()->format('H-i')],
-            'class_session.*.end_time' => ['required',Rule::date()->format('H-i')],
+            'pengampu_id' => ['required', 'string', 'max:36'],
+            'lecturer_id' => ['required', 'string', 'max:36'],
+            'class_id' => ['required', 'string', 'max:36'],
+            'class_name' => ['required', 'string', 'max:255'],
+            'course_name' => ['required', 'string', 'max:255'],
+            'session_amount' => ['required', 'integer', 'max:16'],
+            'start_date' => ['required', Rule::date()->format('d/m/Y')],
+            'start_time' => ['required', Rule::date()->format('H:i')],
+            'end_time' => ['required', Rule::date()->format('H:i')],
         ];
     }
 }

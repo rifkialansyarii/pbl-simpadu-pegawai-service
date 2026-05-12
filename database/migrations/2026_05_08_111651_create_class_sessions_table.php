@@ -19,11 +19,11 @@ return new class extends Migration {
             $table->uuid('class_id');
             $table->string('class_name');
             $table->string('course_name');
-            $table->string('topic');
+            $table->string('topic')->nullable();
             $table->date('session_date');
             $table->time('start_time');
             $table->time('end_time');
-            $table->enum('status', ['opened', 'closed']);
+            $table->enum('status', ['opened', 'closed'])->default('closed');
             $table->boolean('is_already_opened')->default(false);
             $table->timestamps();
         });

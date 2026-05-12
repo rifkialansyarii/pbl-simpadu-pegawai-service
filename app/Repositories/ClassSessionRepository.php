@@ -49,19 +49,30 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
         return $classSession;
     }
 
+    public function generate(array $data)
+    {
+        // $chunks = array_chunk($data, 1000);
+
+        // foreach ($chunks as $chunk) {
+        //     Product::fillAndInsert($chunk);
+        // }
+
+        return ClassSession::fillAndInsert($data);
+    }
+
     public function delete(ClassSession $classSession)
     {
         $classSession->delete();
     }
 
-    public function create(array $attributes)
+    public function create(array $data)
     {
-        return ClassSession::create($attributes);
+        return ClassSession::create($data);
     }
 
-    public function update(ClassSession $classSession, array $attributes)
+    public function update(ClassSession $classSession, array $data)
     {
-        $classSession->update($attributes);
+        $classSession->update($data);
         return $classSession->refresh()->load(['village', 'district', 'city', 'province', 'citizen']);
     }
 }

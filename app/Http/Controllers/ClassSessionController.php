@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\GenerateClassSessionRequest;
 use App\Http\Resources\ClassSectionCollection;
 use App\Http\Resources\ClassSectionResource;
 use App\Models\ClassSession;
@@ -27,6 +28,16 @@ class ClassSessionController extends Controller
     public function show(ClassSession $classSession)
     {
         $classSessionResource = new ClassSectionResource($this->service->getClassSessionById($classSession));
+        return $classSessionResource->additional([
+            'success' => true,
+            'message' => 'Data retrieved successfully',
+            'code' => 200,
+        ]);
+    }
+
+    public function generate(GenerateClassSessionRequest $request)
+    {
+        $classSessionResource = new ClassSectionResource($this->service->generateClassSession($request->validated()));
         return $classSessionResource->additional([
             'success' => true,
             'message' => 'Data retrieved successfully',

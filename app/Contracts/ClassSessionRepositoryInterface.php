@@ -9,6 +9,7 @@ interface ClassSessionRepositoryInterface
     public function getAll();
     public function getById(ClassSession $classSession);
     public function delete(ClassSession $classSession);
-    public function create(array $attributes);
-    public function update(ClassSession $classSession, array $attributes);
+    public function generate(array $data);
+    public function create(array $data);
+    public function update(ClassSession $classSession, array $data);
 }
