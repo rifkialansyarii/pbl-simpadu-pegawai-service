@@ -19,9 +19,9 @@ final class ClassSessionService
         return $this->repository->getAll();
     }
 
-    public function getClassSessionById(ClassSession $ClassSession)
+    public function getClassSessionById(ClassSession $classSession)
     {
-        return $this->repository->getById($ClassSession);
+        return $this->repository->getById($classSession);
     }
 
     public function createClassSession(array $attributes)
@@ -29,16 +29,16 @@ final class ClassSessionService
         return $this->repository->create($attributes);
     }
 
-    public function updateClassSession(UpdateClassSessionRequest $request, ClassSession $ClassSession)
+    public function updateClassSession(UpdateClassSessionRequest $request, ClassSession $classSession)
     {
         $attributes = Arr::except($request->validated(), ['nip', 'nik', 'ClassSession_name']);
-        return $this->repository->update($ClassSession, $attributes);
+        return $this->repository->update($classSession, $attributes);
     }
 
 
-    public function deleteClassSession(ClassSession $ClassSession)
+    public function deleteClassSession(ClassSession $classSession)
     {
-        $this->repository->delete($ClassSession);
+        $this->repository->delete($classSession);
     }
 
 

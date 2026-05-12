@@ -39,3 +39,4 @@ Route::get('/villages', [VillageController::class, 'index']);
 Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);
 
 Route::get('/class-sessions', [ClassSessionController::class, 'index']);
+Route::get('/class-sessions/{classSession}', [ClassSessionController::class, 'show']);

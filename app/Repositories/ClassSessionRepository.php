@@ -23,6 +23,8 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'is_already_opened',
         ])->paginate(10);
 
+        $classSession->load(['lecturer']);
+
         return $classSession;
     }
 
@@ -40,8 +42,9 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'end_time',
             'status',
             'is_already_opened',
-        ])->paginate(10);
+        ])->where('id', $classSession->id)->first();
 
+        $classSession->load(['lecturer']);
 
         return $classSession;
     }
