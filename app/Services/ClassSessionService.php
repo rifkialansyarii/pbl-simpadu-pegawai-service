@@ -6,6 +6,8 @@ use App\Contracts\ClassSessionRepositoryInterface;
 use App\Http\Requests\UpdateClassSessionRequest;
 use App\Models\ClassSession;
 use Arr;
+use Carbon\Carbon;
+use DB;
 
 final class ClassSessionService
 {
@@ -19,9 +21,38 @@ final class ClassSessionService
         return $this->repository->getAll();
     }
 
-    public function getClassSessionById(ClassSession $ClassSession)
+    public function getClassSessionById(ClassSession $classSession)
     {
-        return $this->repository->getById($ClassSession);
+        return $this->repository->getById($classSession);
+    }
+
+    public function generateClassSession(array $attributes)
+    {
+        $data = array();
+
+        $sessionAmount = 16;
+
+        $sessionDate = Carbon::createFromFormat('d/m/Y', $attributes['start_date'])->format('Y-m-d');
+
+        for ($i = 0; $i < $sessionAmount; $i++) {
+
+            array_push($data, [
+                "pengampu_id" => $attributes['pengampu_id'],
+                "lecturer_id" => $attributes['lecturer_id'],
+                "class_id" => $attributes['class_id'],
+                "class_name" => $attributes['class_name'],
+                "course_name" => $attributes['course_name'],
+                "session_date" => $sessionDate,
+                "start_time" => $attributes['start_time'],
+                "end_time" => $attributes['end_time'],
+            ]);
+
+            $sessionDate = Carbon::parse($sessionDate)->addDays(7)->toDateString();
+        }
+
+        return DB::transaction(function () use ($data, $sessionAmount) {
+            return $this->repository->generate($data, $sessionAmount);
+        });
     }
 
     public function createClassSession(array $attributes)
@@ -29,16 +60,16 @@ final class ClassSessionService
         return $this->repository->create($attributes);
     }
 
-    public function updateClassSession(UpdateClassSessionRequest $request, ClassSession $ClassSession)
+    public function updateClassSession(UpdateClassSessionRequest $request, ClassSession $classSession)
     {
         $attributes = Arr::except($request->validated(), ['nip', 'nik', 'ClassSession_name']);
-        return $this->repository->update($ClassSession, $attributes);
+        return $this->repository->update($classSession, $attributes);
     }
 
 
-    public function deleteClassSession(ClassSession $ClassSession)
+    public function deleteClassSession(ClassSession $classSession)
     {
-        $this->repository->delete($ClassSession);
+        $this->repository->delete($classSession);
     }
 
 

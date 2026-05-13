@@ -33,6 +33,6 @@ class ClassSession extends Model
 
     public function lecturer(): BelongsTo
     {
-        return $this->belongsTo(Employee::class, 'employee_id');
+        return $this->belongsTo(Employee::class, 'lecturer_id');
     }
 }

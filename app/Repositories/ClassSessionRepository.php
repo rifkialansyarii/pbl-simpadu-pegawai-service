@@ -23,6 +23,8 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'is_already_opened',
         ])->paginate(10);
 
+        $classSession->load(['lecturer']);
+
         return $classSession;
     }
 
@@ -40,8 +42,25 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'end_time',
             'status',
             'is_already_opened',
-        ])->paginate(10);
+        ])->where('id', $classSession->id)->first();
 
+        $classSession->load(['lecturer']);
+
+        return $classSession;
+    }
+
+    public function generate(array $data, $sessionAmount)
+    {
+        // $chunks = array_chunk($data, 1000);
+
+        // foreach ($chunks as $chunk) {
+        //     Product::fillAndInsert($chunk);
+        // }
+
+        ClassSession::fillAndInsert($data);
+
+        $classSession = ClassSession::latest()->take($sessionAmount)->get();
+        $classSession->load(['lecturer']);
 
         return $classSession;
     }
@@ -51,14 +70,14 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
         $classSession->delete();
     }
 
-    public function create(array $attributes)
+    public function create(array $data)
     {
-        return ClassSession::create($attributes);
+        return ClassSession::create($data);
     }
 
-    public function update(ClassSession $classSession, array $attributes)
+    public function update(ClassSession $classSession, array $data)
     {
-        $classSession->update($attributes);
+        $classSession->update($data);
         return $classSession->refresh()->load(['village', 'district', 'city', 'province', 'citizen']);
     }
 }
