@@ -16,7 +16,7 @@ final class ChangeRequestService
 
     public function getAllChangeRequest(User $user)
     {
-        if ($user->role === 'admin') {
+        if ($user->role === 'admin-pegawai') {
             return $this->repository->getAll();
         }
 
