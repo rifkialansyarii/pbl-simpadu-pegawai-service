@@ -30,7 +30,6 @@ class GenerateClassSessionRequest extends FormRequest
             'class_name' => ['required', 'string', 'max:255'],
             'course_name' => ['required', 'string', 'max:255'],
             'session_amount' => ['required', 'integer', 'max:16'],
-            'start_date' => ['required', Rule::date()->format('d/m/Y')],
             'start_time' => ['required', Rule::date()->format('H:i')],
             'end_time' => ['required', Rule::date()->format('H:i')],
         ];

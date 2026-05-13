@@ -30,7 +30,7 @@ final class ClassSessionService
     {
         $data = array();
 
-        $sessionAmount = $attributes['session_amount'];
+        $sessionAmount = 16;
 
         $sessionDate = Carbon::createFromFormat('d/m/Y', $attributes['start_date'])->format('Y-m-d');
 
