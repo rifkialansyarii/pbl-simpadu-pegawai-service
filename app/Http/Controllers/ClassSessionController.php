@@ -37,8 +37,8 @@ class ClassSessionController extends Controller
 
     public function generate(GenerateClassSessionRequest $request)
     {
-        $classSessionResource = new ClassSectionResource($this->service->generateClassSession($request->validated()));
-        return $classSessionResource->additional([
+        $classSessionCollection = new ClassSectionCollection($this->service->generateClassSession($request->validated()));
+        return $classSessionCollection->additional([
             'success' => true,
             'message' => 'Data retrieved successfully',
             'code' => 200,

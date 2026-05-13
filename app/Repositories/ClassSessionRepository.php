@@ -49,7 +49,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
         return $classSession;
     }
 
-    public function generate(array $data)
+    public function generate(array $data, $sessionAmount)
     {
         // $chunks = array_chunk($data, 1000);
 
@@ -57,7 +57,12 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
         //     Product::fillAndInsert($chunk);
         // }
 
-        return ClassSession::fillAndInsert($data);
+        ClassSession::fillAndInsert($data);
+
+        $classSession = ClassSession::latest()->take($sessionAmount)->get();
+        $classSession->load(['lecturer']);
+
+        return $classSession;
     }
 
     public function delete(ClassSession $classSession)

@@ -30,9 +30,11 @@ final class ClassSessionService
     {
         $data = array();
 
+        $sessionAmount = $attributes['session_amount'];
+
         $sessionDate = Carbon::createFromFormat('d/m/Y', $attributes['start_date'])->format('Y-m-d');
 
-        for ($i = 0; $i < $attributes['session_amount']; $i++) {
+        for ($i = 0; $i < $sessionAmount; $i++) {
 
             array_push($data, [
                 "pengampu_id" => $attributes['pengampu_id'],
@@ -48,8 +50,8 @@ final class ClassSessionService
             $sessionDate = Carbon::parse($sessionDate)->addDays(7)->toDateString();
         }
 
-        DB::transaction(function () use ($data) {
-            return $this->repository->generate($data);
+        return DB::transaction(function () use ($data, $sessionAmount) {
+            return $this->repository->generate($data, $sessionAmount);
         });
     }
 
