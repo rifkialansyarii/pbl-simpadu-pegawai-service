@@ -80,7 +80,7 @@ final class ClassSessionService
                 'message' => 'Unprocessable Content',
                 'code' => 422,
                 'errrors' => $e->getMessage()
-            ]);
+            ], 422);
         }
     }
 
