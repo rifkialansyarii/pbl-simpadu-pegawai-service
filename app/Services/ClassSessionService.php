@@ -3,7 +3,6 @@
 namespace App\Services;
 
 use App\Contracts\ClassSessionRepositoryInterface;
-use App\Http\Requests\UpdateClassSessionRequest;
 use App\Models\ClassSession;
 use App\Models\User;
 use Arr;
@@ -58,30 +57,21 @@ final class ClassSessionService
             $sessionDate = Carbon::parse($sessionDate)->addDays(7)->toDateString();
         }
 
-        try {
-            return DB::transaction(function () use ($data, $sessionAmount, $attributes) {
+        return DB::transaction(function () use ($data, $sessionAmount, $attributes) {
 
-                $totalData = DB::table('class_sessions')
-                    ->where('class_name', $attributes['class_name'])
-                    ->where('course_name', $attributes['course_name'])
-                    ->lockForUpdate()
-                    ->count();
+            $totalData = DB::table('class_sessions')
+                ->where('class_name', $attributes['class_name'])
+                ->where('course_name', $attributes['course_name'])
+                ->lockForUpdate()
+                ->count();
 
-                if ($totalData >= 16) {
-                    throw new Exception("class sessions have been added");
+            if ($totalData >= 16) {
+                throw new Exception("class sessions have been added");
 
-                }
+            }
 
-                return $this->repository->generate($data, $sessionAmount);
-            });
-        } catch (Exception $e) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Unprocessable Content',
-                'code' => 422,
-                'errrors' => $e->getMessage()
-            ], 422);
-        }
+            return $this->repository->generate($data, $sessionAmount);
+        });
     }
 
     public function updateClassSession(array $attributes, ClassSession $classSession)
@@ -92,18 +82,9 @@ final class ClassSessionService
 
     public function deleteClassSession(array $attributes)
     {
-        try {
-            return DB::transaction(function () use ($attributes) {
-                return $this->repository->bulkDelete($attributes);
-            });
-        } catch (Exception $e) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Unprocessable Content',
-                'code' => 422,
-                'errrors' => $e->getMessage()
-            ]);
-        }
+        return DB::transaction(function () use ($attributes) {
+            return $this->repository->bulkDelete($attributes);
+        });
 
     }
 
