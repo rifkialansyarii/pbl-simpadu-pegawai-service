@@ -18,7 +18,9 @@ return new class extends Migration {
             );
             $table->uuid('class_id');
             $table->string('class_name');
+            $table->string('course_code');
             $table->string('course_name');
+            $table->unsignedTinyInteger('session_number')->comment('Urutan sesi kelas');
             $table->string('topic')->nullable();
             $table->date('session_date');
             $table->time('start_time');

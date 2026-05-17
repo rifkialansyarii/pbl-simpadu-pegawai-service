@@ -13,7 +13,10 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'id',
             'pengampu_id',
             'lecturer_id',
+            'session_number',
             'class_id',
+            'class_name',
+            'course_code',
             'course_name',
             'topic',
             'session_date',
@@ -34,7 +37,10 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'id',
             'pengampu_id',
             'lecturer_id',
+            'session_number',
             'class_id',
+            'class_name',
+            'course_code',
             'course_name',
             'topic',
             'session_date',
@@ -55,7 +61,10 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'id',
             'pengampu_id',
             'lecturer_id',
+            'session_number',
             'class_id',
+            'class_name',
+            'course_code',
             'course_name',
             'topic',
             'session_date',
@@ -76,7 +85,10 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'id',
             'pengampu_id',
             'lecturer_id',
+            'session_number',
             'class_id',
+            'class_name',
+            'course_code',
             'course_name',
             'topic',
             'session_date',
@@ -101,7 +113,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
 
         ClassSession::fillAndInsert($data);
 
-        $classSession = ClassSession::latest()->take($sessionAmount)->get();
+        $classSession = ClassSession::latest()->take($sessionAmount)->paginate(10);
         $classSession->load(['lecturer']);
 
         return $classSession;

@@ -17,8 +17,10 @@ class ClassSessionResource extends JsonResource
         return [
             'id' => $this->id,
             'pengampu_id' => $this->pengampu_id,
+            'session_number' => $this->session_number,
             'class_id' => $this->class_id,
             'class_name' => $this->class_name,
+            'course_code' => $this->course_code,
             'course_name' => $this->course_name,
             'topic' => $this->topic,
             'session_date' => $this->session_date,

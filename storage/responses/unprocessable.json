@@ -1,0 +1,13 @@
+{
+    "success": false,
+    "message": "Unprocessable Content",
+    "code": 422,
+    "errors": {
+        "foo": [
+            "The foo is required"
+        ],
+        "bar": [
+            "The bar must be string"
+        ]
+    }
+}

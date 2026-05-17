@@ -9,7 +9,8 @@ use Illuminate\Translation\PotentiallyTranslatedString;
 
 class CourseQuotaLimit implements ValidationRule
 {
-    public function __construct(private $className) {}
+    public function __construct(private $classId, private $className, private $courseCode) {}
+
     /**
      * Run the validation rule.
      *
@@ -18,7 +19,9 @@ class CourseQuotaLimit implements ValidationRule
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
         $totalData = DB::table('class_sessions')
+            ->where('class_id', $this->classId)
             ->where('class_name', $this->className)
+            ->where('course_code', $this->courseCode)
             ->where('course_name', $value)
             ->count();
         

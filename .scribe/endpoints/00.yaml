@@ -208,17 +208,6 @@ endpoints:
       employee_id:
         custom: []
         name: employee_id
-        description: 'The ID of the employee.'
-        required: true
-        example: 019e06d6-0d5e-708c-b75e-c236bdcdcecb
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      employee:
-        custom: []
-        name: employee
         description: 'UUID Pegawai'
         required: true
         example: 123e4567-e89b-12d3-a456-426614174000
@@ -228,8 +217,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      employee_id: 019e06d6-0d5e-708c-b75e-c236bdcdcecb
-      employee: 123e4567-e89b-12d3-a456-426614174000
+      employee_id: 123e4567-e89b-12d3-a456-426614174000
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -984,7 +972,7 @@ endpoints:
         name: employee_id
         description: 'The ID of the employee.'
         required: true
-        example: 019e06d6-0d5e-708c-b75e-c236bdcdcecb
+        example: 019e3511-06f5-70b9-b30c-0a4d21866971
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1002,7 +990,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      employee_id: 019e06d6-0d5e-708c-b75e-c236bdcdcecb
+      employee_id: 019e3511-06f5-70b9-b30c-0a4d21866971
       employee: 123e4567-e89b-12d3-a456-426614174000
     queryParameters: []
     cleanQueryParameters: []

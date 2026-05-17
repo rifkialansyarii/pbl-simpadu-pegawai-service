@@ -45,7 +45,7 @@ class EmployeeController extends Controller
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     #[ResponseFromFile(file: 'responses/not_found.json', status: 404, description: 'Data tidak ditemukan')]
-    #[UrlParam("employee", "string", "UUID Pegawai", example: "123e4567-e89b-12d3-a456-426614174000")]
+    #[UrlParam("employee_id", "string", "UUID Pegawai", example: "123e4567-e89b-12d3-a456-426614174000")]
     public function show(Employee $employee)
     {
         $employeeResource = new EmployeeResource($this->service->getEmployeeById($employee));
