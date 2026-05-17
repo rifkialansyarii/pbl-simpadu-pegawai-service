@@ -406,7 +406,7 @@ endpoints:
         name: changeRequest_id
         description: 'The ID of the changeRequest.'
         required: true
-        example: 019e06d6-3073-72d8-9a30-8a680d82dded
+        example: 019e3511-343d-7385-88da-8ad099bee303
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -424,7 +424,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      changeRequest_id: 019e06d6-3073-72d8-9a30-8a680d82dded
+      changeRequest_id: 019e3511-343d-7385-88da-8ad099bee303
       change-request: 123e4567-e89b-12d3-a456-426614174000
     queryParameters: []
     cleanQueryParameters: []
@@ -434,7 +434,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: pending
+        example: approved
         type: string
         enumValues:
           - pending
@@ -444,7 +444,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanBodyParameters:
-      status: pending
+      status: approved
     fileParameters: []
     responses:
       -

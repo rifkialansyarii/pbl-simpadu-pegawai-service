@@ -9,7 +9,13 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rule;
+use Knuckles\Scribe\Attributes\BodyParam;
 
+#[BodyParam("topic", "string", "Topik yang dibahas pada sesi kelas", example: "Session 1 - Mahasiswa mampu memahami konsep MVC", required: false)]
+#[BodyParam("session_date", "string", "Tanggal perkuliahan", example: "1990-01-01", required: false)]
+#[BodyParam("start_time", "string", "Waktu dimulainya perkuliahan", example: "08:30", required: false)]
+#[BodyParam("end_time", "string", "Waktu selesainya perkuliahan", example: "10:30", required: false)]
+#[BodyParam("status", "string", "Status sesi kelas (opened / closed), khusus role dosen yang bisa update", example: "opened", required: false)]
 class UpdateClassSessionRequest extends FormRequest
 {
     /**
@@ -28,7 +34,7 @@ class UpdateClassSessionRequest extends FormRequest
     public function rules(): array
     {
         $rules = array();
-        $role = $this->user()->role;
+        $role = $this->user()->role ?? null;
 
         if ($role === 'super-admin' || $role === 'admin-pegawai') {
             $rules = [

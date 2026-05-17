@@ -1,0 +1,35 @@
+{
+    "success": true,
+    "message": "Data retrieved successfully",
+    "code": 200,
+    "data": {
+        "id": "019e33e7-993d-7376-9c5a-c3c8078d697b",
+        "pengampu_id": "237e1c51-1818-7123-85d4-6880f9ff4a21",
+        "class_id": "309e6c61-1812-7123-65d3-6880f9ff4a2e",
+        "class_name": null,
+        "course_name": "Pemrograman Perangkat Bergerak",
+        "topic": "Dart Dasar",
+        "session_date": "2026-05-14",
+        "start_time": "13:30:00",
+        "end_time": "16:30:00",
+        "status": "opened",
+        "is_already_opened": 0,
+        "lecturer_id": "019e2446-7fc4-72de-8392-d22978eea84a",
+        "lecturer": {
+            "id": "019e2446-7fc4-72de-8392-d22978eea84a",
+            "nip": "377377633780957275",
+            "nik": "1674900508152465",
+            "employee_name": "Samiah Mayasari M.Pd",
+            "address": "Ds. Salam No. 429, Bitung 13428, Sulbar",
+            "birth_place": "Binjai",
+            "birth_date": "2000-08-26",
+            "gender": "male",
+            "phone_number": "088430472369",
+            "village_code": "1307032002",
+            "district_code": "130703",
+            "city_code": "1307",
+            "province_code": "13",
+            "citizen_code": "13"
+        }
+    }
+}

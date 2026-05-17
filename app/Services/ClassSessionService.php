@@ -46,8 +46,10 @@ final class ClassSessionService
             array_push($data, [
                 "pengampu_id" => $attributes['pengampu_id'],
                 "lecturer_id" => $attributes['lecturer_id'],
+                'session_number' => $i + 1,
                 "class_id" => $attributes['class_id'],
                 "class_name" => $attributes['class_name'],
+                "course_code" => $attributes['course_code'],
                 "course_name" => $attributes['course_name'],
                 "session_date" => $sessionDate,
                 "start_time" => $attributes['start_time'],
@@ -76,6 +78,10 @@ final class ClassSessionService
 
     public function updateClassSession(array $attributes, ClassSession $classSession)
     {
+        if ($classSession->is_already_opened) {
+            throw new Exception("class session has been opened");
+
+        }
         return $this->repository->update($classSession, $attributes);
     }
 
