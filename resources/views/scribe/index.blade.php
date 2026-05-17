@@ -6980,6 +6980,7 @@ fetch(url, {
                                                                                                             <option value="1">401, Tidak terotentikasi</option>
                                                                                                             <option value="2">403, Tidak memiliki izin</option>
                                                                                                             <option value="3">404, Data tidak ditemukan</option>
+                                                                                                            <option value="4">409, Sesi sudah pernah dibuka</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -7074,6 +7075,18 @@ fetch(url, {
 }</code></pre>
                                                                             </div>
                                 </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-PUTapi-class-sessions--classSession_id- example-response-PUTapi-class-sessions--classSession_id--4"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;class session has been opened&quot;,
+    &quot;code&quot;: 409
+}</code></pre>
+                                                                            </div>
+                                </div>
                                                     </div>
                             </div>
     </div>
@@ -7113,7 +7126,7 @@ fetch(url, {
         </div>
 
         <p>Endpoint ini <strong>TERPAKSA</strong> harus menggunakan <strong>method POST</strong> dibandingkan DELETE.</p>
-<p>Hal ini dikarenakan endpoint ini mendukung <em>multiple delete</em> data atau <em>bulk delete</em>.</p>
+<p>Hal ini dikarenakan endpoint ini mendukung <em>multiple delete</em> data atau <em>bulk delete</em>. Sehingga memerlukan body parameter / body request.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">

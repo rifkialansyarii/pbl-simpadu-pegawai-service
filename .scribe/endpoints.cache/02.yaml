@@ -841,6 +841,17 @@ endpoints:
           }
         headers: []
         description: 'Data tidak ditemukan'
+      -
+        custom: []
+        status: 409
+        content: |-
+          {
+              "success": false,
+              "message": "class session has been opened",
+              "code": 409
+          }
+        headers: []
+        description: 'Sesi sudah pernah dibuka'
     responseFields: []
     auth:
       - headers
@@ -864,7 +875,7 @@ endpoints:
       description: |-
         Endpoint ini **TERPAKSA** harus menggunakan **method POST** dibandingkan DELETE.
 
-        Hal ini dikarenakan endpoint ini mendukung *multiple delete* data atau *bulk delete*.
+        Hal ini dikarenakan endpoint ini mendukung *multiple delete* data atau *bulk delete*. Sehingga memerlukan body parameter / body request.
       authenticated: true
       deprecated: false
     headers:
