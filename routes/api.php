@@ -24,6 +24,13 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
     Route::get('/change-requests/info/newly', [ChangeRequestController::class, 'showNewly'])->middleware('can:viewNewly, App\Models\ChangeRequest');
     Route::get('/change-requests/info/pending', [ChangeRequestController::class, 'showTotalPendingStatus'])->middleware('can:viewTotalPendingStatus, App\Models\ChangeRequest');
     Route::put('/change-requests/{changeRequest}', [ChangeRequestController::class, 'update'])->middleware('can:update,changeRequest');
+
+    Route::get('/class-sessions', [ClassSessionController::class, 'index'])->middleware('can:viewAny, App\Models\ClassSession');
+    Route::get('/class-sessions/{classSession}', [ClassSessionController::class, 'show'])->middleware('can:view,classSession');
+    Route::post('/class-sessions/generate', [ClassSessionController::class, 'generate'])->middleware('can:generate, App\Models\ClassSession');
+    Route::put('/class-sessions/{classSession}', [ClassSessionController::class, 'update'])->middleware('can:update,classSession');
+    Route::post('/class-sessions/bulk-delete', [ClassSessionController::class, 'destroy'])->middleware('can:bulkDelete, App\Models\ClassSession');
+
 });
 
 Route::get('/countries', [CountryController::class, 'index']);
@@ -37,7 +44,3 @@ Route::get('/districts/{cityCode}', [DistrictController::class, 'showByCity']);
 
 Route::get('/villages', [VillageController::class, 'index']);
 Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);
-
-Route::get('/class-sessions', [ClassSessionController::class, 'index']);
-Route::get('/class-sessions/{classSession}', [ClassSessionController::class, 'show']);
-Route::post('/class-sessions/generate', [ClassSessionController::class, 'generate']);
