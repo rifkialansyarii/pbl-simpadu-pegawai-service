@@ -2,14 +2,13 @@
 
 namespace App\Http\Requests;
 
-use App\Rules\CourseQuotaLimit;
 use Illuminate\Contracts\Validation\ValidationRule;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rule;
-use Illuminate\Contracts\Validation\Validator;
 
-class GenerateClassSessionRequest extends FormRequest
+class BulkDeleteClassSessionRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,19 +26,8 @@ class GenerateClassSessionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'pengampu_id' => ['required', 'string', 'max:36'],
-            'lecturer_id' => ['required', 'string', 'max:36'],
-            'class_id' => ['required', 'string', 'max:36'],
-            'class_name' => ['required', 'string', 'max:255'],
-            'course_name' => [
-                'required',
-                'string',
-                'max:255',
-                new CourseQuotaLimit($this->class_name),
-            ],
-            'start_date' => ['required', Rule::date()->format('Y-m-d')],
-            'start_time' => ['required', Rule::date()->format('H:i')],
-            'end_time' => ['required', Rule::date()->format('H:i')],
+            'uuids' => ['required', 'array', 'min:1'],
+            'uuids.*' => ['required', 'string', Rule::exists('class_sessions', 'id')]
         ];
     }
 

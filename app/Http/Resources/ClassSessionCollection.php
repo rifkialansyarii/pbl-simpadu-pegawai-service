@@ -7,7 +7,7 @@ use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class ClassSessionCollection extends ResourceCollection
 {
-    public $collects = ClassSectionResource::class;
+    public $collects = ClassSessionResource::class;
 
     /**
      * Transform the resource collection into an array.

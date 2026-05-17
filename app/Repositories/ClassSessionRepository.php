@@ -28,6 +28,48 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
         return $classSession;
     }
 
+    public function getAllByLecturer(string $lecturerId)
+    {
+        $classSession = ClassSession::select([
+            'id',
+            'pengampu_id',
+            'lecturer_id',
+            'class_id',
+            'course_name',
+            'topic',
+            'session_date',
+            'start_time',
+            'end_time',
+            'status',
+            'is_already_opened',
+        ])->where('lecturer_id', $lecturerId)->paginate(10);
+
+        $classSession->load(['lecturer']);
+
+        return $classSession;
+    }
+
+    public function getAllByClass(string $classId)
+    {
+        $classSession = ClassSession::select([
+            'id',
+            'pengampu_id',
+            'lecturer_id',
+            'class_id',
+            'course_name',
+            'topic',
+            'session_date',
+            'start_time',
+            'end_time',
+            'status',
+            'is_already_opened',
+        ])->where('class_id', $classId)->paginate(10);
+
+        $classSession->load(['lecturer']);
+
+        return $classSession;
+    }
+
     public function getById(ClassSession $classSession)
     {
         $classSession = ClassSession::select([
@@ -65,19 +107,14 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
         return $classSession;
     }
 
-    public function delete(ClassSession $classSession)
-    {
-        $classSession->delete();
-    }
-
-    public function create(array $data)
-    {
-        return ClassSession::create($data);
-    }
-
     public function update(ClassSession $classSession, array $data)
     {
         $classSession->update($data);
-        return $classSession->refresh()->load(['village', 'district', 'city', 'province', 'citizen']);
+        return $classSession->refresh()->load(['lecturer']);
+    }
+
+    public function bulkDelete(array $data)
+    {
+        ClassSession::destroy($data);
     }
 }

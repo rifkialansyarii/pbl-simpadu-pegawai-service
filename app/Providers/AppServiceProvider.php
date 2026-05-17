@@ -39,6 +39,7 @@ class AppServiceProvider extends ServiceProvider
                     $user = new User();
                     $user->id = $jwtTokenDecode->detail_id;
                     $user->role = $jwtTokenDecode->role_name;
+                    $user->class_id = $jwtTokenDecode->class_id;
 
                     return $user;
                 } catch (Exception $e) {
