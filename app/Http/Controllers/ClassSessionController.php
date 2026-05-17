@@ -9,6 +9,7 @@ use App\Http\Resources\ClassSessionCollection;
 use App\Http\Resources\ClassSessionResource;
 use App\Models\ClassSession;
 use App\Services\ClassSessionService;
+use Exception;
 use Illuminate\Http\Request;
 class ClassSessionController extends Controller
 {
@@ -38,12 +39,22 @@ class ClassSessionController extends Controller
 
     public function generate(GenerateClassSessionRequest $request)
     {
-        $classSessionCollection = new ClassSessionCollection($this->service->generateClassSession($request->validated()));
-        return $classSessionCollection->additional([
-            'success' => true,
-            'message' => 'Data genereated successfully',
-            'code' => 201,
-        ]);
+        try {
+            $classSessionCollection = new ClassSessionCollection($this->service->generateClassSession($request->validated()));
+            return $classSessionCollection->additional([
+                'success' => true,
+                'message' => 'Data genereated successfully',
+                'code' => 201,
+            ]);
+        } catch (Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Unprocessable Content',
+                'code' => 422,
+                'errrors' => $e->getMessage()
+            ], 422);
+        }
+
     }
 
     public function update(UpdateClassSessionRequest $request, ClassSession $classSession)
@@ -58,14 +69,25 @@ class ClassSessionController extends Controller
 
     public function destroy(BulkDeleteClassSessionRequest $request)
     {
-        $attributes = $request->validated()['uuids'];
-        $this->service->deleteClassSession($attributes);
-        return response()->json([
-            'success' => true,
-            'message' => 'Data deleted successfully',
-            'code' => 200,
-            'deleted_count' => count($attributes),
-        ]);
+        try {
+            $attributes = $request->validated()['uuids'];
+
+            $this->service->deleteClassSession($attributes);
+            return response()->json([
+                'success' => true,
+                'message' => 'Data deleted successfully',
+                'code' => 200,
+                'deleted_count' => count($attributes),
+            ]);
+        } catch (Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Unprocessable Content',
+                'code' => 422,
+                'errrors' => $e->getMessage()
+            ]);
+        }
+
     }
 
 }
