@@ -27,13 +27,25 @@ class UpdateClassSessionRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'topic' => ['string', 'max:255'],
-            'session_date' => [Rule::date()->format('Y-m-d')],
-            'start_time' => [Rule::date()->format('H:i')],
-            'end_time' => [Rule::date()->format('H:i')],
-            'status' => [Rule::enum(ClassSessionStatus::class)]
-        ];
+        $rules = array();
+        $role = $this->user()->role;
+
+        if ($role === 'super-admin' || $role === 'admin-pegawai') {
+            $rules = [
+                'topic' => ['string', 'max:255'],
+                'session_date' => [Rule::date()->format('Y-m-d')],
+                'start_time' => [Rule::date()->format('H:i')],
+                'end_time' => [Rule::date()->format('H:i')],
+            ];
+        }
+
+        if($role === 'dosen') {
+            $rules = [
+                'status' => [Rule::enum(ClassSessionStatus::class)]
+            ];
+        }
+
+        return $rules;
     }
 
     protected function failedValidation(Validator $validator)
