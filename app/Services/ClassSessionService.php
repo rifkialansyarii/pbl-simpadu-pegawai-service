@@ -78,6 +78,10 @@ final class ClassSessionService
 
     public function updateClassSession(array $attributes, ClassSession $classSession)
     {
+        if ($classSession->is_already_opened) {
+            throw new Exception("class session has been opened");
+
+        }
         return $this->repository->update($classSession, $attributes);
     }
 

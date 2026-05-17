@@ -122,12 +122,20 @@ class ClassSessionController extends Controller
     #[UrlParam("classSession_id", "string", "UUID Pegawai", example: "123e4567-e89b-12d3-a456-426614174000")]
     public function update(UpdateClassSessionRequest $request, ClassSession $classSession)
     {
-        $classSessionResource = new ClassSessionResource($this->service->updateClassSession($request->validated(), $classSession));
-        return $classSessionResource->additional([
-            'success' => true,
-            'message' => 'Data updated successfully',
-            'code' => 200,
-        ]);
+        try {
+            $classSessionResource = new ClassSessionResource($this->service->updateClassSession($request->validated(), $classSession));
+            return $classSessionResource->additional([
+                'success' => true,
+                'message' => 'Data updated successfully',
+                'code' => 200,
+            ]);
+        } catch (Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => $e->getMessage(),
+                'code' => 409,
+            ], 409);
+        }
     }
 
     /**
@@ -157,10 +165,10 @@ class ClassSessionController extends Controller
         } catch (Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Unprocessable Content',
-                'code' => 422,
+                'message' => 'an error occurred while processing',
+                'code' => 500,
                 'errrors' => $e->getMessage()
-            ]);
+            ], 500);
         }
     }
 }

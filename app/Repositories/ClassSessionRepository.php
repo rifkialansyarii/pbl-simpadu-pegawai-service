@@ -122,7 +122,16 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
     public function update(ClassSession $classSession, array $data)
     {
         $classSession->update($data);
-        return $classSession->refresh()->load(['lecturer']);
+
+        $classSession = $classSession->refresh()->load(['lecturer']);
+
+        if ($classSession->status === 'opened') {
+            $classSession->update([
+                'is_already_opened' => true,
+            ]);
+        }
+
+        return $classSession;
     }
 
     public function bulkDelete(array $data)
