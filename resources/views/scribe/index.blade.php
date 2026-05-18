@@ -654,7 +654,7 @@
 
         </div>
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
-            Last updated: May 17, 2026
+            Last updated: May 18, 2026
         </div>
 
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
@@ -1140,6 +1140,8 @@ fetch(url, {
             &quot;nip&quot;: &quot;350661066055483856&quot;,
             &quot;nik&quot;: &quot;7406980408239916&quot;,
             &quot;employee_name&quot;: &quot;Salimah Zulaika&quot;,
+            &quot;study_program_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+            &quot;study_program_name&quot;: &quot;teknik-listrik&quot;,
             &quot;address&quot;: &quot;Jln. Elang No. 856, Sabang 82360, Papua&quot;,
             &quot;birth_place&quot;: &quot;Batam&quot;,
             &quot;birth_date&quot;: &quot;2000-07-02&quot;,
@@ -1698,6 +1700,8 @@ fetch(url, {
         &quot;nip&quot;: &quot;350661066055483856&quot;,
         &quot;nik&quot;: &quot;7406980408239916&quot;,
         &quot;employee_name&quot;: &quot;Salimah Zulaika&quot;,
+        &quot;study_program_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+        &quot;study_program_name&quot;: &quot;teknik-listrik&quot;,
         &quot;address&quot;: &quot;Jln. Elang No. 856, Sabang 82360, Papua&quot;,
         &quot;birth_place&quot;: &quot;Batam&quot;,
         &quot;birth_date&quot;: &quot;2000-07-02&quot;,
@@ -2373,6 +2377,56 @@ fetch(url, {
     <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
         <div class="sl-flex sl-items-center sl-max-w-full">
                                         <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">study_program_id</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>UUID Program Studi</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        123e4567-e89b-12d3-a456-426614174000
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">study_program_name</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Nama Program Studi</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        teknik-listrik
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">address</div>
                                             <span class="sl-truncate sl-text-muted">string</span>
                                     </div>
@@ -2742,6 +2796,8 @@ fetch(url, {
     "nip": "691651594659009703",
     "nik": "1801160204072477",
     "employee_name": "John Doe",
+    "study_program_id": "123e4567-e89b-12d3-a456-426614174000",
+    "study_program_name": "teknik-listrik",
     "address": "Gg. Casablanca No. 249, Administrasi Jakarta Timur 83230, Sulteng",
     "birth_place": "Jakarta",
     "birth_date": "1990-01-01",
@@ -2851,6 +2907,8 @@ You can check the Dev Tools console for debugging information.</p>
     \"nip\": \"691651594659009703\",
     \"nik\": \"1801160204072477\",
     \"employee_name\": \"John Doe\",
+    \"study_program_id\": \"123e4567-e89b-12d3-a456-426614174000\",
+    \"study_program_name\": \"teknik-listrik\",
     \"address\": \"Gg. Casablanca No. 249, Administrasi Jakarta Timur 83230, Sulteng\",
     \"birth_place\": \"Jakarta\",
     \"birth_date\": \"1990-01-01\",
@@ -2883,6 +2941,8 @@ let body = {
     "nip": "691651594659009703",
     "nik": "1801160204072477",
     "employee_name": "John Doe",
+    "study_program_id": "123e4567-e89b-12d3-a456-426614174000",
+    "study_program_name": "teknik-listrik",
     "address": "Gg. Casablanca No. 249, Administrasi Jakarta Timur 83230, Sulteng",
     "birth_place": "Jakarta",
     "birth_date": "1990-01-01",
@@ -2948,6 +3008,8 @@ fetch(url, {
         &quot;nip&quot;: &quot;350661066055483856&quot;,
         &quot;nik&quot;: &quot;7406980408239916&quot;,
         &quot;employee_name&quot;: &quot;Salimah Zulaika&quot;,
+        &quot;study_program_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+        &quot;study_program_name&quot;: &quot;teknik-listrik&quot;,
         &quot;address&quot;: &quot;Jln. Elang No. 856, Sabang 82360, Papua&quot;,
         &quot;birth_place&quot;: &quot;Batam&quot;,
         &quot;birth_date&quot;: &quot;2000-07-02&quot;,
@@ -3226,6 +3288,56 @@ fetch(url, {
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
                         John Doe
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">study_program_id</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>UUID Program Studi</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        123e4567-e89b-12d3-a456-426614174000
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">study_program_name</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Nama Program Studi</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        teknik-listrik
                     </div>
                 </div>
             </div>
@@ -3641,6 +3753,8 @@ fetch(url, {
     "nip": "691651594659009703",
     "nik": "1801160204072477",
     "employee_name": "John Doe",
+    "study_program_id": "123e4567-e89b-12d3-a456-426614174000",
+    "study_program_name": "teknik-listrik",
     "address": "Gg. Casablanca No. 249, Administrasi Jakarta Timur 83230, Sulteng",
     "birth_place": "Jakarta",
     "birth_date": "1990-01-01",
@@ -3750,6 +3864,8 @@ You can check the Dev Tools console for debugging information.</p>
     \"nip\": \"691651594659009703\",
     \"nik\": \"1801160204072477\",
     \"employee_name\": \"John Doe\",
+    \"study_program_id\": \"123e4567-e89b-12d3-a456-426614174000\",
+    \"study_program_name\": \"teknik-listrik\",
     \"address\": \"Gg. Casablanca No. 249, Administrasi Jakarta Timur 83230, Sulteng\",
     \"birth_place\": \"Jakarta\",
     \"birth_date\": \"1990-01-01\",
@@ -3782,6 +3898,8 @@ let body = {
     "nip": "691651594659009703",
     "nik": "1801160204072477",
     "employee_name": "John Doe",
+    "study_program_id": "123e4567-e89b-12d3-a456-426614174000",
+    "study_program_name": "teknik-listrik",
     "address": "Gg. Casablanca No. 249, Administrasi Jakarta Timur 83230, Sulteng",
     "birth_place": "Jakarta",
     "birth_date": "1990-01-01",
@@ -3848,6 +3966,8 @@ fetch(url, {
         &quot;nip&quot;: &quot;350661066055483856&quot;,
         &quot;nik&quot;: &quot;7406980408239916&quot;,
         &quot;employee_name&quot;: &quot;Salimah Zulaika&quot;,
+        &quot;study_program_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+        &quot;study_program_name&quot;: &quot;teknik-listrik&quot;,
         &quot;address&quot;: &quot;Jln. Elang No. 856, Sabang 82360, Papua&quot;,
         &quot;birth_place&quot;: &quot;Batam&quot;,
         &quot;birth_date&quot;: &quot;2000-07-02&quot;,
@@ -4055,7 +4175,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019e3511-06f5-70b9-b30c-0a4d21866971
+                        019e39e0-d19c-70f9-a664-c6ad24786558
                     </div>
                 </div>
             </div>
@@ -4214,7 +4334,7 @@ fetch(url, {
                                         <input aria-label="employee_id" name="employee_id"
                                                id="urlparam-DELETEapi-employees--employee_id--employee_id"
                                                placeholder="The ID of the employee."
-                                               value="019e3511-06f5-70b9-b30c-0a4d21866971" data-component="url"
+                                               value="019e39e0-d19c-70f9-a664-c6ad24786558" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -4322,7 +4442,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:1234/api/employees/019e3511-06f5-70b9-b30c-0a4d21866971" \
+    "http://localhost:1234/api/employees/019e39e0-d19c-70f9-a664-c6ad24786558" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -4333,7 +4453,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/employees/019e3511-06f5-70b9-b30c-0a4d21866971"
+    "http://localhost:1234/api/employees/019e39e0-d19c-70f9-a664-c6ad24786558"
 );
 
 const headers = {
@@ -8003,34 +8123,108 @@ fetch(url, {
     &quot;code&quot;: 200,
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;019df6c9-badf-734e-91ad-e51cd9649cf0&quot;,
-            &quot;field_name&quot;: &quot;nik&quot;,
-            &quot;old_value&quot;: &quot;8106080403076841&quot;,
-            &quot;new_value&quot;: &quot;1952765217638904&quot;,
-            &quot;status&quot;: &quot;rejected&quot;,
-            &quot;employee_id&quot;: &quot;019df6c9-9ff0-726b-b94a-a688f3321eb4&quot;,
+            &quot;id&quot;: &quot;019e39e0-fee4-7142-9d44-cd8574382727&quot;,
+            &quot;field_name&quot;: &quot;nip&quot;,
+            &quot;old_value&quot;: &quot;530197731810609862&quot;,
+            &quot;new_value&quot;: &quot;069893595836370860&quot;,
+            &quot;status&quot;: &quot;pending&quot;,
+            &quot;employee_id&quot;: &quot;019e39e0-d19c-70f9-a664-c6ad24786558&quot;,
             &quot;employee&quot;: {
-                &quot;id&quot;: &quot;019df6c9-9ff0-726b-b94a-a688f3321eb4&quot;,
-                &quot;nip&quot;: &quot;113885585713262403&quot;,
-                &quot;nik&quot;: &quot;8106080403076841&quot;,
-                &quot;employee_name&quot;: &quot;Warsita Uwais&quot;,
-                &quot;address&quot;: &quot;Kpg. Untung Suropati No. 955, Pariaman 22832, DIY&quot;,
-                &quot;birth_place&quot;: &quot;Kendari&quot;,
-                &quot;birth_date&quot;: &quot;2006-03-20&quot;,
-                &quot;gender&quot;: &quot;female&quot;,
-                &quot;phone_number&quot;: &quot;085592483500&quot;,
-                &quot;village_code&quot;: &quot;6402192001&quot;,
-                &quot;district_code&quot;: &quot;640219&quot;,
-                &quot;city_code&quot;: &quot;6402&quot;,
-                &quot;province_code&quot;: &quot;64&quot;,
-                &quot;citizen_code&quot;: &quot;64&quot;
+                &quot;id&quot;: &quot;019e39e0-d19c-70f9-a664-c6ad24786558&quot;,
+                &quot;nip&quot;: &quot;530197731810609862&quot;,
+                &quot;nik&quot;: &quot;3371162906031035&quot;,
+                &quot;employee_name&quot;: &quot;Kayla Kayla Rahmawati S.Ked&quot;,
+                &quot;address&quot;: &quot;Ki. Babadak No. 189, Tebing Tinggi 58196, Papua&quot;,
+                &quot;birth_place&quot;: &quot;Prabumulih&quot;,
+                &quot;birth_date&quot;: &quot;2001-04-04&quot;,
+                &quot;gender&quot;: &quot;male&quot;,
+                &quot;phone_number&quot;: &quot;087537101725&quot;,
+                &quot;village_code&quot;: &quot;5315072010&quot;,
+                &quot;district_code&quot;: &quot;531507&quot;,
+                &quot;city_code&quot;: &quot;5315&quot;,
+                &quot;province_code&quot;: &quot;53&quot;,
+                &quot;citizen_code&quot;: &quot;53&quot;,
+                &quot;village&quot;: {
+                    &quot;id&quot;: &quot;55308&quot;,
+                    &quot;code&quot;: &quot;5315072010&quot;,
+                    &quot;name&quot;: &quot;PENGKA&quot;
+                },
+                &quot;district&quot;: {
+                    &quot;id&quot;: &quot;4536&quot;,
+                    &quot;code&quot;: &quot;531507&quot;,
+                    &quot;name&quot;: &quot;WELAK&quot;
+                },
+                &quot;city&quot;: {
+                    &quot;id&quot;: &quot;307&quot;,
+                    &quot;code&quot;: &quot;5315&quot;,
+                    &quot;name&quot;: &quot;KABUPATEN MANGGARAI BARAT&quot;
+                },
+                &quot;province&quot;: {
+                    &quot;id&quot;: &quot;19&quot;,
+                    &quot;code&quot;: &quot;53&quot;,
+                    &quot;name&quot;: &quot;NUSA TENGGARA TIMUR&quot;
+                },
+                &quot;citizen&quot;: {
+                    &quot;id&quot;: &quot;153&quot;,
+                    &quot;name&quot;: &quot;Northern Mariana Islands&quot;,
+                    &quot;code&quot;: &quot;MP&quot;
+                }
+            }
+        },
+        {
+            &quot;id&quot;: &quot;019e39e0-fe8b-7194-be8d-ecd0f5cfab69&quot;,
+            &quot;field_name&quot;: &quot;nik&quot;,
+            &quot;old_value&quot;: &quot;3518661711140205&quot;,
+            &quot;new_value&quot;: &quot;8689719055013306&quot;,
+            &quot;status&quot;: &quot;rejected&quot;,
+            &quot;employee_id&quot;: &quot;019e39e0-dba8-739d-bb4a-71efb14e6bac&quot;,
+            &quot;employee&quot;: {
+                &quot;id&quot;: &quot;019e39e0-dba8-739d-bb4a-71efb14e6bac&quot;,
+                &quot;nip&quot;: &quot;794344981724023853&quot;,
+                &quot;nik&quot;: &quot;3518661711140205&quot;,
+                &quot;employee_name&quot;: &quot;Emil Sihombing&quot;,
+                &quot;address&quot;: &quot;Psr. Daan No. 885, Mataram 86601, Maluku&quot;,
+                &quot;birth_place&quot;: &quot;Batam&quot;,
+                &quot;birth_date&quot;: &quot;1996-10-18&quot;,
+                &quot;gender&quot;: &quot;male&quot;,
+                &quot;phone_number&quot;: &quot;086327201239&quot;,
+                &quot;village_code&quot;: &quot;3524092015&quot;,
+                &quot;district_code&quot;: &quot;352409&quot;,
+                &quot;city_code&quot;: &quot;3524&quot;,
+                &quot;province_code&quot;: &quot;35&quot;,
+                &quot;citizen_code&quot;: &quot;35&quot;,
+                &quot;village&quot;: {
+                    &quot;id&quot;: &quot;47192&quot;,
+                    &quot;code&quot;: &quot;3524092015&quot;,
+                    &quot;name&quot;: &quot;KARANG&quot;
+                },
+                &quot;district&quot;: {
+                    &quot;id&quot;: &quot;3789&quot;,
+                    &quot;code&quot;: &quot;352409&quot;,
+                    &quot;name&quot;: &quot;SEKARAN&quot;
+                },
+                &quot;city&quot;: {
+                    &quot;id&quot;: &quot;251&quot;,
+                    &quot;code&quot;: &quot;3524&quot;,
+                    &quot;name&quot;: &quot;KABUPATEN LAMONGAN&quot;
+                },
+                &quot;province&quot;: {
+                    &quot;id&quot;: &quot;15&quot;,
+                    &quot;code&quot;: &quot;35&quot;,
+                    &quot;name&quot;: &quot;JAWA TIMUR&quot;
+                },
+                &quot;citizen&quot;: {
+                    &quot;id&quot;: &quot;34&quot;,
+                    &quot;name&quot;: &quot;Brazil&quot;,
+                    &quot;code&quot;: &quot;BR&quot;
+                }
             }
         }
     ],
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
         &quot;from&quot;: 1,
-        &quot;last_page&quot;: 4,
+        &quot;last_page&quot;: 3,
         &quot;links&quot;: [
             {
                 &quot;url&quot;: null,
@@ -8039,40 +8233,34 @@ fetch(url, {
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=1&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/change-requests?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;page&quot;: 1,
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=2&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/change-requests?page=2&quot;,
                 &quot;label&quot;: &quot;2&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=3&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/change-requests?page=3&quot;,
                 &quot;label&quot;: &quot;3&quot;,
                 &quot;page&quot;: 3,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=4&quot;,
-                &quot;label&quot;: &quot;4&quot;,
-                &quot;page&quot;: 4,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=2&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/change-requests?page=2&quot;,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://127.0.0.1:1234/api/change-requests&quot;,
+        &quot;path&quot;: &quot;http://localhost:1234/api/change-requests&quot;,
         &quot;per_page&quot;: 10,
         &quot;to&quot;: 10,
-        &quot;total&quot;: 34
+        &quot;total&quot;: 30
     }
 }</code></pre>
                                                                             </div>
@@ -8465,34 +8653,108 @@ fetch(url, {
     &quot;code&quot;: 200,
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;019df6c9-badf-734e-91ad-e51cd9649cf0&quot;,
-            &quot;field_name&quot;: &quot;nik&quot;,
-            &quot;old_value&quot;: &quot;8106080403076841&quot;,
-            &quot;new_value&quot;: &quot;1952765217638904&quot;,
-            &quot;status&quot;: &quot;rejected&quot;,
-            &quot;employee_id&quot;: &quot;019df6c9-9ff0-726b-b94a-a688f3321eb4&quot;,
+            &quot;id&quot;: &quot;019e39e0-fee4-7142-9d44-cd8574382727&quot;,
+            &quot;field_name&quot;: &quot;nip&quot;,
+            &quot;old_value&quot;: &quot;530197731810609862&quot;,
+            &quot;new_value&quot;: &quot;069893595836370860&quot;,
+            &quot;status&quot;: &quot;pending&quot;,
+            &quot;employee_id&quot;: &quot;019e39e0-d19c-70f9-a664-c6ad24786558&quot;,
             &quot;employee&quot;: {
-                &quot;id&quot;: &quot;019df6c9-9ff0-726b-b94a-a688f3321eb4&quot;,
-                &quot;nip&quot;: &quot;113885585713262403&quot;,
-                &quot;nik&quot;: &quot;8106080403076841&quot;,
-                &quot;employee_name&quot;: &quot;Warsita Uwais&quot;,
-                &quot;address&quot;: &quot;Kpg. Untung Suropati No. 955, Pariaman 22832, DIY&quot;,
-                &quot;birth_place&quot;: &quot;Kendari&quot;,
-                &quot;birth_date&quot;: &quot;2006-03-20&quot;,
-                &quot;gender&quot;: &quot;female&quot;,
-                &quot;phone_number&quot;: &quot;085592483500&quot;,
-                &quot;village_code&quot;: &quot;6402192001&quot;,
-                &quot;district_code&quot;: &quot;640219&quot;,
-                &quot;city_code&quot;: &quot;6402&quot;,
-                &quot;province_code&quot;: &quot;64&quot;,
-                &quot;citizen_code&quot;: &quot;64&quot;
+                &quot;id&quot;: &quot;019e39e0-d19c-70f9-a664-c6ad24786558&quot;,
+                &quot;nip&quot;: &quot;530197731810609862&quot;,
+                &quot;nik&quot;: &quot;3371162906031035&quot;,
+                &quot;employee_name&quot;: &quot;Kayla Kayla Rahmawati S.Ked&quot;,
+                &quot;address&quot;: &quot;Ki. Babadak No. 189, Tebing Tinggi 58196, Papua&quot;,
+                &quot;birth_place&quot;: &quot;Prabumulih&quot;,
+                &quot;birth_date&quot;: &quot;2001-04-04&quot;,
+                &quot;gender&quot;: &quot;male&quot;,
+                &quot;phone_number&quot;: &quot;087537101725&quot;,
+                &quot;village_code&quot;: &quot;5315072010&quot;,
+                &quot;district_code&quot;: &quot;531507&quot;,
+                &quot;city_code&quot;: &quot;5315&quot;,
+                &quot;province_code&quot;: &quot;53&quot;,
+                &quot;citizen_code&quot;: &quot;53&quot;,
+                &quot;village&quot;: {
+                    &quot;id&quot;: &quot;55308&quot;,
+                    &quot;code&quot;: &quot;5315072010&quot;,
+                    &quot;name&quot;: &quot;PENGKA&quot;
+                },
+                &quot;district&quot;: {
+                    &quot;id&quot;: &quot;4536&quot;,
+                    &quot;code&quot;: &quot;531507&quot;,
+                    &quot;name&quot;: &quot;WELAK&quot;
+                },
+                &quot;city&quot;: {
+                    &quot;id&quot;: &quot;307&quot;,
+                    &quot;code&quot;: &quot;5315&quot;,
+                    &quot;name&quot;: &quot;KABUPATEN MANGGARAI BARAT&quot;
+                },
+                &quot;province&quot;: {
+                    &quot;id&quot;: &quot;19&quot;,
+                    &quot;code&quot;: &quot;53&quot;,
+                    &quot;name&quot;: &quot;NUSA TENGGARA TIMUR&quot;
+                },
+                &quot;citizen&quot;: {
+                    &quot;id&quot;: &quot;153&quot;,
+                    &quot;name&quot;: &quot;Northern Mariana Islands&quot;,
+                    &quot;code&quot;: &quot;MP&quot;
+                }
+            }
+        },
+        {
+            &quot;id&quot;: &quot;019e39e0-fe8b-7194-be8d-ecd0f5cfab69&quot;,
+            &quot;field_name&quot;: &quot;nik&quot;,
+            &quot;old_value&quot;: &quot;3518661711140205&quot;,
+            &quot;new_value&quot;: &quot;8689719055013306&quot;,
+            &quot;status&quot;: &quot;rejected&quot;,
+            &quot;employee_id&quot;: &quot;019e39e0-dba8-739d-bb4a-71efb14e6bac&quot;,
+            &quot;employee&quot;: {
+                &quot;id&quot;: &quot;019e39e0-dba8-739d-bb4a-71efb14e6bac&quot;,
+                &quot;nip&quot;: &quot;794344981724023853&quot;,
+                &quot;nik&quot;: &quot;3518661711140205&quot;,
+                &quot;employee_name&quot;: &quot;Emil Sihombing&quot;,
+                &quot;address&quot;: &quot;Psr. Daan No. 885, Mataram 86601, Maluku&quot;,
+                &quot;birth_place&quot;: &quot;Batam&quot;,
+                &quot;birth_date&quot;: &quot;1996-10-18&quot;,
+                &quot;gender&quot;: &quot;male&quot;,
+                &quot;phone_number&quot;: &quot;086327201239&quot;,
+                &quot;village_code&quot;: &quot;3524092015&quot;,
+                &quot;district_code&quot;: &quot;352409&quot;,
+                &quot;city_code&quot;: &quot;3524&quot;,
+                &quot;province_code&quot;: &quot;35&quot;,
+                &quot;citizen_code&quot;: &quot;35&quot;,
+                &quot;village&quot;: {
+                    &quot;id&quot;: &quot;47192&quot;,
+                    &quot;code&quot;: &quot;3524092015&quot;,
+                    &quot;name&quot;: &quot;KARANG&quot;
+                },
+                &quot;district&quot;: {
+                    &quot;id&quot;: &quot;3789&quot;,
+                    &quot;code&quot;: &quot;352409&quot;,
+                    &quot;name&quot;: &quot;SEKARAN&quot;
+                },
+                &quot;city&quot;: {
+                    &quot;id&quot;: &quot;251&quot;,
+                    &quot;code&quot;: &quot;3524&quot;,
+                    &quot;name&quot;: &quot;KABUPATEN LAMONGAN&quot;
+                },
+                &quot;province&quot;: {
+                    &quot;id&quot;: &quot;15&quot;,
+                    &quot;code&quot;: &quot;35&quot;,
+                    &quot;name&quot;: &quot;JAWA TIMUR&quot;
+                },
+                &quot;citizen&quot;: {
+                    &quot;id&quot;: &quot;34&quot;,
+                    &quot;name&quot;: &quot;Brazil&quot;,
+                    &quot;code&quot;: &quot;BR&quot;
+                }
             }
         }
     ],
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
         &quot;from&quot;: 1,
-        &quot;last_page&quot;: 4,
+        &quot;last_page&quot;: 3,
         &quot;links&quot;: [
             {
                 &quot;url&quot;: null,
@@ -8501,40 +8763,34 @@ fetch(url, {
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=1&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/change-requests?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;page&quot;: 1,
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=2&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/change-requests?page=2&quot;,
                 &quot;label&quot;: &quot;2&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=3&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/change-requests?page=3&quot;,
                 &quot;label&quot;: &quot;3&quot;,
                 &quot;page&quot;: 3,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=4&quot;,
-                &quot;label&quot;: &quot;4&quot;,
-                &quot;page&quot;: 4,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://127.0.0.1:1234/api/change-requests?page=2&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/change-requests?page=2&quot;,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://127.0.0.1:1234/api/change-requests&quot;,
+        &quot;path&quot;: &quot;http://localhost:1234/api/change-requests&quot;,
         &quot;per_page&quot;: 10,
         &quot;to&quot;: 10,
-        &quot;total&quot;: 34
+        &quot;total&quot;: 30
     }
 }</code></pre>
                                                                             </div>
@@ -9085,7 +9341,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019e3511-343d-7385-88da-8ad099bee303
+                        019e39e0-f07a-729d-8368-f2fe65b58e15
                     </div>
                 </div>
             </div>
@@ -9146,7 +9402,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        approved
+                        rejected
                     </div>
                 </div>
             </div>
@@ -9278,7 +9534,7 @@ fetch(url, {
                                         <input aria-label="changeRequest_id" name="changeRequest_id"
                                                id="urlparam-PUTapi-change-requests--changeRequest_id--changeRequest_id"
                                                placeholder="The ID of the changeRequest."
-                                               value="019e3511-343d-7385-88da-8ad099bee303" data-component="url"
+                                               value="019e39e0-f07a-729d-8368-f2fe65b58e15" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -9321,7 +9577,7 @@ fetch(url, {
                                      id="json-body-PUTapi-change-requests--changeRequest_id-"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "status": "approved"
+    "status": "rejected"
 }</div>
                             </div>
                                             </div>
@@ -9413,12 +9669,12 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:1234/api/change-requests/019e3511-343d-7385-88da-8ad099bee303" \
+    "http://localhost:1234/api/change-requests/019e39e0-f07a-729d-8368-f2fe65b58e15" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"status\": \"approved\"
+    \"status\": \"rejected\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -9428,7 +9684,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/change-requests/019e3511-343d-7385-88da-8ad099bee303"
+    "http://localhost:1234/api/change-requests/019e39e0-f07a-729d-8368-f2fe65b58e15"
 );
 
 const headers = {
@@ -9438,7 +9694,7 @@ const headers = {
 };
 
 let body = {
-    "status": "approved"
+    "status": "rejected"
 };
 
 fetch(url, {
@@ -9490,27 +9746,52 @@ fetch(url, {
     &quot;message&quot;: &quot;Data updated successfully&quot;,
     &quot;code&quot;: 200,
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;019df6c9-acd7-736a-883a-13863afd302c&quot;,
-        &quot;field_name&quot;: &quot;employee_name&quot;,
-        &quot;old_value&quot;: &quot;Mahdi Harjasa Mahendra M.Ak&quot;,
-        &quot;new_value&quot;: &quot;Diah Eka Mulyani S.H.&quot;,
-        &quot;status&quot;: &quot;approved&quot;,
-        &quot;employee_id&quot;: &quot;019df6c9-8f63-70c8-97d4-8f03a63be8d5&quot;,
+        &quot;id&quot;: &quot;019e39e0-fee4-7142-9d44-cd8574382727&quot;,
+        &quot;field_name&quot;: &quot;nip&quot;,
+        &quot;old_value&quot;: &quot;530197731810609862&quot;,
+        &quot;new_value&quot;: &quot;069893595836370860&quot;,
+        &quot;status&quot;: &quot;pending&quot;,
+        &quot;employee_id&quot;: &quot;019e39e0-d19c-70f9-a664-c6ad24786558&quot;,
         &quot;employee&quot;: {
-            &quot;id&quot;: &quot;019df6c9-8f63-70c8-97d4-8f03a63be8d5&quot;,
-            &quot;nip&quot;: &quot;691651594659009703&quot;,
-            &quot;nik&quot;: &quot;1801160204072477&quot;,
-            &quot;employee_name&quot;: &quot;Diah Eka Mulyani S.H.&quot;,
-            &quot;address&quot;: &quot;Gg. Casablanca No. 249, Administrasi Jakarta Timur 83230, Sulteng&quot;,
-            &quot;birth_place&quot;: &quot;Sungai Penuh&quot;,
-            &quot;birth_date&quot;: &quot;2003-12-31&quot;,
+            &quot;id&quot;: &quot;019e39e0-d19c-70f9-a664-c6ad24786558&quot;,
+            &quot;nip&quot;: &quot;530197731810609862&quot;,
+            &quot;nik&quot;: &quot;3371162906031035&quot;,
+            &quot;employee_name&quot;: &quot;Kayla Kayla Rahmawati S.Ked&quot;,
+            &quot;address&quot;: &quot;Ki. Babadak No. 189, Tebing Tinggi 58196, Papua&quot;,
+            &quot;birth_place&quot;: &quot;Prabumulih&quot;,
+            &quot;birth_date&quot;: &quot;2001-04-04&quot;,
             &quot;gender&quot;: &quot;male&quot;,
-            &quot;phone_number&quot;: &quot;087480210541&quot;,
-            &quot;village_code&quot;: &quot;9403152001&quot;,
-            &quot;district_code&quot;: &quot;940315&quot;,
-            &quot;city_code&quot;: &quot;9403&quot;,
-            &quot;province_code&quot;: &quot;94&quot;,
-            &quot;citizen_code&quot;: &quot;94&quot;
+            &quot;phone_number&quot;: &quot;087537101725&quot;,
+            &quot;village_code&quot;: &quot;5315072010&quot;,
+            &quot;district_code&quot;: &quot;531507&quot;,
+            &quot;city_code&quot;: &quot;5315&quot;,
+            &quot;province_code&quot;: &quot;53&quot;,
+            &quot;citizen_code&quot;: &quot;53&quot;,
+            &quot;village&quot;: {
+                &quot;id&quot;: &quot;55308&quot;,
+                &quot;code&quot;: &quot;5315072010&quot;,
+                &quot;name&quot;: &quot;PENGKA&quot;
+            },
+            &quot;district&quot;: {
+                &quot;id&quot;: &quot;4536&quot;,
+                &quot;code&quot;: &quot;531507&quot;,
+                &quot;name&quot;: &quot;WELAK&quot;
+            },
+            &quot;city&quot;: {
+                &quot;id&quot;: &quot;307&quot;,
+                &quot;code&quot;: &quot;5315&quot;,
+                &quot;name&quot;: &quot;KABUPATEN MANGGARAI BARAT&quot;
+            },
+            &quot;province&quot;: {
+                &quot;id&quot;: &quot;19&quot;,
+                &quot;code&quot;: &quot;53&quot;,
+                &quot;name&quot;: &quot;NUSA TENGGARA TIMUR&quot;
+            },
+            &quot;citizen&quot;: {
+                &quot;id&quot;: &quot;153&quot;,
+                &quot;name&quot;: &quot;Northern Mariana Islands&quot;,
+                &quot;code&quot;: &quot;MP&quot;
+            }
         }
     }
 }</code></pre>

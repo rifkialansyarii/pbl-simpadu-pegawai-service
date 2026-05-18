@@ -3,27 +3,52 @@
     "message": "Data updated successfully",
     "code": 200,
     "data": {
-        "id": "019df6c9-acd7-736a-883a-13863afd302c",
-        "field_name": "employee_name",
-        "old_value": "Mahdi Harjasa Mahendra M.Ak",
-        "new_value": "Diah Eka Mulyani S.H.",
-        "status": "approved",
-        "employee_id": "019df6c9-8f63-70c8-97d4-8f03a63be8d5",
+        "id": "019e39e0-fee4-7142-9d44-cd8574382727",
+        "field_name": "nip",
+        "old_value": "530197731810609862",
+        "new_value": "069893595836370860",
+        "status": "pending",
+        "employee_id": "019e39e0-d19c-70f9-a664-c6ad24786558",
         "employee": {
-            "id": "019df6c9-8f63-70c8-97d4-8f03a63be8d5",
-            "nip": "691651594659009703",
-            "nik": "1801160204072477",
-            "employee_name": "Diah Eka Mulyani S.H.",
-            "address": "Gg. Casablanca No. 249, Administrasi Jakarta Timur 83230, Sulteng",
-            "birth_place": "Sungai Penuh",
-            "birth_date": "2003-12-31",
+            "id": "019e39e0-d19c-70f9-a664-c6ad24786558",
+            "nip": "530197731810609862",
+            "nik": "3371162906031035",
+            "employee_name": "Kayla Kayla Rahmawati S.Ked",
+            "address": "Ki. Babadak No. 189, Tebing Tinggi 58196, Papua",
+            "birth_place": "Prabumulih",
+            "birth_date": "2001-04-04",
             "gender": "male",
-            "phone_number": "087480210541",
-            "village_code": "9403152001",
-            "district_code": "940315",
-            "city_code": "9403",
-            "province_code": "94",
-            "citizen_code": "94"
+            "phone_number": "087537101725",
+            "village_code": "5315072010",
+            "district_code": "531507",
+            "city_code": "5315",
+            "province_code": "53",
+            "citizen_code": "53",
+            "village": {
+                "id": "55308",
+                "code": "5315072010",
+                "name": "PENGKA"
+            },
+            "district": {
+                "id": "4536",
+                "code": "531507",
+                "name": "WELAK"
+            },
+            "city": {
+                "id": "307",
+                "code": "5315",
+                "name": "KABUPATEN MANGGARAI BARAT"
+            },
+            "province": {
+                "id": "19",
+                "code": "53",
+                "name": "NUSA TENGGARA TIMUR"
+            },
+            "citizen": {
+                "id": "153",
+                "name": "Northern Mariana Islands",
+                "code": "MP"
+            }
         }
     }
 }
