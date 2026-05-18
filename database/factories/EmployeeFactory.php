@@ -23,11 +23,26 @@ class EmployeeFactory extends Factory
         $village = Village::with('district.city.province')->inRandomOrder()->first();
         $country = Country::inRandomOrder()->first();
         $genderInstance = fake()->randomElement(Gender::cases());
+        $studyProgram = [
+            "teknik-listrik",
+            "teknik-elektronika",
+            "teknologi-rekayasa-pembangkit-energi",
+            "teknik-otomotif",
+            "teknologi-rekayasa-konstruksi-pesawat-udara",
+            "teknik-sipil",
+            "teknologi-rekayasa-konstruksi-jalan-dan-jembatan",
+            "administrasi-bisnis",
+            "manajemen-pemasaran",
+            "akuntansi",
+            "bisnis-digital",
+        ];
 
         return [
             'nip' => fake()->numerify('##################'),
             'nik' => fake()->nik(),
             'employee_name' => fake()->name(),
+            'study_program_id' => fake()->uuid(),
+            'study_program_name' => fake()->randomElement($studyProgram),
             'address' => fake()->address(),
             'birth_place' => fake()->city(),
             'birth_date' => fake()->dateTimeBetween(startDate: '-30 years', endDate: '-20 years'),
