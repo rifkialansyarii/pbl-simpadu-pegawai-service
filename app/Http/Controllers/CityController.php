@@ -22,6 +22,14 @@ class CityController extends Controller
     }
 
     /**
+
+     *
+     * Ambil semua data kota / kabupaten
+     * 
+     * Endpoint bertujuan untuk **mengambil semua data kota / kabupaten**.
+     * 
+     * Endpoint ini **bersifat publik**.
+     * 
      * @unauthenticated
      */
     #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
@@ -37,7 +45,15 @@ class CityController extends Controller
     }
 
 
-     /**
+    /**
+
+     *
+     * Ambil data kota berdasarkan provinsi 
+     * 
+     * Endpoint bertujuan untuk **mengambil semua data kota berdasarkan provinsi**.
+     * 
+     * Endpoint ini **bersifat publik**.
+     * 
      * @unauthenticated
      */
     #[UrlParam("provinceCode", "string", "Kode Provinsi", example: "63")]

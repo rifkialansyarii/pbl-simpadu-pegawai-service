@@ -24,6 +24,13 @@ class ProvinceController extends Controller
     }
 
     /**
+     *
+     * Ambil semua data provinsi
+     * 
+     * Endpoint bertujuan untuk **mengambil semua data provinsi**.
+     * 
+     * Endpoint ini **bersifat publik**.
+     * 
      * @unauthenticated
      */
     #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]

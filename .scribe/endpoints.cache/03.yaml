@@ -18,8 +18,11 @@ endpoints:
         Endpoint yang menyediakan data wilayah-wilayah pada indonesia dan seluruh negara dunia.
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Ambil semua data negara'
+      description: |-
+        Endpoint bertujuan untuk **mengambil semua data negara**.
+
+        Endpoint ini **bersifat publik**.
       authenticated: false
       deprecated: false
     headers:
@@ -184,8 +187,11 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Ambil semua data provinsi'
+      description: |-
+        Endpoint bertujuan untuk **mengambil semua data provinsi**.
+
+        Endpoint ini **bersifat publik**.
       authenticated: false
       deprecated: false
     headers:
@@ -297,8 +303,11 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Ambil semua data kota / kabupaten'
+      description: |-
+        Endpoint bertujuan untuk **mengambil semua data kota / kabupaten**.
+
+        Endpoint ini **bersifat publik**.
       authenticated: false
       deprecated: false
     headers:
@@ -473,8 +482,11 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Ambil data kota berdasarkan provinsi'
+      description: |-
+        Endpoint bertujuan untuk **mengambil semua data kota berdasarkan provinsi**.
+
+        Endpoint ini **bersifat publik**.
       authenticated: false
       deprecated: false
     headers:
@@ -649,8 +661,11 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Ambil semua data kecamatan'
+      description: |-
+        Endpoint bertujuan untuk **mengambil semua data kecamatan**.
+
+        Endpoint ini **bersifat publik**.
       authenticated: false
       deprecated: false
     headers:
@@ -825,12 +840,14 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
+      title: 'Ambil data kecamatan berdasarkan kota'
+      description: |-
+        Endpoint bertujuan untuk **mengambil semua data kecamatan berdasarkan kota**.
+
+        Endpoint ini **bersifat publik**.
+      authenticated: false
       deprecated: false
     headers:
-      Authorization: 'Bearer {JWT here}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -987,10 +1004,7 @@ endpoints:
         headers: []
         description: 'Sukses mendapatkan data kecamatan'
     responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    auth: []
     controller: null
     method: null
     route: null
@@ -1005,8 +1019,11 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Ambil semua data kelurahan / desa'
+      description: |-
+        Endpoint bertujuan untuk **mengambil semua data kelurahan / desa**.
+
+        Endpoint ini **bersifat publik**.
       authenticated: false
       deprecated: false
     headers:
@@ -1181,12 +1198,14 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
+      title: 'Ambil kelurahan berdasarkan kecamatan'
+      description: |-
+        Endpoint bertujuan untuk **mengambil semua data kelurahan berdasarkan kecamatan**.
+
+        Endpoint ini **bersifat publik**.
+      authenticated: false
       deprecated: false
     headers:
-      Authorization: 'Bearer {JWT here}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -1343,10 +1362,7 @@ endpoints:
         headers: []
         description: 'Sukses mendapatkan data desa/kelurahan'
     responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    auth: []
     controller: null
     method: null
     route: null

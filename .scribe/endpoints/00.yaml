@@ -12,8 +12,11 @@ endpoints:
       groupDescription: 'Endpoint terkait operasi CRUD untuk data pegawai, termasuk penambahan, pembaruan, penghapusan, dan pengambilan data pegawai.'
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Ambil data pegawai'
+      description: |-
+        Endpoint bertujuan untuk **mengambil semua data pegawai**.
+
+        Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
       authenticated: true
       deprecated: false
     headers:
@@ -198,8 +201,13 @@ endpoints:
       groupDescription: 'Endpoint terkait operasi CRUD untuk data pegawai, termasuk penambahan, pembaruan, penghapusan, dan pengambilan data pegawai.'
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Detail pegawai'
+      description: |-
+        Endpoint bertujuan untuk **melihat detail pegawai**.
+
+        **dosen** atau **pegawai** hanya dapat melihat detail **MILIKNYA SENDIRI**.
+
+        admin-pegawai dan super-admin dapat melihat detail pegawai manapun.
       authenticated: true
       deprecated: false
     headers:
@@ -334,8 +342,11 @@ endpoints:
       groupDescription: 'Endpoint terkait operasi CRUD untuk data pegawai, termasuk penambahan, pembaruan, penghapusan, dan pengambilan data pegawai.'
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Ambil total data pegawai'
+      description: |-
+        Endpoint bertujuan untuk **mengambil total data pegawai**.
+
+        Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
       authenticated: true
       deprecated: false
     headers:
@@ -405,8 +416,11 @@ endpoints:
       groupDescription: 'Endpoint terkait operasi CRUD untuk data pegawai, termasuk penambahan, pembaruan, penghapusan, dan pengambilan data pegawai.'
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Menambahkan data pegawai'
+      description: |-
+        Endpoint bertujuan untuk **menambahkan data pegawai**.
+
+        Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
       authenticated: true
       deprecated: false
     headers:
@@ -698,8 +712,15 @@ endpoints:
       groupDescription: 'Endpoint terkait operasi CRUD untuk data pegawai, termasuk penambahan, pembaruan, penghapusan, dan pengambilan data pegawai.'
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Update data pegawai'
+      description: |-
+        Endpoint bertujuan untuk **mengupdate data pegawai**.
+
+        **dosen** atau **pegawai** hanya dapat mengupdate data **MILIKNYA SENDIRI**.
+
+        admin-pegawai dan super-admin dapat mengupdate data pegawai manapun.
+
+        **NOTE**: Ketika dosen atau pegawai mengubah data **NIK**, **NIP** dan **NAMA** miliknya, maka perubahan ini **OTOMATIS DIKIRIMKAN KE ADMIN** dan harus **MENUNGGU ADMIN MENYETUJUI**.
       authenticated: true
       deprecated: false
     headers:
@@ -1014,8 +1035,11 @@ endpoints:
       groupDescription: 'Endpoint terkait operasi CRUD untuk data pegawai, termasuk penambahan, pembaruan, penghapusan, dan pengambilan data pegawai.'
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Hapus data pegawai'
+      description: |-
+        Endpoint bertujuan untuk **menghapus data pegawai**.
+
+        Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
       authenticated: true
       deprecated: false
     headers:

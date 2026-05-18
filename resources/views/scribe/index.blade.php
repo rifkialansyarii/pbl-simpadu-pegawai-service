@@ -318,10 +318,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-pegawai-GETapi-employees">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/employees">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Ambil data pegawai">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#pegawai-GETapi-employees">
-                                                    GET api/employees
+                                                    Ambil data pegawai
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -330,10 +330,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-pegawai-GETapi-employees--employee_id-">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/employees/{employee_id}">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Detail pegawai">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#pegawai-GETapi-employees--employee_id-">
-                                                    GET api/employees/{employee_id}
+                                                    Detail pegawai
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -342,10 +342,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-pegawai-GETapi-employees-info-count">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/employees/info/count">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Ambil total data pegawai">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#pegawai-GETapi-employees-info-count">
-                                                    GET api/employees/info/count
+                                                    Ambil total data pegawai
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -354,10 +354,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-pegawai-POSTapi-employees">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="POST api/employees">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Menambahkan data pegawai">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#pegawai-POSTapi-employees">
-                                                    POST api/employees
+                                                    Menambahkan data pegawai
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -366,10 +366,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-pegawai-PUTapi-employees--employee_id-">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="PUT api/employees/{employee_id}">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Update data pegawai">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#pegawai-PUTapi-employees--employee_id-">
-                                                    PUT api/employees/{employee_id}
+                                                    Update data pegawai
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -378,10 +378,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-pegawai-DELETEapi-employees--employee_id-">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="DELETE api/employees/{employee_id}">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Hapus data pegawai">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#pegawai-DELETEapi-employees--employee_id-">
-                                                    DELETE api/employees/{employee_id}
+                                                    Hapus data pegawai
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -488,10 +488,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-verifikasi-permintaan-perubahan-GETapi-change-requests">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/change-requests">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Ambil Semua Permintaan Perubahan Data">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#verifikasi-permintaan-perubahan-GETapi-change-requests">
-                                                    GET api/change-requests
+                                                    Ambil Semua Permintaan Perubahan Data
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -500,10 +500,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-verifikasi-permintaan-perubahan-GETapi-change-requests-info-newly">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/change-requests/info/newly">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Mengambil 5 data terbaru">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#verifikasi-permintaan-perubahan-GETapi-change-requests-info-newly">
-                                                    GET api/change-requests/info/newly
+                                                    Mengambil 5 data terbaru
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -512,10 +512,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-verifikasi-permintaan-perubahan-GETapi-change-requests-info-pending">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/change-requests/info/pending">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Mengambil total status pending">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#verifikasi-permintaan-perubahan-GETapi-change-requests-info-pending">
-                                                    GET api/change-requests/info/pending
+                                                    Mengambil total status pending
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -524,10 +524,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-verifikasi-permintaan-perubahan-PUTapi-change-requests--changeRequest_id-">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="PUT api/change-requests/{changeRequest_id}">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Ubah Status Permintaan Perubahan Data">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#verifikasi-permintaan-perubahan-PUTapi-change-requests--changeRequest_id-">
-                                                    PUT api/change-requests/{changeRequest_id}
+                                                    Ubah Status Permintaan Perubahan Data
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -555,10 +555,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-wilayah-GETapi-countries">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/countries">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Ambil semua data negara">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#wilayah-GETapi-countries">
-                                                    GET api/countries
+                                                    Ambil semua data negara
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -567,10 +567,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-wilayah-GETapi-provinces">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/provinces">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Ambil semua data provinsi">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#wilayah-GETapi-provinces">
-                                                    GET api/provinces
+                                                    Ambil semua data provinsi
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -579,10 +579,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-wilayah-GETapi-cities">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/cities">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Ambil semua data kota / kabupaten">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#wilayah-GETapi-cities">
-                                                    GET api/cities
+                                                    Ambil semua data kota / kabupaten
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -591,10 +591,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-wilayah-GETapi-cities--provinceCode-">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/cities/{provinceCode}">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Ambil data kota berdasarkan provinsi">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#wilayah-GETapi-cities--provinceCode-">
-                                                    GET api/cities/{provinceCode}
+                                                    Ambil data kota berdasarkan provinsi
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -603,10 +603,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-wilayah-GETapi-districts">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/districts">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Ambil semua data kecamatan">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#wilayah-GETapi-districts">
-                                                    GET api/districts
+                                                    Ambil semua data kecamatan
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -615,10 +615,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-wilayah-GETapi-districts--cityCode-">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/districts/{cityCode}">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Ambil data kecamatan berdasarkan kota">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#wilayah-GETapi-districts--cityCode-">
-                                                    GET api/districts/{cityCode}
+                                                    Ambil data kecamatan berdasarkan kota
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -627,10 +627,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-wilayah-GETapi-villages">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/villages">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Ambil semua data kelurahan / desa">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#wilayah-GETapi-villages">
-                                                    GET api/villages
+                                                    Ambil semua data kelurahan / desa
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -639,10 +639,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-wilayah-GETapi-villages--districtCode-">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/villages/{districtCode}">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Ambil kelurahan berdasarkan kecamatan">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#wilayah-GETapi-villages--districtCode-">
-                                                    GET api/villages/{districtCode}
+                                                    Ambil kelurahan berdasarkan kecamatan
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -711,7 +711,7 @@ Setiap endpoint yang memerlukan otentikasi sudah menyediakan sebuah form untuk m
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="pegawai-GETapi-employees">
-                    GET api/employees
+                    Ambil data pegawai
                 </h2>
             </div>
         </div>
@@ -738,7 +738,8 @@ Setiap endpoint yang memerlukan otentikasi sudah menyediakan sebuah form untuk m
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>mengambil semua data pegawai</strong>.</p>
+<p>Fitur ini <strong>hanya bisa dijalankan</strong> oleh user <strong>admin-pegawai</strong> dan <strong>super-admin</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -1278,7 +1279,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="pegawai-GETapi-employees--employee_id-">
-                    GET api/employees/{employee_id}
+                    Detail pegawai
                 </h2>
             </div>
         </div>
@@ -1305,7 +1306,9 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>melihat detail pegawai</strong>.</p>
+<p><strong>dosen</strong> atau <strong>pegawai</strong> hanya dapat melihat detail <strong>MILIKNYA SENDIRI</strong>.</p>
+<p>admin-pegawai dan super-admin dapat melihat detail pegawai manapun.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -1790,7 +1793,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="pegawai-GETapi-employees-info-count">
-                    GET api/employees/info/count
+                    Ambil total data pegawai
                 </h2>
             </div>
         </div>
@@ -1817,7 +1820,8 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>mengambil total data pegawai</strong>.</p>
+<p>Fitur ini <strong>hanya bisa dijalankan</strong> oleh user <strong>admin-pegawai</strong> dan <strong>super-admin</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -2182,7 +2186,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="pegawai-POSTapi-employees">
-                    POST api/employees
+                    Menambahkan data pegawai
                 </h2>
             </div>
         </div>
@@ -2209,7 +2213,8 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>menambahkan data pegawai</strong>.</p>
+<p>Fitur ini <strong>hanya bisa dijalankan</strong> oleh user <strong>admin-pegawai</strong> dan <strong>super-admin</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -3086,7 +3091,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="pegawai-PUTapi-employees--employee_id-">
-                    PUT api/employees/{employee_id}
+                    Update data pegawai
                 </h2>
             </div>
         </div>
@@ -3113,7 +3118,10 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>mengupdate data pegawai</strong>.</p>
+<p><strong>dosen</strong> atau <strong>pegawai</strong> hanya dapat mengupdate data <strong>MILIKNYA SENDIRI</strong>.</p>
+<p>admin-pegawai dan super-admin dapat mengupdate data pegawai manapun.</p>
+<p><strong>NOTE</strong>: Ketika dosen atau pegawai mengubah data <strong>NIK</strong>, <strong>NIP</strong> dan <strong>NAMA</strong> miliknya, maka perubahan ini <strong>OTOMATIS DIKIRIMKAN KE ADMIN</strong> dan harus <strong>MENUNGGU ADMIN MENYETUJUI</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -4056,7 +4064,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="pegawai-DELETEapi-employees--employee_id-">
-                    DELETE api/employees/{employee_id}
+                    Hapus data pegawai
                 </h2>
             </div>
         </div>
@@ -4083,7 +4091,8 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>menghapus data pegawai</strong>.</p>
+<p>Fitur ini <strong>hanya bisa dijalankan</strong> oleh user <strong>admin-pegawai</strong> dan <strong>super-admin</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -4597,6 +4606,9 @@ fetch(url, {
         </div>
 
         <p>Endpoint bertujuan untuk <strong>mengambil seluruh data sesi kelas</strong>.</p>
+<p>Jika usernya adalah <strong>admin-pegawai</strong> atau <strong>super-admin</strong> maka akan menampilkan <strong>SEMUA DATA</strong> sesi kelas.</p>
+<p>Jika usernya adalah <strong>dosen</strong> maka hanya akan menampilkan semua <strong>data sesi kelas milik dosen</strong>.</p>
+<p>Jika usernya adalah <strong>mahasiswa</strong> maka hanya akan menampilkan semua <strong>data sesi kelas milik mahasiswa</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -5191,6 +5203,9 @@ fetch(url, {
         </div>
 
         <p>Endpoint bertujuan untuk <strong>melihat detail sesi kelas</strong>.</p>
+<p>Jika usernya adalah <strong>admin-pegawai</strong> atau <strong>super-admin</strong> maka bisa melihat <strong>SEMUA DETAIL</strong> sesi kelas.</p>
+<p>Jika usernya adalah <strong>dosen</strong> maka hanya akan bisa melihat <strong>data sesi kelas milik dosen tersebut</strong>.</p>
+<p>Jika usernya adalah <strong>mahasiswa</strong> maka hanya akan bisa melihat <strong>data sesi kelas milik mahasiswa tersebut</strong> atau <strong>sesuai kelas yang ia tempati</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -5688,6 +5703,7 @@ fetch(url, {
         </div>
 
         <p>Endpoint bertujuan untuk <strong>melakukan generate 16 data sesi kelas</strong>.</p>
+<p>Fitur ini <strong>hanya bisa dijalankan</strong> oleh user <strong>admin-pegawai</strong> dan <strong>super-admin</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -7247,6 +7263,7 @@ fetch(url, {
 
         <p>Endpoint ini <strong>TERPAKSA</strong> harus menggunakan <strong>method POST</strong> dibandingkan DELETE.</p>
 <p>Hal ini dikarenakan endpoint ini mendukung <em>multiple delete</em> data atau <em>bulk delete</em>. Sehingga memerlukan body parameter / body request.</p>
+<p>Fitur ini <strong>hanya bisa dijalankan</strong> oleh user <strong>admin-pegawai</strong> dan <strong>super-admin</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -7696,7 +7713,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="verifikasi-permintaan-perubahan-GETapi-change-requests">
-                    GET api/change-requests
+                    Ambil Semua Permintaan Perubahan Data
                 </h2>
             </div>
         </div>
@@ -7723,7 +7740,9 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>mengambil seluruh data permintaan perubahan</strong>.</p>
+<p>Jika usernya adalah <strong>admin-pegawai</strong> atau <strong>super-admin</strong> maka akan menampilkan <strong>SEMUA DATA</strong> permintaan perubahan.</p>
+<p>Jika usernya adalah <strong>dosen</strong> maka hanya akan menampilkan semua <strong>data permintaan perubahan milik dosen</strong> (sebagai history).</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -8091,9 +8110,7 @@ fetch(url, {
                                                         class="example-response-GETapi-change-requests-toggle sl-text-base"
                                                         aria-label="Response sample"
                                                         onchange="switchExampleResponse('GETapi-change-requests', event.target.value);">
-                                                                                                            <option value="0">200, Sukses mendapatkan data permintaan perubahan. Note:
-                      Jika role admin akan menampilkan semua data, 
-                      Jika role dosen hanya menampilkan data miliknya sendiri</option>
+                                                                                                            <option value="0">200, Sukses mendapatkan data permintaan perubahan</option>
                                                                                                             <option value="1">401, Tidak terotentikasi</option>
                                                                                                             <option value="2">403, Tidak memiliki izin</option>
                                                                                                     </select></div>
@@ -8300,7 +8317,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="verifikasi-permintaan-perubahan-GETapi-change-requests-info-newly">
-                    GET api/change-requests/info/newly
+                    Mengambil 5 data terbaru
                 </h2>
             </div>
         </div>
@@ -8327,7 +8344,8 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>mengambil 5 data permintaan perubahan terbaru</strong>.</p>
+<p>Fitur ini <strong>hanya bisa dijalankan</strong> oleh user <strong>admin-pegawai</strong> dan <strong>super-admin</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -8623,7 +8641,7 @@ fetch(url, {
                                                         class="example-response-GETapi-change-requests-info-newly-toggle sl-text-base"
                                                         aria-label="Response sample"
                                                         onchange="switchExampleResponse('GETapi-change-requests-info-newly', event.target.value);">
-                                                                                                            <option value="0">200, Sukses mengubah data permintaan perubahan</option>
+                                                                                                            <option value="0">200, Sukses mengambil 5 data permintaan perubahan terbaru</option>
                                                                                                             <option value="1">401, Tidak terotentikasi</option>
                                                                                                             <option value="2">403, Tidak memiliki izin</option>
                                                                                                     </select></div>
@@ -8830,7 +8848,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="verifikasi-permintaan-perubahan-GETapi-change-requests-info-pending">
-                    GET api/change-requests/info/pending
+                    Mengambil total status pending
                 </h2>
             </div>
         </div>
@@ -8857,7 +8875,8 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>mengambil total data permintaan perubahan dengan status pending</strong>.</p>
+<p>Fitur ini <strong>hanya bisa dijalankan</strong> oleh user <strong>admin-pegawai</strong> dan <strong>super-admin</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -9222,7 +9241,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="verifikasi-permintaan-perubahan-PUTapi-change-requests--changeRequest_id-">
-                    PUT api/change-requests/{changeRequest_id}
+                    Ubah Status Permintaan Perubahan Data
                 </h2>
             </div>
         </div>
@@ -9249,7 +9268,15 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>mengubah status permintaan perubahan</strong>.</p>
+<p>Fitur ini <strong>hanya bisa dijalankan</strong> oleh user <strong>admin-pegawai</strong> dan <strong>super-admin</strong>.</p>
+<p>Ada tiga status permintaan perubahan:</p>
+<ul>
+<li>pending</li>
+<li>rejected</li>
+<li>approved</li>
+</ul>
+<p>Jika <strong>APPROVED</strong> maka otomatis <strong>data yang diajukan untuk dirubah otomatis berubah</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -9402,7 +9429,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        rejected
+                        pending
                     </div>
                 </div>
             </div>
@@ -9577,7 +9604,7 @@ fetch(url, {
                                      id="json-body-PUTapi-change-requests--changeRequest_id-"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "status": "rejected"
+    "status": "pending"
 }</div>
                             </div>
                                             </div>
@@ -9674,7 +9701,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"status\": \"rejected\"
+    \"status\": \"pending\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -9694,7 +9721,7 @@ const headers = {
 };
 
 let body = {
-    "status": "rejected"
+    "status": "pending"
 };
 
 fetch(url, {
@@ -9840,7 +9867,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="wilayah-GETapi-countries">
-                    GET api/countries
+                    Ambil semua data negara
                 </h2>
             </div>
         </div>
@@ -9863,7 +9890,8 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>mengambil semua data negara</strong>.</p>
+<p>Endpoint ini <strong>bersifat publik</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -10327,7 +10355,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="wilayah-GETapi-provinces">
-                    GET api/provinces
+                    Ambil semua data provinsi
                 </h2>
             </div>
         </div>
@@ -10350,7 +10378,8 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>mengambil semua data provinsi</strong>.</p>
+<p>Endpoint ini <strong>bersifat publik</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -10761,7 +10790,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="wilayah-GETapi-cities">
-                    GET api/cities
+                    Ambil semua data kota / kabupaten
                 </h2>
             </div>
         </div>
@@ -10784,7 +10813,8 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>mengambil semua data kota / kabupaten</strong>.</p>
+<p>Endpoint ini <strong>bersifat publik</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -11258,7 +11288,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="wilayah-GETapi-cities--provinceCode-">
-                    GET api/cities/{provinceCode}
+                    Ambil data kota berdasarkan provinsi
                 </h2>
             </div>
         </div>
@@ -11281,7 +11311,8 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>mengambil semua data kota berdasarkan provinsi</strong>.</p>
+<p>Endpoint ini <strong>bersifat publik</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -11748,7 +11779,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="wilayah-GETapi-districts">
-                    GET api/districts
+                    Ambil semua data kecamatan
                 </h2>
             </div>
         </div>
@@ -11771,7 +11802,8 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>mengambil semua data kecamatan</strong>.</p>
+<p>Endpoint ini <strong>bersifat publik</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -12245,7 +12277,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="wilayah-GETapi-districts--cityCode-">
-                    GET api/districts/{cityCode}
+                    Ambil data kecamatan berdasarkan kota
                 </h2>
             </div>
         </div>
@@ -12265,14 +12297,11 @@ fetch(url, {
                         <div class="sl-flex-1 sl-font-semibold">/api/districts/{cityCode}</div>
                     </div>
 
-                                                    <div class="sl-font-prose sl-font-semibold sl-px-1.5 sl-py-0.5 sl-text-on-primary sl-rounded-lg"
-                                 style="background-color: darkred"
-                            >requires authentication
-                            </div>
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>mengambil semua data kecamatan berdasarkan kota</strong>.</p>
+<p>Endpoint ini <strong>bersifat publik</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -12283,24 +12312,6 @@ fetch(url, {
                                 Headers
                             </h3>
                             <div class="sl-text-sm">
-                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Authorization</div>
-                                    </div>
-                                        </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        Bearer {JWT here}
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
                                                                     <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
     <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
     <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
@@ -12390,42 +12401,6 @@ fetch(url, {
               data-path="api/districts/{cityCode}"
               data-hasfiles="0"
               data-hasjsonbody="0">
-                            <div class="sl-panel sl-outline-none sl-w-full expandable">
-                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                         role="button">
-                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                     data-icon="caret-down"
-                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="currentColor"
-                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                                </svg>
-                            </div>
-                            Auth
-                        </div>
-                    </div>
-                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                        <div class="ParameterGrid sl-p-4">
-                            <label aria-hidden="true"
-                                   for="auth-GETapi-districts--cityCode-">Authorization</label>
-                            <span class="sl-mx-3">:</span>
-                            <div class="sl-flex sl-flex-1">
-                                <div class="sl-input sl-flex-1 sl-relative">
-                                    <code>Bearer </code>
-                                    <input aria-label="Authorization"
-                                           id="auth-GETapi-districts--cityCode-"
-                                           data-component="header"
-                                           data-prefix="Bearer "
-                                           name="Authorization"
-                                           placeholder="{JWT here}"
-                                           class="auth-value sl-relative sl-w-3/5 sl-h-md sl-text-base sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             
                             <div class="sl-panel sl-outline-none sl-w-full expandable">
                     <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
@@ -12445,7 +12420,7 @@ fetch(url, {
                     </div>
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
-                                                                                                                            <label aria-hidden="true"
+                                                                                            <label aria-hidden="true"
                                        for="header-GETapi-districts--cityCode--Content-Type">Content-Type</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
@@ -12594,7 +12569,6 @@ You can check the Dev Tools console for debugging information.</p>
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:1234/api/districts/6301" \
-    --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -12608,7 +12582,6 @@ You can check the Dev Tools console for debugging information.</p>
 );
 
 const headers = {
-    "Authorization": "Bearer {JWT here}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -12795,7 +12768,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="wilayah-GETapi-villages">
-                    GET api/villages
+                    Ambil semua data kelurahan / desa
                 </h2>
             </div>
         </div>
@@ -12818,7 +12791,8 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>mengambil semua data kelurahan / desa</strong>.</p>
+<p>Endpoint ini <strong>bersifat publik</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -13292,7 +13266,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="wilayah-GETapi-villages--districtCode-">
-                    GET api/villages/{districtCode}
+                    Ambil kelurahan berdasarkan kecamatan
                 </h2>
             </div>
         </div>
@@ -13312,14 +13286,11 @@ fetch(url, {
                         <div class="sl-flex-1 sl-font-semibold">/api/villages/{districtCode}</div>
                     </div>
 
-                                                    <div class="sl-font-prose sl-font-semibold sl-px-1.5 sl-py-0.5 sl-text-on-primary sl-rounded-lg"
-                                 style="background-color: darkred"
-                            >requires authentication
-                            </div>
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint bertujuan untuk <strong>mengambil semua data kelurahan berdasarkan kecamatan</strong>.</p>
+<p>Endpoint ini <strong>bersifat publik</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -13330,24 +13301,6 @@ fetch(url, {
                                 Headers
                             </h3>
                             <div class="sl-text-sm">
-                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Authorization</div>
-                                    </div>
-                                        </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        Bearer {JWT here}
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
                                                                     <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
     <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
     <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
@@ -13437,42 +13390,6 @@ fetch(url, {
               data-path="api/villages/{districtCode}"
               data-hasfiles="0"
               data-hasjsonbody="0">
-                            <div class="sl-panel sl-outline-none sl-w-full expandable">
-                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                         role="button">
-                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                     data-icon="caret-down"
-                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="currentColor"
-                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                                </svg>
-                            </div>
-                            Auth
-                        </div>
-                    </div>
-                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                        <div class="ParameterGrid sl-p-4">
-                            <label aria-hidden="true"
-                                   for="auth-GETapi-villages--districtCode-">Authorization</label>
-                            <span class="sl-mx-3">:</span>
-                            <div class="sl-flex sl-flex-1">
-                                <div class="sl-input sl-flex-1 sl-relative">
-                                    <code>Bearer </code>
-                                    <input aria-label="Authorization"
-                                           id="auth-GETapi-villages--districtCode-"
-                                           data-component="header"
-                                           data-prefix="Bearer "
-                                           name="Authorization"
-                                           placeholder="{JWT here}"
-                                           class="auth-value sl-relative sl-w-3/5 sl-h-md sl-text-base sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             
                             <div class="sl-panel sl-outline-none sl-w-full expandable">
                     <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
@@ -13492,7 +13409,7 @@ fetch(url, {
                     </div>
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
-                                                                                                                            <label aria-hidden="true"
+                                                                                            <label aria-hidden="true"
                                        for="header-GETapi-villages--districtCode--Content-Type">Content-Type</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
@@ -13641,7 +13558,6 @@ You can check the Dev Tools console for debugging information.</p>
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:1234/api/villages/630101" \
-    --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -13655,7 +13571,6 @@ You can check the Dev Tools console for debugging information.</p>
 );
 
 const headers = {
-    "Authorization": "Bearer {JWT here}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };

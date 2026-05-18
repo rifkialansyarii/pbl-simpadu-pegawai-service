@@ -15,7 +15,14 @@ endpoints:
       subgroup: ''
       subgroupDescription: ''
       title: 'Ambil Semua Sesi Kelas'
-      description: 'Endpoint bertujuan untuk **mengambil seluruh data sesi kelas**.'
+      description: |-
+        Endpoint bertujuan untuk **mengambil seluruh data sesi kelas**.
+
+        Jika usernya adalah **admin-pegawai** atau **super-admin** maka akan menampilkan **SEMUA DATA** sesi kelas.
+
+        Jika usernya adalah **dosen** maka hanya akan menampilkan semua **data sesi kelas milik dosen**.
+
+        Jika usernya adalah **mahasiswa** maka hanya akan menampilkan semua **data sesi kelas milik mahasiswa**.
       authenticated: true
       deprecated: false
     headers:
@@ -228,7 +235,14 @@ endpoints:
       subgroup: ''
       subgroupDescription: ''
       title: 'Detail Sesi Kelas'
-      description: 'Endpoint bertujuan untuk **melihat detail sesi kelas**.'
+      description: |-
+        Endpoint bertujuan untuk **melihat detail sesi kelas**.
+
+        Jika usernya adalah **admin-pegawai** atau **super-admin** maka bisa melihat **SEMUA DETAIL** sesi kelas.
+
+        Jika usernya adalah **dosen** maka hanya akan bisa melihat **data sesi kelas milik dosen tersebut**.
+
+        Jika usernya adalah **mahasiswa** maka hanya akan bisa melihat **data sesi kelas milik mahasiswa tersebut** atau **sesuai kelas yang ia tempati**.
       authenticated: true
       deprecated: false
     headers:
@@ -349,7 +363,10 @@ endpoints:
       subgroup: ''
       subgroupDescription: ''
       title: 'Generate sesi kelas'
-      description: 'Endpoint bertujuan untuk **melakukan generate 16 data sesi kelas**.'
+      description: |-
+        Endpoint bertujuan untuk **melakukan generate 16 data sesi kelas**.
+
+        Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
       authenticated: true
       deprecated: false
     headers:
@@ -876,6 +893,8 @@ endpoints:
         Endpoint ini **TERPAKSA** harus menggunakan **method POST** dibandingkan DELETE.
 
         Hal ini dikarenakan endpoint ini mendukung *multiple delete* data atau *bulk delete*. Sehingga memerlukan body parameter / body request.
+
+        Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
       authenticated: true
       deprecated: false
     headers:

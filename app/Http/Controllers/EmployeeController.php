@@ -26,6 +26,13 @@ class EmployeeController extends Controller
     ) {
     }
 
+    /**
+     * Ambil data pegawai
+     * 
+     * Endpoint bertujuan untuk **mengambil semua data pegawai**.
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
+     */
     #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
     #[ResponseFromFile(file: 'responses/employee/get_employees.json', status: 200, description: 'Sukses mendapatkan data pegawai')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
@@ -41,6 +48,15 @@ class EmployeeController extends Controller
         ;
     }
 
+    /**
+     * Detail pegawai
+     * 
+     * Endpoint bertujuan untuk **melihat detail pegawai**.
+     * 
+     * **dosen** atau **pegawai** hanya dapat melihat detail **MILIKNYA SENDIRI**.
+     * 
+     * admin-pegawai dan super-admin dapat melihat detail pegawai manapun.
+     */    
     #[ResponseFromFile(file: 'responses/employee/detail_employee.json', status: 200, description: 'Sukses mendapatkan detail pegawai')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
@@ -57,6 +73,13 @@ class EmployeeController extends Controller
         return $employeeResource;
     }
 
+    /**
+     * Menambahkan data pegawai
+     * 
+     * Endpoint bertujuan untuk **menambahkan data pegawai**.
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
+     */
     #[ResponseFromFile(file: 'responses/employee/detail_employee.json', status: 201, description: 'Sukses menambahkan data pegawai')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
@@ -71,7 +94,17 @@ class EmployeeController extends Controller
         return $employeeResource;
     }
 
-
+    /**
+     * Update data pegawai
+     * 
+     * Endpoint bertujuan untuk **mengupdate data pegawai**.
+     * 
+     * **dosen** atau **pegawai** hanya dapat mengupdate data **MILIKNYA SENDIRI**.
+     * 
+     * admin-pegawai dan super-admin dapat mengupdate data pegawai manapun.
+     * 
+     * **NOTE**: Ketika dosen atau pegawai mengubah data **NIK**, **NIP** dan **NAMA** miliknya, maka perubahan ini **OTOMATIS DIKIRIMKAN KE ADMIN** dan harus **MENUNGGU ADMIN MENYETUJUI**.
+     */
     #[ResponseFromFile(file: 'responses/employee/detail_employee.json', status: 200, description: 'Sukses mengubah data pegawai')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
@@ -88,6 +121,14 @@ class EmployeeController extends Controller
         return $employeeResource;
     }
 
+    /**
+     * Hapus data pegawai
+     * 
+     * Endpoint bertujuan untuk **menghapus data pegawai**.
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
+     * 
+     */
     #[ResponseFromFile(file: 'responses/success_delete.json', status: 200, description: 'Sukses menghapus data pegawai')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
@@ -103,6 +144,14 @@ class EmployeeController extends Controller
         ]);
     }
 
+    /**
+     * Ambil total data pegawai
+     * 
+     * Endpoint bertujuan untuk **mengambil total data pegawai**.
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
+     * 
+     */
     #[ResponseFromFile(file: 'responses/employee/total_employee.json', status: 200, description: 'Sukses mendapatkan total data pegawai')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]

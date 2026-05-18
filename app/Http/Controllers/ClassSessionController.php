@@ -31,6 +31,12 @@ class ClassSessionController extends Controller
      * Ambil Semua Sesi Kelas
      * 
      * Endpoint bertujuan untuk **mengambil seluruh data sesi kelas**.
+     * 
+     * Jika usernya adalah **admin-pegawai** atau **super-admin** maka akan menampilkan **SEMUA DATA** sesi kelas.
+     * 
+     * Jika usernya adalah **dosen** maka hanya akan menampilkan semua **data sesi kelas milik dosen**.
+     * 
+     * Jika usernya adalah **mahasiswa** maka hanya akan menampilkan semua **data sesi kelas milik mahasiswa**.
      *  
      */
     #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
@@ -51,6 +57,12 @@ class ClassSessionController extends Controller
      * Detail Sesi Kelas
      * 
      * Endpoint bertujuan untuk **melihat detail sesi kelas**.
+     * 
+     * Jika usernya adalah **admin-pegawai** atau **super-admin** maka bisa melihat **SEMUA DETAIL** sesi kelas.
+     * 
+     * Jika usernya adalah **dosen** maka hanya akan bisa melihat **data sesi kelas milik dosen tersebut**.
+     * 
+     * Jika usernya adalah **mahasiswa** maka hanya akan bisa melihat **data sesi kelas milik mahasiswa tersebut** atau **sesuai kelas yang ia tempati**.
      *  
      */
     #[ResponseFromFile(file: 'responses/class_sessions/detail_class_session.json', status: 200, description: 'Sukses mendapatkan detail sesi kelas')]
@@ -72,6 +84,8 @@ class ClassSessionController extends Controller
      * Generate sesi kelas
      * 
      * Endpoint bertujuan untuk **melakukan generate 16 data sesi kelas**.
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
      *  
      */
     #[ResponseFromFile(file: 'responses/class_sessions/get_class_sessions.json', status: 201, description: 'Sukses generate data sesi kelas')]
@@ -145,6 +159,8 @@ class ClassSessionController extends Controller
      * Endpoint ini **TERPAKSA** harus menggunakan **method POST** dibandingkan DELETE.
      * 
      * Hal ini dikarenakan endpoint ini mendukung *multiple delete* data atau *bulk delete*. Sehingga memerlukan body parameter / body request.
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
      *  
      */
     #[ResponseFromFile(file: 'responses/class_sessions/bulk_delete_class_session.json', status: 200, description: 'Sukses menghapus data pegawai')]

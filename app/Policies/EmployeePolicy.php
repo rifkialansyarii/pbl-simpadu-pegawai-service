@@ -13,7 +13,7 @@ class EmployeePolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->role === 'admin-pegawai' || $user->role === 'super-admin' || $user->role === 'super-admin';
+        return $user->role === 'admin-pegawai' || $user->role === 'super-admin';
     }
 
     /**
@@ -64,4 +64,5 @@ class EmployeePolicy
     {
         return false;
     }
+
 }
