@@ -56,6 +56,8 @@ endpoints:
                       "nip": "350661066055483856",
                       "nik": "7406980408239916",
                       "employee_name": "Salimah Zulaika",
+                      "study_program_id": "123e4567-e89b-12d3-a456-426614174000",
+                      "study_program_name": "teknik-listrik",
                       "address": "Jln. Elang No. 856, Sabang 82360, Papua",
                       "birth_place": "Batam",
                       "birth_date": "2000-07-02",
@@ -239,6 +241,8 @@ endpoints:
                   "nip": "350661066055483856",
                   "nik": "7406980408239916",
                   "employee_name": "Salimah Zulaika",
+                  "study_program_id": "123e4567-e89b-12d3-a456-426614174000",
+                  "study_program_name": "teknik-listrik",
                   "address": "Jln. Elang No. 856, Sabang 82360, Papua",
                   "birth_place": "Batam",
                   "birth_date": "2000-07-02",
@@ -449,6 +453,28 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
+      study_program_id:
+        custom: []
+        name: study_program_id
+        description: 'UUID Program Studi'
+        required: false
+        example: 123e4567-e89b-12d3-a456-426614174000
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      study_program_name:
+        custom: []
+        name: study_program_name
+        description: 'Nama Program Studi'
+        required: false
+        example: teknik-listrik
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
       address:
         custom: []
         name: address
@@ -563,6 +589,8 @@ endpoints:
       nip: '691651594659009703'
       nik: '1801160204072477'
       employee_name: 'John Doe'
+      study_program_id: 123e4567-e89b-12d3-a456-426614174000
+      study_program_name: teknik-listrik
       address: 'Gg. Casablanca No. 249, Administrasi Jakarta Timur 83230, Sulteng'
       birth_place: Jakarta
       birth_date: '1990-01-01'
@@ -588,6 +616,8 @@ endpoints:
                   "nip": "350661066055483856",
                   "nik": "7406980408239916",
                   "employee_name": "Salimah Zulaika",
+                  "study_program_id": "123e4567-e89b-12d3-a456-426614174000",
+                  "study_program_name": "teknik-listrik",
                   "address": "Jln. Elang No. 856, Sabang 82360, Papua",
                   "birth_place": "Batam",
                   "birth_date": "2000-07-02",
@@ -728,6 +758,28 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
+      study_program_id:
+        custom: []
+        name: study_program_id
+        description: 'UUID Program Studi'
+        required: false
+        example: 123e4567-e89b-12d3-a456-426614174000
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      study_program_name:
+        custom: []
+        name: study_program_name
+        description: 'Nama Program Studi'
+        required: false
+        example: teknik-listrik
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
       address:
         custom: []
         name: address
@@ -842,6 +894,8 @@ endpoints:
       nip: '691651594659009703'
       nik: '1801160204072477'
       employee_name: 'John Doe'
+      study_program_id: 123e4567-e89b-12d3-a456-426614174000
+      study_program_name: teknik-listrik
       address: 'Gg. Casablanca No. 249, Administrasi Jakarta Timur 83230, Sulteng'
       birth_place: Jakarta
       birth_date: '1990-01-01'
@@ -867,6 +921,8 @@ endpoints:
                   "nip": "350661066055483856",
                   "nik": "7406980408239916",
                   "employee_name": "Salimah Zulaika",
+                  "study_program_id": "123e4567-e89b-12d3-a456-426614174000",
+                  "study_program_name": "teknik-listrik",
                   "address": "Jln. Elang No. 856, Sabang 82360, Papua",
                   "birth_place": "Batam",
                   "birth_date": "2000-07-02",
@@ -974,7 +1030,7 @@ endpoints:
         name: employee_id
         description: 'The ID of the employee.'
         required: true
-        example: 019e3511-06f5-70b9-b30c-0a4d21866971
+        example: 019e39e0-d19c-70f9-a664-c6ad24786558
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -992,7 +1048,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      employee_id: 019e3511-06f5-70b9-b30c-0a4d21866971
+      employee_id: 019e39e0-d19c-70f9-a664-c6ad24786558
       employee: 123e4567-e89b-12d3-a456-426614174000
     queryParameters: []
     cleanQueryParameters: []
