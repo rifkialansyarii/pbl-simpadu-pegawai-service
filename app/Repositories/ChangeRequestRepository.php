@@ -19,8 +19,8 @@ class ChangeRequestRepository implements ChangeRequestRepositoryInterface
             'status',
         ])->latest()->paginate(10);
 
-        $changeRequest->load(['employee']);
-        
+        $changeRequest->load(['employee.village', 'employee.district', 'employee.city', 'employee.province', 'employee.citizen']);
+
         return $changeRequest;
     }
 

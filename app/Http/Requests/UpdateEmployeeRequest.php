@@ -13,7 +13,7 @@ use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rule;
 use Knuckles\Scribe\Attributes\BodyParam;
 
-#[BodyParam("nip", "string", "NIP harus unik dan terdiri dari 18 karakter (Perubahan pada field ini akan berlaku jika admin menyetujui)", example: "691651594659009703", required: false) ]
+#[BodyParam("nip", "string", "NIP harus unik dan terdiri dari 18 karakter (Perubahan pada field ini akan berlaku jika admin menyetujui)", example: "691651594659009703", required: false)]
 #[BodyParam("nik", "string", "NIK harus unik dan terdiri dari 16 karakter (Perubahan pada field ini akan berlaku jika admin menyetujui)", example: "1801160204072477", required: false)]
 #[BodyParam("employee_name", "string", "Nama pegawai (Perubahan pada field ini akan berlaku jika admin menyetujui)", example: "John Doe", required: false)]
 #[BodyParam("address", "string", "Alamat Pegawai", example: "Gg. Casablanca No. 249, Administrasi Jakarta Timur 83230, Sulteng", required: false)]
@@ -56,6 +56,8 @@ class UpdateEmployeeRequest extends FormRequest
                 Rule::unique(Employee::class)->ignore($this->route('employee')),
             ],
             'employee_name' => 'string|max:255',
+            'study_program_id' => 'string|size:36',
+            'study_program_name' => 'string|max:255',
             'address' => 'string|max:255',
             'birth_place' => 'string|max:255',
             'birth_date' => [Rule::date()->format('Y-m-d')],

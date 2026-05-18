@@ -45,6 +45,8 @@ class StoreEmployeeRequest extends FormRequest
             'nip' => 'required|string|unique:App\Models\Employee,nip|size:18',
             'nik' => 'required|string|unique:App\Models\Employee,nik|size:16',
             'employee_name' => 'required|string|max:255',
+            'study_program_id' => 'required|string|size:36',
+            'study_program_name' => 'required|string|max:255',
             'address' => 'string|max:255',
             'birth_place' => 'string|max:255',
             'birth_date' => [Rule::date()->format('Y-m-d')],

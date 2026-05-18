@@ -22,7 +22,9 @@ class ChangeRequestFactory extends Factory
     {
         $employee = Employee::inRandomOrder()->first();
         $fieldList = array_diff(Schema::getColumnListing('employees'), [
-            'id', 
+            'id',
+            'study_program_id',
+            'study_program_name',
             'address',
             'birth_place',
             'birth_date',
