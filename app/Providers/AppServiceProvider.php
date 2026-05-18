@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
             function (Request $request) {
                 $jwtToken = $request->bearerToken();
 
-                if(!$jwtToken){
+                if (!$jwtToken) {
                     return null;
                 }
 
@@ -39,7 +39,10 @@ class AppServiceProvider extends ServiceProvider
                     $user = new User();
                     $user->id = $jwtTokenDecode->detail_id;
                     $user->role = $jwtTokenDecode->role_name;
-                    $user->class_id = $jwtTokenDecode->class_id;
+
+                    if ($user->role === 'mahasiswa') {
+                        $user->class_id = $jwtTokenDecode->class_id;
+                    }
 
                     return $user;
                 } catch (Exception $e) {
