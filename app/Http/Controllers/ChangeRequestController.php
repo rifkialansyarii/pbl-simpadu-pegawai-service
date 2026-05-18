@@ -26,13 +26,21 @@ class ChangeRequestController extends Controller
     ) {
     }
 
+    /**
+     * Ambil Semua Permintaan Perubahan Data
+     * 
+     * Endpoint bertujuan untuk **mengambil seluruh data permintaan perubahan**.
+     * 
+     * Jika usernya adalah **admin-pegawai** atau **super-admin** maka akan menampilkan **SEMUA DATA** permintaan perubahan.
+     * 
+     * Jika usernya adalah **dosen** maka hanya akan menampilkan semua **data permintaan perubahan milik dosen** (sebagai history).
+     *  
+     */
     #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
     #[ResponseFromFile(
         file: 'responses/change_request/success_get_all.json',
         status: 200,
-        description: 'Sukses mendapatkan data permintaan perubahan. Note:
-                      Jika role admin akan menampilkan semua data, 
-                      Jika role dosen hanya menampilkan data miliknya sendiri'
+        description: 'Sukses mendapatkan data permintaan perubahan'
     )]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
@@ -46,6 +54,23 @@ class ChangeRequestController extends Controller
         ]);
     }
 
+
+    /**
+     * Ubah Status Permintaan Perubahan Data
+     * 
+     * Endpoint bertujuan untuk **mengubah status permintaan perubahan**.
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
+     * 
+     * Ada tiga status permintaan perubahan:
+     * 
+     * - pending
+     * - rejected
+     * - approved
+     * 
+     * Jika **APPROVED** maka otomatis **data yang diajukan untuk dirubah otomatis berubah**.
+     * 
+     */
     #[ResponseFromFile(file: 'responses/change_request/success_get_detail.json', status: 200, description: 'Sukses mengubah data permintaan perubahan')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
@@ -60,7 +85,15 @@ class ChangeRequestController extends Controller
         ]);
     }
 
-    #[ResponseFromFile(file: 'responses/change_request/success_get_all.json', status: 200, description: 'Sukses mengubah data permintaan perubahan')]
+    /**
+     * Mengambil 5 data terbaru
+     * 
+     * Endpoint bertujuan untuk **mengambil 5 data permintaan perubahan terbaru**.
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
+     * 
+     */
+    #[ResponseFromFile(file: 'responses/change_request/success_get_all.json', status: 200, description: 'Sukses mengambil 5 data permintaan perubahan terbaru')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     public function showNewly()
@@ -73,6 +106,14 @@ class ChangeRequestController extends Controller
         ]);
     }
 
+    /**
+     * Mengambil total status pending
+     * 
+     * Endpoint bertujuan untuk **mengambil total data permintaan perubahan dengan status pending**.
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
+     * 
+     */
     #[ResponseFromFile(file: 'responses/change_request/success_get_total_pending.json', status: 200, description: 'Sukses mendapatkan total data pegawai')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]

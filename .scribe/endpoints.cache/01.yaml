@@ -18,8 +18,13 @@ endpoints:
         Endpoint terkait operasi verifikasi / permintaan perubahan data pegawai tertentu SIMPADU.
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Ambil Semua Permintaan Perubahan Data'
+      description: |-
+        Endpoint bertujuan untuk **mengambil seluruh data permintaan perubahan**.
+
+        Jika usernya adalah **admin-pegawai** atau **super-admin** maka akan menampilkan **SEMUA DATA** permintaan perubahan.
+
+        Jika usernya adalah **dosen** maka hanya akan menampilkan semua **data permintaan perubahan milik dosen** (sebagai history).
       authenticated: true
       deprecated: false
     headers:
@@ -197,10 +202,7 @@ endpoints:
               }
           }
         headers: []
-        description: |-
-          Sukses mendapatkan data permintaan perubahan. Note:
-                                Jika role admin akan menampilkan semua data, 
-                                Jika role dosen hanya menampilkan data miliknya sendiri
+        description: 'Sukses mendapatkan data permintaan perubahan'
       -
         custom: []
         status: 401
@@ -244,8 +246,11 @@ endpoints:
         Endpoint terkait operasi verifikasi / permintaan perubahan data pegawai tertentu SIMPADU.
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Mengambil 5 data terbaru'
+      description: |-
+        Endpoint bertujuan untuk **mengambil 5 data permintaan perubahan terbaru**.
+
+        Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
       authenticated: true
       deprecated: false
     headers:
@@ -411,7 +416,7 @@ endpoints:
               }
           }
         headers: []
-        description: 'Sukses mengubah data permintaan perubahan'
+        description: 'Sukses mengambil 5 data permintaan perubahan terbaru'
       -
         custom: []
         status: 401
@@ -455,8 +460,11 @@ endpoints:
         Endpoint terkait operasi verifikasi / permintaan perubahan data pegawai tertentu SIMPADU.
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Mengambil total status pending'
+      description: |-
+        Endpoint bertujuan untuk **mengambil total data permintaan perubahan dengan status pending**.
+
+        Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
       authenticated: true
       deprecated: false
     headers:
@@ -528,8 +536,19 @@ endpoints:
         Endpoint terkait operasi verifikasi / permintaan perubahan data pegawai tertentu SIMPADU.
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Ubah Status Permintaan Perubahan Data'
+      description: |-
+        Endpoint bertujuan untuk **mengubah status permintaan perubahan**.
+
+        Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
+
+        Ada tiga status permintaan perubahan:
+
+        - pending
+        - rejected
+        - approved
+
+        Jika **APPROVED** maka otomatis **data yang diajukan untuk dirubah otomatis berubah**.
       authenticated: true
       deprecated: false
     headers:
@@ -570,7 +589,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: rejected
+        example: pending
         type: string
         enumValues:
           - pending
@@ -580,7 +599,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanBodyParameters:
-      status: rejected
+      status: pending
     fileParameters: []
     responses:
       -

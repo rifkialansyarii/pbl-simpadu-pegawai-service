@@ -26,6 +26,12 @@ class CountryController extends Controller
     }
 
     /**
+     * Ambil semua data negara
+     * 
+     * Endpoint bertujuan untuk **mengambil semua data negara**.
+     * 
+     * Endpoint ini **bersifat publik**.
+     * 
      * @unauthenticated
      */
     #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]

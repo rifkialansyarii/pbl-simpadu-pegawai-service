@@ -19,7 +19,15 @@ class VillageController extends Controller
     ) {
     }
 
+
     /**
+     *
+     * Ambil semua data kelurahan / desa
+     * 
+     * Endpoint bertujuan untuk **mengambil semua data kelurahan / desa**.
+     * 
+     * Endpoint ini **bersifat publik**.
+     * 
      * @unauthenticated
      */
     #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
@@ -35,6 +43,16 @@ class VillageController extends Controller
 
     }
 
+    /**
+     *
+     * Ambil kelurahan berdasarkan kecamatan
+     * 
+     * Endpoint bertujuan untuk **mengambil semua data kelurahan berdasarkan kecamatan**.
+     * 
+     * Endpoint ini **bersifat publik**.
+     * 
+     * @unauthenticated
+     */
     #[UrlParam("districtCode", "string", "Kode Kecamatan", example: "630101")]
     #[ResponseFromFile(file: 'responses/region/success_get_village.json', status: 200, description: 'Sukses mendapatkan data desa/kelurahan')]
     public function showByDistrict(string $districtCode)
