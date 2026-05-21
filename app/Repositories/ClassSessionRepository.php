@@ -26,7 +26,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'is_already_opened',
         ])->paginate(10);
 
-        $classSession->load(['lecturer']);
+        $classSession->load(['lecturer', 'learningMaterials']);
 
         return $classSession;
     }
@@ -50,7 +50,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'is_already_opened',
         ])->where('lecturer_id', $lecturerId)->paginate(10);
 
-        $classSession->load(['lecturer']);
+        $classSession->load(['lecturer', 'learningMaterials']);
 
         return $classSession;
     }
@@ -74,7 +74,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'is_already_opened',
         ])->where('class_id', $classId)->paginate(10);
 
-        $classSession->load(['lecturer']);
+        $classSession->load(['lecturer', 'learningMaterials']);
 
         return $classSession;
     }
@@ -98,7 +98,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'is_already_opened',
         ])->where('id', $classSession->id)->first();
 
-        $classSession->load(['lecturer']);
+        $classSession->load(['lecturer', 'learningMaterials']);
 
         return $classSession;
     }
@@ -114,7 +114,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
         ClassSession::fillAndInsert($data);
 
         $classSession = ClassSession::latest()->take($sessionAmount)->paginate(10);
-        $classSession->load(['lecturer']);
+        $classSession->load(['lecturer', 'learningMaterials']);
 
         return $classSession;
     }
