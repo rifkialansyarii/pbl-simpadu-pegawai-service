@@ -28,6 +28,8 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
 
         $classSession->load(['lecturer', 'learningMaterials']);
 
+        // dd($classSession);
+
         return $classSession;
     }
 
