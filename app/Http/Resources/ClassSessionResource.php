@@ -30,7 +30,7 @@ class ClassSessionResource extends JsonResource
             'is_already_opened' => $this->is_already_opened,
             'lecturer_id' => $this->lecturer_id,
             'lecturer' => EmployeeResource::make($this->whenLoaded('lecturer')),
-            'learning_materials' => LearningMaterialCollection::make($this->whenLoaded('learningMaterials'))
+            'learning_materials' => FileUploadCollection::make($this->whenLoaded('learningMaterials'))
         ];
     }
 

@@ -32,7 +32,7 @@ class FileUploadController extends Controller
                 'success' => false,
                 'message' => 'an error occurred while processing',
                 'code' => 500,
-                'errrors' => $e->getMessage()
+                'errors' => $e->getMessage()
             ];
 
             if ($isDebug) {
@@ -65,7 +65,7 @@ class FileUploadController extends Controller
                 'success' => false,
                 'message' => 'an error occurred while processing',
                 'code' => 500,
-                'errrors' => $e->getMessage()
+                'errors' => $e->getMessage()
             ];
 
             if ($isDebug) {
@@ -94,7 +94,7 @@ class FileUploadController extends Controller
                 'success' => false,
                 'message' => 'an error occurred while processing',
                 'code' => 500,
-                'errrors' => $e->getMessage()
+                'errors' => $e->getMessage()
             ], 500);
         }
     }

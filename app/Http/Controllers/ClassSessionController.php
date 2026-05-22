@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AddLearningMaterialRequest;
 use App\Http\Requests\BulkDeleteClassSessionRequest;
 use App\Http\Requests\GenerateClassSessionRequest;
 use App\Http\Requests\UpdateClassSessionRequest;
@@ -187,5 +188,35 @@ class ClassSessionController extends Controller
                 'errrors' => $e->getMessage()
             ], 500);
         }
+    }
+
+    public function addMaterial(AddLearningMaterialRequest $request, ClassSession $classSession)
+    {
+        try {
+            $attributes = $request->validated()['file_uuids'];
+            $classSessionCollection = new ClassSessionCollection($this->service->addSessionMaterial($classSession, $attributes));
+            return $classSessionCollection->additional([
+                'success' => true,
+                'message' => 'Data created successfully',
+                'code' => 201,
+            ]);
+        } catch (Exception $e) {
+            $isDebug = config('app.debug');
+
+            $response = [
+                'success' => false,
+                'message' => 'an error occurred while processing',
+                'code' => 500,
+                'errrors' => $e->getMessage()
+            ];
+
+            if ($isDebug) {
+                $response['errors'] = $e->getMessage();
+                $response['trace'] = $e->getTrace();
+            }
+
+            return response()->json($response, 500);
+        }
+
     }
 }

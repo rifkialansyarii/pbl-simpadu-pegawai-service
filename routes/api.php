@@ -50,3 +50,4 @@ Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistric
 Route::get('/file-uploads/{fileUpload}/download', [FileUploadController::class, 'download']);
 Route::post('/file-uploads', [FileUploadController::class, 'store']);
 Route::post('/file-uploads/bulk-delete', [FileUploadController::class, 'destroy']);
+Route::post('/class-sessions/{classSession}/learning-materials', [ClassSessionController::class, 'addMaterial']);

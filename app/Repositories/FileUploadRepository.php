@@ -9,15 +9,13 @@ use App\Models\FileUpload;
 
 class FileUploadRepository implements FileUploadRepositoryInterface
 {
-    public function create(array $data, int $amount)
+    public function create(array $data)
     {
         FileUpload::fillAndInsert($data);
 
-        $insertedMaterialData = FileUpload::latest()->take($amount);
+        $insertedMaterialData = FileUpload::latest()->take(count($data));
 
-        $insertedMaterialData = $insertedMaterialData->paginate(10);
-
-        return $insertedMaterialData;
+        return $insertedMaterialData->get();
     }
 
     public function bulkDelete(array $data)

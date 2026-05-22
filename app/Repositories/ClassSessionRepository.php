@@ -138,4 +138,15 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
     {
         ClassSession::destroy($data);
     }
+
+    public function createSessionMaterial(ClassSession $classSession, array $data)
+    {
+        $classSession->learningMaterials()->attach($data);
+
+        $classSession = $classSession->latest()->take(count($data))->get();
+
+        $classSession->load(['lecturer', 'learningMaterials']);
+
+        return $classSession;
+    }
 }

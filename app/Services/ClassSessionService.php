@@ -94,4 +94,11 @@ final class ClassSessionService
 
     }
 
+    public function addSessionMaterial(ClassSession $classSession, array $attributes)
+    {
+        return DB::transaction(function () use ($classSession, $attributes) {
+            return $this->repository->createSessionMaterial($classSession, $attributes);
+        });
+    }
+
 }

@@ -19,7 +19,6 @@ final class FileUploadService
     public function uploadMaterials(array $attributes)
     {
         $materialsData = array();
-        $amount = 1;
 
         foreach ($attributes['files'] as $file) {
             $path = $file->store('files', 'private');
@@ -30,13 +29,11 @@ final class FileUploadService
                 'file_size' => Storage::disk('private')->size($path),
                 'mime_type' => Storage::mimeType($path),
             ];
-
-            $amount++;
         }
 
         try {
-            return DB::transaction(function () use ($files, $amount) {
-                return $this->repository->create($files, $amount);
+            return DB::transaction(function () use ($files) {
+                return $this->repository->create($files);
             });
         } catch (Throwable $th) {
             foreach ($materialsData as $data) {
