@@ -27,7 +27,12 @@ class AddLearningMaterialRequest extends FormRequest
     {
         return [
             "file_uuids" => ['array', 'required', 'min:1'],
-            "file_uuids.*" => ['required', 'string', Rule::exists('file_uploads', 'id'), 'size:36']
+            "file_uuids.*" => [
+                'required',
+                'string',
+                'size:36',
+                Rule::exists('file_uploads', 'id'),
+            ]
         ];
     }
 

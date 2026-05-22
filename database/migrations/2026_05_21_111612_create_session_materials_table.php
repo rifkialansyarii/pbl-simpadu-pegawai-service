@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->foreignUuid('class_session_id')->constrained('class_sessions')->cascadeOnDelete();
             $table->foreignUuid('file_upload_id')->constrained('file_uploads')->cascadeOnDelete();
+            $table->unique(['class_session_id', 'file_upload_id']);
             $table->timestamps();
         });
     }
