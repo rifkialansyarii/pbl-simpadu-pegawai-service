@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Contracts\LearningMaterialRepositoryInterface;
+use App\Models\LearningMaterial;
 use DB;
 use Illuminate\Support\Facades\Storage;
 use Throwable;
@@ -21,12 +22,12 @@ final class LearningMaterialService
         $amount = 1;
 
         foreach ($attributes['learning_materials'] as $file) {
-            $path = $file->store('learning_materials', 'public');
+            $path = $file->store('learning_materials', 'private');
 
             $materialsData[] = [
                 'file_path' => $path,
                 'original_file_name' => $file->getClientOriginalName(),
-                'file_size' => Storage::disk('public')->size($path),            ];
+                'file_size' => Storage::disk('private')->size($path),            ];
 
             $amount++;
         }
@@ -37,14 +38,19 @@ final class LearningMaterialService
             });
         } catch (Throwable $th) {
             foreach ($materialsData as $data) {
-                if(Storage::disk('public')->exists($data['file_path'])){
-                    Storage::disk('public')->delete($data['file_path']);
+                if(Storage::disk('private')->exists($data['file_path'])){
+                    Storage::disk('private')->delete($data['file_path']);
                 }
             }
 
             throw $th;
         }
 
+    }
+
+    public function getDownloadPath($learningMaterial)
+    {
+        return Storage::disk('private')->path($learningMaterial->file_path);
     }
 
 }

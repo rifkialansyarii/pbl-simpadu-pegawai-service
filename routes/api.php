@@ -47,4 +47,5 @@ Route::get('/villages', [VillageController::class, 'index']);
 Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);
 
 
-Route::post('learning-materials', [LearningMaterialController::class, 'store']);
+Route::get('/learning-materials/{learningMaterial}/download', [LearningMaterialController::class, 'download']);
+Route::post('/learning-materials', [LearningMaterialController::class, 'store']);
