@@ -10,11 +10,12 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('learning_materials', function (Blueprint $table) {
+        Schema::create('file_uploads', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('file_path');
             $table->string('original_file_name');
             $table->integer('file_size');
+            $table->string('mime_type');
             $table->timestamps();
         });
     }

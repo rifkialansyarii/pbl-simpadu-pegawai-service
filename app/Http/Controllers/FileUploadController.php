@@ -2,24 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreLearningMaterialRequest;
-use App\Http\Resources\LearningMaterialCollection;
-use App\Models\LearningMaterial;
-use App\Services\LearningMaterialService;
+use App\Http\Requests\BulkDeleteFileUploadRequest;
+use App\Http\Requests\StoreFileUploadRequest;
+use App\Http\Resources\FileUploadCollection;
+use App\Models\FileUpload;
+use App\Services\FileUploadService;
 use Exception;
 use Illuminate\Http\Request;
 
-class LearningMaterialController extends Controller
+class FileUploadController extends Controller
 {
-    public function __construct(private LearningMaterialService $service)
+    public function __construct(private FileUploadService $service)
     {
     }
 
-    public function store(StoreLearningMaterialRequest $request)
+    public function store(StoreFileUploadRequest $request)
     {
         try {
-            $learningMaterialCollection = new LearningMaterialCollection($this->service->uploadMaterials($request->validated()));
-            return $learningMaterialCollection->additional([
+            $fileUploadCollection = new FileUploadCollection($this->service->uploadMaterials($request->validated()));
+            return $fileUploadCollection->additional([
                 'success' => true,
                 'message' => 'File uploaded successfully',
                 'code' => 201,
@@ -43,10 +44,10 @@ class LearningMaterialController extends Controller
         }
     }
 
-    public function download(LearningMaterial $learningMaterial)
+    public function download(FileUpload $fileUpload)
     {
         try {
-            $path = $this->service->getDownloadPath($learningMaterial);
+            $path = $this->service->getDownloadPath($fileUpload);
             if (!file_exists($path)) {
                 return response()->json([
                     'success' => false,
@@ -55,7 +56,7 @@ class LearningMaterialController extends Controller
                 ], 404);
             }
 
-            return response()->download($path, $learningMaterial->original_file_name);
+            return response()->download($path, $fileUpload->original_file_name);
 
         } catch (Exception $e) {
             $isDebug = config('app.debug');
@@ -74,7 +75,27 @@ class LearningMaterialController extends Controller
 
             return response()->json($response, 500);
         }
+    }
 
+    public function destroy(BulkDeleteFileUploadRequest $request)
+    {
+        try {
+            $attributes = $request->validated()['uuids'];
 
+            $this->service->deleteFile($attributes);
+            return response()->json([
+                'success' => true,
+                'message' => 'Data deleted successfully',
+                'code' => 200,
+                'deleted_count' => count($attributes),
+            ]);
+        } catch (Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'an error occurred while processing',
+                'code' => 500,
+                'errrors' => $e->getMessage()
+            ], 500);
+        }
     }
 }

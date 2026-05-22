@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreLearningMaterialRequest extends FormRequest
+class StoreFileUploadRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,9 +23,8 @@ class StoreLearningMaterialRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'class_session_id' => ['required', 'string', 'size:36'],
-            'learning_materials' => ['required', 'array', 'min:1'],
-            'learning_materials.*' => ['required', 'mimes:pdf,jpg,jpeg,png,csv,xlsx', 'max:10240'],
+            'files' => ['required', 'array', 'min:1'],
+            'files.*' => ['required', 'mimes:pdf,jpg,jpeg,png,csv,xlsx,docx', 'max:10240'],
         ];
     }
 }

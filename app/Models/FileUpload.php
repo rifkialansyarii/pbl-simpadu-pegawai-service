@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class LearningMaterial extends Model
+class FileUpload extends Model
 {
     use HasUuids;
 
@@ -15,6 +15,7 @@ class LearningMaterial extends Model
         'file_path',
         'original_file_name',
         'file_size',
+        'mime_type',
     ];
 
     protected $guarded = [
@@ -25,6 +26,6 @@ class LearningMaterial extends Model
 
     public function classSessions(): BelongsToMany
     {
-        return $this->belongsToMany(ClassSession::class, 'session_materials');
+        return $this->belongsToMany(ClassSession::class, 'session_files');
     }
 }

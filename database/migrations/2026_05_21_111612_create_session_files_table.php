@@ -10,10 +10,11 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('session_materials', function (Blueprint $table) {
+        Schema::create('session_files', function (Blueprint $table) {
             $table->id();
-            $table->uuid('class_session_id');
-            $table->uuid('learning_material_id');
+            $table->foreignUuid('class_session_id')->constrained('class_sessions')->cascadeOnDelete();
+            $table->foreignUuid('file_upload_id')->constrained('file_uploads')->cascadeOnDelete();
+            $table->enum('type', ['material', 'assignment']);
             $table->timestamps();
         });
     }

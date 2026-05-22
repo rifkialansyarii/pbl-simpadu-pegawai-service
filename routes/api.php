@@ -6,7 +6,7 @@ use App\Http\Controllers\ClassSessionController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\EmployeeController;
-use App\Http\Controllers\LearningMaterialController;
+use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\ProvinceController;
 use App\Http\Controllers\VillageController;
 use Illuminate\Http\Request;
@@ -47,5 +47,6 @@ Route::get('/villages', [VillageController::class, 'index']);
 Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);
 
 
-Route::get('/learning-materials/{learningMaterial}/download', [LearningMaterialController::class, 'download']);
-Route::post('/learning-materials', [LearningMaterialController::class, 'store']);
+Route::get('/file-uploads/{fileUpload}/download', [FileUploadController::class, 'download']);
+Route::post('/file-uploads', [FileUploadController::class, 'store']);
+Route::post('/file-uploads/bulk-delete', [FileUploadController::class, 'destroy']);

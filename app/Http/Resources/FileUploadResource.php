@@ -3,33 +3,35 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Resources\Json\ResourceCollection;
+use Illuminate\Http\Resources\Json\JsonResource;
 
-class LearningMaterialCollection extends ResourceCollection
+class FileUploadResource extends JsonResource
 {
-    public $collects = LearningMaterialResource::class;
-
     /**
-     * Transform the resource collection into an array.
+     * Transform the resource into an array.
      *
-     * @return array<int|string, mixed>
+     * @return array<string, mixed>
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            "id" => (string) $this->id,
+            "original_file_name" => $this->original_file_name,
+            "file_size" => $this->file_size,
+            "mime_type" => $this->mime_type,
+            "created_at" => $this->created_at,
+        ];
     }
 
     public function withResponse(Request $request, $response): void
     {
         $originalData = $response->getData(true);
-
         $response->setData([
             'success' => $originalData['success'] ?? true,
             'message' => $originalData['message'] ?? "Data retrieved successfully",
             'code' => $originalData['code'] ?? 200,
 
             'data' => $originalData['data'] ?? [],
-            'meta' => $originalData['meta'] ?? [],
         ]);
 
         $response->setStatusCode($originalData['code'] ?? 200);
