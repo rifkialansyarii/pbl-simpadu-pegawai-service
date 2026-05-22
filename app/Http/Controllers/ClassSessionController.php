@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\AddLearningMaterialRequest;
 use App\Http\Requests\BulkDeleteClassSessionRequest;
+use App\Http\Requests\DeleteLearningMaterialRequest;
 use App\Http\Requests\GenerateClassSessionRequest;
 use App\Http\Requests\UpdateClassSessionRequest;
 use App\Http\Resources\ClassSessionCollection;
@@ -190,7 +191,7 @@ class ClassSessionController extends Controller
         }
     }
 
-    public function addMaterial(AddLearningMaterialRequest $request, ClassSession $classSession)
+    public function storeMaterial(AddLearningMaterialRequest $request, ClassSession $classSession)
     {
         try {
             $attributes = $request->validated()['file_uuids'];
@@ -218,5 +219,36 @@ class ClassSessionController extends Controller
             return response()->json($response, 500);
         }
 
+    }
+
+    public function destroyMaterial(DeleteLearningMaterialRequest $request, ClassSession $classSession)
+    {
+        try {
+            $attributes = $request->validated()['file_uuids'];
+
+            $this->service->deleteSessionMaterial($classSession, $attributes);
+            return response()->json([
+                'success' => true,
+                'message' => 'Data deleted successfully',
+                'code' => 200,
+                'deleted_count' => count($attributes)
+            ]);
+        } catch (Exception $e) {
+            $isDebug = config('app.debug');
+
+            $response = [
+                'success' => false,
+                'message' => 'an error occurred while processing',
+                'code' => 500,
+                'errrors' => $e->getMessage()
+            ];
+
+            if ($isDebug) {
+                $response['errors'] = $e->getMessage();
+                $response['trace'] = $e->getTrace();
+            }
+
+            return response()->json($response, 500);
+        }
     }
 }

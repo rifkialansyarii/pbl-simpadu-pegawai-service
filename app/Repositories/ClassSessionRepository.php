@@ -149,4 +149,9 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
 
         return $classSession;
     }
+
+    public function deleteSessionMaterial(ClassSession $classSession, array $data)
+    {
+        $classSession->learningMaterials()->detach($data);
+    }
 }

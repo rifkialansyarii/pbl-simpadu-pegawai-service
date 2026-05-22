@@ -101,4 +101,11 @@ final class ClassSessionService
         });
     }
 
+    public function deleteSessionMaterial(ClassSession $classSession, array $attributes)
+    {
+        return DB::transaction(function () use ($classSession, $attributes) {
+            return $this->repository->deleteSessionMaterial($classSession, $attributes);
+        });
+    }
+
 }
