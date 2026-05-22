@@ -28,8 +28,6 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
 
         $classSession->load(['lecturer', 'learningMaterials']);
 
-        // dd($classSession);
-
         return $classSession;
     }
 
@@ -83,7 +81,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
 
     public function getById(ClassSession $classSession)
     {
-        $classSession = ClassSession::select([
+        $classSession->select([
             'id',
             'pengampu_id',
             'lecturer_id',
@@ -98,7 +96,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'end_time',
             'status',
             'is_already_opened',
-        ])->where('id', $classSession->id)->first();
+        ]);
 
         $classSession->load(['lecturer', 'learningMaterials']);
 

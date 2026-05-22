@@ -16,9 +16,9 @@ class LearningMaterialResource extends JsonResource
     {
         return [
             "id" => (string) $this->id,
-            "file_path" => $this->file_path,
             "original_file_name" => $this->original_file_name,
             "file_size" => $this->file_size,
+            "created_at" => $this->created_at,
         ];
     }
 
