@@ -6,6 +6,7 @@ use App\Http\Controllers\ClassSessionController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\LearningMaterialController;
 use App\Http\Controllers\ProvinceController;
 use App\Http\Controllers\VillageController;
 use Illuminate\Http\Request;
@@ -44,3 +45,6 @@ Route::get('/districts/{cityCode}', [DistrictController::class, 'showByCity']);
 
 Route::get('/villages', [VillageController::class, 'index']);
 Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);
+
+
+Route::post('learning-materials', [LearningMaterialController::class, 'store']);

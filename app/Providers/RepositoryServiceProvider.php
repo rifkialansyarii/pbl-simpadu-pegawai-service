@@ -8,6 +8,7 @@ use App\Contracts\ClassSessionRepositoryInterface;
 use App\Contracts\CountryRepositoryInterface;
 use App\Contracts\DistrictRepositoryInterface;
 use App\Contracts\EmployeeRepositoryInterface;
+use App\Contracts\LearningMaterialRepositoryInterface;
 use App\Contracts\ProvinceRepositoryInterface;
 use App\Contracts\VillageRepositoryInterface;
 use App\Repositories\ChangeRequestRepository;
@@ -16,6 +17,7 @@ use App\Repositories\ClassSessionRepository;
 use App\Repositories\CountryRepository;
 use App\Repositories\DistrictRepository;
 use App\Repositories\EmployeeRepository;
+use App\Repositories\LearningMaterialRepository;
 use App\Repositories\ProvinceRepository;
 use App\Repositories\VillageRepository;
 use Illuminate\Support\ServiceProvider;
@@ -35,6 +37,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(DistrictRepositoryInterface::class, DistrictRepository::class);
         $this->app->bind(VillageRepositoryInterface::class, VillageRepository::class);
         $this->app->bind(ClassSessionRepositoryInterface::class, ClassSessionRepository::class);
+        $this->app->bind(LearningMaterialRepositoryInterface::class, LearningMaterialRepository::class);
     }
 
     /**
