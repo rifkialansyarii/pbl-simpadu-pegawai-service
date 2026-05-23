@@ -16,10 +16,19 @@ class FileUploadController extends Controller
     {
     }
 
+    public function index(Request $request)
+    {
+        $fileUploadCollection = new FileUploadCollection($this->service->showAllFileUpload($request->user()));
+        return $fileUploadCollection->additional([
+            'success' => true,
+            'message' => 'Data retrieved successfully',
+            'code' => 200,
+        ]);
+    }
     public function store(StoreFileUploadRequest $request)
     {
         try {
-            $fileUploadCollection = new FileUploadCollection($this->service->uploadMaterials($request->validated()));
+            $fileUploadCollection = new FileUploadCollection($this->service->uploadFile($request->validated(), $request->user()->id));
             return $fileUploadCollection->additional([
                 'success' => true,
                 'message' => 'File uploaded successfully',
@@ -82,12 +91,16 @@ class FileUploadController extends Controller
         try {
             $attributes = $request->validated()['uuids'];
 
-            $this->service->deleteFile($attributes);
+            $files = $this->service->checkFileOwnership($attributes, $request->user()->id);
+
+            $validFileIds = $files->pluck('id')->toArray();
+
+            $this->service->deleteFile($validFileIds);
             return response()->json([
                 'success' => true,
                 'message' => 'Data deleted successfully',
                 'code' => 200,
-                'deleted_count' => count($attributes),
+                'deleted_count' => count($validFileIds),
             ]);
         } catch (Exception $e) {
             return response()->json([

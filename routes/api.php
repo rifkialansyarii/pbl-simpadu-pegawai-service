@@ -32,6 +32,11 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
     Route::put('/class-sessions/{classSession}', [ClassSessionController::class, 'update'])->middleware('can:update,classSession');
     Route::post('/class-sessions/delete', [ClassSessionController::class, 'destroy'])->middleware('can:bulkDelete, App\Models\ClassSession');
 
+    Route::get('/file-uploads', [FileUploadController::class, 'index'])->middleware('can:viewAny, App\Models\FileUpload');
+    Route::get('/file-uploads/{fileUpload}/download', [FileUploadController::class, 'download'])->middleware('can:download,fileUpload');
+    Route::post('/file-uploads', [FileUploadController::class, 'store'])->middleware('can:create, App\Models\FileUpload');
+    Route::post('/file-uploads/delete', [FileUploadController::class, 'destroy'])->middleware('can:delete, App\Models\FileUpload');
+
 });
 
 Route::get('/countries', [CountryController::class, 'index']);
@@ -47,8 +52,5 @@ Route::get('/villages', [VillageController::class, 'index']);
 Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);
 
 
-Route::get('/file-uploads/{fileUpload}/download', [FileUploadController::class, 'download']);
-Route::post('/file-uploads', [FileUploadController::class, 'store']);
-Route::post('/file-uploads/delete', [FileUploadController::class, 'destroy']);
 Route::post('/class-sessions/{classSession}/learning-materials', [ClassSessionController::class, 'storeMaterial']);
 Route::post('/class-sessions/{classSession}/learning-materials/delete', [ClassSessionController::class, 'destroyMaterial']);

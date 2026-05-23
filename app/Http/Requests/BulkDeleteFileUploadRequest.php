@@ -27,7 +27,10 @@ class BulkDeleteFileUploadRequest extends FormRequest
     {
         return [
             'uuids' => ['required', 'array', 'min:1'],
-            'uuids.*' => ['required', 'string', Rule::exists('file_uploads', 'id')]
+            'uuids.*' => [
+                'required',
+                'string',
+            ]
         ];
     }
 

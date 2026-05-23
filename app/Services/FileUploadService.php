@@ -3,6 +3,8 @@
 namespace App\Services;
 
 use App\Contracts\FileUploadRepositoryInterface;
+use App\Http\Requests\BulkDeleteClassSessionRequest;
+use App\Models\User;
 use DB;
 use Illuminate\Session\Store;
 use Illuminate\Support\Facades\Storage;
@@ -16,7 +18,12 @@ final class FileUploadService
     ) {
     }
 
-    public function uploadMaterials(array $attributes)
+    public function showAllFileUpload(User $user)
+    {
+        return $this->repository->getAllByUser($user->id);
+    }
+
+    public function uploadFile(array $attributes, string $userId)
     {
         $materialsData = array();
 
@@ -24,6 +31,7 @@ final class FileUploadService
             $path = $file->store('files', 'private');
 
             $files[] = [
+                'user_id' => $userId,
                 'file_path' => $path,
                 'original_file_name' => $file->getClientOriginalName(),
                 'file_size' => Storage::disk('private')->size($path),
@@ -52,6 +60,11 @@ final class FileUploadService
         if ($fileUpload->file_path !== null) {
             return Storage::disk('private')->path($fileUpload->file_path);
         }
+    }
+
+    public function checkFileOwnership(array $data, string $userId)
+    {
+        return $this->repository->checkFileOwnership($data, $userId);
     }
 
     public function deleteFile(array $attributes)

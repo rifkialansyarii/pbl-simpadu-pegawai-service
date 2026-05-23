@@ -12,6 +12,7 @@ class FileUpload extends Model
     use HasUuids;
 
     protected $fillable = [
+        'user_id',
         'file_path',
         'original_file_name',
         'file_size',
@@ -26,6 +27,6 @@ class FileUpload extends Model
 
     public function classSessions(): BelongsToMany
     {
-        return $this->belongsToMany(ClassSession::class, 'session_files');
+        return $this->belongsToMany(ClassSession::class, 'session_materials');
     }
 }

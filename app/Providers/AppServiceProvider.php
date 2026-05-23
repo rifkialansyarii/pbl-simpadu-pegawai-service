@@ -37,7 +37,8 @@ class AppServiceProvider extends ServiceProvider
                     $jwtTokenDecode = JWT::decode($jwtToken, new Key($key, 'HS256'));
 
                     $user = new User();
-                    $user->id = $jwtTokenDecode->detail_id;
+                    $user->id= $jwtTokenDecode->user_id;
+                    $user->detail_id = $jwtTokenDecode->detail_id;
                     $user->role = $jwtTokenDecode->role_name;
 
                     if ($user->role === 'mahasiswa') {
