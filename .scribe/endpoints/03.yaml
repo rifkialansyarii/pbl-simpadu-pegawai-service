@@ -214,7 +214,7 @@ endpoints:
       description: |-
         Endpoint bertujuan untuk **mengunggah / upload file**.
 
-        Juga **bisa mengupload beberapa file sekaligus** (*maksimum 5 file*).
+        Juga **bisa mengupload beberapa file sekaligus** (*maksimum 5 file* dan **ukuran per file maksimal 10 MB**).
 
         Hanya **dosen** dan **mahasiswa** yang dapat mengupload file.
 
@@ -223,7 +223,7 @@ endpoints:
       deprecated: false
     headers:
       Authorization: 'Bearer {JWT here}'
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -233,19 +233,17 @@ endpoints:
       files:
         custom: []
         name: files
-        description: 'Must not be greater than 10240 characters.'
+        description: 'File yang akan diupload minimal 1 file dan maximal 5 file serta ukuran file maksimal 10 MB'
         required: true
-        example:
-          - b
-        type: 'string[]'
+        example: null
+        type: file
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-    cleanBodyParameters:
-      files:
-        - b
-    fileParameters: []
+    cleanBodyParameters: []
+    fileParameters:
+      files: null
     responses:
       -
         custom: []

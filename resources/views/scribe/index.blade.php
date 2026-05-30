@@ -1738,7 +1738,7 @@ access-control-allow-origin: *</code></pre>
         </div>
 
         <p>Endpoint bertujuan untuk <strong>mengunggah / upload file</strong>.</p>
-<p>Juga <strong>bisa mengupload beberapa file sekaligus</strong> (<em>maksimum 5 file</em>).</p>
+<p>Juga <strong>bisa mengupload beberapa file sekaligus</strong> (<em>maksimum 5 file</em> dan <strong>ukuran per file maksimal 10 MB</strong>).</p>
 <p>Hanya <strong>dosen</strong> dan <strong>mahasiswa</strong> yang dapat mengupload file.</p>
 <p><strong>Noted</strong>: Gunakan Content-Type: multipart/form-data, bukan application/json</p>
     </div>
@@ -1781,7 +1781,7 @@ access-control-allow-origin: *</code></pre>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        application/json
+                        multipart/form-data
                     </div>
                 </div>
             </div>
@@ -1822,7 +1822,7 @@ access-control-allow-origin: *</code></pre>
         <div class="sl-flex sl-items-center sl-max-w-full">
                                         <div class="sl-flex sl-items-baseline sl-text-base">
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">files</div>
-                                            <span class="sl-truncate sl-text-muted">string[]</span>
+                                            <span class="sl-truncate sl-text-muted">file</span>
                                     </div>
                                             <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
                         <div class="sl-flex sl-items-center">
@@ -1830,13 +1830,13 @@ access-control-allow-origin: *</code></pre>
                                                                                 </div>
                                         </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>Must not be greater than 10240 characters.</p>
+            <p>File yang akan diupload minimal 1 file dan maximal 5 file serta ukuran file maksimal 10 MB</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        [&quot;b&quot;]
+                        /tmp/phpugo7q8o100ledKbMggk
                     </div>
                 </div>
             </div>
@@ -1859,8 +1859,8 @@ access-control-allow-origin: *</code></pre>
         <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
               data-method="POST"
               data-path="api/file-uploads"
-              data-hasfiles="0"
-              data-hasjsonbody="1">
+              data-hasfiles="1"
+              data-hasjsonbody="0">
                             <div class="sl-panel sl-outline-none sl-w-full expandable">
                     <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                          role="button">
@@ -1923,7 +1923,7 @@ access-control-allow-origin: *</code></pre>
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Content-Type" name="Content-Type"
                                                id="header-POSTapi-file-uploads-Content-Type"
-                                               value="application/json" data-component="header"
+                                               value="multipart/form-data" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -1961,16 +1961,20 @@ access-control-allow-origin: *</code></pre>
                         </div>
                     </div>
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                                                    <div class="TextRequestBody sl-p-4">
-                                <div class="code-editor language-json"
-                                     id="json-body-POSTapi-file-uploads"
-                                     style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
-                                >{
-    "files": [
-        "b"
-    ]
-}</div>
-                            </div>
+                                                    <div class="ParameterGrid sl-p-4">
+                                                                                                        <label aria-hidden="true"
+                                           for="bodyparam-POSTapi-file-uploads-files">files</label>
+                                    <span class="sl-mx-3">:</span>
+                                    <div class="sl-flex sl-flex-1">
+                                        <div class="sl-input sl-flex-1 sl-relative">
+                                                                                            <input aria-label="files" name="files"
+                                                       id="bodyparam-POSTapi-file-uploads-files"
+                                                       type="file" data-component="body"
+                                                       class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
+                                                >
+                                                                                    </div>
+                                    </div>
+                                                            </div>
                                             </div>
                 </div>
             
@@ -2062,14 +2066,9 @@ You can check the Dev Tools console for debugging information.</p>
                                             <pre><code class="language-bash">curl --request POST \
     "http://localhost:1234/api/file-uploads" \
     --header "Authorization: Bearer {JWT here}" \
-    --header "Content-Type: application/json" \
+    --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --data "{
-    \"files\": [
-        \"b\"
-    ]
-}"
-</code></pre>                                        </div>
+    --form "files=@/tmp/phpugo7q8o100ledKbMggk" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -2082,20 +2081,17 @@ You can check the Dev Tools console for debugging information.</p>
 
 const headers = {
     "Authorization": "Bearer {JWT here}",
-    "Content-Type": "application/json",
+    "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
 
-let body = {
-    "files": [
-        "b"
-    ]
-};
+const body = new FormData();
+body.append('files', document.querySelector('input[name="files"]').files[0]);
 
 fetch(url, {
     method: "POST",
     headers,
-    body: JSON.stringify(body),
+    body,
 }).then(response =&gt; response.json());</code></pre>                                        </div>
                                     </div>
                                 </div>

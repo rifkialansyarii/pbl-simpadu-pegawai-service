@@ -9,6 +9,7 @@ use App\Models\FileUpload;
 use App\Services\FileUploadService;
 use Exception;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\Header;
 use Knuckles\Scribe\Attributes\ResponseFromFile;
 
 /**
@@ -58,6 +59,7 @@ class FileUploadController extends Controller
      * **Noted**: Gunakan Content-Type: multipart/form-data, bukan application/json 
      *  
      */
+    #[Header("Content-Type", "application/json")]
     #[ResponseFromFile(file: 'responses/file_upload/success_upload.json', status: 200, description: 'Sukses mengunggah file')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]

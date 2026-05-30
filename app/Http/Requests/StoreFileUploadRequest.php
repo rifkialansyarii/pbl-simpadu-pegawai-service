@@ -6,7 +6,9 @@ use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
+use Knuckles\Scribe\Attributes\BodyParam;
 
+#[BodyParam("files", "file", description: "File yang akan diupload minimal 1 file dan maximal 5 file serta ukuran file maksimal 10 MB")]
 class StoreFileUploadRequest extends FormRequest
 {
     /**
