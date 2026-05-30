@@ -536,10 +536,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-sesi-kelas-POSTapi-class-sessions--classSession_id--learning-materials">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="POST api/class-sessions/{classSession_id}/learning-materials">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Tambah Materi Kelas">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#sesi-kelas-POSTapi-class-sessions--classSession_id--learning-materials">
-                                                    POST api/class-sessions/{classSession_id}/learning-materials
+                                                    Tambah Materi Kelas
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -548,10 +548,10 @@
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-sesi-kelas-POSTapi-class-sessions--classSession_id--learning-materials-delete">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="POST api/class-sessions/{classSession_id}/learning-materials/delete">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Hapus Materi Kelas">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#sesi-kelas-POSTapi-class-sessions--classSession_id--learning-materials-delete">
-                                                    POST api/class-sessions/{classSession_id}/learning-materials/delete
+                                                    Hapus Materi Kelas
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -1836,7 +1836,7 @@ access-control-allow-origin: *</code></pre>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/phpugo7q8o100ledKbMggk
+                        /tmp/phpi48kqcak71a49MKBHkG
                     </div>
                 </div>
             </div>
@@ -2068,7 +2068,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "files=@/tmp/phpugo7q8o100ledKbMggk" </code></pre>                                        </div>
+    --form "files=@/tmp/phpi48kqcak71a49MKBHkG" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -6957,7 +6957,8 @@ fetch(url, {
                                                         onchange="switchExampleResponse('GETapi-class-sessions', event.target.value);">
                                                                                                             <option value="0">200, Sukses mendapatkan data sesi kelas</option>
                                                                                                             <option value="1">401, Tidak terotentikasi</option>
-                                                                                                            <option value="2">403, Tidak memiliki izin</option>
+                                                                                                            <option value="2">401, Token expired</option>
+                                                                                                            <option value="3">403, Tidak memiliki izin</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -7132,6 +7133,18 @@ fetch(url, {
                                                                             </div>
                                 </div>
                                                             <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-class-sessions example-response-GETapi-class-sessions-2"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;Token is Expired&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-class-sessions example-response-GETapi-class-sessions-3"
                                      style=" display: none;"
                                 >
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
@@ -7547,8 +7560,9 @@ fetch(url, {
                                                         onchange="switchExampleResponse('GETapi-class-sessions--classSession_id-', event.target.value);">
                                                                                                             <option value="0">200, Sukses mendapatkan detail sesi kelas</option>
                                                                                                             <option value="1">401, Tidak terotentikasi</option>
-                                                                                                            <option value="2">403, Tidak memiliki izin</option>
-                                                                                                            <option value="3">404, Data tidak ditemukan</option>
+                                                                                                            <option value="2">401, Token expired</option>
+                                                                                                            <option value="3">403, Tidak memiliki izin</option>
+                                                                                                            <option value="4">404, Data tidak ditemukan</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -7626,12 +7640,24 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;Token is Expired&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-class-sessions--classSession_id- example-response-GETapi-class-sessions--classSession_id--3"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
     &quot;code&quot;: 403,
     &quot;message&quot;: &quot;Forbidden&quot;
 }</code></pre>
                                                                             </div>
                                 </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-class-sessions--classSession_id- example-response-GETapi-class-sessions--classSession_id--3"
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-class-sessions--classSession_id- example-response-GETapi-class-sessions--classSession_id--4"
                                      style=" display: none;"
                                 >
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
@@ -8306,8 +8332,9 @@ fetch(url, {
                                                         onchange="switchExampleResponse('POSTapi-class-sessions-generate', event.target.value);">
                                                                                                             <option value="0">201, Sukses generate data sesi kelas</option>
                                                                                                             <option value="1">401, Tidak terotentikasi</option>
-                                                                                                            <option value="2">403, Tidak memiliki izin</option>
-                                                                                                            <option value="3">422, Inputan tidak valid</option>
+                                                                                                            <option value="2">401, Token expired</option>
+                                                                                                            <option value="3">403, Tidak memiliki izin</option>
+                                                                                                            <option value="4">422, Inputan tidak valid</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -8488,12 +8515,24 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;Token is Expired&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-class-sessions-generate example-response-POSTapi-class-sessions-generate-3"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
     &quot;code&quot;: 403,
     &quot;message&quot;: &quot;Forbidden&quot;
 }</code></pre>
                                                                             </div>
                                 </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-class-sessions-generate example-response-POSTapi-class-sessions-generate-3"
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-class-sessions-generate example-response-POSTapi-class-sessions-generate-4"
                                      style=" display: none;"
                                 >
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
@@ -9093,9 +9132,10 @@ fetch(url, {
                                                         onchange="switchExampleResponse('PUTapi-class-sessions--classSession_id-', event.target.value);">
                                                                                                             <option value="0">200, Sukses mengubah data sesi kelas</option>
                                                                                                             <option value="1">401, Tidak terotentikasi</option>
-                                                                                                            <option value="2">403, Tidak memiliki izin</option>
-                                                                                                            <option value="3">404, Data tidak ditemukan</option>
-                                                                                                            <option value="4">409, Sesi sudah pernah dibuka</option>
+                                                                                                            <option value="2">401, Token expired</option>
+                                                                                                            <option value="3">403, Tidak memiliki izin</option>
+                                                                                                            <option value="4">404, Data tidak ditemukan</option>
+                                                                                                            <option value="5">409, Sesi sudah pernah dibuka</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -9173,12 +9213,24 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;Token is Expired&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-PUTapi-class-sessions--classSession_id- example-response-PUTapi-class-sessions--classSession_id--3"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
     &quot;code&quot;: 403,
     &quot;message&quot;: &quot;Forbidden&quot;
 }</code></pre>
                                                                             </div>
                                 </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-PUTapi-class-sessions--classSession_id- example-response-PUTapi-class-sessions--classSession_id--3"
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-PUTapi-class-sessions--classSession_id- example-response-PUTapi-class-sessions--classSession_id--4"
                                      style=" display: none;"
                                 >
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
@@ -9190,7 +9242,7 @@ fetch(url, {
 }</code></pre>
                                                                             </div>
                                 </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-PUTapi-class-sessions--classSession_id- example-response-PUTapi-class-sessions--classSession_id--4"
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-PUTapi-class-sessions--classSession_id- example-response-PUTapi-class-sessions--classSession_id--5"
                                      style=" display: none;"
                                 >
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
@@ -9617,9 +9669,10 @@ fetch(url, {
                                                         class="example-response-POSTapi-class-sessions-delete-toggle sl-text-base"
                                                         aria-label="Response sample"
                                                         onchange="switchExampleResponse('POSTapi-class-sessions-delete', event.target.value);">
-                                                                                                            <option value="0">200, Sukses menghapus data pegawai</option>
+                                                                                                            <option value="0">200, Sukses menghapus data sesi kelas</option>
                                                                                                             <option value="1">401, Tidak terotentikasi</option>
-                                                                                                            <option value="2">403, Tidak memiliki izin</option>
+                                                                                                            <option value="2">401, Token expired</option>
+                                                                                                            <option value="3">403, Tidak memiliki izin</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -9668,6 +9721,18 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;Token is Expired&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-class-sessions-delete example-response-POSTapi-class-sessions-delete-3"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
     &quot;code&quot;: 403,
     &quot;message&quot;: &quot;Forbidden&quot;
 }</code></pre>
@@ -9684,7 +9749,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="sesi-kelas-POSTapi-class-sessions--classSession_id--learning-materials">
-                    POST api/class-sessions/{classSession_id}/learning-materials
+                    Tambah Materi Kelas
                 </h2>
             </div>
         </div>
@@ -9711,7 +9776,9 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint ini digunakan untuk membuat materi pada sesi kelas</p>
+<p>Endpoint ini mendukung multiple insert</p>
+<p>Fitur ini <strong>hanya bisa dijalankan</strong> oleh user <strong>dosen yang mengajar di sesi kelas tersebut</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -9803,7 +9870,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        architecto
+                        019e7782-82cf-7356-a33a-2018fec26929
                     </div>
                 </div>
             </div>
@@ -9833,13 +9900,13 @@ fetch(url, {
                                                                                 </div>
                                         </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The <code>id</code> of an existing record in the file_uploads table. Must be 36 characters.</p>
+            <p>Masukkan file uuids yang ingin digunakan sebagai materi</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        [&quot;bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp&quot;]
+                        [&quot;019e33e7-993d-7376-9c5a-c3c8078d697b&quot;,&quot;019e33e7-993d-7376-9c5a-c3c8078d697b&quot;]
                     </div>
                 </div>
             </div>
@@ -9971,7 +10038,7 @@ fetch(url, {
                                         <input aria-label="classSession_id" name="classSession_id"
                                                id="urlparam-POSTapi-class-sessions--classSession_id--learning-materials-classSession_id"
                                                placeholder="The ID of the classSession."
-                                               value="architecto" data-component="url"
+                                               value="019e7782-82cf-7356-a33a-2018fec26929" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -10003,7 +10070,8 @@ fetch(url, {
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
     "file_uuids": [
-        "bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp"
+        "019e33e7-993d-7376-9c5a-c3c8078d697b",
+        "019e33e7-993d-7376-9c5a-c3c8078d697b"
     ]
 }</div>
                             </div>
@@ -10096,13 +10164,14 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:1234/api/class-sessions/architecto/learning-materials" \
+    "http://localhost:1234/api/class-sessions/019e7782-82cf-7356-a33a-2018fec26929/learning-materials" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"file_uuids\": [
-        \"bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp\"
+        \"019e33e7-993d-7376-9c5a-c3c8078d697b\",
+        \"019e33e7-993d-7376-9c5a-c3c8078d697b\"
     ]
 }"
 </code></pre>                                        </div>
@@ -10113,7 +10182,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/class-sessions/architecto/learning-materials"
+    "http://localhost:1234/api/class-sessions/019e7782-82cf-7356-a33a-2018fec26929/learning-materials"
 );
 
 const headers = {
@@ -10124,7 +10193,8 @@ const headers = {
 
 let body = {
     "file_uuids": [
-        "bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp"
+        "019e33e7-993d-7376-9c5a-c3c8078d697b",
+        "019e33e7-993d-7376-9c5a-c3c8078d697b"
     ]
 };
 
@@ -10137,6 +10207,134 @@ fetch(url, {
                                 </div>
                                                     </div>
                     
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-py-2">
+                                    <div class="sl--ml-2">
+                                        <div class="sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-text-muted sl-rounded sl-border-transparent sl-border">
+                                            <div class="sl-mb-2 sl-inline-block">Example response:</div>
+                                            <div class="sl-mb-2 sl-inline-block">
+                                                <select
+                                                        class="example-response-POSTapi-class-sessions--classSession_id--learning-materials-toggle sl-text-base"
+                                                        aria-label="Response sample"
+                                                        onchange="switchExampleResponse('POSTapi-class-sessions--classSession_id--learning-materials', event.target.value);">
+                                                                                                            <option value="0">200, Sukses menambahkan materi</option>
+                                                                                                            <option value="1">401, Tidak terotentikasi</option>
+                                                                                                            <option value="2">401, Token expired</option>
+                                                                                                            <option value="3">403, Tidak memiliki izin</option>
+                                                                                                    </select></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button"
+                                        class="sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 hover:sl-bg-canvas-50 active:sl-bg-canvas-100 sl-text-muted hover:sl-text-body focus:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70">
+                                    <div class="sl-mx-0">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
+                                             class="svg-inline--fa fa-copy fa-fw fa-sm sl-icon" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                  d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-class-sessions--classSession_id--learning-materials example-response-POSTapi-class-sessions--classSession_id--learning-materials-0"
+                                     style=" "
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data created successfully&quot;,
+    &quot;code&quot;: 201,
+    &quot;data&quot;: {
+        &quot;id&quot;: &quot;019e7782-82cf-7356-a33a-2018fec26929&quot;,
+        &quot;pengampu_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+        &quot;session_number&quot;: 1,
+        &quot;class_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174001&quot;,
+        &quot;class_name&quot;: &quot;TI-4A&quot;,
+        &quot;course_code&quot;: &quot;MK001&quot;,
+        &quot;course_name&quot;: &quot;Pemrograman Web&quot;,
+        &quot;topic&quot;: null,
+        &quot;session_date&quot;: &quot;2025-01-01&quot;,
+        &quot;start_time&quot;: &quot;08:30:00&quot;,
+        &quot;end_time&quot;: &quot;10:30:00&quot;,
+        &quot;status&quot;: &quot;closed&quot;,
+        &quot;is_already_opened&quot;: 0,
+        &quot;lecturer_id&quot;: &quot;019e53f8-8188-71b8-9480-ae493f6098c8&quot;,
+        &quot;lecturer&quot;: {
+            &quot;id&quot;: &quot;019e53f8-8188-71b8-9480-ae493f6098c8&quot;,
+            &quot;nip&quot;: &quot;308354822718607804&quot;,
+            &quot;nik&quot;: &quot;3321952704071225&quot;,
+            &quot;employee_name&quot;: &quot;Pandu Lamar Sihotang M.M.&quot;,
+            &quot;address&quot;: &quot;Dk. Peta No. 975, Lhokseumawe 80789, NTB&quot;,
+            &quot;birth_place&quot;: &quot;Salatiga&quot;,
+            &quot;birth_date&quot;: &quot;1998-10-29&quot;,
+            &quot;gender&quot;: &quot;female&quot;,
+            &quot;phone_number&quot;: &quot;085087838900&quot;,
+            &quot;village_code&quot;: &quot;1111072013&quot;,
+            &quot;district_code&quot;: &quot;111107&quot;,
+            &quot;city_code&quot;: &quot;1111&quot;,
+            &quot;province_code&quot;: &quot;11&quot;,
+            &quot;citizen_code&quot;: &quot;11&quot;
+        },
+        &quot;learning_materials&quot;: [
+            {
+                &quot;id&quot;: &quot;019e778b-28e7-72f9-8943-fe454328b2a9&quot;,
+                &quot;original_file_name&quot;: &quot;Modul Flutter Consultation APP.pdf&quot;,
+                &quot;file_size&quot;: 940422,
+                &quot;mime_type&quot;: &quot;application/pdf&quot;,
+                &quot;created_at&quot;: &quot;2026-05-30T06:21:09.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: &quot;019e778b-28e7-72f9-8943-fe4543361c2b&quot;,
+                &quot;original_file_name&quot;: &quot;4. Normalisasi Mahasiswa-2.pdf&quot;,
+                &quot;file_size&quot;: 514751,
+                &quot;mime_type&quot;: &quot;application/pdf&quot;,
+                &quot;created_at&quot;: &quot;2026-05-30T06:21:09.000000Z&quot;
+            }
+        ]
+    }
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-class-sessions--classSession_id--learning-materials example-response-POSTapi-class-sessions--classSession_id--learning-materials-1"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;You are not logged in&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-class-sessions--classSession_id--learning-materials example-response-POSTapi-class-sessions--classSession_id--learning-materials-2"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;Token is Expired&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-class-sessions--classSession_id--learning-materials example-response-POSTapi-class-sessions--classSession_id--learning-materials-3"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 403,
+    &quot;message&quot;: &quot;Forbidden&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                    </div>
                             </div>
     </div>
 </div>
@@ -10147,7 +10345,7 @@ fetch(url, {
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
                     id="sesi-kelas-POSTapi-class-sessions--classSession_id--learning-materials-delete">
-                    POST api/class-sessions/{classSession_id}/learning-materials/delete
+                    Hapus Materi Kelas
                 </h2>
             </div>
         </div>
@@ -10174,7 +10372,9 @@ fetch(url, {
                                                                                     </div>
         </div>
 
-        
+        <p>Endpoint ini digunakan untuk menghapus materi pada sesi kelas</p>
+<p>Endpoint ini mendukung multiple delete</p>
+<p>Fitur ini <strong>hanya bisa dijalankan</strong> oleh user <strong>dosen yang mengajar di sesi kelas tersebut</strong>.</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -10266,7 +10466,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        architecto
+                        019e7782-82cf-7356-a33a-2018fec26929
                     </div>
                 </div>
             </div>
@@ -10296,13 +10496,13 @@ fetch(url, {
                                                                                 </div>
                                         </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The <code>id</code> of an existing record in the file_uploads table. Must be 36 characters.</p>
+            <p>Masukkan uuids file materi yang ingin dihapus</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        [&quot;bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp&quot;]
+                        [&quot;019e33e7-993d-7376-9c5a-c3c8078d697b&quot;,&quot;019e33e7-993d-7376-9c5a-c3c8078d697b&quot;]
                     </div>
                 </div>
             </div>
@@ -10434,7 +10634,7 @@ fetch(url, {
                                         <input aria-label="classSession_id" name="classSession_id"
                                                id="urlparam-POSTapi-class-sessions--classSession_id--learning-materials-delete-classSession_id"
                                                placeholder="The ID of the classSession."
-                                               value="architecto" data-component="url"
+                                               value="019e7782-82cf-7356-a33a-2018fec26929" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -10466,7 +10666,8 @@ fetch(url, {
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
     "file_uuids": [
-        "bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp"
+        "019e33e7-993d-7376-9c5a-c3c8078d697b",
+        "019e33e7-993d-7376-9c5a-c3c8078d697b"
     ]
 }</div>
                             </div>
@@ -10559,13 +10760,14 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:1234/api/class-sessions/architecto/learning-materials/delete" \
+    "http://localhost:1234/api/class-sessions/019e7782-82cf-7356-a33a-2018fec26929/learning-materials/delete" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"file_uuids\": [
-        \"bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp\"
+        \"019e33e7-993d-7376-9c5a-c3c8078d697b\",
+        \"019e33e7-993d-7376-9c5a-c3c8078d697b\"
     ]
 }"
 </code></pre>                                        </div>
@@ -10576,7 +10778,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/class-sessions/architecto/learning-materials/delete"
+    "http://localhost:1234/api/class-sessions/019e7782-82cf-7356-a33a-2018fec26929/learning-materials/delete"
 );
 
 const headers = {
@@ -10587,7 +10789,8 @@ const headers = {
 
 let body = {
     "file_uuids": [
-        "bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp"
+        "019e33e7-993d-7376-9c5a-c3c8078d697b",
+        "019e33e7-993d-7376-9c5a-c3c8078d697b"
     ]
 };
 
@@ -10600,6 +10803,87 @@ fetch(url, {
                                 </div>
                                                     </div>
                     
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-py-2">
+                                    <div class="sl--ml-2">
+                                        <div class="sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-text-muted sl-rounded sl-border-transparent sl-border">
+                                            <div class="sl-mb-2 sl-inline-block">Example response:</div>
+                                            <div class="sl-mb-2 sl-inline-block">
+                                                <select
+                                                        class="example-response-POSTapi-class-sessions--classSession_id--learning-materials-delete-toggle sl-text-base"
+                                                        aria-label="Response sample"
+                                                        onchange="switchExampleResponse('POSTapi-class-sessions--classSession_id--learning-materials-delete', event.target.value);">
+                                                                                                            <option value="0">200, Sukses menghapus materi</option>
+                                                                                                            <option value="1">401, Tidak terotentikasi</option>
+                                                                                                            <option value="2">401, Token expired</option>
+                                                                                                            <option value="3">403, Tidak memiliki izin</option>
+                                                                                                    </select></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button"
+                                        class="sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 hover:sl-bg-canvas-50 active:sl-bg-canvas-100 sl-text-muted hover:sl-text-body focus:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70">
+                                    <div class="sl-mx-0">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
+                                             class="svg-inline--fa fa-copy fa-fw fa-sm sl-icon" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                  d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-class-sessions--classSession_id--learning-materials-delete example-response-POSTapi-class-sessions--classSession_id--learning-materials-delete-0"
+                                     style=" "
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data deleted successfully&quot;,
+    &quot;code&quot;: 200,
+    &quot;deleted_count&quot;: 2
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-class-sessions--classSession_id--learning-materials-delete example-response-POSTapi-class-sessions--classSession_id--learning-materials-delete-1"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;You are not logged in&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-class-sessions--classSession_id--learning-materials-delete example-response-POSTapi-class-sessions--classSession_id--learning-materials-delete-2"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;Token is Expired&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-class-sessions--classSession_id--learning-materials-delete example-response-POSTapi-class-sessions--classSession_id--learning-materials-delete-3"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 403,
+    &quot;message&quot;: &quot;Forbidden&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                    </div>
                             </div>
     </div>
 </div>
@@ -12334,7 +12618,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        rejected
+                        approved
                     </div>
                 </div>
             </div>
@@ -12509,7 +12793,7 @@ fetch(url, {
                                      id="json-body-PUTapi-change-requests--changeRequest_id-"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "status": "rejected"
+    "status": "approved"
 }</div>
                             </div>
                                             </div>
@@ -12606,7 +12890,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"status\": \"rejected\"
+    \"status\": \"approved\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -12626,7 +12910,7 @@ const headers = {
 };
 
 let body = {
-    "status": "rejected"
+    "status": "approved"
 };
 
 fetch(url, {
