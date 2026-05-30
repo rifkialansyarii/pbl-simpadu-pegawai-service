@@ -39,14 +39,16 @@
                 "original_file_name": "Modul Flutter Consultation APP.pdf",
                 "file_size": 940422,
                 "mime_type": "application/pdf",
-                "created_at": "2026-05-30T06:21:09.000000Z"
+                "uploaded_at": "2026-05-30T06:21:09.000000Z",
+                "created_as_material_at": "2026-05-30T07:43:11.000000Z"
             },
             {
                 "id": "019e778b-28e7-72f9-8943-fe4543361c2b",
                 "original_file_name": "4. Normalisasi Mahasiswa-2.pdf",
                 "file_size": 514751,
                 "mime_type": "application/pdf",
-                "created_at": "2026-05-30T06:21:09.000000Z"
+                "uploaded_at": "2026-05-30T06:21:09.000000Z",
+                "created_as_material_at": "2026-05-30T07:43:11.000000Z"
             }
         ]
     }

@@ -19,7 +19,10 @@ class FileUploadResource extends JsonResource
             "original_file_name" => $this->original_file_name,
             "file_size" => $this->file_size,
             "mime_type" => $this->mime_type,
-            "created_at" => $this->created_at,
+            "uploaded_at" => $this->created_at,
+            "created_as_material_at" => $this->whenPivotLoaded('session_materials', function () {
+                return $this->pivot->created_at;
+            })
         ];
     }
 
