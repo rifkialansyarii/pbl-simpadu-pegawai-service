@@ -9,13 +9,33 @@ use App\Models\FileUpload;
 use App\Services\FileUploadService;
 use Exception;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\ResponseFromFile;
 
+/**
+ * 
+ * @group File Upload
+ * Endpoint terkait operasi CRUD untuk file upload, termasuk pengambilan data file yang telah diupload, unggah file / upload, mengunduh file dan penghapusan.
+ */
 class FileUploadController extends Controller
 {
     public function __construct(private FileUploadService $service)
     {
     }
 
+    /**
+     * Ambil Semua File yang Di-Upload
+     * 
+     * Endpoint bertujuan untuk **mengambil seluruh data file yang telah di-upload**.
+     * 
+     * Jika usernya adalah **dosen** maka hanya akan menampilkan semua **data sesi kelas milik dosen**.
+     * 
+     * Jika usernya adalah **mahasiswa** maka hanya akan menampilkan semua **data sesi kelas milik mahasiswa**.
+     *  
+     */
+    #[ResponseFromFile(file: 'responses/file_upload/success_get.json', status: 200, description: 'Sukses mendapatkan data file upload')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     public function index(Request $request)
     {
         $fileUploadCollection = new FileUploadCollection($this->service->showAllFileUpload($request->user()));
@@ -25,6 +45,21 @@ class FileUploadController extends Controller
             'code' => 200,
         ]);
     }
+
+    /**
+     * Unggah / Upload File
+     * 
+     * Endpoint bertujuan untuk **mengunggah / upload file**.
+     * 
+     * Juga **bisa mengupload beberapa file sekaligus** (*maksimum 5 file*).
+     * 
+     * Hanya **dosen** dan **mahasiswa** yang dapat mengupload file.
+     *  
+     */
+    #[ResponseFromFile(file: 'responses/file_upload/success_upload.json', status: 200, description: 'Sukses mengunggah file')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     public function store(StoreFileUploadRequest $request)
     {
         try {
@@ -53,6 +88,19 @@ class FileUploadController extends Controller
         }
     }
 
+    /**
+     * Unduh / Download File
+     * 
+     * Endpoint bertujuan untuk **mengunduh / download file**.
+     *  
+     * Hanya **dosen** dan **mahasiswa** yang dapat mengupload file.
+     * 
+     * **User hanya bisa mengunduh file miliknya sendiri**
+     *  
+     */
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     public function download(FileUpload $fileUpload)
     {
         try {
@@ -86,6 +134,20 @@ class FileUploadController extends Controller
         }
     }
 
+    /**
+     * Hapus File
+     * 
+     * Endpoint bertujuan untuk **menghapus file** yang sudah di-upload.
+     *  
+     * Hanya **dosen** dan **mahasiswa** yang dapat menghapus file.
+     * 
+     * **User hanya bisa menghapus file miliknya sendiri**
+     *  
+     */
+    #[ResponseFromFile(file: 'responses/file_upload/success_delete.json', status: 200, description: 'Sukses menghapus file')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     public function destroy(BulkDeleteFileUploadRequest $request)
     {
         try {
