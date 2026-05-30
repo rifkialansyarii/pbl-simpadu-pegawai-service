@@ -1,5 +1,7 @@
 <?php
 
+use Firebase\JWT\ExpiredException;
+use Firebase\JWT\SignatureInvalidException;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -17,6 +19,50 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         //
+    })
+
+    ->withExceptions(function (Exceptions $exceptions): void {
+        $exceptions->render(function (ExpiredException $e, Request $request) {
+            if ($request->is('api/*')) {
+
+                $isDebug = config('app.debug');
+
+                $response = [
+                    'success' => false,
+                    'code' => 401,
+                    'message' => 'You are not logged in',
+                ];
+
+                if ($isDebug) {
+                    $response['errors'] = $e->getMessage();
+                    $response['trace'] = $e->getTrace();
+                }
+
+                return response()->json($response, 401);
+            }
+        });
+    })
+
+    ->withExceptions(function (Exceptions $exceptions): void {
+        $exceptions->render(function (SignatureInvalidException $e, Request $request) {
+            if ($request->is('api/*')) {
+
+                $isDebug = config('app.debug');
+
+                $response = [
+                    'success' => false,
+                    'code' => 401,
+                    'message' => 'You are not logged in',
+                ];
+
+                if ($isDebug) {
+                    $response['errors'] = $e->getMessage();
+                    $response['trace'] = $e->getTrace();
+                }
+
+                return response()->json($response, 401);
+            }
+        });
     })
 
     ->withExceptions(function (Exceptions $exceptions): void {
@@ -84,5 +130,5 @@ return Application::configure(basePath: dirname(__DIR__))
             }
         });
     })
-    
+
     ->create();

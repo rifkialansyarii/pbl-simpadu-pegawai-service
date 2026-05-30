@@ -50,51 +50,8 @@ class AppServiceProvider extends ServiceProvider
                     }
 
                     return $user;
-                } catch (ExpiredException $e) {
-                    $response = [
-                        'success' => false,
-                        'message' => 'Not Authenticated',
-                        'code' => 401,
-                    ];
-
-                    $isDebug = config('app.debug');
-
-                    if ($isDebug) {
-                        $response['errors'] = $e->getMessage();
-                        $response['trace'] = $e->getTrace();
-                    }
-
-                    return response()->json($response, 200);
-                } catch (SignatureInvalidException $e) {
-                    $response = [
-                        'success' => false,
-                        'message' => 'Not Authenticated',
-                        'code' => 401,
-                    ];
-
-                    $isDebug = config('app.debug');
-
-                    if ($isDebug) {
-                        $response['errors'] = $e->getMessage();
-                        $response['trace'] = $e->getTrace();
-                    }
-
-                    return response()->json($response, 200);
-                } catch (Exception $e) {
-                    $response = [
-                        'success' => false,
-                        'message' => 'Not Authenticated',
-                        'code' => 401,
-                    ];
-
-                    $isDebug = config('app.debug');
-
-                    if ($isDebug) {
-                        $response['errors'] = $e->getMessage();
-                        $response['trace'] = $e->getTrace();
-                    }
-
-                    return response()->json($response, 200);
+                } catch (Exception $e){
+                    return null;
                 }
 
             }
