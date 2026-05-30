@@ -5,8 +5,10 @@ namespace App\Providers;
 use App\Models\User;
 use Auth;
 use Exception;
+use Firebase\JWT\ExpiredException;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
+use Firebase\JWT\SignatureInvalidException;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\ServiceProvider;
@@ -34,20 +36,65 @@ class AppServiceProvider extends ServiceProvider
 
                 try {
                     $key = env('JWT_SECRET');
+
+                    JWT::$leeway = 60;
                     $jwtTokenDecode = JWT::decode($jwtToken, new Key($key, 'HS256'));
 
                     $user = new User();
-                    $user->id= $jwtTokenDecode->user_id;
+                    $user->id = $jwtTokenDecode->user_id;
                     $user->detail_id = $jwtTokenDecode->detail_id;
                     $user->role = $jwtTokenDecode->role_name;
 
                     if ($user->role === 'mahasiswa') {
-                        $user->class_id = $jwtTokenDecode->class_id;
+                        $user->class_id = $jwtTokenDecode->kelas_id;
                     }
 
                     return $user;
+                } catch (ExpiredException $e) {
+                    $response = [
+                        'success' => false,
+                        'message' => 'Not Authenticated',
+                        'code' => 401,
+                    ];
+
+                    $isDebug = config('app.debug');
+
+                    if ($isDebug) {
+                        $response['errors'] = $e->getMessage();
+                        $response['trace'] = $e->getTrace();
+                    }
+
+                    return response()->json($response, 200);
+                } catch (SignatureInvalidException $e) {
+                    $response = [
+                        'success' => false,
+                        'message' => 'Not Authenticated',
+                        'code' => 401,
+                    ];
+
+                    $isDebug = config('app.debug');
+
+                    if ($isDebug) {
+                        $response['errors'] = $e->getMessage();
+                        $response['trace'] = $e->getTrace();
+                    }
+
+                    return response()->json($response, 200);
                 } catch (Exception $e) {
-                    return null;
+                    $response = [
+                        'success' => false,
+                        'message' => 'Not Authenticated',
+                        'code' => 401,
+                    ];
+
+                    $isDebug = config('app.debug');
+
+                    if ($isDebug) {
+                        $response['errors'] = $e->getMessage();
+                        $response['trace'] = $e->getTrace();
+                    }
+
+                    return response()->json($response, 200);
                 }
 
             }
