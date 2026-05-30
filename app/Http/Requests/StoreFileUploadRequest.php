@@ -25,7 +25,7 @@ class StoreFileUploadRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'files' => ['required', 'array', 'min:1', 'max:10'],
+            'files' => ['required', 'array', 'min:1', 'max:5'],
             'files.*' => ['required', 'mimes:pdf,jpg,jpeg,png,csv,xlsx,docx', 'max:10240'],
         ];
     }
