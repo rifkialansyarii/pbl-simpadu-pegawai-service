@@ -39,6 +39,6 @@ class ClassSession extends Model
 
     public function learningMaterials(): BelongsToMany
     {
-        return $this->belongsToMany(FileUpload::class, 'session_materials');
+        return $this->belongsToMany(FileUpload::class, 'session_materials')->withTimestamps();
     }
 }
