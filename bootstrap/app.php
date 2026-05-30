@@ -30,7 +30,7 @@ return Application::configure(basePath: dirname(__DIR__))
                 $response = [
                     'success' => false,
                     'code' => 401,
-                    'message' => 'You are not logged in',
+                    'message' => 'Token is expired',
                 ];
 
                 if ($isDebug) {
