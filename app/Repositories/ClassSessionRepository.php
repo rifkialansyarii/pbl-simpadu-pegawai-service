@@ -141,9 +141,9 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
 
     public function createSessionMaterial(ClassSession $classSession, array $data)
     {
-        $classSession->learningMaterials()->attach($data);
+        $classSession->learningMaterials()->syncWithoutDetaching($data);
 
-        $classSession = $classSession->latest()->take(count($data))->get();
+        $classSession = $classSession->latest()->first();
 
         $classSession->load(['lecturer', 'learningMaterials']);
 
