@@ -881,7 +881,7 @@ endpoints:
     custom: []
     httpMethods:
       - POST
-    uri: api/class-sessions/bulk-delete
+    uri: api/class-sessions/delete
     metadata:
       custom: []
       groupName: 'Sesi Kelas'
@@ -959,6 +959,128 @@ endpoints:
           }
         headers: []
         description: 'Tidak memiliki izin'
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/class-sessions/{classSession_id}/learning-materials'
+    metadata:
+      custom: []
+      groupName: 'Sesi Kelas'
+      groupDescription: 'Endpoint terkait operasi CRUD untuk data sesi kelas, termasuk generate, pembaruan, penghapusan, dan pengambilan data sesi kelas.'
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {JWT here}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      classSession_id:
+        custom: []
+        name: classSession_id
+        description: 'The ID of the classSession.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      classSession_id: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      file_uuids:
+        custom: []
+        name: file_uuids
+        description: 'The <code>id</code> of an existing record in the file_uploads table. Must be 36 characters.'
+        required: true
+        example:
+          - bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      file_uuids:
+        - bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/class-sessions/{classSession_id}/learning-materials/delete'
+    metadata:
+      custom: []
+      groupName: 'Sesi Kelas'
+      groupDescription: 'Endpoint terkait operasi CRUD untuk data sesi kelas, termasuk generate, pembaruan, penghapusan, dan pengambilan data sesi kelas.'
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {JWT here}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      classSession_id:
+        custom: []
+        name: classSession_id
+        description: 'The ID of the classSession.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      classSession_id: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      file_uuids:
+        custom: []
+        name: file_uuids
+        description: 'The <code>id</code> of an existing record in the file_uploads table. Must be 36 characters.'
+        required: true
+        example:
+          - bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      file_uuids:
+        - bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp
+    fileParameters: []
+    responses: []
     responseFields: []
     auth:
       - headers

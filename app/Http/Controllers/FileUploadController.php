@@ -54,6 +54,8 @@ class FileUploadController extends Controller
      * Juga **bisa mengupload beberapa file sekaligus** (*maksimum 5 file*).
      * 
      * Hanya **dosen** dan **mahasiswa** yang dapat mengupload file.
+     * 
+     * **Noted**: Gunakan Content-Type: multipart/form-data, bukan application/json 
      *  
      */
     #[ResponseFromFile(file: 'responses/file_upload/success_upload.json', status: 200, description: 'Sukses mengunggah file')]
