@@ -219,6 +219,8 @@ endpoints:
         Juga **bisa mengupload beberapa file sekaligus** (*maksimum 5 file*).
 
         Hanya **dosen** dan **mahasiswa** yang dapat mengupload file.
+
+        **Noted**: Gunakan Content-Type: multipart/form-data, bukan application/json
       authenticated: true
       deprecated: false
     headers:
@@ -233,11 +235,10 @@ endpoints:
       files:
         custom: []
         name: files
-        description: 'Minimal 1 file dan Maximal 5 File'
+        description: 'Must not be greater than 10240 characters.'
         required: true
         example:
-          - 019e54e4-66c6-7310-9f5c-bf3f368a240a
-          - 019e54e4-66c6-7310-9f5c-bf3f368a240a
+          - b
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -245,8 +246,7 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       files:
-        - 019e54e4-66c6-7310-9f5c-bf3f368a240a
-        - 019e54e4-66c6-7310-9f5c-bf3f368a240a
+        - b
     fileParameters: []
     responses:
       -

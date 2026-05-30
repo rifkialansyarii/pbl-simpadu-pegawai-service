@@ -51,7 +51,7 @@ class FileUploadController extends Controller
      * 
      * Endpoint bertujuan untuk **mengunggah / upload file**.
      * 
-     * Juga **bisa mengupload beberapa file sekaligus** (*maksimum 5 file*).
+     * Juga **bisa mengupload beberapa file sekaligus** (*maksimum 5 file* dan **ukuran per file maksimal 10 MB**).
      * 
      * Hanya **dosen** dan **mahasiswa** yang dapat mengupload file.
      * 

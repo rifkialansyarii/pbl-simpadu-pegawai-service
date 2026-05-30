@@ -1740,6 +1740,7 @@ access-control-allow-origin: *</code></pre>
         <p>Endpoint bertujuan untuk <strong>mengunggah / upload file</strong>.</p>
 <p>Juga <strong>bisa mengupload beberapa file sekaligus</strong> (<em>maksimum 5 file</em>).</p>
 <p>Hanya <strong>dosen</strong> dan <strong>mahasiswa</strong> yang dapat mengupload file.</p>
+<p><strong>Noted</strong>: Gunakan Content-Type: multipart/form-data, bukan application/json</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -1829,13 +1830,13 @@ access-control-allow-origin: *</code></pre>
                                                                                 </div>
                                         </div>
                 <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>Minimal 1 file dan Maximal 5 File</p>
+            <p>Must not be greater than 10240 characters.</p>
         </div>
                                             <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        [&quot;019e54e4-66c6-7310-9f5c-bf3f368a240a&quot;,&quot;019e54e4-66c6-7310-9f5c-bf3f368a240a&quot;]
+                        [&quot;b&quot;]
                     </div>
                 </div>
             </div>
@@ -1966,8 +1967,7 @@ access-control-allow-origin: *</code></pre>
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
     "files": [
-        "019e54e4-66c6-7310-9f5c-bf3f368a240a",
-        "019e54e4-66c6-7310-9f5c-bf3f368a240a"
+        "b"
     ]
 }</div>
                             </div>
@@ -2066,8 +2066,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Accept: application/json" \
     --data "{
     \"files\": [
-        \"019e54e4-66c6-7310-9f5c-bf3f368a240a\",
-        \"019e54e4-66c6-7310-9f5c-bf3f368a240a\"
+        \"b\"
     ]
 }"
 </code></pre>                                        </div>
@@ -2089,8 +2088,7 @@ const headers = {
 
 let body = {
     "files": [
-        "019e54e4-66c6-7310-9f5c-bf3f368a240a",
-        "019e54e4-66c6-7310-9f5c-bf3f368a240a"
+        "b"
     ]
 };
 
