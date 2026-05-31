@@ -94,4 +94,32 @@ final class ClassSessionService
 
     }
 
+    public function addSessionMaterial(ClassSession $classSession, array $attributes)
+    {
+        return DB::transaction(function () use ($classSession, $attributes) {
+            return $this->repository->createSessionMaterial($classSession, $attributes);
+        });
+    }
+
+    public function deleteSessionMaterial(ClassSession $classSession, array $attributes)
+    {
+        return DB::transaction(function () use ($classSession, $attributes) {
+            return $this->repository->deleteSessionMaterial($classSession, $attributes);
+        });
+    }
+
+    public function addStudentAssignment(ClassSession $classSession, array $attributes)
+    {
+        return DB::transaction(function () use ($classSession, $attributes) {
+            return $this->repository->createStudentAssignment($classSession, $attributes);
+        });
+    }
+
+    public function deleteStudentAssignment(ClassSession $classSession, array $attributes)
+    {
+        return DB::transaction(function () use ($classSession, $attributes) {
+            return $this->repository->deleteStudentAssignment($classSession, $attributes);
+        });
+    }
+
 }

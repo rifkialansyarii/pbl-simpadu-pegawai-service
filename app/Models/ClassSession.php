@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class ClassSession extends Model
 {
@@ -34,5 +36,15 @@ class ClassSession extends Model
     public function lecturer(): BelongsTo
     {
         return $this->belongsTo(Employee::class, 'lecturer_id');
+    }
+
+    public function learningMaterials(): BelongsToMany
+    {
+        return $this->belongsToMany(FileUpload::class, 'session_materials')->withTimestamps();
+    }
+
+    public function studentAssignments(): HasMany
+    {
+        return $this->hasMany(StudentAssignment::class);
     }
 }

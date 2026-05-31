@@ -38,7 +38,7 @@ class EmployeeRepository implements EmployeeRepositoryInterface
 
     public function getById(Employee $employee)
     {
-        $employee = Employee::select([
+        $employee->select([
             'id',
             'nip',
             'nik',
@@ -53,7 +53,7 @@ class EmployeeRepository implements EmployeeRepositoryInterface
             'city_code',
             'province_code',
             'citizen_code',
-        ])->where('id', $employee->id)->first();
+        ]);
 
         $employee->load(['village', 'district', 'city', 'province', 'citizen']);
 

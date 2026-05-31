@@ -2,14 +2,14 @@
 
 namespace App\Http\Requests;
 
-use App\Enums\ChangeRequestStatus;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
-use Illuminate\Validation\Rule;
+use Knuckles\Scribe\Attributes\BodyParam;
 
-class UpdateChangeRequest extends FormRequest
+#[BodyParam("files", "file", description: "File yang akan diupload minimal 1 file dan maximal 5 file serta ukuran file maksimal 10 MB")]
+class StoreFileUploadRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,10 +27,8 @@ class UpdateChangeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'status' => [
-                'required',
-                Rule::enum(ChangeRequestStatus::class),
-            ],
+            'files' => ['required', 'array', 'min:1', 'max:5'],
+            'files.*' => ['required', 'mimes:pdf,jpg,jpeg,png,csv,xlsx,docx', 'max:10240'],
         ];
     }
 

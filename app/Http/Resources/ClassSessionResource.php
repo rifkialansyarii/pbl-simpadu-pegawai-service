@@ -29,7 +29,9 @@ class ClassSessionResource extends JsonResource
             'status' => $this->status,
             'is_already_opened' => $this->is_already_opened,
             'lecturer_id' => $this->lecturer_id,
-            'lecturer' => EmployeeResource::make($this->whenLoaded('lecturer'))
+            'lecturer' => EmployeeResource::make($this->whenLoaded('lecturer')),
+            'learning_materials' => FileUploadCollection::make($this->whenLoaded('learningMaterials')),
+            'assignments' => StudentAssignmentCollection::make($this->whenLoaded('studentAssignments'))
         ];
     }
 

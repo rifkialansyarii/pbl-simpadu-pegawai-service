@@ -206,6 +206,17 @@ endpoints:
         description: 'Tidak terotentikasi'
       -
         custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "Token is Expired"
+          }
+        headers: []
+        description: 'Token expired'
+      -
+        custom: []
         status: 403
         content: |-
           {
@@ -321,6 +332,17 @@ endpoints:
           }
         headers: []
         description: 'Tidak terotentikasi'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "Token is Expired"
+          }
+        headers: []
+        description: 'Token expired'
       -
         custom: []
         status: 403
@@ -646,6 +668,17 @@ endpoints:
         description: 'Tidak terotentikasi'
       -
         custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "Token is Expired"
+          }
+        headers: []
+        description: 'Token expired'
+      -
+        custom: []
         status: 403
         content: |-
           {
@@ -838,6 +871,17 @@ endpoints:
         description: 'Tidak terotentikasi'
       -
         custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "Token is Expired"
+          }
+        headers: []
+        description: 'Token expired'
+      -
+        custom: []
         status: 403
         content: |-
           {
@@ -881,7 +925,7 @@ endpoints:
     custom: []
     httpMethods:
       - POST
-    uri: api/class-sessions/bulk-delete
+    uri: api/class-sessions/delete
     metadata:
       custom: []
       groupName: 'Sesi Kelas'
@@ -936,7 +980,7 @@ endpoints:
               "deleted_count": 32
           }
         headers: []
-        description: 'Sukses menghapus data pegawai'
+        description: 'Sukses menghapus data sesi kelas'
       -
         custom: []
         status: 401
@@ -948,6 +992,290 @@ endpoints:
           }
         headers: []
         description: 'Tidak terotentikasi'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "Token is Expired"
+          }
+        headers: []
+        description: 'Token expired'
+      -
+        custom: []
+        status: 403
+        content: |-
+          {
+              "success": false,
+              "code": 403,
+              "message": "Forbidden"
+          }
+        headers: []
+        description: 'Tidak memiliki izin'
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/class-sessions/{classSession_id}/learning-materials'
+    metadata:
+      custom: []
+      groupName: 'Sesi Kelas'
+      groupDescription: 'Endpoint terkait operasi CRUD untuk data sesi kelas, termasuk generate, pembaruan, penghapusan, dan pengambilan data sesi kelas.'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Tambah Materi Kelas'
+      description: |-
+        Endpoint ini digunakan untuk membuat materi pada sesi kelas
+
+        Endpoint ini mendukung multiple insert
+
+        Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {JWT here}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      classSession_id:
+        custom: []
+        name: classSession_id
+        description: 'The ID of the classSession.'
+        required: true
+        example: 019e7782-82cf-7356-a33a-2018fec26929
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      classSession_id: 019e7782-82cf-7356-a33a-2018fec26929
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      file_uuids:
+        custom: []
+        name: file_uuids
+        description: 'Masukkan file uuids yang ingin digunakan sebagai materi'
+        required: true
+        example:
+          - 019e33e7-993d-7376-9c5a-c3c8078d697b
+          - 019e33e7-993d-7376-9c5a-c3c8078d697b
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      file_uuids:
+        - 019e33e7-993d-7376-9c5a-c3c8078d697b
+        - 019e33e7-993d-7376-9c5a-c3c8078d697b
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: |-
+          {
+              "success": true,
+              "message": "Data created successfully",
+              "code": 201,
+              "data": {
+                  "id": "019e7782-82cf-7356-a33a-2018fec26929",
+                  "pengampu_id": "123e4567-e89b-12d3-a456-426614174000",
+                  "session_number": 1,
+                  "class_id": "123e4567-e89b-12d3-a456-426614174001",
+                  "class_name": "TI-4A",
+                  "course_code": "MK001",
+                  "course_name": "Pemrograman Web",
+                  "topic": null,
+                  "session_date": "2025-01-01",
+                  "start_time": "08:30:00",
+                  "end_time": "10:30:00",
+                  "status": "closed",
+                  "is_already_opened": 0,
+                  "lecturer_id": "019e53f8-8188-71b8-9480-ae493f6098c8",
+                  "lecturer": {
+                      "id": "019e53f8-8188-71b8-9480-ae493f6098c8",
+                      "nip": "308354822718607804",
+                      "nik": "3321952704071225",
+                      "employee_name": "Pandu Lamar Sihotang M.M.",
+                      "address": "Dk. Peta No. 975, Lhokseumawe 80789, NTB",
+                      "birth_place": "Salatiga",
+                      "birth_date": "1998-10-29",
+                      "gender": "female",
+                      "phone_number": "085087838900",
+                      "village_code": "1111072013",
+                      "district_code": "111107",
+                      "city_code": "1111",
+                      "province_code": "11",
+                      "citizen_code": "11"
+                  },
+                  "learning_materials": [
+                      {
+                          "id": "019e778b-28e7-72f9-8943-fe454328b2a9",
+                          "original_file_name": "Modul Flutter Consultation APP.pdf",
+                          "file_size": 940422,
+                          "mime_type": "application/pdf",
+                          "created_at": "2026-05-30T06:21:09.000000Z"
+                      },
+                      {
+                          "id": "019e778b-28e7-72f9-8943-fe4543361c2b",
+                          "original_file_name": "4. Normalisasi Mahasiswa-2.pdf",
+                          "file_size": 514751,
+                          "mime_type": "application/pdf",
+                          "created_at": "2026-05-30T06:21:09.000000Z"
+                      }
+                  ]
+              }
+          }
+        headers: []
+        description: 'Sukses menambahkan materi'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "You are not logged in"
+          }
+        headers: []
+        description: 'Tidak terotentikasi'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "Token is Expired"
+          }
+        headers: []
+        description: 'Token expired'
+      -
+        custom: []
+        status: 403
+        content: |-
+          {
+              "success": false,
+              "code": 403,
+              "message": "Forbidden"
+          }
+        headers: []
+        description: 'Tidak memiliki izin'
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/class-sessions/{classSession_id}/learning-materials/delete'
+    metadata:
+      custom: []
+      groupName: 'Sesi Kelas'
+      groupDescription: 'Endpoint terkait operasi CRUD untuk data sesi kelas, termasuk generate, pembaruan, penghapusan, dan pengambilan data sesi kelas.'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Hapus Materi Kelas'
+      description: |-
+        Endpoint ini digunakan untuk menghapus materi pada sesi kelas
+
+        Endpoint ini mendukung multiple delete
+
+        Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {JWT here}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      classSession_id:
+        custom: []
+        name: classSession_id
+        description: 'The ID of the classSession.'
+        required: true
+        example: 019e7782-82cf-7356-a33a-2018fec26929
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      classSession_id: 019e7782-82cf-7356-a33a-2018fec26929
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      file_uuids:
+        custom: []
+        name: file_uuids
+        description: 'Masukkan uuids file materi yang ingin dihapus'
+        required: true
+        example:
+          - 019e33e7-993d-7376-9c5a-c3c8078d697b
+          - 019e33e7-993d-7376-9c5a-c3c8078d697b
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      file_uuids:
+        - 019e33e7-993d-7376-9c5a-c3c8078d697b
+        - 019e33e7-993d-7376-9c5a-c3c8078d697b
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: |-
+          {
+              "success": true,
+              "message": "Data deleted successfully",
+              "code": 200,
+              "deleted_count": 2
+          }
+        headers: []
+        description: 'Sukses menghapus materi'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "You are not logged in"
+          }
+        headers: []
+        description: 'Tidak terotentikasi'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "Token is Expired"
+          }
+        headers: []
+        description: 'Token expired'
       -
         custom: []
         status: 403

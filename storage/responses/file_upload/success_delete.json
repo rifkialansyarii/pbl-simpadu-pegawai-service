@@ -1,0 +1,6 @@
+{
+    "success": true,
+    "message": "Data deleted successfully",
+    "code": 200,
+    "deleted_count": 2
+}

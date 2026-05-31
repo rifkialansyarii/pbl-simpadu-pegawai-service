@@ -2,14 +2,13 @@
 
 namespace App\Http\Requests;
 
-use App\Enums\ChangeRequestStatus;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rule;
 
-class UpdateChangeRequest extends FormRequest
+class DeleteStudentAssignmentRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,10 +26,8 @@ class UpdateChangeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'status' => [
-                'required',
-                Rule::enum(ChangeRequestStatus::class),
-            ],
+            "assignment_uuids" => ['array', 'required', 'min:1'],
+            "assignment_uuids.*" => ['required', 'string', Rule::exists('student_assignments', 'id'), 'size:36']
         ];
     }
 

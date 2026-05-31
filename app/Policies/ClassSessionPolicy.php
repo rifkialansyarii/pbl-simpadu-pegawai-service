@@ -22,7 +22,7 @@ class ClassSessionPolicy
      */
     public function view(User $user, ClassSession $classSession): bool
     {
-        return $user->role === 'admin-pegawai' || $user->role === 'super-admin' || ($user->role === 'dosen' && $classSession->lecturer_id === $user->id) || ($user->role === 'mahasiswa' && $user->class_id === $classSession->class_id);
+        return $user->role === 'admin-pegawai' || $user->role === 'super-admin' || ($user->role === 'dosen' && $classSession->lecturer_id === $user->detail_id) || ($user->role === 'mahasiswa' && $user->class_id === $classSession->class_id);
     }
 
     /**
@@ -39,7 +39,7 @@ class ClassSessionPolicy
      */
     public function update(User $user, ClassSession $classSession): bool
     {
-        return $user->role === 'admin-pegawai' || $user->role === 'super-admin' || ($user->role === 'dosen' && $classSession->lecturer_id === $user->id);
+        return $user->role === 'admin-pegawai' || $user->role === 'super-admin' || ($user->role === 'dosen' && $classSession->lecturer_id === $user->detail_id);
     }
 
     /**
@@ -48,6 +48,16 @@ class ClassSessionPolicy
     public function bulkDelete(User $user): bool
     {
         return $user->role === 'admin-pegawai' || $user->role === 'super-admin';
+    }
+
+    public function createMaterial(User $user, ClassSession $classSession)
+    {
+        return $user->role === 'dosen' && $classSession->lecturer_id === $user->detail_id;
+    }
+
+    public function deleteMaterial(User $user, ClassSession $classSession)
+    {
+        return $user->role === 'dosen' && $classSession->lecturer_id === $user->detail_id;
     }
 
     /**

@@ -5,8 +5,10 @@ namespace App\Providers;
 use App\Models\User;
 use Auth;
 use Exception;
+use Firebase\JWT\ExpiredException;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
+use Firebase\JWT\SignatureInvalidException;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\ServiceProvider;
@@ -32,24 +34,23 @@ class AppServiceProvider extends ServiceProvider
                     return null;
                 }
 
-                try {
-                    $key = env('JWT_SECRET');
-                    $jwtTokenDecode = JWT::decode($jwtToken, new Key($key, 'HS256'));
+                $key = env('JWT_SECRET');
 
-                    $user = new User();
-                    $user->id = $jwtTokenDecode->detail_id;
-                    $user->role = $jwtTokenDecode->role_name;
+                JWT::$leeway = 60;
+                $jwtTokenDecode = JWT::decode($jwtToken, new Key($key, 'HS256'));
 
-                    if ($user->role === 'mahasiswa') {
-                        $user->class_id = $jwtTokenDecode->class_id;
-                    }
+                $user = new User();
+                $user->id = $jwtTokenDecode->user_id;
+                $user->detail_id = $jwtTokenDecode->detail_id;
+                $user->role = $jwtTokenDecode->role_name;
 
-                    return $user;
-                } catch (Exception $e) {
-                    return null;
+                if ($user->role === 'mahasiswa') {
+                    $user->class_id = $jwtTokenDecode->kelas_id;
                 }
 
+                return $user;
             }
+
         );
     }
 

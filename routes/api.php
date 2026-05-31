@@ -6,10 +6,14 @@ use App\Http\Controllers\ClassSessionController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\ProvinceController;
 use App\Http\Controllers\VillageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+Route::post('/class-sessions/{classSession}/student-assignments', [ClassSessionController::class, 'storeStudentAssignment']);
+Route::post('/class-sessions/{classSession}/student-assignments/delete', [ClassSessionController::class, 'destroyStudentAssignment']);
 
 Route::middleware(['auth:auth-jwt'])->group(function () {
 
@@ -29,7 +33,14 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
     Route::get('/class-sessions/{classSession}', [ClassSessionController::class, 'show'])->middleware('can:view,classSession');
     Route::post('/class-sessions/generate', [ClassSessionController::class, 'generate'])->middleware('can:generate, App\Models\ClassSession');
     Route::put('/class-sessions/{classSession}', [ClassSessionController::class, 'update'])->middleware('can:update,classSession');
-    Route::post('/class-sessions/bulk-delete', [ClassSessionController::class, 'destroy'])->middleware('can:bulkDelete, App\Models\ClassSession');
+    Route::post('/class-sessions/delete', [ClassSessionController::class, 'destroy'])->middleware('can:bulkDelete, App\Models\ClassSession');
+    Route::post('/class-sessions/{classSession}/learning-materials', [ClassSessionController::class, 'storeMaterial'])->middleware('can:createMaterial,classSession');
+    Route::post('/class-sessions/{classSession}/learning-materials/delete', [ClassSessionController::class, 'destroyMaterial'])->middleware('can:deleteMaterial,classSession');
+
+    Route::get('/file-uploads', [FileUploadController::class, 'index'])->middleware('can:viewAny, App\Models\FileUpload');
+    Route::get('/file-uploads/{fileUpload}/download', [FileUploadController::class, 'download'])->middleware('can:download,fileUpload');
+    Route::post('/file-uploads', [FileUploadController::class, 'store'])->middleware('can:create, App\Models\FileUpload');
+    Route::post('/file-uploads/delete', [FileUploadController::class, 'destroy'])->middleware('can:delete, App\Models\FileUpload');
 
 });
 
@@ -44,3 +55,5 @@ Route::get('/districts/{cityCode}', [DistrictController::class, 'showByCity']);
 
 Route::get('/villages', [VillageController::class, 'index']);
 Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);
+
+
