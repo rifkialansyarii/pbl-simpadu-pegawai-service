@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AddLearningMaterialRequest;
+use App\Http\Requests\AddStudentAssignmentRequest;
 use App\Http\Requests\BulkDeleteClassSessionRequest;
 use App\Http\Requests\DeleteLearningMaterialRequest;
+use App\Http\Requests\DeleteStudentAssignmentRequest;
 use App\Http\Requests\GenerateClassSessionRequest;
 use App\Http\Requests\UpdateClassSessionRequest;
 use App\Http\Resources\ClassSessionCollection;
@@ -260,6 +262,102 @@ class ClassSessionController extends Controller
             $attributes = $request->validated()['file_uuids'];
 
             $this->service->deleteSessionMaterial($classSession, $attributes);
+            return response()->json([
+                'success' => true,
+                'message' => 'Data deleted successfully',
+                'code' => 200,
+                'deleted_count' => count($attributes)
+            ]);
+        } catch (Exception $e) {
+            $isDebug = config('app.debug');
+
+            $response = [
+                'success' => false,
+                'message' => 'an error occurred while processing',
+                'code' => 500,
+                'errrors' => $e->getMessage()
+            ];
+
+            if ($isDebug) {
+                $response['errors'] = $e->getMessage();
+                $response['trace'] = $e->getTrace();
+            }
+
+            return response()->json($response, 500);
+        }
+    }
+
+    /**
+     * Tambah Tugas
+     *
+     * Endpoint ini digunakan untuk membuat tugas pada sesi kelas
+     * 
+     * Endpoint ini mendukung multiple insert
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
+     *  
+     */
+    #[ResponseFromFile(file: 'responses/class_sessions/success_add_material.json', status: 200, description: 'Sukses menambahkan materi')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
+    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
+    public function storeStudentAssignment(AddStudentAssignmentRequest $request, ClassSession $classSession)
+    {
+        try {
+            $validated = $request->validated();
+            $attributes = [
+                'file_upload_id' => $validated['file_uuids'],
+                'title' => $validated['title'],
+                'description' => $validated['description'],
+                'deadline' => $validated['deadline'],
+            ];
+
+            $classSessionResource = new ClassSessionResource($this->service->addStudentAssignment($classSession, $attributes));
+            return $classSessionResource->additional([
+                'success' => true,
+                'message' => 'Data created successfully',
+                'code' => 201,
+            ]);
+        } catch (Exception $e) {
+            $isDebug = config('app.debug');
+
+            $response = [
+                'success' => false,
+                'message' => 'an error occurred while processing',
+                'code' => 500,
+                'errrors' => $e->getMessage()
+            ];
+
+            if ($isDebug) {
+                $response['errors'] = $e->getMessage();
+                $response['trace'] = $e->getTrace();
+            }
+
+            return response()->json($response, 500);
+        }
+
+    }
+
+    /**
+     * Hapus Materi Kelas
+     *
+     * Endpoint ini digunakan untuk menghapus materi pada sesi kelas
+     * 
+     * Endpoint ini mendukung multiple delete
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
+     *  
+     */
+    #[ResponseFromFile(file: 'responses/file_upload/success_delete.json', status: 200, description: 'Sukses menghapus materi')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
+    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
+    public function destroyStudentAssignment(DeleteStudentAssignmentRequest $request, ClassSession $classSession)
+    {
+        try {
+            $attributes = $request->validated()['file_uuids'];
+
+            $this->service->deleteStudentAssignment($classSession, $attributes);
             return response()->json([
                 'success' => true,
                 'message' => 'Data deleted successfully',

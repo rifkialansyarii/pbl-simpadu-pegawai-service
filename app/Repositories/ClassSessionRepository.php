@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Contracts\ClassSessionRepositoryInterface;
 use App\Models\ClassSession;
+use Arr;
 
 class ClassSessionRepository implements ClassSessionRepositoryInterface
 {
@@ -143,8 +144,6 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
     {
         $classSession->learningMaterials()->syncWithoutDetaching($data);
 
-        $classSession = $classSession->latest()->first();
-
         $classSession->load(['lecturer', 'learningMaterials']);
 
         return $classSession;
@@ -153,5 +152,23 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
     public function deleteSessionMaterial(ClassSession $classSession, array $data)
     {
         $classSession->learningMaterials()->detach($data);
+    }
+
+    public function createStudentAssignment(ClassSession $classSession, array $data)
+    {
+        $assignment = $classSession->studentAssignments()->updateOrCreate(Arr::except($data, ['file_upload_id']));
+
+        if (!empty($data['file_upload_id'])) {
+            $assignment->fileUploads()->sync($data['file_upload_id']);
+        }
+
+        $classSession->load(['lecturer', 'studentAssignments.fileUploads']);
+
+        return $classSession;
+    }
+
+    public function deleteStudentAssignment(ClassSession $classSession, array $data)
+    {
+        $classSession->studentAssignments()->detach($data);
     }
 }

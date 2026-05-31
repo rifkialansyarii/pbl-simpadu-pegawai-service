@@ -22,7 +22,7 @@ class ClassSessionPolicy
      */
     public function view(User $user, ClassSession $classSession): bool
     {
-        return $user->role === 'admin-pegawai' || $user->role === 'super-admin' || ($user->role === 'dosen' && $classSession->lecturer_id === $user->id) || ($user->role === 'mahasiswa' && $user->class_id === $classSession->class_id);
+        return $user->role === 'admin-pegawai' || $user->role === 'super-admin' || ($user->role === 'dosen' && $classSession->lecturer_id === $user->detail_id) || ($user->role === 'mahasiswa' && $user->class_id === $classSession->class_id);
     }
 
     /**

@@ -29,4 +29,9 @@ class FileUpload extends Model
     {
         return $this->belongsToMany(ClassSession::class, 'session_materials')->withTimestamps();
     }
+
+    public function studentAssignments(): BelongsToMany
+    {
+        return $this->belongsToMany(StudentAssignment::class, 'assignment_attachments');
+    }
 }

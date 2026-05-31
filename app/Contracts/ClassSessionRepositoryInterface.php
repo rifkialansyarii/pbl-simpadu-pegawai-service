@@ -16,4 +16,7 @@ interface ClassSessionRepositoryInterface
     public function bulkDelete(array $data);
     public function createSessionMaterial(ClassSession $classSession, array $data);
     public function deleteSessionMaterial(ClassSession $classSession, array $data);
+    public function createStudentAssignment(ClassSession $classSession, array $data);
+    public function deleteStudentAssignment(ClassSession $classSession, array $data);
+
 }

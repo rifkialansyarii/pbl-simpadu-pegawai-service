@@ -12,6 +12,9 @@ use App\Http\Controllers\VillageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+Route::post('/class-sessions/{classSession}/student-assignments', [ClassSessionController::class, 'storeStudentAssignment']);
+Route::post('/class-sessions/{classSession}/student-assignments/delete', [ClassSessionController::class, 'destroyStudentAssignment']);
+
 Route::middleware(['auth:auth-jwt'])->group(function () {
 
     Route::get('/employees', [EmployeeController::class, 'index'])->middleware('can:viewAny, App\Models\Employee');
@@ -52,3 +55,5 @@ Route::get('/districts/{cityCode}', [DistrictController::class, 'showByCity']);
 
 Route::get('/villages', [VillageController::class, 'index']);
 Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);
+
+
