@@ -339,7 +339,7 @@ class ClassSessionController extends Controller
     }
 
     /**
-     * Hapus Materi Kelas
+     * Hapus Tugas
      *
      * Endpoint ini digunakan untuk menghapus materi pada sesi kelas
      * 
@@ -355,7 +355,7 @@ class ClassSessionController extends Controller
     public function destroyStudentAssignment(DeleteStudentAssignmentRequest $request, ClassSession $classSession)
     {
         try {
-            $attributes = $request->validated()['file_uuids'];
+            $attributes = $request->validated()['assignment_uuids'];
 
             $this->service->deleteStudentAssignment($classSession, $attributes);
             return response()->json([

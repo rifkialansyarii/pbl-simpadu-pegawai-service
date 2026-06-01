@@ -108,18 +108,4 @@ final class ClassSessionService
         });
     }
 
-    public function addStudentAssignment(ClassSession $classSession, array $attributes)
-    {
-        return DB::transaction(function () use ($classSession, $attributes) {
-            return $this->repository->createStudentAssignment($classSession, $attributes);
-        });
-    }
-
-    public function deleteStudentAssignment(ClassSession $classSession, array $attributes)
-    {
-        return DB::transaction(function () use ($classSession, $attributes) {
-            return $this->repository->deleteStudentAssignment($classSession, $attributes);
-        });
-    }
-
 }
