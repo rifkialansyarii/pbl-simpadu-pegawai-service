@@ -21,7 +21,7 @@ class EmployeePolicy
      */
     public function view(User $user, Employee $employee): bool
     {
-        return $user->role === 'admin-pegawai' || $user->role === 'super-admin' || $employee->id === $user->id;
+        return $user->role === 'admin-pegawai' || $user->role === 'super-admin' || $employee->id === $user->detail_id;
     }
 
     /**
@@ -37,7 +37,7 @@ class EmployeePolicy
      */
     public function update(User $user, Employee $employee): bool
     {
-        return $user->role === 'admin-pegawai' || $user->role === 'super-admin' || $user->id === $employee->id;
+        return $user->role === 'admin-pegawai' || $user->role === 'super-admin' || $user->detail_id === $employee->id;
     }
 
 
