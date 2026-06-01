@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('assignment_attachments', function (Blueprint $table) {
             $table->id();
-            $table->foreignUuid('student_assignment_id');
-            $table->foreignUuid('file_upload_id');
+            $table->foreignUuid('student_assignment_id')->constrained('student_assignments')->cascadeOnDelete();
+            $table->foreignUuid('file_upload_id')->constrained('file_uploads')->cascadeOnDelete();
             $table->timestamps();
         });
     }

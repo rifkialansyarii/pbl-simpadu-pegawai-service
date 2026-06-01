@@ -7,7 +7,9 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rule;
+use Knuckles\Scribe\Attributes\BodyParam;
 
+#[BodyParam(name: 'assignment_uuids', type: 'string[]', description: 'Masukkan uuids tugas yang ingin dihapus', example: ['019e33e7-993d-7376-9c5a-c3c8078d697b', '019e33e7-993d-7376-9c5a-c3c8078d697b'])]
 class DeleteStudentAssignmentRequest extends FormRequest
 {
     /**

@@ -8,12 +8,10 @@ use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\ProvinceController;
+use App\Http\Controllers\StudentAssignmentController;
 use App\Http\Controllers\VillageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
-Route::post('/class-sessions/{classSession}/student-assignments', [ClassSessionController::class, 'storeStudentAssignment']);
-Route::post('/class-sessions/{classSession}/student-assignments/delete', [ClassSessionController::class, 'destroyStudentAssignment']);
 
 Route::middleware(['auth:auth-jwt'])->group(function () {
 
@@ -57,3 +55,5 @@ Route::get('/villages', [VillageController::class, 'index']);
 Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);
 
 
+Route::post('/class-sessions/{classSession}/assignments', [StudentAssignmentController::class, 'storeStudentAssignment']);
+Route::post('/class-sessions/{classSession}/assignments/delete', [StudentAssignmentController::class, 'destroyStudentAssignment']);

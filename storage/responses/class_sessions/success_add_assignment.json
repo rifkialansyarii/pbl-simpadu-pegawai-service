@@ -1,0 +1,55 @@
+{
+    "success": true,
+    "message": "Data created successfully",
+    "code": 201,
+    "data": {
+        "id": "019e823d-ec88-71db-87de-c13f24070537",
+        "pengampu_id": "123e4567-e89b-12d3-a456-426614174000",
+        "session_number": 1,
+        "class_id": "123e4567-e89b-12d3-a456-426614174001",
+        "class_name": "TI-4A",
+        "course_code": "MK-001",
+        "course_name": "Pemrograman Web",
+        "topic": null,
+        "session_date": "2025-01-01",
+        "start_time": "08:30:00",
+        "end_time": "10:30:00",
+        "status": "closed",
+        "is_already_opened": 0,
+        "lecturer_id": "019e8239-9705-72f1-8d98-2bb6ac864c01",
+        "lecturer": {
+            "id": "019e8239-9705-72f1-8d98-2bb6ac864c01",
+            "nip": "770157675074062969",
+            "nik": "1303622903234095",
+            "employee_name": "Bakda Tasnim Mansur",
+            "address": "Gg. Warga No. 811, Cilegon 71189, Jambi",
+            "birth_place": "Metro",
+            "birth_date": "1997-09-26",
+            "gender": "male",
+            "phone_number": "081788778778",
+            "village_code": "3320132010",
+            "district_code": "332013",
+            "city_code": "3320",
+            "province_code": "33",
+            "citizen_code": "33"
+        },
+        "assignments": [
+            {
+                "id": "019e823e-d06c-7127-b31a-1234453808b2",
+                "title": "Tugas #1 Meolah Wadai",
+                "description": "Olah wadai donat rasa coklat",
+                "deadline": "2025-06-01 00:00:00",
+                "created_at": "2026-06-01T08:13:35.000000Z",
+                "attachment": [
+                    {
+                        "id": "019e823e-3ebd-70d5-b16c-3d8532f5dd97",
+                        "original_file_name": "uas_diabetes.csv",
+                        "file_size": 23875,
+                        "mime_type": "text/csv",
+                        "uploaded_at": "2026-06-01T08:12:57.000000Z"
+                    }
+                ]
+            }
+        ]
+    }
+}
