@@ -7,7 +7,12 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rule;
+use Knuckles\Scribe\Attributes\BodyParam;
 
+#[BodyParam(name: 'file_uuids', type: 'string[]', description: 'Masukkan file uuids yang ingin digunakan sebagai tugas', example: ['019e33e7-993d-7376-9c5a-c3c8078d697b', '019e33e7-993d-7376-9c5a-c3c8078d697b'])]
+#[BodyParam(name: 'title', type: 'string', description: 'Masukkan judul tugas', example: ['Tugas 1', 'Tugas 2'])]
+#[BodyParam(name: 'description', type: 'string', description: 'Masukkan deskripsi tugas', example: ['Deskripsi tugas 1', 'Deskripsi tugas 2'])]
+#[BodyParam(name: 'deadline', type: 'string', description: 'Masukkan tanggal deadline tugas', example: ['2023-12-31'])]
 class AddStudentAssignmentRequest extends FormRequest
 {
     /**

@@ -9,7 +9,11 @@ use App\Models\ClassSession;
 use App\Services\StudentAssignmentService;
 use Exception;
 use Knuckles\Scribe\Attributes\ResponseFromFile;
-
+/**
+ * 
+ * @group Sesi Kelas
+ * Endpoint terkait operasi CRUD untuk data sesi kelas, termasuk generate, pembaruan, penghapusan, dan pengambilan data sesi kelas.
+ */
 class StudentAssignmentController extends Controller
 {
     public function __construct(private StudentAssignmentService $service)
@@ -71,14 +75,14 @@ class StudentAssignmentController extends Controller
     /**
      * Hapus Tugas
      *
-     * Endpoint ini digunakan untuk menghapus materi pada sesi kelas
+     * Endpoint ini digunakan untuk menghapus tugas pada sesi kelas
      * 
      * Endpoint ini mendukung multiple delete
      * 
      * Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
      *  
      */
-    #[ResponseFromFile(file: 'responses/file_upload/success_delete.json', status: 200, description: 'Sukses menghapus materi')]
+    #[ResponseFromFile(file: 'responses/file_upload/success_delete.json', status: 200, description: 'Sukses menghapus tugas')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
