@@ -60,6 +60,16 @@ class ClassSessionPolicy
         return $user->role === 'dosen' && $classSession->lecturer_id === $user->detail_id;
     }
 
+    public function createAssignment(User $user, ClassSession $classSession)
+    {
+        return $user->role === 'dosen' && $classSession->lecturer_id === $user->detail_id;
+    }
+
+    public function deleteAssignment(User $user, ClassSession $classSession)
+    {
+        return $user->role === 'dosen' && $classSession->lecturer_id === $user->detail_id;
+    }
+
     /**
      * Determine whether the user can restore the model.
      */
