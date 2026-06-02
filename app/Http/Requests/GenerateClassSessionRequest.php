@@ -41,7 +41,7 @@ class GenerateClassSessionRequest extends FormRequest
             'lecturer_id' => ['required', 'string', 'size:36'],
             'class_id' => ['required', 'string', 'size:36'],
             'class_name' => ['required', 'string', 'max:255'],
-            'course_code' => ['required', 'string', 'size:6'],
+            'course_code' => ['required', 'string', 'min:5', 'max:10'],
             'course_name' => [
                 'required',
                 'string',

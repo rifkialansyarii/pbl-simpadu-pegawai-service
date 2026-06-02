@@ -103,6 +103,30 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
         return $classSession;
     }
 
+    public function getByPengampu(string $pengampuId)
+    {
+        $classSession = ClassSession::select([
+            'id',
+            'pengampu_id',
+            'lecturer_id',
+            'session_number',
+            'class_id',
+            'class_name',
+            'course_code',
+            'course_name',
+            'topic',
+            'session_date',
+            'start_time',
+            'end_time',
+            'status',
+            'is_already_opened',
+        ])->where('pengampu_id', $pengampuId)->paginate(10);
+
+        $classSession->load(['lecturer', 'learningMaterials']);
+
+        return $classSession;
+    }
+
     public function generate(array $data, $sessionAmount)
     {
         // $chunks = array_chunk($data, 1000);

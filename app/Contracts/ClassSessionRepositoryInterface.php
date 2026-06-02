@@ -11,6 +11,7 @@ interface ClassSessionRepositoryInterface
     public function getAllByLecturer(string $lecturerId);
     public function getAllByClass(string $classId);
     public function getById(ClassSession $classSession);
+    public function getByPengampu(string $pengampuId);
     public function generate(array $data, int $sessionAmount);
     public function update(ClassSession $classSession, array $data);
     public function bulkDelete(array $data);
