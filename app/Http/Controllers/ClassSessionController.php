@@ -86,6 +86,20 @@ class ClassSessionController extends Controller
         ]);
     }
 
+    /**
+     * Ambil Sesi Kelas Berdasarkan Pengampu
+     * 
+     * Endpoint bertujuan untuk **mengambil data sesi kelas berdasarkan id pengampu**.
+     * 
+     * Hanya bisa diakses **super-admin**, **admin-pegawai**, **dosen** dan **mahasiswa**.
+     */
+    #[ResponseFromFile(file: 'responses/class_sessions/get_class_sessions.json', status: 200, description: 'Sukses mendapatkan sesi kelas')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
+    #[ResponseFromFile(file: 'responses/not_found.json', status: 404, description: 'Data tidak ditemukan')]
+    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
+    #[UrlParam("pengampuId", "string", "UUID Pengampu", example: "123e4567-e89b-12d3-a456-426614174000")]
+
     public function showByPengampu(string $pengampuId)
     {
         $classSessionCollection = new ClassSessionCollection($this->service->getClassSessionByPengampu($pengampuId));
