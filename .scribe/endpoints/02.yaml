@@ -374,6 +374,244 @@ endpoints:
   -
     custom: []
     httpMethods:
+      - GET
+    uri: 'api/class-sessions/pengampu/{pengampuId}'
+    metadata:
+      custom: []
+      groupName: 'Sesi Kelas'
+      groupDescription: 'Endpoint terkait operasi CRUD untuk data sesi kelas, termasuk generate, pembaruan, penghapusan, dan pengambilan data sesi kelas.'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Ambil Sesi Kelas Berdasarkan Pengampu'
+      description: |-
+        Endpoint bertujuan untuk **mengambil data sesi kelas berdasarkan id pengampu**.
+
+        Hanya bisa diakses **super-admin**, **admin-pegawai**, **dosen** dan **mahasiswa**.
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {JWT here}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      pengampuId:
+        custom: []
+        name: pengampuId
+        description: 'UUID Pengampu'
+        required: true
+        example: 123e4567-e89b-12d3-a456-426614174000
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      pengampuId: 123e4567-e89b-12d3-a456-426614174000
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: |-
+          {
+              "success": true,
+              "message": "Data genereated successfully",
+              "code": 201,
+              "data": [
+                  {
+                      "id": "019e3519-544c-722e-b475-2d49b10a3942",
+                      "pengampu_id": "237e1c51-1818-7123-85d4-6880f9ff4a21",
+                      "session_number": 1,
+                      "class_id": "309e6c61-1812-7123-65d3-6880f9ff4a2e",
+                      "class_name": "TI-4A",
+                      "course_code": "MK001",
+                      "course_name": "Pemrograman Perangkat Web",
+                      "topic": null,
+                      "session_date": "2026-05-14",
+                      "start_time": "13:30:00",
+                      "end_time": "16:30:00",
+                      "status": "closed",
+                      "is_already_opened": 0,
+                      "lecturer_id": "019e3511-0c15-73a0-8056-3dc7f626ce60",
+                      "lecturer": {
+                          "id": "019e3511-0c15-73a0-8056-3dc7f626ce60",
+                          "nip": "645210164499760257",
+                          "nik": "1607991812998041",
+                          "employee_name": "Bambang Kurniawan M.Pd",
+                          "address": "Kpg. Asia Afrika No. 325, Padang 78123, Sultra",
+                          "birth_place": "Administrasi Jakarta Pusat",
+                          "birth_date": "1996-10-29",
+                          "gender": "male",
+                          "phone_number": "081564987306",
+                          "village_code": "1115032025",
+                          "district_code": "111503",
+                          "city_code": "1115",
+                          "province_code": "11",
+                          "citizen_code": "11"
+                      }
+                  },
+                  {
+                      "id": "019e3519-544c-722e-b475-2d49b1ebe7e4",
+                      "pengampu_id": "237e1c51-1818-7123-85d4-6880f9ff4a21",
+                      "session_number": 2,
+                      "class_id": "309e6c61-1812-7123-65d3-6880f9ff4a2e",
+                      "class_name": "TI-4A",
+                      "course_code": "MK001",
+                      "course_name": "Pemrograman Perangkat Web",
+                      "topic": null,
+                      "session_date": "2026-05-21",
+                      "start_time": "13:30:00",
+                      "end_time": "16:30:00",
+                      "status": "closed",
+                      "is_already_opened": 0,
+                      "lecturer_id": "019e3511-0c15-73a0-8056-3dc7f626ce60",
+                      "lecturer": {
+                          "id": "019e3511-0c15-73a0-8056-3dc7f626ce60",
+                          "nip": "645210164499760257",
+                          "nik": "1607991812998041",
+                          "employee_name": "Bambang Kurniawan M.Pd",
+                          "address": "Kpg. Asia Afrika No. 325, Padang 78123, Sultra",
+                          "birth_place": "Administrasi Jakarta Pusat",
+                          "birth_date": "1996-10-29",
+                          "gender": "male",
+                          "phone_number": "081564987306",
+                          "village_code": "1115032025",
+                          "district_code": "111503",
+                          "city_code": "1115",
+                          "province_code": "11",
+                          "citizen_code": "11"
+                      }
+                  },
+                  {
+                      "id": "019e3519-544c-722e-b475-2d49b2e31359",
+                      "pengampu_id": "237e1c51-1818-7123-85d4-6880f9ff4a21",
+                      "session_number": 3,
+                      "class_id": "309e6c61-1812-7123-65d3-6880f9ff4a2e",
+                      "class_name": "TI-4A",
+                      "course_code": "MK001",
+                      "course_name": "Pemrograman Perangkat Web",
+                      "topic": null,
+                      "session_date": "2026-05-28",
+                      "start_time": "13:30:00",
+                      "end_time": "16:30:00",
+                      "status": "closed",
+                      "is_already_opened": 0,
+                      "lecturer_id": "019e3511-0c15-73a0-8056-3dc7f626ce60",
+                      "lecturer": {
+                          "id": "019e3511-0c15-73a0-8056-3dc7f626ce60",
+                          "nip": "645210164499760257",
+                          "nik": "1607991812998041",
+                          "employee_name": "Bambang Kurniawan M.Pd",
+                          "address": "Kpg. Asia Afrika No. 325, Padang 78123, Sultra",
+                          "birth_place": "Administrasi Jakarta Pusat",
+                          "birth_date": "1996-10-29",
+                          "gender": "male",
+                          "phone_number": "081564987306",
+                          "village_code": "1115032025",
+                          "district_code": "111503",
+                          "city_code": "1115",
+                          "province_code": "11",
+                          "citizen_code": "11"
+                      }
+                  }
+              ],
+              "meta": {
+                  "current_page": 1,
+                  "from": 1,
+                  "last_page": 2,
+                  "links": [
+                      {
+                          "url": null,
+                          "label": "&laquo; Previous",
+                          "page": null,
+                          "active": false
+                      },
+                      {
+                          "url": "http://localhost:1234/api/class-sessions/generate?page=1",
+                          "label": "1",
+                          "page": 1,
+                          "active": true
+                      },
+                      {
+                          "url": "http://localhost:1234/api/class-sessions/generate?page=2",
+                          "label": "2",
+                          "page": 2,
+                          "active": false
+                      },
+                      {
+                          "url": "http://localhost:1234/api/class-sessions/generate?page=2",
+                          "label": "Next &raquo;",
+                          "page": 2,
+                          "active": false
+                      }
+                  ],
+                  "path": "http://localhost:1234/api/class-sessions/generate",
+                  "per_page": 10,
+                  "to": 10,
+                  "total": 16
+              }
+          }
+        headers: []
+        description: 'Sukses mendapatkan sesi kelas'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "You are not logged in"
+          }
+        headers: []
+        description: 'Tidak terotentikasi'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "Token is Expired"
+          }
+        headers: []
+        description: 'Token expired'
+      -
+        custom: []
+        status: 403
+        content: |-
+          {
+              "success": false,
+              "code": 403,
+              "message": "Forbidden"
+          }
+        headers: []
+        description: 'Tidak memiliki izin'
+      -
+        custom: []
+        status: 404
+        content: |-
+          {
+              "success": false,
+              "code": 404,
+              "message": "Resource not found"
+          }
+        headers: []
+        description: 'Data tidak ditemukan'
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
       - POST
     uri: api/class-sessions/generate
     metadata:
