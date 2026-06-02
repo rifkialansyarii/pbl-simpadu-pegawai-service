@@ -22,7 +22,7 @@ final class ClassSessionService
         if ($user->role === 'admin-pegawai' || $user->role === 'super-admin') {
             return $this->repository->getAll();
         } else if ($user->role === 'dosen') {
-            return $this->repository->getAllByLecturer($user->id);
+            return $this->repository->getAllByLecturer($user->detail_id);
         } else {
             return $this->repository->getAllByClass($user->class_id);
         }

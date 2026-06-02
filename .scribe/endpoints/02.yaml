@@ -1354,9 +1354,7 @@ endpoints:
         name: title
         description: 'Masukkan judul tugas'
         required: true
-        example:
-          - 'Tugas 1'
-          - 'Tugas 2'
+        example: 'Tugas 1'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1367,9 +1365,7 @@ endpoints:
         name: description
         description: 'Masukkan deskripsi tugas'
         required: true
-        example:
-          - 'Deskripsi tugas 1'
-          - 'Deskripsi tugas 2'
+        example: 'Deskripsi tugas 1'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1380,8 +1376,7 @@ endpoints:
         name: deadline
         description: 'Masukkan tanggal deadline tugas'
         required: true
-        example:
-          - '2023-12-31'
+        example: '2023-12-31'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1391,14 +1386,9 @@ endpoints:
       file_uuids:
         - 019e33e7-993d-7376-9c5a-c3c8078d697b
         - 019e33e7-993d-7376-9c5a-c3c8078d697b
-      title:
-        - 'Tugas 1'
-        - 'Tugas 2'
-      description:
-        - 'Deskripsi tugas 1'
-        - 'Deskripsi tugas 2'
-      deadline:
-        - '2023-12-31'
+      title: 'Tugas 1'
+      description: 'Deskripsi tugas 1'
+      deadline: '2023-12-31'
     fileParameters: []
     responses:
       -
