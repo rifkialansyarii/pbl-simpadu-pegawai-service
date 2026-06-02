@@ -1860,7 +1860,7 @@ access-control-allow-origin: *</code></pre>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/php9ormc0v7u9jv1iJdHiF
+                        /tmp/phpugv5uj0q3bdh8aEbLHm
                     </div>
                 </div>
             </div>
@@ -2092,7 +2092,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "files=@/tmp/php9ormc0v7u9jv1iJdHiF" </code></pre>                                        </div>
+    --form "files=@/tmp/phpugv5uj0q3bdh8aEbLHm" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -11106,7 +11106,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        [&quot;Tugas 1&quot;,&quot;Tugas 2&quot;]
+                        Tugas 1
                     </div>
                 </div>
             </div>
@@ -11135,7 +11135,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        [&quot;Deskripsi tugas 1&quot;,&quot;Deskripsi tugas 2&quot;]
+                        Deskripsi tugas 1
                     </div>
                 </div>
             </div>
@@ -11164,7 +11164,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        [&quot;2023-12-31&quot;]
+                        2023-12-31
                     </div>
                 </div>
             </div>
@@ -11331,17 +11331,9 @@ fetch(url, {
         "019e33e7-993d-7376-9c5a-c3c8078d697b",
         "019e33e7-993d-7376-9c5a-c3c8078d697b"
     ],
-    "title": [
-        "Tugas 1",
-        "Tugas 2"
-    ],
-    "description": [
-        "Deskripsi tugas 1",
-        "Deskripsi tugas 2"
-    ],
-    "deadline": [
-        "2023-12-31"
-    ]
+    "title": "Tugas 1",
+    "description": "Deskripsi tugas 1",
+    "deadline": "2023-12-31"
 }</div>
                             </div>
                                             </div>
@@ -11442,17 +11434,9 @@ You can check the Dev Tools console for debugging information.</p>
         \"019e33e7-993d-7376-9c5a-c3c8078d697b\",
         \"019e33e7-993d-7376-9c5a-c3c8078d697b\"
     ],
-    \"title\": [
-        \"Tugas 1\",
-        \"Tugas 2\"
-    ],
-    \"description\": [
-        \"Deskripsi tugas 1\",
-        \"Deskripsi tugas 2\"
-    ],
-    \"deadline\": [
-        \"2023-12-31\"
-    ]
+    \"title\": \"Tugas 1\",
+    \"description\": \"Deskripsi tugas 1\",
+    \"deadline\": \"2023-12-31\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -11476,17 +11460,9 @@ let body = {
         "019e33e7-993d-7376-9c5a-c3c8078d697b",
         "019e33e7-993d-7376-9c5a-c3c8078d697b"
     ],
-    "title": [
-        "Tugas 1",
-        "Tugas 2"
-    ],
-    "description": [
-        "Deskripsi tugas 1",
-        "Deskripsi tugas 2"
-    ],
-    "deadline": [
-        "2023-12-31"
-    ]
+    "title": "Tugas 1",
+    "description": "Deskripsi tugas 1",
+    "deadline": "2023-12-31"
 };
 
 fetch(url, {
@@ -13911,7 +13887,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        pending
+                        rejected
                     </div>
                 </div>
             </div>
@@ -14086,7 +14062,7 @@ fetch(url, {
                                      id="json-body-PUTapi-change-requests--changeRequest_id-"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "status": "pending"
+    "status": "rejected"
 }</div>
                             </div>
                                             </div>
@@ -14183,7 +14159,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"status\": \"pending\"
+    \"status\": \"rejected\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -14203,7 +14179,7 @@ const headers = {
 };
 
 let body = {
-    "status": "pending"
+    "status": "rejected"
 };
 
 fetch(url, {

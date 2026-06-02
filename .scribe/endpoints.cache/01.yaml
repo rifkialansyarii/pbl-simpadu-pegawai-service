@@ -589,7 +589,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: pending
+        example: rejected
         type: string
         enumValues:
           - pending
@@ -599,7 +599,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanBodyParameters:
-      status: pending
+      status: rejected
     fileParameters: []
     responses:
       -
