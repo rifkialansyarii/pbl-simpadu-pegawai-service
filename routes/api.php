@@ -29,6 +29,7 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
 
     Route::get('/class-sessions', [ClassSessionController::class, 'index'])->middleware('can:viewAny, App\Models\ClassSession');
     Route::get('/class-sessions/{classSession}', [ClassSessionController::class, 'show'])->middleware('can:view,classSession');
+    Route::get('/class-sessions/pengampu/{pengampuId}', [ClassSessionController::class, 'showByPengampu'])->middleware('can:viewAny, App\Models\ClassSession');
     Route::post('/class-sessions/generate', [ClassSessionController::class, 'generate'])->middleware('can:generate, App\Models\ClassSession');
     Route::put('/class-sessions/{classSession}', [ClassSessionController::class, 'update'])->middleware('can:update,classSession');
     Route::post('/class-sessions/delete', [ClassSessionController::class, 'destroy'])->middleware('can:bulkDelete, App\Models\ClassSession');

@@ -25,6 +25,11 @@ class ClassSessionPolicy
         return $user->role === 'admin-pegawai' || $user->role === 'super-admin' || ($user->role === 'dosen' && $classSession->lecturer_id === $user->detail_id) || ($user->role === 'mahasiswa' && $user->class_id === $classSession->class_id);
     }
 
+    // public function viewByPengampu(User $user, ClassSession $classSession): bool
+    // {
+    //     return $user->role === 'admin-pegawai' || $user->role === 'super-admin' || ($user->role === 'dosen' && $classSession->lecturer_id === $user->detail_id) || ($user->role === 'mahasiswa' && $user->class_id === $classSession->class_id);
+    // }
+
     /**
      * Determine whether the user can create models.
      */

@@ -86,6 +86,16 @@ class ClassSessionController extends Controller
         ]);
     }
 
+    public function showByPengampu(string $pengampuId)
+    {
+        $classSessionCollection = new ClassSessionCollection($this->service->getClassSessionByPengampu($pengampuId));
+        return $classSessionCollection->additional([
+            'success' => true,
+            'message' => 'Data retrieved successfully',
+            'code' => 200,
+        ]);
+    }
+
     /**
      * Generate sesi kelas
      * 
