@@ -6,7 +6,7 @@ use App\Models\Employee;
 
 interface EmployeeRepositoryInterface
 {
-    public function getAll();
+    public function getAll(array $filters = []);
     public function getById(Employee $employee);
     public function getTotal();
     public function delete(Employee $employee);
