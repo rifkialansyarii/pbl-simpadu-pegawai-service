@@ -7,7 +7,7 @@ use App\Models\ClassSession;
 
 class ClassSessionRepository implements ClassSessionRepositoryInterface
 {
-    public function getAll()
+    public function getAll(array $filters = [])
     {
         $classSession = ClassSession::select([
             'id',
@@ -24,14 +24,18 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'end_time',
             'status',
             'is_already_opened',
-        ])->paginate(10);
+        ])->when(isset($filters['start_date']), function ($query) use ($filters) {
+            $query->whereDate('session_date', '>=', $filters['start_date']);
+        })->when(isset($filters['end_date']), function ($query) use ($filters) {
+            $query->whereDate('session_date', '<=', $filters['end_date']);
+        })->paginate(10);
 
         $classSession->load(['lecturer', 'learningMaterials']);
 
         return $classSession;
     }
 
-    public function getAllByLecturer(string $lecturerId)
+    public function getAllByLecturer(string $lecturerId, array $filters = [])
     {
         $classSession = ClassSession::select([
             'id',
@@ -48,14 +52,19 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'end_time',
             'status',
             'is_already_opened',
-        ])->where('lecturer_id', $lecturerId)->paginate(10);
+        ])->where('lecturer_id', $lecturerId)
+            ->when(isset($filters['start_date']), function ($query) use ($filters) {
+                $query->whereDate('session_date', '>=', $filters['start_date']);
+            })->when(isset($filters['end_date']), function ($query) use ($filters) {
+                $query->whereDate('session_date', '<=', $filters['end_date']);
+            })->paginate(10);
 
         $classSession->load(['lecturer', 'learningMaterials']);
 
         return $classSession;
     }
 
-    public function getAllByClass(string $classId)
+    public function getAllByClass(string $classId, array $filters = [])
     {
         $classSession = ClassSession::select([
             'id',
@@ -72,7 +81,12 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'end_time',
             'status',
             'is_already_opened',
-        ])->where('class_id', $classId)->paginate(10);
+        ])->where('class_id', $classId)
+            ->when(isset($filters['start_date']), function ($query) use ($filters) {
+                $query->whereDate('session_date', '>=', $filters['start_date']);
+            })->when(isset($filters['end_date']), function ($query) use ($filters) {
+                $query->whereDate('session_date', '<=', $filters['end_date']);
+            })->paginate(10);
 
         $classSession->load(['lecturer', 'learningMaterials']);
 
