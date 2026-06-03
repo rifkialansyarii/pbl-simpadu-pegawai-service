@@ -7,7 +7,7 @@ use App\Models\Employee;
 
 class EmployeeRepository implements EmployeeRepositoryInterface
 {
-    public function getAll()
+    public function getAll(array $filters = [])
     {
         $employee = Employee::select([
             'id',
@@ -24,7 +24,9 @@ class EmployeeRepository implements EmployeeRepositoryInterface
             'city_code',
             'province_code',
             'citizen_code',
-        ])->paginate(10);
+        ])->when(isset($filters['search']), function ($query) use ($filters) {
+            $query->where('employee_name', 'like', "%{$filters['search']}%")->orWhere('nip', 'like', "%{$filters['search']}%")->orWhere('nik', 'like', "%{$filters['search']}%");
+        })->paginate(10);
 
         $employee->load(['village', 'district', 'city', 'province', 'citizen']);
 

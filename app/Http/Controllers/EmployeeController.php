@@ -9,6 +9,7 @@ use App\Http\Resources\EmployeeCollection;
 use App\Models\Employee;
 use App\Services\ChangeRequestService;
 use App\Services\EmployeeService;
+use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\QueryParam;
 use Knuckles\Scribe\Attributes\ResponseFromFile;
 use Knuckles\Scribe\Attributes\UrlParam;
@@ -34,12 +35,16 @@ class EmployeeController extends Controller
      * Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
      */
     #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
+    #[QueryParam("search", "string", "Kata kunci pencarian, required: false, Pencarian berdasarkan nama pegawai, NIP, atau NIK")]
     #[ResponseFromFile(file: 'responses/employee/get_employees.json', status: 200, description: 'Sukses mendapatkan data pegawai')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
-    public function index()
+    public function index(Request $request)
     {
-        $employeCollection = new EmployeeCollection($this->service->getAllEmployees());
+        $filters = [
+            'search' => $request->query('search'),
+        ];
+        $employeCollection = new EmployeeCollection($this->service->getAllEmployees($filters));
         return $employeCollection->additional([
             'success' => true,
             'message' => 'Data retrieved successfully',

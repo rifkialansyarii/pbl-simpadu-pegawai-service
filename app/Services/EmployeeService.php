@@ -16,9 +16,9 @@ final class EmployeeService
     ) {
     }
 
-    public function getAllEmployees()
+    public function getAllEmployees(array $filters = [])
     {
-        return $this->repository->getAll();
+        return $this->repository->getAll($filters);
     }
 
     public function getEmployeeById(Employee $employee)
