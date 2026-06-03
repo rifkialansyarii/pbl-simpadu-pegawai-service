@@ -17,14 +17,14 @@ final class ClassSessionService
     ) {
     }
 
-    public function getAllClassSessions(User $user)
+    public function getAllClassSessions(User $user, array $filters = [])
     {
         if ($user->role === 'admin-pegawai' || $user->role === 'super-admin') {
-            return $this->repository->getAll();
+            return $this->repository->getAll($filters);
         } else if ($user->role === 'dosen') {
-            return $this->repository->getAllByLecturer($user->detail_id);
+            return $this->repository->getAllByLecturer($user->detail_id, $filters);
         } else {
-            return $this->repository->getAllByClass($user->class_id);
+            return $this->repository->getAllByClass($user->class_id, $filters);
         }
     }
 

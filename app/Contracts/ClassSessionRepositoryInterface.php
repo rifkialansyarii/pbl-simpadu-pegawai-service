@@ -7,9 +7,9 @@ use App\Models\User;
 
 interface ClassSessionRepositoryInterface
 {
-    public function getAll();
-    public function getAllByLecturer(string $lecturerId);
-    public function getAllByClass(string $classId);
+    public function getAll(array $filters = []);
+    public function getAllByLecturer(string $lecturerId, array $filters = []);
+    public function getAllByClass(string $classId, array $filters = []);
     public function getById(ClassSession $classSession);
     public function getByPengampu(string $pengampuId);
     public function generate(array $data, int $sessionAmount);
