@@ -17,6 +17,7 @@ jobs:
           script: |
             cd /root/kelompok-2/pbl-work
             
+            git stash
             git pull origin main
             
             docker compose -f docker-compose.prod.yml exec -T php composer install --no-interaction --prefer-dist --optimize-autoloader
@@ -24,3 +25,5 @@ jobs:
             docker compose -f docker-compose.prod.yml exec -T php php artisan migrate --force
             
             docker compose -f docker-compose.prod.yml exec -T php php artisan optimize:clear
+
+            docker compose -f docker-compose.prod.yml exec -T php php artisan scribe:generate
