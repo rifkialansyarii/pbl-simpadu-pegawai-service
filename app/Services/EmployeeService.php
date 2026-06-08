@@ -34,7 +34,7 @@ final class EmployeeService
     public function updateEmployee(UpdateEmployeeRequest $request, Employee $employee)
     {
 
-        $userId = $request->user()->id;
+        $userId = $request->user()->detail_id;
 
         if ($request->user()->role_name === 'dosen') {
             if ($request->has('nip')) {
