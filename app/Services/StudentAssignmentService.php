@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Contracts\StudentAssignmentRepositoryInterface;
 use App\Models\ClassSession;
+use App\Models\User;
 use DB;
 
 final class StudentAssignmentService
@@ -11,6 +12,11 @@ final class StudentAssignmentService
     public function __construct(
         private StudentAssignmentRepositoryInterface $repository,
     ) {
+    }
+
+    public function getPendingSubmission(User $user)
+    {
+        return $this->repository->getPendingSubmission($user);
     }
 
     public function addStudentAssignment(ClassSession $classSession, array $attributes)

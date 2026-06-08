@@ -7,5 +7,5 @@ use App\Models\User;
 
 interface StudentSubmissionRepositoryInterface
 {
-    public function getNotSubmitted(User $user);
+    public function getPendingSubmission(User $user);
 }

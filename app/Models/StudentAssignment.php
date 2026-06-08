@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class StudentAssignment extends Model
 {
@@ -31,5 +32,10 @@ class StudentAssignment extends Model
     public function fileUploads(): BelongsToMany
     {
         return $this->belongsToMany(FileUpload::class, 'assignment_attachments');
+    }
+
+    public function studentSubmissions(): HasMany
+    {
+        return $this->hasMany(StudentSubmission::class, foreignKey: 'assignment_id');
     }
 }

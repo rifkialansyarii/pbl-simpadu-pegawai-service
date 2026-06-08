@@ -38,6 +38,8 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
     Route::post('/class-sessions/{classSession}/assignments', [StudentAssignmentController::class, 'storeStudentAssignment'])->middleware('can:createAssignment,classSession');
     Route::post('/class-sessions/{classSession}/assignments/delete', [StudentAssignmentController::class, 'destroyStudentAssignment'])->middleware('can:deleteAssignment,classSession');
 
+    Route::get('/assignments/pending', [StudentAssignmentController::class, 'showPendingSubmission']);
+
     Route::get('/file-uploads', [FileUploadController::class, 'index'])->middleware('can:viewAny, App\Models\FileUpload');
     Route::get('/file-uploads/{fileUpload}/download', [FileUploadController::class, 'download'])->middleware('can:download,fileUpload');
     Route::post('/file-uploads', [FileUploadController::class, 'store'])->middleware('can:create, App\Models\FileUpload');

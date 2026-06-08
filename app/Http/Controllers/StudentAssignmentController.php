@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AddStudentAssignmentRequest;
 use App\Http\Requests\DeleteStudentAssignmentRequest;
 use App\Http\Resources\ClassSessionResource;
+use App\Http\Resources\StudentAssignmentCollection;
 use App\Models\ClassSession;
 use App\Services\StudentAssignmentService;
 use Exception;
+use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\ResponseFromFile;
 /**
  * 
@@ -18,6 +20,34 @@ class StudentAssignmentController extends Controller
 {
     public function __construct(private StudentAssignmentService $service)
     {
+    }
+
+    public function showPendingSubmission(Request $request)
+    {
+        try {
+            $assignmentCollection = new StudentAssignmentCollection($this->service->getPendingSubmission($request->user()));
+            return $assignmentCollection->additional([
+                'success' => true,
+                'message' => 'Data retrieved successfully',
+                'code' => 200,
+            ]);
+        } catch (Exception $e) {
+            $isDebug = config('app.debug');
+
+            $response = [
+                'success' => false,
+                'message' => 'an error occurred while processing',
+                'code' => 500,
+                'errrors' => $e->getMessage()
+            ];
+
+            if ($isDebug) {
+                $response['errors'] = $e->getMessage();
+                $response['trace'] = $e->getTrace();
+            }
+
+            return response()->json($response, 500);
+        }
     }
 
 
