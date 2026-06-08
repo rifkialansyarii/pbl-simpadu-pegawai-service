@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Rules\CourseQuotaLimit;
+use App\Rules\SessionDateCollision;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
@@ -48,9 +49,10 @@ class GenerateClassSessionRequest extends FormRequest
                 'max:255',
                 new CourseQuotaLimit($this->class_id, $this->class_name, $this->course_code),
             ],
-            'start_date' => ['required', Rule::date()->format('Y-m-d')],
             'start_time' => ['required', Rule::date()->format('H:i')],
             'end_time' => ['required', Rule::date()->format('H:i')],
+            'start_date' => ['required', Rule::date()->format('Y-m-d'), new SessionDateCollision($this->class_id, $this->start_date, $this->start_time, $this->end_time),
+],
         ];
     }
 
