@@ -16,7 +16,7 @@ return new class extends Migration
             $table->char('nip', 18)->unique();
             $table->char('nik', 16)->unique();
             $table->string('employee_name');
-            $table->uuid('study_program_id')->nullable();
+            $table->integer('study_program_id')->nullable();
             $table->string('study_program_name')->nullable();
             $table->text('address')->nullable();
             $table->string('birth_place')->nullable();
