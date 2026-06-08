@@ -34,4 +34,9 @@ class FileUpload extends Model
     {
         return $this->belongsToMany(StudentAssignment::class, 'assignment_attachments');
     }
+
+    public function studentSubmissions(): BelongsToMany
+    {
+        return $this->belongsToMany(StudentSubmission::class, 'student_submission_files');
+    }
 }

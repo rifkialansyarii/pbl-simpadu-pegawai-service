@@ -11,6 +11,7 @@ use App\Contracts\EmployeeRepositoryInterface;
 use App\Contracts\FileUploadRepositoryInterface;
 use App\Contracts\ProvinceRepositoryInterface;
 use App\Contracts\StudentAssignmentRepositoryInterface;
+use App\Contracts\StudentSubmissionRepositoryInterface;
 use App\Contracts\VillageRepositoryInterface;
 use App\Repositories\ChangeRequestRepository;
 use App\Repositories\CityRepository;
@@ -21,6 +22,7 @@ use App\Repositories\EmployeeRepository;
 use App\Repositories\FileUploadRepository;
 use App\Repositories\ProvinceRepository;
 use App\Repositories\StudentAssignmentRepository;
+use App\Repositories\StudentSubmissionRepository;
 use App\Repositories\VillageRepository;
 use Illuminate\Support\ServiceProvider;
 
@@ -41,6 +43,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(ClassSessionRepositoryInterface::class, ClassSessionRepository::class);
         $this->app->bind(FileUploadRepositoryInterface::class, FileUploadRepository::class);
         $this->app->bind(StudentAssignmentRepositoryInterface::class, StudentAssignmentRepository::class);
+        $this->app->bind(StudentSubmissionRepositoryInterface::class, StudentSubmissionRepository::class);
     }
 
     /**
