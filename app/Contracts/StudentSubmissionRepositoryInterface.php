@@ -2,10 +2,11 @@
 
 namespace App\Contracts;
 
+use App\Models\StudentAssignment;
 use App\Models\User;
-
 
 interface StudentSubmissionRepositoryInterface
 {
-    public function getPendingSubmission(User $user);
+    public function createSubmission(array $attributes, StudentAssignment $studentAssignment, User $user);
+    public function checkIsSubmitted(StudentAssignment $studentAssignment, User $user): bool;
 }

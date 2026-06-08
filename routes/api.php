@@ -9,6 +9,7 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\ProvinceController;
 use App\Http\Controllers\StudentAssignmentController;
+use App\Http\Controllers\StudentSubmissionController;
 use App\Http\Controllers\VillageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -39,6 +40,8 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
     Route::post('/class-sessions/{classSession}/assignments/delete', [StudentAssignmentController::class, 'destroyStudentAssignment'])->middleware('can:deleteAssignment,classSession');
 
     Route::get('/assignments/pending', [StudentAssignmentController::class, 'showPendingSubmission']);
+    Route::post('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'store']);
+
 
     Route::get('/file-uploads', [FileUploadController::class, 'index'])->middleware('can:viewAny, App\Models\FileUpload');
     Route::get('/file-uploads/{fileUpload}/download', [FileUploadController::class, 'download'])->middleware('can:download,fileUpload');

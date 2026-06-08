@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('student_submission_files_tables', function (Blueprint $table) {
+        Schema::create('student_submission_files', function (Blueprint $table) {
             $table->id();
             $table->foreignUuid('submission_id')->constrained('student_submissions')->cascadeOnDelete();
             $table->foreignUuid('file_upload_id')->constrained('file_uploads')->cascadeOnDelete();
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('student_submission_files_tables');
+        Schema::dropIfExists('student_submission_files');
     }
 };

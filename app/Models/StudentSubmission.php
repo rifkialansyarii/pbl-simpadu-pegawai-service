@@ -30,6 +30,6 @@ class StudentSubmission extends Model
 
     public function submissionFiles(): BelongsToMany
     {
-        return $this->belongsToMany(FileUpload::class, 'student_submission_files');
+        return $this->belongsToMany(FileUpload::class, 'student_submission_files', foreignPivotKey: 'submission_id');
     }
 }

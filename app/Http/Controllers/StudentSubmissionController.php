@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreStudentSubmission;
 use App\Http\Resources\StudentSubmissionCollection;
+use App\Http\Resources\StudentSubmissionResource;
+use App\Models\ClassSession;
+use App\Models\StudentAssignment;
 use App\Services\StudentSubmissionService;
 use Exception;
 use Illuminate\Http\Request;
@@ -13,14 +17,14 @@ class StudentSubmissionController extends Controller
     {
     }
 
-    public function notSubmitted(Request $request)
+    public function store(StoreStudentSubmission $request, StudentAssignment $studentAssignment)
     {
         try {
-            $submissionCollection = new StudentSubmissionCollection($this->service->getNotSubmitted($request->user()));
-            return $submissionCollection->additional([
+            $submissionResource = new StudentSubmissionResource($this->service->createSubmission($request->validated(), $studentAssignment, $request->user()));
+            return $submissionResource->additional([
                 'success' => true,
-                'message' => 'Data retrieved successfully',
-                'code' => 200,
+                'message' => 'Data created successfully',
+                'code' => 201,
             ]);
         } catch (Exception $e) {
             $isDebug = config('app.debug');
@@ -29,7 +33,7 @@ class StudentSubmissionController extends Controller
                 'success' => false,
                 'message' => 'an error occurred while processing',
                 'code' => 500,
-                'errrors' => $e->getMessage()
+                'errors' => $e->getMessage()
             ];
 
             if ($isDebug) {
