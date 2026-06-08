@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\DeleteStudentAssignmentRequest;
 use App\Http\Requests\StoreStudentSubmission;
 use App\Http\Resources\StudentSubmissionCollection;
 use App\Http\Resources\StudentSubmissionResource;
@@ -44,5 +45,33 @@ class StudentSubmissionController extends Controller
             return response()->json($response, 500);
         }
 
+    }
+
+    public function destroy(Request $request, StudentAssignment $studentAssignment)
+    {
+        try {
+            $this->service->deleteSubmission($studentAssignment, $request->user());
+            return response()->json([
+                'success' => true,
+                'message' => 'Data deleted successfully',
+                'code' => 200,
+            ]);
+        } catch (Exception $e) {
+            $isDebug = config('app.debug');
+
+            $response = [
+                'success' => false,
+                'message' => 'an error occurred while processing',
+                'code' => 500,
+                'errors' => $e->getMessage()
+            ];
+
+            if ($isDebug) {
+                $response['errors'] = $e->getMessage();
+                $response['trace'] = $e->getTrace();
+            }
+
+            return response()->json($response, 500);
+        }
     }
 }

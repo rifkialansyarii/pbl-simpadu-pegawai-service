@@ -32,4 +32,9 @@ class StudentSubmissionRepository implements StudentSubmissionRepositoryInterfac
             ->where('student_id', $user->detail_id)
             ->exists();
     }
+
+    public function deleteSubmission(StudentAssignment $studentAssignment, User $user)
+    {
+        StudentSubmission::where('assignment_id', $studentAssignment->id)->where('student_id', $user->detail_id)->delete();
+    }
 }

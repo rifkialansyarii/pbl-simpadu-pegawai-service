@@ -9,4 +9,6 @@ interface StudentSubmissionRepositoryInterface
 {
     public function createSubmission(array $attributes, StudentAssignment $studentAssignment, User $user);
     public function checkIsSubmitted(StudentAssignment $studentAssignment, User $user): bool;
+    public function deleteSubmission(StudentAssignment $studentAssignment, User $user);
+
 }

@@ -41,6 +41,7 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
 
     Route::get('/assignments/pending', [StudentAssignmentController::class, 'showPendingSubmission']);
     Route::post('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'store']);
+    Route::delete('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'destroy']);
 
 
     Route::get('/file-uploads', [FileUploadController::class, 'index'])->middleware('can:viewAny, App\Models\FileUpload');

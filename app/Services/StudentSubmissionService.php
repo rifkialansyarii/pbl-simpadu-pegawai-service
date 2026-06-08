@@ -29,4 +29,12 @@ final class StudentSubmissionService
 
         });
     }
+
+    public function deleteSubmission(StudentAssignment $studentAssignment, User $user)
+    {
+        return DB::transaction(function () use ($studentAssignment, $user) {
+            return $this->repository->deleteSubmission($studentAssignment, $user);
+
+        });
+    }
 }
