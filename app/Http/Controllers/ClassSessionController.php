@@ -51,8 +51,8 @@ class ClassSessionController extends Controller
     public function index(Request $request)
     {
         $filters = [
-            "start_date" => $request->query('start_date', default: now()->toDateString()),
-            "end_date" => $request->query('end_date', default: now()->toDateString())
+            "start_date" => $request->query('start_date'),
+            "end_date" => $request->query('end_date')
         ];
 
         $classSessionCollection = new ClassSessionCollection($this->service->getAllClassSessions($request->user(), $filters));
