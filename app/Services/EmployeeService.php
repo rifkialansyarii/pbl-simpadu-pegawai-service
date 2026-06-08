@@ -35,7 +35,8 @@ final class EmployeeService
     {
 
         $userId = $request->user()->detail_id;
-        if ($request->user()->role === 'dosen') {
+        $userRole = $request->user()->role;
+        if ($userRole === 'dosen' && $userRole === 'admin-pegawai') {
             $employee = Employee::find($userId);
             if ($request->has('nip') && $request->nip !== $employee->nip ) {
                 $attributesChangeRequest = [
