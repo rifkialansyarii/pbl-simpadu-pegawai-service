@@ -104,9 +104,7 @@ class EmployeeController extends Controller
      * 
      * Endpoint bertujuan untuk **mengupdate data pegawai**.
      * 
-     * **dosen** atau **pegawai** hanya dapat mengupdate data **MILIKNYA SENDIRI**.
-     * 
-     * admin-pegawai dan super-admin dapat mengupdate data pegawai manapun.
+     * Hanya **dosen** yang dapat mengupdate data **MILIKNYA SENDIRI**.
      * 
      * **NOTE**: Ketika dosen atau pegawai mengubah data **NIK**, **NIP** dan **NAMA** miliknya, maka perubahan ini **OTOMATIS DIKIRIMKAN KE ADMIN** dan harus **MENUNGGU ADMIN MENYETUJUI**.
      */

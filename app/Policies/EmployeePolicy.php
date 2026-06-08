@@ -37,7 +37,7 @@ class EmployeePolicy
      */
     public function update(User $user, Employee $employee): bool
     {
-        return $user->role === 'admin-pegawai' || $user->role === 'super-admin' || $user->detail_id === $employee->id;
+        return $user->detail_id === $employee->id;
     }
 
 
