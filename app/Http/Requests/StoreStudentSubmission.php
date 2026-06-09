@@ -3,7 +3,10 @@
 namespace App\Http\Requests;
 
 use Illuminate\Contracts\Validation\ValidationRule;
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Database\Query\Builder;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rule;
 use Knuckles\Scribe\Attributes\BodyParam;
 
@@ -25,14 +28,28 @@ class StoreStudentSubmission extends FormRequest
      */
     public function rules(): array
     {
-      return [
+        return [
             "file_uuids" => ['array', 'required', 'min:1'],
             "file_uuids.*" => [
                 'required',
                 'string',
                 'size:36',
-                Rule::exists('file_uploads', 'id'),
+                Rule::exists('file_uploads', 'id')->where(function (Builder $query) {
+                    return $query->where('user_id', $this->user()->id);
+                }),
             ],
         ];
+    }
+
+    protected function failedValidation(Validator $validator)
+    {
+        throw new HttpResponseException(
+            response()->json([
+                'success' => false,
+                'message' => "The given data was invalid",
+                'code' => 422,
+                'errors' => $validator->errors()->toArray()
+            ], 422)
+        );
     }
 }

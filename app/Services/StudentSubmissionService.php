@@ -16,6 +16,11 @@ final class StudentSubmissionService
     ) {
     }
 
+    public function getSubmission(StudentAssignment $studentAssignment)
+    {
+        return $this->repository->getAllSubmission($studentAssignment);
+    }
+
     public function createSubmission(array $attributes, StudentAssignment $studentAssignment, User $user)
     {
         return DB::transaction(function () use ($attributes, $studentAssignment, $user) {

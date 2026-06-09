@@ -39,7 +39,8 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
     Route::post('/class-sessions/{classSession}/assignments', [StudentAssignmentController::class, 'storeStudentAssignment'])->middleware('can:createAssignment,classSession');
     Route::post('/class-sessions/{classSession}/assignments/delete', [StudentAssignmentController::class, 'destroyStudentAssignment'])->middleware('can:deleteAssignment,classSession');
 
-    Route::get('/assignments/pending', [StudentAssignmentController::class, 'showPendingSubmission'])->middleware('can:viewPending, App\Models\StudentAssignment');
+    Route::get('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'index'])->middleware('can:viewAny,studentAssignment');
+    Route::get('/assignments/pending', [StudentSubmissionController::class, 'showPendingSubmission'])->middleware('can:viewPending, App\Models\StudentAssignment');
     Route::post('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'store'])->middleware('can:create,studentAssignment');
     Route::delete('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'destroy'])->middleware('can:delete,studentAssignment');
 
@@ -62,3 +63,4 @@ Route::get('/districts/{cityCode}', [DistrictController::class, 'showByCity']);
 
 Route::get('/villages', [VillageController::class, 'index']);
 Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);
+

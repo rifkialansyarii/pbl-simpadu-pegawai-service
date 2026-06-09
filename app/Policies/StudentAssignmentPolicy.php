@@ -11,9 +11,9 @@ class StudentAssignmentPolicy
     /**
      * Determine whether the user can view any models.
      */
-    public function viewAny(User $user): bool
+    public function viewAny(User $user, StudentAssignment $studentAssignment): bool
     {
-        return false;
+        return $user->role === 'dosen' && $studentAssignment->classSession->lecturer_id === $user->detail_id;
     }
 
     /**

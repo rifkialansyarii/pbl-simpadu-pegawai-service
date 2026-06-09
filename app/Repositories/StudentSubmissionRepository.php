@@ -11,6 +11,14 @@ use Illuminate\Database\Eloquent\Builder;
 
 class StudentSubmissionRepository implements StudentSubmissionRepositoryInterface
 {
+
+    public function getAllSubmission(StudentAssignment $studentAssignment)
+    {
+        $submission = StudentSubmission::where('assignment_id', $studentAssignment->id)->get();
+        $submission->load('assignment', 'submissionFiles');
+        return $submission;
+    }
+
     public function createSubmission(array $attributes, StudentAssignment $studentAssignment, User $user)
     {
         $submission = StudentSubmission::create([

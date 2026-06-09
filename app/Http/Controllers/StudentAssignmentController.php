@@ -22,47 +22,6 @@ class StudentAssignmentController extends Controller
     {
     }
 
-     /**
-     * Get Tugas Belum Dikumpulkan
-     *
-     * Endpoint ini digunakan untuk mengambil data tugas yang belum dikumpulkan
-     * 
-     * Fitur ini **hanya bisa dijalankan** oleh user **mahasiswa yang mengikuti mata kuliah di suatu kelas**.
-     *  
-     */
-    #[ResponseFromFile(file: 'responses/submission/get_pending.json', status: 200, description: 'Sukses mengambil data')]
-    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
-    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
-    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
-    public function showPendingSubmission(Request $request)
-    {
-        try {
-            $assignmentCollection = new StudentAssignmentCollection($this->service->getPendingSubmission($request->user()));
-            return $assignmentCollection->additional([
-                'success' => true,
-                'message' => 'Data retrieved successfully',
-                'code' => 200,
-            ]);
-        } catch (Exception $e) {
-            $isDebug = config('app.debug');
-
-            $response = [
-                'success' => false,
-                'message' => 'an error occurred while processing',
-                'code' => 500,
-                'errors' => $e->getMessage()
-            ];
-
-            if ($isDebug) {
-                $response['errors'] = $e->getMessage();
-                $response['trace'] = $e->getTrace();
-            }
-
-            return response()->json($response, 500);
-        }
-    }
-
-
     /**
      * Tambah Tugas
      *
