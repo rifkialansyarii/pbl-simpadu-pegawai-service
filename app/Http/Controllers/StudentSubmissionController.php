@@ -28,6 +28,18 @@ class StudentSubmissionController extends Controller
     {
     }
 
+     /**
+     * Ambil semua Tugas yang dikumpulkan
+     *
+     * Endpoint ini digunakan untuk mengambil data tugas yang sudah dikumpulkan
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar pada sesi**.
+     *  
+     */
+    #[ResponseFromFile(file: 'responses/submission/get_all.json', status: 200, description: 'Sukses mengambil data')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
+    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
     public function index(StudentAssignment $studentAssignment)
     {
         try {
@@ -57,7 +69,7 @@ class StudentSubmissionController extends Controller
     }
 
     /**
-     * Get Tugas Belum Dikumpulkan
+     * Ambil Tugas Belum Dikumpulkan
      *
      * Endpoint ini digunakan untuk mengambil data tugas yang belum dikumpulkan
      * 

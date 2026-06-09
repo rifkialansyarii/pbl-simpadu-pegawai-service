@@ -15,7 +15,7 @@ class StudentSubmissionRepository implements StudentSubmissionRepositoryInterfac
     public function getAllSubmission(StudentAssignment $studentAssignment)
     {
         $submission = StudentSubmission::where('assignment_id', $studentAssignment->id)->get();
-        $submission->load('assignment', 'submissionFiles');
+        $submission->load('submissionFiles');
         return $submission;
     }
 
