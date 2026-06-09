@@ -5,7 +5,9 @@ namespace App\Http\Requests;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use Knuckles\Scribe\Attributes\BodyParam;
 
+#[BodyParam(name: 'file_uuids', type: 'string[]', description: 'Masukkan file uuids yang ingin disubmit sebagai tugas', example: ['019e33e7-993d-7376-9c5a-c3c8078d697b', '019e33e7-993d-7376-9c5a-c3c8078d697b'])]
 class StoreStudentSubmission extends FormRequest
 {
     /**

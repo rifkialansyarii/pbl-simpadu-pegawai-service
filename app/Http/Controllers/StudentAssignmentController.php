@@ -13,8 +13,8 @@ use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\ResponseFromFile;
 /**
  * 
- * @group Sesi Kelas
- * Endpoint terkait operasi CRUD untuk data sesi kelas, termasuk generate, pembaruan, penghapusan, dan pengambilan data sesi kelas.
+ * @group Tugas
+ * Endpoint terkait operasi CRUD untuk data Tugas, termasuk membuat, penghapusan, pengumpulan dan batal pengumpulan.
  */
 class StudentAssignmentController extends Controller
 {
@@ -22,6 +22,18 @@ class StudentAssignmentController extends Controller
     {
     }
 
+     /**
+     * Get Tugas Belum Dikumpulkan
+     *
+     * Endpoint ini digunakan untuk mengambil data tugas yang belum dikumpulkan
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **mahasiswa yang mengikuti mata kuliah di suatu kelas**.
+     *  
+     */
+    #[ResponseFromFile(file: 'responses/submission/get_pending.json', status: 200, description: 'Sukses mengambil data')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
+    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
     public function showPendingSubmission(Request $request)
     {
         try {
@@ -61,7 +73,7 @@ class StudentAssignmentController extends Controller
      * Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
      *  
      */
-    #[ResponseFromFile(file: 'responses/class_sessions/success_add_material.json', status: 200, description: 'Sukses menambahkan materi')]
+    #[ResponseFromFile(file: 'responses/class_sessions/success_add_material.json', status: 201, description: 'Sukses menambahkan materi')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]

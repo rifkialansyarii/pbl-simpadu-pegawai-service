@@ -11,13 +11,31 @@ use App\Models\StudentAssignment;
 use App\Services\StudentSubmissionService;
 use Exception;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\ResponseFromFile;
 
+/**
+ * 
+ * @group Tugas
+ * Endpoint terkait operasi CRUD untuk data Tugas, termasuk membuat, penghapusan, pengumpulan dan batal pengumpulan.
+ */
 class StudentSubmissionController extends Controller
 {
     public function __construct(private StudentSubmissionService $service)
     {
     }
 
+     /**
+     * Kumpul Tugas
+     *
+     * Endpoint ini digunakan untuk mengumpulkan tugas
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **mahasiswa yang mengikuti mata kuliah di suatu kelas**.
+     *  
+     */
+    #[ResponseFromFile(file: 'responses/submission/success_submit.json', status: 201, description: 'Sukses membuat data')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
+    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
     public function store(StoreStudentSubmission $request, StudentAssignment $studentAssignment)
     {
         try {
@@ -47,6 +65,20 @@ class StudentSubmissionController extends Controller
 
     }
 
+     /**
+     * Batalkan Pengumpulan
+     *
+     * Endpoint ini digunakan untuk membatalkan pengumpulan tugas.
+     * 
+     * Tugas yang dibatalkan akan **terhapus** dari database.
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **mahasiswa yang mengikuti mata kuliah di suatu kelas**.
+     *  
+     */
+    #[ResponseFromFile(file: 'responses/success_delete.json', status: 200, description: 'Sukses menghapus data')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
+    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
     public function destroy(Request $request, StudentAssignment $studentAssignment)
     {
         try {

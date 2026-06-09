@@ -43,8 +43,32 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
+      start_date:
+        custom: []
+        name: start_date
+        description: 'Tanggal Mulai Sesi Perkuliahan, required: false, Default: Tanggal Saat Ini, Format: YYYY-MM-DD'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      end_date:
+        custom: []
+        name: end_date
+        description: 'Tanggal Selesai Sesi Perkuliahan, required: false, Default: Tanggal Saat Ini, Format: YYYY-MM-DD'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
     cleanQueryParameters:
       page: 16
+      start_date: architecto
+      end_date: architecto
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -704,17 +728,6 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      start_date:
-        custom: []
-        name: start_date
-        description: 'Tanggal dimulainya perkuliahan'
-        required: true
-        example: '1990-01-01'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
       start_time:
         custom: []
         name: start_time
@@ -737,6 +750,17 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
+      start_date:
+        custom: []
+        name: start_date
+        description: 'Tanggal dimulainya perkuliahan'
+        required: true
+        example: '1990-01-01'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
     cleanBodyParameters:
       pengampu_id: 123e4567-e89b-12d3-a456-426614174000
       lecturer_id: 123e4567-e89b-12d3-a456-426614174000
@@ -744,9 +768,9 @@ endpoints:
       class_name: TI-4A
       course_code: MK001
       course_name: 'Pemrograman Web'
-      start_date: '1990-01-01'
       start_time: '08:30'
       end_time: '10:30'
+      start_date: '1990-01-01'
     fileParameters: []
     responses:
       -
@@ -1290,14 +1314,14 @@ endpoints:
         name: classSession_id
         description: 'The ID of the classSession.'
         required: true
-        example: 019e823d-ec88-71db-87de-c13f24070537
+        example: 019eab01-b22a-7114-af06-8131fe9a9fc9
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      classSession_id: 019e823d-ec88-71db-87de-c13f24070537
+      classSession_id: 019eab01-b22a-7114-af06-8131fe9a9fc9
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -1452,14 +1476,14 @@ endpoints:
         name: classSession_id
         description: 'The ID of the classSession.'
         required: true
-        example: 019e823d-ec88-71db-87de-c13f24070537
+        example: 019eab01-b22a-7114-af06-8131fe9a9fc9
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      classSession_id: 019e823d-ec88-71db-87de-c13f24070537
+      classSession_id: 019eab01-b22a-7114-af06-8131fe9a9fc9
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -1494,317 +1518,6 @@ endpoints:
           }
         headers: []
         description: 'Sukses menghapus materi'
-      -
-        custom: []
-        status: 401
-        content: |-
-          {
-              "success": false,
-              "code": 401,
-              "message": "You are not logged in"
-          }
-        headers: []
-        description: 'Tidak terotentikasi'
-      -
-        custom: []
-        status: 401
-        content: |-
-          {
-              "success": false,
-              "code": 401,
-              "message": "Token is Expired"
-          }
-        headers: []
-        description: 'Token expired'
-      -
-        custom: []
-        status: 403
-        content: |-
-          {
-              "success": false,
-              "code": 403,
-              "message": "Forbidden"
-          }
-        headers: []
-        description: 'Tidak memiliki izin'
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - POST
-    uri: 'api/class-sessions/{classSession_id}/assignments'
-    metadata:
-      custom: []
-      groupName: 'Sesi Kelas'
-      groupDescription: 'Endpoint terkait operasi CRUD untuk data sesi kelas, termasuk generate, pembaruan, penghapusan, dan pengambilan data sesi kelas.'
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Tambah Tugas'
-      description: |-
-        Endpoint ini digunakan untuk membuat tugas pada sesi kelas
-
-        Endpoint ini mendukung multiple insert
-
-        Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
-      authenticated: true
-      deprecated: false
-    headers:
-      Authorization: 'Bearer {JWT here}'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      classSession_id:
-        custom: []
-        name: classSession_id
-        description: 'The ID of the classSession.'
-        required: true
-        example: 019e823d-ec88-71db-87de-c13f24070537
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanUrlParameters:
-      classSession_id: 019e823d-ec88-71db-87de-c13f24070537
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      file_uuids:
-        custom: []
-        name: file_uuids
-        description: 'Masukkan file uuids yang ingin digunakan sebagai tugas'
-        required: true
-        example:
-          - 019e33e7-993d-7376-9c5a-c3c8078d697b
-          - 019e33e7-993d-7376-9c5a-c3c8078d697b
-        type: 'string[]'
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      title:
-        custom: []
-        name: title
-        description: 'Masukkan judul tugas'
-        required: true
-        example: 'Tugas 1'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      description:
-        custom: []
-        name: description
-        description: 'Masukkan deskripsi tugas'
-        required: true
-        example: 'Deskripsi tugas 1'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      deadline:
-        custom: []
-        name: deadline
-        description: 'Masukkan tanggal deadline tugas'
-        required: true
-        example: '2023-12-31'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanBodyParameters:
-      file_uuids:
-        - 019e33e7-993d-7376-9c5a-c3c8078d697b
-        - 019e33e7-993d-7376-9c5a-c3c8078d697b
-      title: 'Tugas 1'
-      description: 'Deskripsi tugas 1'
-      deadline: '2023-12-31'
-    fileParameters: []
-    responses:
-      -
-        custom: []
-        status: 200
-        content: |-
-          {
-              "success": true,
-              "message": "Data created successfully",
-              "code": 201,
-              "data": {
-                  "id": "019e7782-82cf-7356-a33a-2018fec26929",
-                  "pengampu_id": "123e4567-e89b-12d3-a456-426614174000",
-                  "session_number": 1,
-                  "class_id": "123e4567-e89b-12d3-a456-426614174001",
-                  "class_name": "TI-4A",
-                  "course_code": "MK001",
-                  "course_name": "Pemrograman Web",
-                  "topic": null,
-                  "session_date": "2025-01-01",
-                  "start_time": "08:30:00",
-                  "end_time": "10:30:00",
-                  "status": "closed",
-                  "is_already_opened": 0,
-                  "lecturer_id": "019e53f8-8188-71b8-9480-ae493f6098c8",
-                  "lecturer": {
-                      "id": "019e53f8-8188-71b8-9480-ae493f6098c8",
-                      "nip": "308354822718607804",
-                      "nik": "3321952704071225",
-                      "employee_name": "Pandu Lamar Sihotang M.M.",
-                      "address": "Dk. Peta No. 975, Lhokseumawe 80789, NTB",
-                      "birth_place": "Salatiga",
-                      "birth_date": "1998-10-29",
-                      "gender": "female",
-                      "phone_number": "085087838900",
-                      "village_code": "1111072013",
-                      "district_code": "111107",
-                      "city_code": "1111",
-                      "province_code": "11",
-                      "citizen_code": "11"
-                  },
-                  "learning_materials": [
-                      {
-                          "id": "019e778b-28e7-72f9-8943-fe454328b2a9",
-                          "original_file_name": "Modul Flutter Consultation APP.pdf",
-                          "file_size": 940422,
-                          "mime_type": "application/pdf",
-                          "uploaded_at": "2026-05-30T06:21:09.000000Z",
-                          "created_as_material_at": "2026-05-30T07:43:11.000000Z"
-                      },
-                      {
-                          "id": "019e778b-28e7-72f9-8943-fe4543361c2b",
-                          "original_file_name": "4. Normalisasi Mahasiswa-2.pdf",
-                          "file_size": 514751,
-                          "mime_type": "application/pdf",
-                          "uploaded_at": "2026-05-30T06:21:09.000000Z",
-                          "created_as_material_at": "2026-05-30T07:43:11.000000Z"
-                      }
-                  ]
-              }
-          }
-        headers: []
-        description: 'Sukses menambahkan materi'
-      -
-        custom: []
-        status: 401
-        content: |-
-          {
-              "success": false,
-              "code": 401,
-              "message": "You are not logged in"
-          }
-        headers: []
-        description: 'Tidak terotentikasi'
-      -
-        custom: []
-        status: 401
-        content: |-
-          {
-              "success": false,
-              "code": 401,
-              "message": "Token is Expired"
-          }
-        headers: []
-        description: 'Token expired'
-      -
-        custom: []
-        status: 403
-        content: |-
-          {
-              "success": false,
-              "code": 403,
-              "message": "Forbidden"
-          }
-        headers: []
-        description: 'Tidak memiliki izin'
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - POST
-    uri: 'api/class-sessions/{classSession_id}/assignments/delete'
-    metadata:
-      custom: []
-      groupName: 'Sesi Kelas'
-      groupDescription: 'Endpoint terkait operasi CRUD untuk data sesi kelas, termasuk generate, pembaruan, penghapusan, dan pengambilan data sesi kelas.'
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Hapus Tugas'
-      description: |-
-        Endpoint ini digunakan untuk menghapus tugas pada sesi kelas
-
-        Endpoint ini mendukung multiple delete
-
-        Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
-      authenticated: true
-      deprecated: false
-    headers:
-      Authorization: 'Bearer {JWT here}'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      classSession_id:
-        custom: []
-        name: classSession_id
-        description: 'The ID of the classSession.'
-        required: true
-        example: 019e823d-ec88-71db-87de-c13f24070537
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanUrlParameters:
-      classSession_id: 019e823d-ec88-71db-87de-c13f24070537
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      assignment_uuids:
-        custom: []
-        name: assignment_uuids
-        description: 'Masukkan uuids tugas yang ingin dihapus'
-        required: true
-        example:
-          - 019e33e7-993d-7376-9c5a-c3c8078d697b
-          - 019e33e7-993d-7376-9c5a-c3c8078d697b
-        type: 'string[]'
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanBodyParameters:
-      assignment_uuids:
-        - 019e33e7-993d-7376-9c5a-c3c8078d697b
-        - 019e33e7-993d-7376-9c5a-c3c8078d697b
-    fileParameters: []
-    responses:
-      -
-        custom: []
-        status: 200
-        content: |-
-          {
-              "success": true,
-              "message": "Data deleted successfully",
-              "code": 200,
-              "deleted_count": 2
-          }
-        headers: []
-        description: 'Sukses menghapus tugas'
       -
         custom: []
         status: 401

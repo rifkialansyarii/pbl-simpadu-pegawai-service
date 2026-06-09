@@ -39,8 +39,20 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
+      search:
+        custom: []
+        name: search
+        description: 'Kata kunci pencarian, required: false, Pencarian berdasarkan nama pegawai, NIP, atau NIK'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
     cleanQueryParameters:
       page: 16
+      search: architecto
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -59,7 +71,7 @@ endpoints:
                       "nip": "350661066055483856",
                       "nik": "7406980408239916",
                       "employee_name": "Salimah Zulaika",
-                      "study_program_id": "123e4567-e89b-12d3-a456-426614174000",
+                      "study_program_id": "1",
                       "study_program_name": "teknik-listrik",
                       "address": "Jln. Elang No. 856, Sabang 82360, Papua",
                       "birth_place": "Batam",
@@ -249,7 +261,7 @@ endpoints:
                   "nip": "350661066055483856",
                   "nik": "7406980408239916",
                   "employee_name": "Salimah Zulaika",
-                  "study_program_id": "123e4567-e89b-12d3-a456-426614174000",
+                  "study_program_id": "1",
                   "study_program_name": "teknik-listrik",
                   "address": "Jln. Elang No. 856, Sabang 82360, Papua",
                   "birth_place": "Batam",
@@ -470,10 +482,10 @@ endpoints:
       study_program_id:
         custom: []
         name: study_program_id
-        description: 'UUID Program Studi'
+        description: 'ID Program Studi'
         required: false
-        example: 123e4567-e89b-12d3-a456-426614174000
-        type: string
+        example: '1'
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
@@ -603,7 +615,7 @@ endpoints:
       nip: '691651594659009703'
       nik: '1801160204072477'
       employee_name: 'John Doe'
-      study_program_id: 123e4567-e89b-12d3-a456-426614174000
+      study_program_id: '1'
       study_program_name: teknik-listrik
       address: 'Gg. Casablanca No. 249, Administrasi Jakarta Timur 83230, Sulteng'
       birth_place: Jakarta
@@ -630,7 +642,7 @@ endpoints:
                   "nip": "350661066055483856",
                   "nik": "7406980408239916",
                   "employee_name": "Salimah Zulaika",
-                  "study_program_id": "123e4567-e89b-12d3-a456-426614174000",
+                  "study_program_id": "1",
                   "study_program_name": "teknik-listrik",
                   "address": "Jln. Elang No. 856, Sabang 82360, Papua",
                   "birth_place": "Batam",
@@ -718,9 +730,7 @@ endpoints:
       description: |-
         Endpoint bertujuan untuk **mengupdate data pegawai**.
 
-        **dosen** atau **pegawai** hanya dapat mengupdate data **MILIKNYA SENDIRI**.
-
-        admin-pegawai dan super-admin dapat mengupdate data pegawai manapun.
+        Hanya **dosen** yang dapat mengupdate data **MILIKNYA SENDIRI**.
 
         **NOTE**: Ketika dosen atau pegawai mengubah data **NIK**, **NIP** dan **NAMA** miliknya, maka perubahan ini **OTOMATIS DIKIRIMKAN KE ADMIN** dan harus **MENUNGGU ADMIN MENYETUJUI**.
       authenticated: true
@@ -942,7 +952,7 @@ endpoints:
                   "nip": "350661066055483856",
                   "nik": "7406980408239916",
                   "employee_name": "Salimah Zulaika",
-                  "study_program_id": "123e4567-e89b-12d3-a456-426614174000",
+                  "study_program_id": "1",
                   "study_program_name": "teknik-listrik",
                   "address": "Jln. Elang No. 856, Sabang 82360, Papua",
                   "birth_place": "Batam",
@@ -1054,7 +1064,7 @@ endpoints:
         name: employee_id
         description: 'The ID of the employee.'
         required: true
-        example: 019e8239-9705-72f1-8d98-2bb6ac864c01
+        example: 019ea818-108d-7186-bbcd-4135b8623257
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1072,7 +1082,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      employee_id: 019e8239-9705-72f1-8d98-2bb6ac864c01
+      employee_id: 019ea818-108d-7186-bbcd-4135b8623257
       employee: 123e4567-e89b-12d3-a456-426614174000
     queryParameters: []
     cleanQueryParameters: []
