@@ -39,9 +39,9 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
     Route::post('/class-sessions/{classSession}/assignments', [StudentAssignmentController::class, 'storeStudentAssignment'])->middleware('can:createAssignment,classSession');
     Route::post('/class-sessions/{classSession}/assignments/delete', [StudentAssignmentController::class, 'destroyStudentAssignment'])->middleware('can:deleteAssignment,classSession');
 
-    Route::get('/assignments/pending', [StudentAssignmentController::class, 'showPendingSubmission']);
-    Route::post('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'store']);
-    Route::delete('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'destroy']);
+    Route::get('/assignments/pending', [StudentAssignmentController::class, 'showPendingSubmission'])->middleware('can:viewPending, App\Models\StudentAssignment');
+    Route::post('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'store'])->middleware('can:create,studentAssignment');
+    Route::delete('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'destroy'])->middleware('can:delete,studentAssignment');
 
 
     Route::get('/file-uploads', [FileUploadController::class, 'index'])->middleware('can:viewAny, App\Models\FileUpload');
