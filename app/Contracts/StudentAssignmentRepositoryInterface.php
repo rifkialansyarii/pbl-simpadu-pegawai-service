@@ -7,6 +7,7 @@ use App\Models\User;
 
 interface StudentAssignmentRepositoryInterface
 {
+    public function getPendingSubmission(User $user);
     public function createStudentAssignment(ClassSession $classSession, array $data);
     public function deleteStudentAssignment(array $data);
 

@@ -9,6 +9,7 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\ProvinceController;
 use App\Http\Controllers\StudentAssignmentController;
+use App\Http\Controllers\StudentSubmissionController;
 use App\Http\Controllers\VillageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -38,6 +39,12 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
     Route::post('/class-sessions/{classSession}/assignments', [StudentAssignmentController::class, 'storeStudentAssignment'])->middleware('can:createAssignment,classSession');
     Route::post('/class-sessions/{classSession}/assignments/delete', [StudentAssignmentController::class, 'destroyStudentAssignment'])->middleware('can:deleteAssignment,classSession');
 
+    Route::get('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'index'])->middleware('can:viewAny,studentAssignment');
+    Route::get('/assignments/pending', [StudentSubmissionController::class, 'showPendingSubmission'])->middleware('can:viewPending, App\Models\StudentAssignment');
+    Route::post('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'store'])->middleware('can:create,studentAssignment');
+    Route::delete('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'destroy'])->middleware('can:delete,studentAssignment');
+
+
     Route::get('/file-uploads', [FileUploadController::class, 'index'])->middleware('can:viewAny, App\Models\FileUpload');
     Route::get('/file-uploads/{fileUpload}/download', [FileUploadController::class, 'download'])->middleware('can:download,fileUpload');
     Route::post('/file-uploads', [FileUploadController::class, 'store'])->middleware('can:create, App\Models\FileUpload');
@@ -56,3 +63,4 @@ Route::get('/districts/{cityCode}', [DistrictController::class, 'showByCity']);
 
 Route::get('/villages', [VillageController::class, 'index']);
 Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);
+

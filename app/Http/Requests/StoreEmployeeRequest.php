@@ -14,7 +14,7 @@ use Knuckles\Scribe\Attributes\BodyParam;
 #[BodyParam("nip", "string", "NIP harus unik dan terdiri dari 18 karakter", example: "691651594659009703", required: true)]
 #[BodyParam("nik", "string", "NIK harus unik dan terdiri dari 16 karakter", example: "1801160204072477", required: true)]
 #[BodyParam("employee_name", "string", "Nama pegawai harus diisi", example: "John Doe", required: true)]
-#[BodyParam("study_program_id", "string", "UUID Program Studi", example: "123e4567-e89b-12d3-a456-426614174000", required: false)]
+#[BodyParam("study_program_id", "integer", "ID Program Studi", example: "1", required: false)]
 #[BodyParam("study_program_name", "string", "Nama Program Studi", example: "teknik-listrik", required: false)]
 #[BodyParam("address", "string", "Alamat Pegawai", example: "Gg. Casablanca No. 249, Administrasi Jakarta Timur 83230, Sulteng", required: false)]
 #[BodyParam("birth_place", "string", "Tempat lahir", example: "Jakarta", required: false)]

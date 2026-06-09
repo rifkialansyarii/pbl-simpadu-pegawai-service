@@ -2,11 +2,12 @@
 
 namespace App\Services;
 
-use App\Contracts\StudentAssignmentRepositoryInterface;
 use App\Contracts\StudentSubmissionRepositoryInterface;
-use App\Models\ClassSession;
+use App\Models\StudentAssignment;
 use App\Models\User;
 use DB;
+use Exception;
+use Throwable;
 
 final class StudentSubmissionService
 {
@@ -15,8 +16,30 @@ final class StudentSubmissionService
     ) {
     }
 
-    public function getNotSubmitted(User $user)
+    public function getSubmission(StudentAssignment $studentAssignment)
     {
-        return $this->repository->getNotSubmitted($user);
+        return $this->repository->getAllSubmission($studentAssignment);
+    }
+
+    public function createSubmission(array $attributes, StudentAssignment $studentAssignment, User $user)
+    {
+        return DB::transaction(function () use ($attributes, $studentAssignment, $user) {
+
+            if (!$this->repository->checkIsSubmitted($studentAssignment, $user)) {
+                return $this->repository->createSubmission($attributes, $studentAssignment, $user);
+            } else {
+                throw new Exception("data has been created");
+
+            }
+
+        });
+    }
+
+    public function deleteSubmission(StudentAssignment $studentAssignment, User $user)
+    {
+        return DB::transaction(function () use ($studentAssignment, $user) {
+            return $this->repository->deleteSubmission($studentAssignment, $user);
+
+        });
     }
 }

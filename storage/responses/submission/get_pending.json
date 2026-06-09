@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "message": "Data retrieved successfully",
+    "code": 200,
+    "data": [
+        {
+            "id": "019eab05-cb0b-716c-aeb9-94758d2bfad6",
+            "title": "Tugas Dasar 1",
+            "description": "Kerjakan Tugas Dasar 1",
+            "deadline": "2026-06-15 00:00:00",
+            "created_at": "2026-06-09T06:15:44.000000Z"
+        }
+    ],
+    "meta": []
+}

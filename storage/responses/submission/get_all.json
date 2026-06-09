@@ -1,0 +1,98 @@
+{
+    "success": true,
+    "message": "Data retrieved successfully",
+    "code": 200,
+    "data": [
+        {
+            "id": "019eab3d-b3aa-70b1-b924-a4e91e24adac",
+            "student_id": "019e4305-f045-71c9-a823-7e07b160d9c1",
+            "submitted_at": "2026-06-09 07:16:48",
+            "assignment_id": "019eab05-cb0b-716c-aeb9-94758d2bfad6",
+            "attachment": [
+                {
+                    "id": "019eab28-b0e1-73b2-9066-50516ac59f98",
+                    "original_file_name": "4. Normalisasi Mahasiswa-2.pdf",
+                    "file_size": 514751,
+                    "mime_type": "application/pdf",
+                    "uploaded_at": "2026-06-09T06:53:51.000000Z"
+                }
+            ]
+        },
+        {
+            "id": "019eab3e-84b0-73d3-8074-cd3e2cf02bc1",
+            "student_id": "019e4305-f045-71c9-a823-7e07b160d9c2",
+            "submitted_at": "2026-06-09 07:17:41",
+            "assignment_id": "019eab05-cb0b-716c-aeb9-94758d2bfad6",
+            "attachment": [
+                {
+                    "id": "019eab3e-2f25-7393-9fac-47474a4721bc",
+                    "original_file_name": "4. Normalisasi Mahasiswa-2.pdf",
+                    "file_size": 514751,
+                    "mime_type": "application/pdf",
+                    "uploaded_at": "2026-06-09T07:17:19.000000Z"
+                }
+            ]
+        },
+        {
+            "id": "019eab43-17e8-7328-a358-c401bcaa402e",
+            "student_id": "019e4305-f045-71c9-a823-7e07b160d9c3",
+            "submitted_at": "2026-06-09 07:22:41",
+            "assignment_id": "019eab05-cb0b-716c-aeb9-94758d2bfad6",
+            "attachment": [
+                {
+                    "id": "019eab3e-2f25-7393-9fac-47474a4721bc",
+                    "original_file_name": "4. Normalisasi Mahasiswa-2.pdf",
+                    "file_size": 514751,
+                    "mime_type": "application/pdf",
+                    "uploaded_at": "2026-06-09T07:17:19.000000Z"
+                }
+            ]
+        },
+        {
+            "id": "019eab44-92b9-7119-87a3-1ab1571b435f",
+            "student_id": "019e4305-f045-71c9-a823-7e07b160d9cd",
+            "submitted_at": "2026-06-09 07:24:18",
+            "assignment_id": "019eab05-cb0b-716c-aeb9-94758d2bfad6",
+            "attachment": [
+                {
+                    "id": "019eab3e-2f25-7393-9fac-47474a4721bc",
+                    "original_file_name": "4. Normalisasi Mahasiswa-2.pdf",
+                    "file_size": 514751,
+                    "mime_type": "application/pdf",
+                    "uploaded_at": "2026-06-09T07:17:19.000000Z"
+                }
+            ]
+        },
+        {
+            "id": "019eab46-b54d-713b-a1bf-f93aea1ebfee",
+            "student_id": "019e4305-f045-71c9-a823-7e07b160d9ce",
+            "submitted_at": "2026-06-09 07:26:38",
+            "assignment_id": "019eab05-cb0b-716c-aeb9-94758d2bfad6",
+            "attachment": [
+                {
+                    "id": "019eab3e-2f25-7393-9fac-47474a4721bc",
+                    "original_file_name": "4. Normalisasi Mahasiswa-2.pdf",
+                    "file_size": 514751,
+                    "mime_type": "application/pdf",
+                    "uploaded_at": "2026-06-09T07:17:19.000000Z"
+                }
+            ]
+        },
+        {
+            "id": "019eab95-d698-73af-ba85-2811f660f3a8",
+            "student_id": "019e4305-f045-71c9-a823-7e07b160d9c0",
+            "submitted_at": "2026-06-09 08:53:04",
+            "assignment_id": "019eab05-cb0b-716c-aeb9-94758d2bfad6",
+            "attachment": [
+                {
+                    "id": "019eab95-b250-7195-9cf3-4a84fd4196e0",
+                    "original_file_name": "Modul Flutter Consultation APP.pdf",
+                    "file_size": 940422,
+                    "mime_type": "application/pdf",
+                    "uploaded_at": "2026-06-09T08:52:54.000000Z"
+                }
+            ]
+        }
+    ],
+    "meta": []
+}

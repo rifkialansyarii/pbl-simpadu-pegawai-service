@@ -5,21 +5,22 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AddStudentAssignmentRequest;
 use App\Http\Requests\DeleteStudentAssignmentRequest;
 use App\Http\Resources\ClassSessionResource;
+use App\Http\Resources\StudentAssignmentCollection;
 use App\Models\ClassSession;
 use App\Services\StudentAssignmentService;
 use Exception;
+use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\ResponseFromFile;
 /**
  * 
- * @group Sesi Kelas
- * Endpoint terkait operasi CRUD untuk data sesi kelas, termasuk generate, pembaruan, penghapusan, dan pengambilan data sesi kelas.
+ * @group Tugas
+ * Endpoint terkait operasi CRUD untuk data Tugas, termasuk membuat, penghapusan, pengumpulan dan batal pengumpulan.
  */
 class StudentAssignmentController extends Controller
 {
     public function __construct(private StudentAssignmentService $service)
     {
     }
-
 
     /**
      * Tambah Tugas
@@ -31,7 +32,7 @@ class StudentAssignmentController extends Controller
      * Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
      *  
      */
-    #[ResponseFromFile(file: 'responses/class_sessions/success_add_material.json', status: 200, description: 'Sukses menambahkan materi')]
+    #[ResponseFromFile(file: 'responses/class_sessions/success_add_material.json', status: 201, description: 'Sukses menambahkan materi')]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]

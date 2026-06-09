@@ -37,12 +37,14 @@ class EmployeeFactory extends Factory
             "bisnis-digital",
         ];
 
+        $studyProgramKey = fake()->randomKey($studyProgram);
+
         return [
             'nip' => fake()->numerify('##################'),
             'nik' => fake()->nik(),
             'employee_name' => fake()->name(),
-            'study_program_id' => fake()->uuid(),
-            'study_program_name' => fake()->randomElement($studyProgram),
+            'study_program_id' => $studyProgramKey,
+            'study_program_name' => $studyProgram[$studyProgramKey],
             'address' => fake()->address(),
             'birth_place' => fake()->city(),
             'birth_date' => fake()->dateTimeBetween(startDate: '-30 years', endDate: '-20 years'),

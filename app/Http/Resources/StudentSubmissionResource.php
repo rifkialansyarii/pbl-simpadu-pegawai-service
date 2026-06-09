@@ -18,6 +18,9 @@ class StudentSubmissionResource extends JsonResource
             "id" => (string) $this->id,
             "student_id" => $this->student_id,
             "submitted_at" => $this->submitted_at,
+            "assignment_id" => $this->assignment_id,
+            "assignment" => StudentAssignmentResource::make($this->whenLoaded('assignment')),
+            "attachment" => FileUploadCollection::make($this->whenLoaded('submissionFiles')),
         ];
     }
 

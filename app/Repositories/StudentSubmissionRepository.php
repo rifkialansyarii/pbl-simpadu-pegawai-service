@@ -4,17 +4,45 @@ namespace App\Repositories;
 
 use App\Contracts\StudentSubmissionRepositoryInterface;
 use App\Models\StudentAssignment;
+use App\Models\StudentSubmission;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 
 class StudentSubmissionRepository implements StudentSubmissionRepositoryInterface
 {
-    public function getNotSubmitted(User $user)
+
+    public function getAllSubmission(StudentAssignment $studentAssignment)
     {
-        $submissions = StudentAssignment::whereHas('classSession', function (Builder $query) use ($user) {
-            $query->where('class_id', $user->class_id);
-        });
+        $submission = StudentSubmission::where('assignment_id', $studentAssignment->id)->get();
+        $submission->load('submissionFiles');
+        return $submission;
+    }
 
+    public function createSubmission(array $attributes, StudentAssignment $studentAssignment, User $user)
+    {
+        $submission = StudentSubmission::create([
+            'assignment_id' => $studentAssignment->id,
+            'student_id' => $user->detail_id,
+            'submitted_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
 
+        $submission->submissionFiles()->syncWithoutDetaching($attributes['file_uuids']);
+
+        $submission->load(['submissionFiles', 'assignment']);
+
+        return $submission;
+    }
+
+    public function checkIsSubmitted(StudentAssignment $studentAssignment, User $user): bool
+    {
+        return StudentSubmission::where('assignment_id', $studentAssignment->id)
+            ->where('student_id', $user->detail_id)
+            ->exists();
+    }
+
+    public function deleteSubmission(StudentAssignment $studentAssignment, User $user)
+    {
+        StudentSubmission::where('assignment_id', $studentAssignment->id)->where('student_id', $user->detail_id)->delete();
     }
 }
