@@ -14,13 +14,13 @@ final class ChangeRequestService
     ) {
     }
 
-    public function getAllChangeRequest(User $user)
+    public function getAllChangeRequest(User $user, array $filters = [])
     {
         if ($user->role === 'admin-pegawai') {
-            return $this->repository->getAll();
+            return $this->repository->getAll($filters);
         }
 
-        return $this->repository->getAllByUser($user);
+        return $this->repository->getAllByUser($user, $filters);
     }
 
     public function updateChangeRequest(ChangeRequest $changeRequest, array $attributes)
