@@ -51,6 +51,7 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
     Route::post('/file-uploads', [FileUploadController::class, 'store'])->middleware('can:create, App\Models\FileUpload');
     Route::post('/file-uploads/delete', [FileUploadController::class, 'destroy'])->middleware('can:delete, App\Models\FileUpload');
 
+    Route::get('grade-settings', [GradeSettingController::class, 'index']);
     Route::post('grade-settings', [GradeSettingController::class, 'store']);
 
 
@@ -67,3 +68,4 @@ Route::get('/districts/{cityCode}', [DistrictController::class, 'showByCity']);
 
 Route::get('/villages', [VillageController::class, 'index']);
 Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);
+

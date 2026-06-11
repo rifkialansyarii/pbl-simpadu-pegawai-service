@@ -14,6 +14,16 @@ class GradeSettingController extends Controller
     public function __construct(private GradeSettingService $service) {
     }
 
+    public function index(Request $request)
+    {
+        $gradeSettingCollection = new GradeSettingCollection($this->service->getAllSetting($request->user()));
+        return $gradeSettingCollection->additional([
+            'success' => true,
+            'message' => 'Data retrieved successfully',
+            'code' => 200,
+        ]);
+    }
+
     public function store(StoreGradeSettingRequest $request)
     {
         try {

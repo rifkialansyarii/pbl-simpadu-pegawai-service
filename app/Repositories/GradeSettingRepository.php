@@ -8,7 +8,24 @@ use App\Models\User;
 
 class GradeSettingRepository implements GradeSettingRepositoryInterface
 {
-    public function createSettings(array $attributes = [], User $user)
+    public function getAllSetting(User $user)
+    {
+        $gradeSettings = GradeSetting::select([
+            'id',
+            'lecturer_id',
+            'course_code',
+            'course_name',
+            'assignment',
+            'uts',
+            'uas',
+        ])->where('lecturer_id', $user->detail_id)->get();
+
+        $gradeSettings->load(['lecturer']);
+
+        return $gradeSettings;
+    }
+    
+    public function createSetting(array $attributes = [], User $user)
     {
         $attributes['lecturer_id'] = $user->detail_id;
         
