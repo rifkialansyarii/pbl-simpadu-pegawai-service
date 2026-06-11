@@ -190,4 +190,9 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
     {
         $classSession->learningMaterials()->detach($data);
     }
+
+    public function searchData(array $filters = [], $classSession)
+    {
+
+    }
 }

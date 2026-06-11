@@ -76,4 +76,9 @@ class Employee extends Model
         return $this->hasMany(ClassSession::class);
     }
 
+    public function gradeSettings(): HasMany
+    {
+        return $this->hasMany(GradeSetting::class);
+    }
+
 }

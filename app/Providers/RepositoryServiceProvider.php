@@ -9,6 +9,7 @@ use App\Contracts\CountryRepositoryInterface;
 use App\Contracts\DistrictRepositoryInterface;
 use App\Contracts\EmployeeRepositoryInterface;
 use App\Contracts\FileUploadRepositoryInterface;
+use App\Contracts\GradeSettingRepositoryInterface;
 use App\Contracts\ProvinceRepositoryInterface;
 use App\Contracts\StudentAssignmentRepositoryInterface;
 use App\Contracts\StudentSubmissionRepositoryInterface;
@@ -20,6 +21,7 @@ use App\Repositories\CountryRepository;
 use App\Repositories\DistrictRepository;
 use App\Repositories\EmployeeRepository;
 use App\Repositories\FileUploadRepository;
+use App\Repositories\GradeSettingRepository;
 use App\Repositories\ProvinceRepository;
 use App\Repositories\StudentAssignmentRepository;
 use App\Repositories\StudentSubmissionRepository;
@@ -44,6 +46,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(FileUploadRepositoryInterface::class, FileUploadRepository::class);
         $this->app->bind(StudentAssignmentRepositoryInterface::class, StudentAssignmentRepository::class);
         $this->app->bind(StudentSubmissionRepositoryInterface::class, StudentSubmissionRepository::class);
+        $this->app->bind(GradeSettingRepositoryInterface::class, GradeSettingRepository::class);
     }
 
     /**
