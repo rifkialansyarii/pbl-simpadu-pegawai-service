@@ -2,13 +2,14 @@
 
 namespace App\Http\Requests;
 
+use App\Models\GradeSetting;
 use Illuminate\Contracts\Validation\ValidationRule;
-use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Validation\Rule;
 
-class StoreGradeSettingRequest extends FormRequest
+class UpdateGradeSettingRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,14 +27,16 @@ class StoreGradeSettingRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'course_code' => ['string', 'max:10', 'min:1'],
+            'course_code' => [
+                'string',
+                'max:10',
+                'min:1',
+                Rule::unique(GradeSetting::class)->ignore($this->route('gradeSetting')),
+            ],
             'course_name' => [
                 'string',
                 'max:100',
-                Rule::unique('grade_settings')
-                    ->where(function ($query) {
-                        return $query->where('course_code', $this->course_code);
-                    })
+                Rule::unique(GradeSetting::class)->ignore($this->route('gradeSetting'))
             ],
             'assignment' => ['integer', 'min:1', 'max:100'],
             'uts' => ['integer', 'min:1', 'max:100'],

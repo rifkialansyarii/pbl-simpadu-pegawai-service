@@ -35,4 +35,15 @@ class GradeSettingRepository implements GradeSettingRepositoryInterface
 
         return $gradeSetting;
     }   
+
+    public function updateSetting(array $attributes = [], User $user, GradeSetting $gradeSetting)
+    {
+        $attributes['lecturer_id'] = $user->detail_id;
+        
+        $gradeSetting->update($attributes);
+
+        $gradeSetting->load(['lecturer']);
+
+        return $gradeSetting;
+    }   
 }

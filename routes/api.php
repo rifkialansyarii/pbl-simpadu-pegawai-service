@@ -53,6 +53,7 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
 
     Route::get('grade-settings', [GradeSettingController::class, 'index']);
     Route::post('grade-settings', [GradeSettingController::class, 'store']);
+    Route::put('grade-settings/{gradeSetting}', [GradeSettingController::class, 'update']);
 
 
 });
