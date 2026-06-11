@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\FilterChangeRequest;
 use App\Http\Requests\UpdateChangeRequest;
 use App\Http\Resources\ChangeRequestCollection;
 use App\Http\Resources\ChangeRequestResource;
 use App\Models\ChangeRequest;
 use App\Services\ChangeRequestService;
+use Exception;
 use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\Endpoint;
 use Knuckles\Scribe\Attributes\QueryParam;
@@ -44,14 +46,37 @@ class ChangeRequestController extends Controller
     )]
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
-    public function index(Request $request)
+    public function index(FilterChangeRequest $request)
     {
-        $changeRequestCollection = new ChangeRequestCollection($this->service->getAllChangeRequest($request->user()));
-        return $changeRequestCollection->additional([
-            'success' => true,
-            'code' => 200,
-            'message' => 'Data retrieved successfully',
-        ]);
+        try {
+            $filters = $request->validated();
+
+            $changeRequestCollection = new ChangeRequestCollection($this->service->getAllChangeRequest($request->user(), $filters));
+            return $changeRequestCollection->additional([
+                'success' => true,
+                'code' => 200,
+                'message' => 'Data retrieved successfully',
+            ]);
+
+        } catch (Exception $e) {
+            $isDebug = config('app.debug');
+
+            $response = [
+                'success' => false,
+                'message' => 'an error occurred while processing',
+                'code' => 500,
+                'errrors' => $e->getMessage()
+            ];
+
+            if ($isDebug) {
+                $response['errors'] = $e->getMessage();
+                $response['trace'] = $e->getTrace();
+            }
+
+            return response()->json($response, 500);
+        }
+
+
     }
 
 

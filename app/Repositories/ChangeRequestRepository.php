@@ -8,7 +8,7 @@ use App\Models\User;
 
 class ChangeRequestRepository implements ChangeRequestRepositoryInterface
 {
-    public function getAll()
+    public function getAll(array $filters = [])
     {
         $changeRequest = ChangeRequest::select([
             'id',
@@ -17,14 +17,18 @@ class ChangeRequestRepository implements ChangeRequestRepositoryInterface
             'old_value',
             'new_value',
             'status',
-        ])->latest()->paginate(10);
+        ]);
 
-        $changeRequest->load(['employee.village', 'employee.district', 'employee.city', 'employee.province', 'employee.citizen']);
+        $changeRequest = $this->filterData($filters, $changeRequest);
+
+        $changeRequest = $changeRequest->latest()->paginate(10);
+
+        $changeRequest->load(['employee']);
 
         return $changeRequest;
     }
 
-    public function getAllByUser(User $user)
+    public function getAllByUser(User $user, array $filters = [])
     {
         $userChangeRequest = ChangeRequest::select([
             'id',
@@ -33,9 +37,14 @@ class ChangeRequestRepository implements ChangeRequestRepositoryInterface
             'old_value',
             'new_value',
             'status',
-        ])->latest()->where('employee_id', $user->id)->paginate(10);
+        ])->where('employee_id', $user->detail_id);
+
+        $userChangeRequest = $this->filterData($filters, $userChangeRequest);
+        
+        $userChangeRequest = $userChangeRequest->latest()->paginate(10);
 
         $userChangeRequest->load(['employee']);
+
         return $userChangeRequest;
     }
 
@@ -59,6 +68,15 @@ class ChangeRequestRepository implements ChangeRequestRepositoryInterface
 
         return $totalPendingChangeRequest;
     }
+
+    public function filterData(array $filters = [], $changeRequest){
+
+        if(isset($filters['status'])){
+            $changeRequest->where('status', $filters['status']);
+        }
+        return $changeRequest;
+    }
+
 
     public function create(array $attributes)
     {
