@@ -848,7 +848,7 @@
 
         </div>
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
-            Last updated: June 9, 2026
+            Last updated: June 11, 2026
         </div>
 
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
@@ -1939,7 +1939,7 @@ access-control-allow-origin: *</code></pre>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/phpgltn4834laq4fOoMoiM
+                        /tmp/phpveea0b834chjdaMnIaa
                     </div>
                 </div>
             </div>
@@ -2171,7 +2171,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "files=@/tmp/phpgltn4834laq4fOoMoiM" </code></pre>                                        </div>
+    --form "files=@/tmp/phpveea0b834chjdaMnIaa" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -13407,13 +13407,6 @@ fetch(url, {
             &quot;student_id&quot;: &quot;019e4305-f045-71c9-a823-7e07b160d9c1&quot;,
             &quot;submitted_at&quot;: &quot;2026-06-09 07:16:48&quot;,
             &quot;assignment_id&quot;: &quot;019eab05-cb0b-716c-aeb9-94758d2bfad6&quot;,
-            &quot;assignment&quot;: {
-                &quot;id&quot;: &quot;019eab05-cb0b-716c-aeb9-94758d2bfad6&quot;,
-                &quot;title&quot;: &quot;Tugas Dasar 1&quot;,
-                &quot;description&quot;: &quot;Kerjakan Tugas Dasar 1&quot;,
-                &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
-                &quot;created_at&quot;: &quot;2026-06-09T06:15:44.000000Z&quot;
-            },
             &quot;attachment&quot;: [
                 {
                     &quot;id&quot;: &quot;019eab28-b0e1-73b2-9066-50516ac59f98&quot;,
@@ -13429,13 +13422,6 @@ fetch(url, {
             &quot;student_id&quot;: &quot;019e4305-f045-71c9-a823-7e07b160d9c2&quot;,
             &quot;submitted_at&quot;: &quot;2026-06-09 07:17:41&quot;,
             &quot;assignment_id&quot;: &quot;019eab05-cb0b-716c-aeb9-94758d2bfad6&quot;,
-            &quot;assignment&quot;: {
-                &quot;id&quot;: &quot;019eab05-cb0b-716c-aeb9-94758d2bfad6&quot;,
-                &quot;title&quot;: &quot;Tugas Dasar 1&quot;,
-                &quot;description&quot;: &quot;Kerjakan Tugas Dasar 1&quot;,
-                &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
-                &quot;created_at&quot;: &quot;2026-06-09T06:15:44.000000Z&quot;
-            },
             &quot;attachment&quot;: [
                 {
                     &quot;id&quot;: &quot;019eab3e-2f25-7393-9fac-47474a4721bc&quot;,
@@ -13451,13 +13437,6 @@ fetch(url, {
             &quot;student_id&quot;: &quot;019e4305-f045-71c9-a823-7e07b160d9c3&quot;,
             &quot;submitted_at&quot;: &quot;2026-06-09 07:22:41&quot;,
             &quot;assignment_id&quot;: &quot;019eab05-cb0b-716c-aeb9-94758d2bfad6&quot;,
-            &quot;assignment&quot;: {
-                &quot;id&quot;: &quot;019eab05-cb0b-716c-aeb9-94758d2bfad6&quot;,
-                &quot;title&quot;: &quot;Tugas Dasar 1&quot;,
-                &quot;description&quot;: &quot;Kerjakan Tugas Dasar 1&quot;,
-                &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
-                &quot;created_at&quot;: &quot;2026-06-09T06:15:44.000000Z&quot;
-            },
             &quot;attachment&quot;: [
                 {
                     &quot;id&quot;: &quot;019eab3e-2f25-7393-9fac-47474a4721bc&quot;,
@@ -13473,13 +13452,6 @@ fetch(url, {
             &quot;student_id&quot;: &quot;019e4305-f045-71c9-a823-7e07b160d9cd&quot;,
             &quot;submitted_at&quot;: &quot;2026-06-09 07:24:18&quot;,
             &quot;assignment_id&quot;: &quot;019eab05-cb0b-716c-aeb9-94758d2bfad6&quot;,
-            &quot;assignment&quot;: {
-                &quot;id&quot;: &quot;019eab05-cb0b-716c-aeb9-94758d2bfad6&quot;,
-                &quot;title&quot;: &quot;Tugas Dasar 1&quot;,
-                &quot;description&quot;: &quot;Kerjakan Tugas Dasar 1&quot;,
-                &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
-                &quot;created_at&quot;: &quot;2026-06-09T06:15:44.000000Z&quot;
-            },
             &quot;attachment&quot;: [
                 {
                     &quot;id&quot;: &quot;019eab3e-2f25-7393-9fac-47474a4721bc&quot;,
@@ -13495,13 +13467,6 @@ fetch(url, {
             &quot;student_id&quot;: &quot;019e4305-f045-71c9-a823-7e07b160d9ce&quot;,
             &quot;submitted_at&quot;: &quot;2026-06-09 07:26:38&quot;,
             &quot;assignment_id&quot;: &quot;019eab05-cb0b-716c-aeb9-94758d2bfad6&quot;,
-            &quot;assignment&quot;: {
-                &quot;id&quot;: &quot;019eab05-cb0b-716c-aeb9-94758d2bfad6&quot;,
-                &quot;title&quot;: &quot;Tugas Dasar 1&quot;,
-                &quot;description&quot;: &quot;Kerjakan Tugas Dasar 1&quot;,
-                &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
-                &quot;created_at&quot;: &quot;2026-06-09T06:15:44.000000Z&quot;
-            },
             &quot;attachment&quot;: [
                 {
                     &quot;id&quot;: &quot;019eab3e-2f25-7393-9fac-47474a4721bc&quot;,
@@ -13517,13 +13482,6 @@ fetch(url, {
             &quot;student_id&quot;: &quot;019e4305-f045-71c9-a823-7e07b160d9c0&quot;,
             &quot;submitted_at&quot;: &quot;2026-06-09 08:53:04&quot;,
             &quot;assignment_id&quot;: &quot;019eab05-cb0b-716c-aeb9-94758d2bfad6&quot;,
-            &quot;assignment&quot;: {
-                &quot;id&quot;: &quot;019eab05-cb0b-716c-aeb9-94758d2bfad6&quot;,
-                &quot;title&quot;: &quot;Tugas Dasar 1&quot;,
-                &quot;description&quot;: &quot;Kerjakan Tugas Dasar 1&quot;,
-                &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
-                &quot;created_at&quot;: &quot;2026-06-09T06:15:44.000000Z&quot;
-            },
             &quot;attachment&quot;: [
                 {
                     &quot;id&quot;: &quot;019eab95-b250-7195-9cf3-4a84fd4196e0&quot;,
@@ -15153,6 +15111,50 @@ fetch(url, {
     <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
         <div class="sl-flex sl-items-center sl-max-w-full">
                                         <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">status</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Filter by status. The <code>status</code> of an existing record in the change_requests table. Must not be greater than 20 characters.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        approved
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                            <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">search</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Search by nip, nik, nama. Must not be greater than 30 characters.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        john doe
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                            <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">page</div>
                                             <span class="sl-truncate sl-text-muted">integer</span>
                                     </div>
@@ -15293,6 +15295,32 @@ fetch(url, {
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
                                                                                             <label aria-hidden="true"
+                                       for="queryparam-GETapi-change-requests-status">status</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                                                                    <input aria-label="status" name="status"
+                                                   id="queryparam-GETapi-change-requests-status"
+                                                   placeholder="Filter by status. The &lt;code&gt;status&lt;/code&gt; of an existing record in the change_requests table. Must not be greater than 20 characters."
+                                                   value="approved" data-component="query"
+                                                   class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
+                                            >
+                                                                            </div>
+                                </div>
+                                                                                            <label aria-hidden="true"
+                                       for="queryparam-GETapi-change-requests-search">search</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                                                                    <input aria-label="search" name="search"
+                                                   id="queryparam-GETapi-change-requests-search"
+                                                   placeholder="Search by nip, nik, nama. Must not be greater than 30 characters."
+                                                   value="john doe" data-component="query"
+                                                   class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
+                                            >
+                                                                            </div>
+                                </div>
+                                                                                            <label aria-hidden="true"
                                        for="queryparam-GETapi-change-requests-page">page</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
@@ -15396,7 +15424,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:1234/api/change-requests?page=16" \
+    --get "http://localhost:1234/api/change-requests?status=approved&amp;search=john+doe&amp;page=16" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -15411,6 +15439,8 @@ You can check the Dev Tools console for debugging information.</p>
 );
 
 const params = {
+    "status": "approved",
+    "search": "john doe",
     "page": "16",
 };
 Object.keys(params)
@@ -16761,7 +16791,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        approved
+                        rejected
                     </div>
                 </div>
             </div>
@@ -16936,7 +16966,7 @@ fetch(url, {
                                      id="json-body-PUTapi-change-requests--changeRequest_id-"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "status": "approved"
+    "status": "rejected"
 }</div>
                             </div>
                                             </div>
@@ -17033,7 +17063,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"status\": \"approved\"
+    \"status\": \"rejected\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -17053,7 +17083,7 @@ const headers = {
 };
 
 let body = {
-    "status": "approved"
+    "status": "rejected"
 };
 
 fetch(url, {

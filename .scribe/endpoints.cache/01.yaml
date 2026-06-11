@@ -34,6 +34,28 @@ endpoints:
     urlParameters: []
     cleanUrlParameters: []
     queryParameters:
+      status:
+        custom: []
+        name: status
+        description: 'Filter by status. The <code>status</code> of an existing record in the change_requests table. Must not be greater than 20 characters.'
+        required: false
+        example: approved
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      search:
+        custom: []
+        name: search
+        description: 'Search by nip, nik, nama. Must not be greater than 30 characters.'
+        required: false
+        example: 'john doe'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
       page:
         custom: []
         name: page
@@ -46,6 +68,8 @@ endpoints:
         nullable: false
         deprecated: false
     cleanQueryParameters:
+      status: approved
+      search: 'john doe'
       page: 16
     bodyParameters: []
     cleanBodyParameters: []
@@ -589,7 +613,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: approved
+        example: rejected
         type: string
         enumValues:
           - pending
@@ -599,7 +623,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanBodyParameters:
-      status: approved
+      status: rejected
     fileParameters: []
     responses:
       -
