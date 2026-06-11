@@ -19,7 +19,13 @@ class ChangeRequestRepository implements ChangeRequestRepositoryInterface
             'status',
         ]);
 
-        $changeRequest = $this->filterData($filters, $changeRequest);
+        if(isset($filters['status'])){
+            $changeRequest = $this->filterData($filters, $changeRequest);        
+        }
+
+        if(isset($filters['search'])){
+            $changeRequest = $this->searchData($filters, $changeRequest);
+        }
 
         $changeRequest = $changeRequest->latest()->paginate(10);
 
@@ -38,9 +44,15 @@ class ChangeRequestRepository implements ChangeRequestRepositoryInterface
             'new_value',
             'status',
         ])->where('employee_id', $user->detail_id);
-
-        $userChangeRequest = $this->filterData($filters, $userChangeRequest);
         
+        if(isset($filters['status'])){
+            $userChangeRequest = $this->filterData($filters, $userChangeRequest);        
+        }
+
+        if(isset($filters['search'])){
+            $userChangeRequest = $this->searchData($filters, $userChangeRequest);
+        }
+
         $userChangeRequest = $userChangeRequest->latest()->paginate(10);
 
         $userChangeRequest->load(['employee']);
@@ -73,6 +85,18 @@ class ChangeRequestRepository implements ChangeRequestRepositoryInterface
 
         if(isset($filters['status'])){
             $changeRequest->where('status', $filters['status']);
+        }
+        return $changeRequest;
+    }
+
+    public function searchData(array $filters = [], $changeRequest)
+    {
+        $keyword = $filters['search'];
+        if(isset($keyword)){
+            $changeRequest->when($keyword, function($query, $keyword){
+                return $query->where('old_value', 'like', "%{$keyword}%")
+                            ->orWhere('new_value', 'like', "{$keyword}");
+            });
         }
         return $changeRequest;
     }

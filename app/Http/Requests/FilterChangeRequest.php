@@ -23,7 +23,8 @@ class FilterChangeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'status' => ['sometimes', 'string', 'exists:change_requests,status'],
+            'status' => ['sometimes', 'string', 'exists:change_requests,status', 'max:20'],
+            'search' => ['sometimes', 'string', 'max:30'],
         ];
     }
 }
