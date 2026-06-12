@@ -18,6 +18,15 @@ final class GradeSettingService
         return $this->repository->getAllSetting($user);
     }
 
+    public function getByField(string $fieldName, array $attribute)
+    {
+        $field = [
+            $fieldName => $attribute["$fieldName"]
+        ];
+
+        return $this->repository->getByField($field);
+    }
+
     public function createSetting(array $attributes = [], User $user)
     {
         return DB::transaction(function () use ($attributes, $user) {

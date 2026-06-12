@@ -6,11 +6,8 @@ use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
-use Knuckles\Scribe\Attributes\QueryParam;
 
-#[QueryParam("page", "status", "Filter berdasarakan status verifikasi, required: false")]
-#[QueryParam("page", "search", "Pencarian berdasarkan nip, nik, nama, required: false")]
-class FilterChangeRequest extends FormRequest
+class downloadTemplateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,22 +25,14 @@ class FilterChangeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'status' => ['sometimes', 'string', 'exists:change_requests,status', 'max:20'],
-            'search' => ['sometimes', 'string', 'max:30'],
-        ];
-    }
-
-    public function queryParameters()
-    {
-        return [
-            'status' => [
-                'description' => 'Filter by status',
-                'example' => 'approved',
-            ],
-            'search' => [
-                'description' => 'Search by nip, nik, nama',
-                'example' => 'john doe',
-            ],
+            'students' => ['required', 'array', 'min:1'],
+            'students.*.student_id' => ['required', 'string', 'size:36'],
+            'students.*.nim' => ['required', 'string', 'max:10'],
+            'students.*.name' => ['required', 'string', 'max:255'],
+            'course_code' => ['required', 'string', 'max:10'],
+            'course_name' => ['required', 'string', 'max:255'],
+            'class_id' => ['required', 'string', 'size:36'],
+            'class_name' => ['required', 'string', 'max:255'],
         ];
     }
 

@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Contracts\ClassSessionRepositoryInterface;
 use App\Models\ClassSession;
+use App\Models\StudentAssignment;
 
 class ClassSessionRepository implements ClassSessionRepositoryInterface
 {
@@ -139,6 +140,15 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
         $classSession->load(['lecturer', 'learningMaterials']);
 
         return $classSession;
+    }
+
+    public function getAssignmentByCourse(array $attributes)
+    {
+        $sessionIds = ClassSession::where('course_code', $attributes['course_code'])->pluck('id');
+
+        $assignments = StudentAssignment::whereIn('class_session_id', $sessionIds)->get();
+
+        return $assignments;
     }
 
     public function generate(array $data, $sessionAmount)

@@ -38,6 +38,11 @@ final class ClassSessionService
         return $this->repository->getByPengampu($pengampuId);
     }
 
+    public function getAssignmentByCourse(array $attributes)
+    {
+        return $this->repository->getAssignmentByCourse($attributes);
+    }
+
     public function generateClassSession(array $attributes)
     {
         $data = array();

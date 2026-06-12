@@ -24,6 +24,12 @@ class GradeSettingRepository implements GradeSettingRepositoryInterface
 
         return $gradeSettings;
     }
+
+    public function getByField(array $field)
+    {
+        $key = array_keys($field);
+        return GradeSetting::where($key[0], $field[$key[0]])->first();
+    }
     
     public function createSetting(array $attributes = [], User $user)
     {
