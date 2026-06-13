@@ -1,5 +1,5 @@
-name: Endpoints
-description: ''
+name: 'Setting Nilai'
+description: 'Endpoint terkait operasi CRUD untuk data Setting nilai.'
 endpoints:
   -
     custom: []
@@ -8,12 +8,15 @@ endpoints:
     uri: api/grade-settings
     metadata:
       custom: []
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: 'Setting Nilai'
+      groupDescription: 'Endpoint terkait operasi CRUD untuk data Setting nilai.'
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Ambil Semua Data Aturan Nilai'
+      description: |-
+        Endpoint ini digunakan untuk mengambil semua data aturan nilai
+
+        Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
       authenticated: true
       deprecated: false
     headers:
@@ -30,16 +33,76 @@ endpoints:
     responses:
       -
         custom: []
-        status: 500
+        status: 201
         content: |-
           {
-              "message": "Server Error"
+              "success": true,
+              "message": "Data retrieved successfully",
+              "code": 200,
+              "data": [
+                  {
+                      "id": "019ebf13-f4ef-7224-81d9-15e2cfc26ef1",
+                      "course_code": "mk-kl1-001",
+                      "course_name": "Kalkulus I",
+                      "assignment": "5.00",
+                      "uts": "45.00",
+                      "uas": "50.00",
+                      "lecturer_id": "019ebef9-13de-7320-807c-9e624eedc4cf",
+                      "lecturer": {
+                          "id": "019ebef9-13de-7320-807c-9e624eedc4cf",
+                          "nip": "613603008739246341",
+                          "nik": "3214925301111133",
+                          "employee_name": "Nadia Usada",
+                          "address": "Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung",
+                          "birth_place": "Sibolga",
+                          "birth_date": "1999-01-08",
+                          "gender": "female",
+                          "phone_number": "085552818314",
+                          "village_code": "3205332006",
+                          "district_code": "320533",
+                          "city_code": "3205",
+                          "province_code": "32",
+                          "citizen_code": "32"
+                      }
+                  }
+              ],
+              "meta": []
           }
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
+        headers: []
+        description: 'Sukses mengambil aturan nilai'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "You are not logged in"
+          }
+        headers: []
+        description: 'Tidak terotentikasi'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "Token is Expired"
+          }
+        headers: []
+        description: 'Token expired'
+      -
+        custom: []
+        status: 403
+        content: |-
+          {
+              "success": false,
+              "code": 403,
+              "message": "Forbidden"
+          }
+        headers: []
+        description: 'Tidak memiliki izin'
     responseFields: []
     auth:
       - headers
@@ -55,12 +118,15 @@ endpoints:
     uri: api/grade-settings
     metadata:
       custom: []
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: 'Setting Nilai'
+      groupDescription: 'Endpoint terkait operasi CRUD untuk data Setting nilai.'
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Buat Aturan Nilai'
+      description: |-
+        Endpoint ini digunakan untuk membuat aturan nilai
+
+        Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
       authenticated: true
       deprecated: false
     headers:
@@ -134,7 +200,76 @@ endpoints:
       uts: 18
       uas: 8
     fileParameters: []
-    responses: []
+    responses:
+      -
+        custom: []
+        status: 201
+        content: |-
+          {
+              "success": true,
+              "message": "Data created successfully",
+              "code": 201,
+              "data": {
+                  "id": "019ebf13-f4ef-7224-81d9-15e2cfc26ef1",
+                  "course_code": "mk-kl1-001",
+                  "course_name": "Kalkulus I",
+                  "assignment": 20,
+                  "uts": 30,
+                  "uas": 50,
+                  "lecturer_id": "019ebef9-13de-7320-807c-9e624eedc4cf",
+                  "lecturer": {
+                      "id": "019ebef9-13de-7320-807c-9e624eedc4cf",
+                      "nip": "613603008739246341",
+                      "nik": "3214925301111133",
+                      "employee_name": "Nadia Usada",
+                      "address": "Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung",
+                      "birth_place": "Sibolga",
+                      "birth_date": "1999-01-08",
+                      "gender": "female",
+                      "phone_number": "085552818314",
+                      "village_code": "3205332006",
+                      "district_code": "320533",
+                      "city_code": "3205",
+                      "province_code": "32",
+                      "citizen_code": "32"
+                  }
+              }
+          }
+        headers: []
+        description: 'Sukses membuat aturan nilai'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "You are not logged in"
+          }
+        headers: []
+        description: 'Tidak terotentikasi'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "Token is Expired"
+          }
+        headers: []
+        description: 'Token expired'
+      -
+        custom: []
+        status: 403
+        content: |-
+          {
+              "success": false,
+              "code": 403,
+              "message": "Forbidden"
+          }
+        headers: []
+        description: 'Tidak memiliki izin'
     responseFields: []
     auth:
       - headers
@@ -150,12 +285,15 @@ endpoints:
     uri: 'api/grade-settings/{gradeSetting_id}'
     metadata:
       custom: []
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: 'Setting Nilai'
+      groupDescription: 'Endpoint terkait operasi CRUD untuk data Setting nilai.'
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Update Aturan Nilai'
+      description: |-
+        Endpoint ini digunakan untuk update aturan nilai
+
+        Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
       authenticated: true
       deprecated: false
     headers:
@@ -241,235 +379,76 @@ endpoints:
       uts: 18
       uas: 8
     fileParameters: []
-    responses: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - POST
-    uri: api/grade-exports
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      deprecated: false
-    headers:
-      Authorization: 'Bearer {JWT here}'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      students:
+    responses:
+      -
         custom: []
-        name: students
-        description: 'Must have at least 1 items.'
-        required: true
-        example:
-          - []
-        type: 'object[]'
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      course_code:
+        status: 201
+        content: |-
+          {
+              "success": true,
+              "message": "Data created successfully",
+              "code": 201,
+              "data": {
+                  "id": "019ebf13-f4ef-7224-81d9-15e2cfc26ef1",
+                  "course_code": "mk-kl1-001",
+                  "course_name": "Kalkulus I",
+                  "assignment": 5,
+                  "uts": 45,
+                  "uas": 50,
+                  "lecturer_id": "019ebef9-13de-7320-807c-9e624eedc4cf",
+                  "lecturer": {
+                      "id": "019ebef9-13de-7320-807c-9e624eedc4cf",
+                      "nip": "613603008739246341",
+                      "nik": "3214925301111133",
+                      "employee_name": "Nadia Usada",
+                      "address": "Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung",
+                      "birth_place": "Sibolga",
+                      "birth_date": "1999-01-08",
+                      "gender": "female",
+                      "phone_number": "085552818314",
+                      "village_code": "3205332006",
+                      "district_code": "320533",
+                      "city_code": "3205",
+                      "province_code": "32",
+                      "citizen_code": "32"
+                  }
+              }
+          }
+        headers: []
+        description: 'Sukses menambahkan materi'
+      -
         custom: []
-        name: course_code
-        description: 'Must not be greater than 10 characters.'
-        required: true
-        example: bngzmi
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      course_name:
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "You are not logged in"
+          }
+        headers: []
+        description: 'Tidak terotentikasi'
+      -
         custom: []
-        name: course_name
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: 'y'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      class_id:
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "Token is Expired"
+          }
+        headers: []
+        description: 'Token expired'
+      -
         custom: []
-        name: class_id
-        description: 'Must be 36 characters.'
-        required: true
-        example: vdljnikhwaykcmyuwpwlvqwrsitcpscqldzs
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      class_name:
-        custom: []
-        name: class_name
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: 'n'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      'students[].student_id':
-        custom: []
-        name: 'students[].student_id'
-        description: 'Must be 36 characters.'
-        required: true
-        example: rwtujwvlxjklqppwqbewtnnoqitpxntltcvi
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      'students[].nim':
-        custom: []
-        name: 'students[].nim'
-        description: 'Must not be greater than 10 characters.'
-        required: true
-        example: pojsau
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      'students[].name':
-        custom: []
-        name: 'students[].name'
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: s
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanBodyParameters:
-      students:
-        -
-          student_id: rwtujwvlxjklqppwqbewtnnoqitpxntltcvi
-          nim: pojsau
-          name: s
-      course_code: bngzmi
-      course_name: 'y'
-      class_id: vdljnikhwaykcmyuwpwlvqwrsitcpscqldzs
-      class_name: 'n'
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - POST
-    uri: api/grade-imports
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      deprecated: false
-    headers:
-      Authorization: 'Bearer {JWT here}'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      file:
-        custom: []
-        name: file
-        description: 'Must not be greater than 2048 characters.'
-        required: true
-        example: b
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      class_id:
-        custom: []
-        name: class_id
-        description: 'Must be 36 characters.'
-        required: true
-        example: ngzmiyvdljnikhwaykcmyuwpwlvqwrsitcps
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      class_name:
-        custom: []
-        name: class_name
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: c
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      course_code:
-        custom: []
-        name: course_code
-        description: 'Must not be greater than 10 characters.'
-        required: true
-        example: qldzsn
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      course_name:
-        custom: []
-        name: course_name
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: r
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanBodyParameters:
-      file: b
-      class_id: ngzmiyvdljnikhwaykcmyuwpwlvqwrsitcps
-      class_name: c
-      course_code: qldzsn
-      course_name: r
-    fileParameters: []
-    responses: []
+        status: 403
+        content: |-
+          {
+              "success": false,
+              "code": 403,
+              "message": "Forbidden"
+          }
+        headers: []
+        description: 'Tidak memiliki izin'
     responseFields: []
     auth:
       - headers

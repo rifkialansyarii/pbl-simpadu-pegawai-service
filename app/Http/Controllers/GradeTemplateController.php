@@ -14,14 +14,31 @@ use App\Services\StudentAssignmentService;
 use App\Services\StudentSubmissionService;
 use Exception;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\ResponseFromFile;
 use Maatwebsite\Excel\Facades\Excel;
 
+/**
+ * 
+ * @group Nilai
+ * Endpoint terkait operasi CRUD untuk data Setting nilai.
+ */
 class GradeTemplateController extends Controller
 {
     public function __construct(private GradeSettingService $gradeSettingService, private ClassSessionService $classSessionService, private StudentSubmissionService $submissionService, private GradeService $gradeService)
     {
     }
 
+    /**
+     * Download Template Excel Nilai
+     *
+     * Endpoint ini digunakan untuk mengunduh template excel nilai
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
+     *  
+     */
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
+    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
     public function downloadTemplate(DownloadTemplateRequest $request)
     {
         try {
@@ -68,6 +85,18 @@ class GradeTemplateController extends Controller
         }
     }
 
+    /**
+     * Upload Template Excel Nilai
+     *
+     * Endpoint ini digunakan untuk mengupload template excel nilai
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
+     *  
+     */
+    #[ResponseFromFile(file: 'responses/grades/success_import.json', status: 201, description: 'Sukses membuat aturan nilai')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
+    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
     public function uploadTemplate(UploadTemplateRequest $request)
     {
         try {

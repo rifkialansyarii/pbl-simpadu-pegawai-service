@@ -25,7 +25,7 @@ class UploadTemplateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'file' => ['required', 'mimes:xlsx', 'max:2048'],
+            'file' => ['required', 'mimes:xlsx', 'max:2048', 'file'],
             'class_id' => ['required', 'string', 'size:36'],
             'class_name' => ['required', 'string', 'max:255'],
             'course_code' => ['required', 'string', 'max:10'],

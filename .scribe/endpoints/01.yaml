@@ -611,7 +611,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: approved
+        example: rejected
         type: string
         enumValues:
           - pending
@@ -621,7 +621,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanBodyParameters:
-      status: approved
+      status: rejected
     fileParameters: []
     responses:
       -
