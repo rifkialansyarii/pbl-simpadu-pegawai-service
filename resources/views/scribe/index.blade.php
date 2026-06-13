@@ -4619,7 +4619,7 @@ access-control-allow-origin: *</code></pre>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/phpu2m95en5v8rocJKppAK
+                        /tmp/phpiub0364kgkg36kjpkNN
                     </div>
                 </div>
             </div>
@@ -4851,7 +4851,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "files=@/tmp/phpu2m95en5v8rocJKppAK" </code></pre>                                        </div>
+    --form "files=@/tmp/phpiub0364kgkg36kjpkNN" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -10526,6 +10526,22 @@ fetch(url, {
                 &quot;uploaded_at&quot;: &quot;2026-06-13T04:04:01.000000Z&quot;,
                 &quot;created_as_material_at&quot;: &quot;2026-06-13T04:04:18.000000Z&quot;
             }
+        ],
+        &quot;assignments&quot;: [
+            {
+                &quot;id&quot;: &quot;019ebefb-dc61-70a6-8228-242188b285a4&quot;,
+                &quot;title&quot;: &quot;Tugas Dasar 1&quot;,
+                &quot;description&quot;: &quot;Kerjakan Tugas Dasar 1&quot;,
+                &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
+                &quot;created_at&quot;: &quot;2026-06-13T03:17:17.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: &quot;019ebefb-f829-73a5-9fc8-60ac378b1cb5&quot;,
+                &quot;title&quot;: &quot;Tugas Dasar 2&quot;,
+                &quot;description&quot;: &quot;Kerjakan Tugas Dasar 2&quot;,
+                &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
+                &quot;created_at&quot;: &quot;2026-06-13T03:17:24.000000Z&quot;
+            }
         ]
     }
 }</code></pre>
@@ -12716,6 +12732,22 @@ fetch(url, {
                 &quot;mime_type&quot;: &quot;application/pdf&quot;,
                 &quot;uploaded_at&quot;: &quot;2026-06-13T04:04:01.000000Z&quot;,
                 &quot;created_as_material_at&quot;: &quot;2026-06-13T04:04:18.000000Z&quot;
+            }
+        ],
+        &quot;assignments&quot;: [
+            {
+                &quot;id&quot;: &quot;019ebefb-dc61-70a6-8228-242188b285a4&quot;,
+                &quot;title&quot;: &quot;Tugas Dasar 1&quot;,
+                &quot;description&quot;: &quot;Kerjakan Tugas Dasar 1&quot;,
+                &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
+                &quot;created_at&quot;: &quot;2026-06-13T03:17:17.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: &quot;019ebefb-f829-73a5-9fc8-60ac378b1cb5&quot;,
+                &quot;title&quot;: &quot;Tugas Dasar 2&quot;,
+                &quot;description&quot;: &quot;Kerjakan Tugas Dasar 2&quot;,
+                &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
+                &quot;created_at&quot;: &quot;2026-06-13T03:17:24.000000Z&quot;
             }
         ]
     }
@@ -19483,7 +19515,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        rejected
+                        approved
                     </div>
                 </div>
             </div>
@@ -19658,7 +19690,7 @@ fetch(url, {
                                      id="json-body-PUTapi-change-requests--changeRequest_id-"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "status": "rejected"
+    "status": "approved"
 }</div>
                             </div>
                                             </div>
@@ -19755,7 +19787,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"status\": \"rejected\"
+    \"status\": \"approved\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -19775,7 +19807,7 @@ const headers = {
 };
 
 let body = {
-    "status": "rejected"
+    "status": "approved"
 };
 
 fetch(url, {
@@ -19824,65 +19856,56 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;success&quot;: true,
-    &quot;message&quot;: &quot;Data retrieved successfully&quot;,
+    &quot;message&quot;: &quot;Data updated successfully&quot;,
     &quot;code&quot;: 200,
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;019ebefb-253b-72b3-a5cb-6a5344ffbb09&quot;,
-        &quot;pengampu_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
-        &quot;session_number&quot;: 1,
-        &quot;class_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
-        &quot;class_name&quot;: &quot;SIPIL-4A&quot;,
-        &quot;course_code&quot;: &quot;mk-kl1-001&quot;,
-        &quot;course_name&quot;: &quot;Kalkulus I&quot;,
-        &quot;topic&quot;: null,
-        &quot;session_date&quot;: &quot;2026-06-01&quot;,
-        &quot;start_time&quot;: &quot;08:30:00&quot;,
-        &quot;end_time&quot;: &quot;10:30:00&quot;,
-        &quot;status&quot;: &quot;closed&quot;,
-        &quot;is_already_opened&quot;: 0,
-        &quot;lecturer_id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
-        &quot;lecturer&quot;: {
-            &quot;id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
-            &quot;nip&quot;: &quot;613603008739246341&quot;,
-            &quot;nik&quot;: &quot;3214925301111133&quot;,
-            &quot;employee_name&quot;: &quot;Nadia Usada&quot;,
-            &quot;address&quot;: &quot;Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung&quot;,
-            &quot;birth_place&quot;: &quot;Sibolga&quot;,
-            &quot;birth_date&quot;: &quot;1999-01-08&quot;,
-            &quot;gender&quot;: &quot;female&quot;,
-            &quot;phone_number&quot;: &quot;085552818314&quot;,
-            &quot;village_code&quot;: &quot;3205332006&quot;,
-            &quot;district_code&quot;: &quot;320533&quot;,
-            &quot;city_code&quot;: &quot;3205&quot;,
-            &quot;province_code&quot;: &quot;32&quot;,
-            &quot;citizen_code&quot;: &quot;32&quot;
-        },
-        &quot;learning_materials&quot;: [
-            {
-                &quot;id&quot;: &quot;019ebf26-a390-7139-95fb-071706236007&quot;,
-                &quot;original_file_name&quot;: &quot;Modul Flutter Consultation APP.pdf&quot;,
-                &quot;file_size&quot;: 940422,
-                &quot;mime_type&quot;: &quot;application/pdf&quot;,
-                &quot;uploaded_at&quot;: &quot;2026-06-13T04:04:01.000000Z&quot;,
-                &quot;created_as_material_at&quot;: &quot;2026-06-13T04:04:18.000000Z&quot;
-            }
-        ],
-        &quot;assignments&quot;: [
-            {
-                &quot;id&quot;: &quot;019ebefb-dc61-70a6-8228-242188b285a4&quot;,
-                &quot;title&quot;: &quot;Tugas Dasar 1&quot;,
-                &quot;description&quot;: &quot;Kerjakan Tugas Dasar 1&quot;,
-                &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
-                &quot;created_at&quot;: &quot;2026-06-13T03:17:17.000000Z&quot;
+        &quot;id&quot;: &quot;019e39e0-fee4-7142-9d44-cd8574382727&quot;,
+        &quot;field_name&quot;: &quot;nip&quot;,
+        &quot;old_value&quot;: &quot;530197731810609862&quot;,
+        &quot;new_value&quot;: &quot;069893595836370860&quot;,
+        &quot;status&quot;: &quot;pending&quot;,
+        &quot;employee_id&quot;: &quot;019e39e0-d19c-70f9-a664-c6ad24786558&quot;,
+        &quot;employee&quot;: {
+            &quot;id&quot;: &quot;019e39e0-d19c-70f9-a664-c6ad24786558&quot;,
+            &quot;nip&quot;: &quot;530197731810609862&quot;,
+            &quot;nik&quot;: &quot;3371162906031035&quot;,
+            &quot;employee_name&quot;: &quot;Kayla Kayla Rahmawati S.Ked&quot;,
+            &quot;address&quot;: &quot;Ki. Babadak No. 189, Tebing Tinggi 58196, Papua&quot;,
+            &quot;birth_place&quot;: &quot;Prabumulih&quot;,
+            &quot;birth_date&quot;: &quot;2001-04-04&quot;,
+            &quot;gender&quot;: &quot;male&quot;,
+            &quot;phone_number&quot;: &quot;087537101725&quot;,
+            &quot;village_code&quot;: &quot;5315072010&quot;,
+            &quot;district_code&quot;: &quot;531507&quot;,
+            &quot;city_code&quot;: &quot;5315&quot;,
+            &quot;province_code&quot;: &quot;53&quot;,
+            &quot;citizen_code&quot;: &quot;53&quot;,
+            &quot;village&quot;: {
+                &quot;id&quot;: &quot;55308&quot;,
+                &quot;code&quot;: &quot;5315072010&quot;,
+                &quot;name&quot;: &quot;PENGKA&quot;
             },
-            {
-                &quot;id&quot;: &quot;019ebefb-f829-73a5-9fc8-60ac378b1cb5&quot;,
-                &quot;title&quot;: &quot;Tugas Dasar 2&quot;,
-                &quot;description&quot;: &quot;Kerjakan Tugas Dasar 2&quot;,
-                &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
-                &quot;created_at&quot;: &quot;2026-06-13T03:17:24.000000Z&quot;
+            &quot;district&quot;: {
+                &quot;id&quot;: &quot;4536&quot;,
+                &quot;code&quot;: &quot;531507&quot;,
+                &quot;name&quot;: &quot;WELAK&quot;
+            },
+            &quot;city&quot;: {
+                &quot;id&quot;: &quot;307&quot;,
+                &quot;code&quot;: &quot;5315&quot;,
+                &quot;name&quot;: &quot;KABUPATEN MANGGARAI BARAT&quot;
+            },
+            &quot;province&quot;: {
+                &quot;id&quot;: &quot;19&quot;,
+                &quot;code&quot;: &quot;53&quot;,
+                &quot;name&quot;: &quot;NUSA TENGGARA TIMUR&quot;
+            },
+            &quot;citizen&quot;: {
+                &quot;id&quot;: &quot;153&quot;,
+                &quot;name&quot;: &quot;Northern Mariana Islands&quot;,
+                &quot;code&quot;: &quot;MP&quot;
             }
-        ]
+        }
     }
 }</code></pre>
                                                                             </div>

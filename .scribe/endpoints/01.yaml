@@ -611,7 +611,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: rejected
+        example: approved
         type: string
         enumValues:
           - pending
@@ -621,7 +621,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanBodyParameters:
-      status: rejected
+      status: approved
     fileParameters: []
     responses:
       -
@@ -630,65 +630,56 @@ endpoints:
         content: |-
           {
               "success": true,
-              "message": "Data retrieved successfully",
+              "message": "Data updated successfully",
               "code": 200,
               "data": {
-                  "id": "019ebefb-253b-72b3-a5cb-6a5344ffbb09",
-                  "pengampu_id": "123e4567-e89b-12d3-a456-426614174000",
-                  "session_number": 1,
-                  "class_id": "123e4567-e89b-12d3-a456-426614174000",
-                  "class_name": "SIPIL-4A",
-                  "course_code": "mk-kl1-001",
-                  "course_name": "Kalkulus I",
-                  "topic": null,
-                  "session_date": "2026-06-01",
-                  "start_time": "08:30:00",
-                  "end_time": "10:30:00",
-                  "status": "closed",
-                  "is_already_opened": 0,
-                  "lecturer_id": "019ebef9-13de-7320-807c-9e624eedc4cf",
-                  "lecturer": {
-                      "id": "019ebef9-13de-7320-807c-9e624eedc4cf",
-                      "nip": "613603008739246341",
-                      "nik": "3214925301111133",
-                      "employee_name": "Nadia Usada",
-                      "address": "Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung",
-                      "birth_place": "Sibolga",
-                      "birth_date": "1999-01-08",
-                      "gender": "female",
-                      "phone_number": "085552818314",
-                      "village_code": "3205332006",
-                      "district_code": "320533",
-                      "city_code": "3205",
-                      "province_code": "32",
-                      "citizen_code": "32"
-                  },
-                  "learning_materials": [
-                      {
-                          "id": "019ebf26-a390-7139-95fb-071706236007",
-                          "original_file_name": "Modul Flutter Consultation APP.pdf",
-                          "file_size": 940422,
-                          "mime_type": "application/pdf",
-                          "uploaded_at": "2026-06-13T04:04:01.000000Z",
-                          "created_as_material_at": "2026-06-13T04:04:18.000000Z"
-                      }
-                  ],
-                  "assignments": [
-                      {
-                          "id": "019ebefb-dc61-70a6-8228-242188b285a4",
-                          "title": "Tugas Dasar 1",
-                          "description": "Kerjakan Tugas Dasar 1",
-                          "deadline": "2026-06-15 00:00:00",
-                          "created_at": "2026-06-13T03:17:17.000000Z"
+                  "id": "019e39e0-fee4-7142-9d44-cd8574382727",
+                  "field_name": "nip",
+                  "old_value": "530197731810609862",
+                  "new_value": "069893595836370860",
+                  "status": "pending",
+                  "employee_id": "019e39e0-d19c-70f9-a664-c6ad24786558",
+                  "employee": {
+                      "id": "019e39e0-d19c-70f9-a664-c6ad24786558",
+                      "nip": "530197731810609862",
+                      "nik": "3371162906031035",
+                      "employee_name": "Kayla Kayla Rahmawati S.Ked",
+                      "address": "Ki. Babadak No. 189, Tebing Tinggi 58196, Papua",
+                      "birth_place": "Prabumulih",
+                      "birth_date": "2001-04-04",
+                      "gender": "male",
+                      "phone_number": "087537101725",
+                      "village_code": "5315072010",
+                      "district_code": "531507",
+                      "city_code": "5315",
+                      "province_code": "53",
+                      "citizen_code": "53",
+                      "village": {
+                          "id": "55308",
+                          "code": "5315072010",
+                          "name": "PENGKA"
                       },
-                      {
-                          "id": "019ebefb-f829-73a5-9fc8-60ac378b1cb5",
-                          "title": "Tugas Dasar 2",
-                          "description": "Kerjakan Tugas Dasar 2",
-                          "deadline": "2026-06-15 00:00:00",
-                          "created_at": "2026-06-13T03:17:24.000000Z"
+                      "district": {
+                          "id": "4536",
+                          "code": "531507",
+                          "name": "WELAK"
+                      },
+                      "city": {
+                          "id": "307",
+                          "code": "5315",
+                          "name": "KABUPATEN MANGGARAI BARAT"
+                      },
+                      "province": {
+                          "id": "19",
+                          "code": "53",
+                          "name": "NUSA TENGGARA TIMUR"
+                      },
+                      "citizen": {
+                          "id": "153",
+                          "name": "Northern Mariana Islands",
+                          "code": "MP"
                       }
-                  ]
+                  }
               }
           }
         headers: []
