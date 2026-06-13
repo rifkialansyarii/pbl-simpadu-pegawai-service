@@ -366,6 +366,49 @@
                                                             </div>
                                             </div>
                                     <div class="expandable">
+                        <div title="Nilai" id="toc-item-nilai"
+                             class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-4 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none">
+                            <a href="#nilai"
+                               class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0">Nilai</a>
+                                                            <div class="sl-flex sl-items-center sl-text-xs expansion-chevrons">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                         data-icon="chevron-right"
+                                         class="svg-inline--fa fa-chevron-right fa-fw sl-icon sl-text-muted"
+                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path>
+                                    </svg>
+                                </div>
+                                                    </div>
+
+                                                    <div class="children" style="display: none;">
+                                                                    <div class="expandable">
+                                        <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
+                                             id="toc-item-nilai-POSTapi-grade-exports">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Download Template Excel Nilai">
+                                                <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
+                                                   href="#nilai-POSTapi-grade-exports">
+                                                    Download Template Excel Nilai
+                                                </a>
+                                            </div>
+                                                                                    </div>
+
+                                                                            </div>
+                                                                    <div class="expandable">
+                                        <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
+                                             id="toc-item-nilai-POSTapi-grade-imports">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Upload Template Excel Nilai">
+                                                <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
+                                                   href="#nilai-POSTapi-grade-imports">
+                                                    Upload Template Excel Nilai
+                                                </a>
+                                            </div>
+                                                                                    </div>
+
+                                                                            </div>
+                                                            </div>
+                                            </div>
+                                    <div class="expandable">
                         <div title="Pegawai" id="toc-item-pegawai"
                              class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-4 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none">
                             <a href="#pegawai"
@@ -564,6 +607,61 @@
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
                                                    href="#sesi-kelas-POSTapi-class-sessions--classSession_id--learning-materials-delete">
                                                     Hapus Materi Kelas
+                                                </a>
+                                            </div>
+                                                                                    </div>
+
+                                                                            </div>
+                                                            </div>
+                                            </div>
+                                    <div class="expandable">
+                        <div title="Setting Nilai" id="toc-item-setting-nilai"
+                             class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-4 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none">
+                            <a href="#setting-nilai"
+                               class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0">Setting Nilai</a>
+                                                            <div class="sl-flex sl-items-center sl-text-xs expansion-chevrons">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                         data-icon="chevron-right"
+                                         class="svg-inline--fa fa-chevron-right fa-fw sl-icon sl-text-muted"
+                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path>
+                                    </svg>
+                                </div>
+                                                    </div>
+
+                                                    <div class="children" style="display: none;">
+                                                                    <div class="expandable">
+                                        <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
+                                             id="toc-item-setting-nilai-GETapi-grade-settings">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Ambil Semua Data Aturan Nilai">
+                                                <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
+                                                   href="#setting-nilai-GETapi-grade-settings">
+                                                    Ambil Semua Data Aturan Nilai
+                                                </a>
+                                            </div>
+                                                                                    </div>
+
+                                                                            </div>
+                                                                    <div class="expandable">
+                                        <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
+                                             id="toc-item-setting-nilai-POSTapi-grade-settings">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Buat Aturan Nilai">
+                                                <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
+                                                   href="#setting-nilai-POSTapi-grade-settings">
+                                                    Buat Aturan Nilai
+                                                </a>
+                                            </div>
+                                                                                    </div>
+
+                                                                            </div>
+                                                                    <div class="expandable">
+                                        <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
+                                             id="toc-item-setting-nilai-PUTapi-grade-settings--gradeSetting_id-">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Update Aturan Nilai">
+                                                <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
+                                                   href="#setting-nilai-PUTapi-grade-settings--gradeSetting_id-">
+                                                    Update Aturan Nilai
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -848,7 +946,7 @@
 
         </div>
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
-            Last updated: June 11, 2026
+            Last updated: June 13, 2026
         </div>
 
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
@@ -1447,7 +1545,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019eab03-d6fc-735e-b202-0333b4b86463
+                        019ebefa-a997-72d1-a1fb-125eadb3f6bb
                     </div>
                 </div>
             </div>
@@ -1580,7 +1678,7 @@ fetch(url, {
                                         <input aria-label="fileUpload_id" name="fileUpload_id"
                                                id="urlparam-GETapi-file-uploads--fileUpload_id--download-fileUpload_id"
                                                placeholder="The ID of the fileUpload."
-                                               value="019eab03-d6fc-735e-b202-0333b4b86463" data-component="url"
+                                               value="019ebefa-a997-72d1-a1fb-125eadb3f6bb" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -1676,7 +1774,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:1234/api/file-uploads/019eab03-d6fc-735e-b202-0333b4b86463/download" \
+    --get "http://localhost:1234/api/file-uploads/019ebefa-a997-72d1-a1fb-125eadb3f6bb/download" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -1687,7 +1785,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/file-uploads/019eab03-d6fc-735e-b202-0333b4b86463/download"
+    "http://localhost:1234/api/file-uploads/019ebefa-a997-72d1-a1fb-125eadb3f6bb/download"
 );
 
 const headers = {
@@ -1939,7 +2037,7 @@ access-control-allow-origin: *</code></pre>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/phpveea0b834chjdaMnIaa
+                        /tmp/php6ddab1df3nk82PJEOaB
                     </div>
                 </div>
             </div>
@@ -2171,7 +2269,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "files=@/tmp/phpveea0b834chjdaMnIaa" </code></pre>                                        </div>
+    --form "files=@/tmp/php6ddab1df3nk82PJEOaB" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -2763,6 +2861,1360 @@ fetch(url, {
                                                                             </div>
                                 </div>
                                                             <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-file-uploads-delete example-response-POSTapi-file-uploads-delete-3"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 403,
+    &quot;message&quot;: &quot;Forbidden&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                    </div>
+                            </div>
+    </div>
+</div>
+
+                <h1 id="nilai"
+        class="sl-text-5xl sl-leading-tight sl-font-prose sl-text-heading"
+    >
+        Nilai
+    </h1>
+
+    <p>Endpoint terkait operasi CRUD untuk data Setting nilai.</p>
+
+                                <div class="sl-stack sl-stack--vertical sl-stack--8 HttpOperation sl-flex sl-flex-col sl-items-stretch sl-w-full">
+    <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
+        <div class="sl-relative">
+            <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
+                <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
+                    id="nilai-POSTapi-grade-exports">
+                    Download Template Excel Nilai
+                </h2>
+            </div>
+        </div>
+
+        <div class="sl-relative">
+            <div title="http://localhost:1234/api/grade-exports"
+                     class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
+                >
+                                            <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
+                             style="background-color: black;"
+                        >
+                            POST
+                        </div>
+                                        <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
+                        <div dir="rtl"
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://localhost:1234</div>
+                        <div class="sl-flex-1 sl-font-semibold">/api/grade-exports</div>
+                    </div>
+
+                                                    <div class="sl-font-prose sl-font-semibold sl-px-1.5 sl-py-0.5 sl-text-on-primary sl-rounded-lg"
+                                 style="background-color: darkred"
+                            >requires authentication
+                            </div>
+                                                                                    </div>
+        </div>
+
+        <p>Endpoint ini digunakan untuk mengunduh template excel nilai</p>
+<p>Fitur ini <strong>hanya bisa dijalankan</strong> oleh user <strong>dosen yang mengajar di sesi kelas tersebut</strong>.</p>
+    </div>
+    <div class="sl-flex">
+        <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
+            <div class="sl-stack sl-stack--vertical sl-stack--10 sl-flex sl-flex-col sl-items-stretch">
+                <div class="sl-stack sl-stack--vertical sl-stack--8 sl-flex sl-flex-col sl-items-stretch">
+                                            <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
+                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">
+                                Headers
+                            </h3>
+                            <div class="sl-text-sm">
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Authorization</div>
+                                    </div>
+                                        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        Bearer {JWT here}
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Content-Type</div>
+                                    </div>
+                                        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        application/json
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Accept</div>
+                                    </div>
+                                        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        application/json
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                            </div>
+                        </div>
+                    
+                    
+
+                    
+                                            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
+                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">Body Parameters</h3>
+
+                                <div class="sl-text-sm">
+                                    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2  sl-cursor-pointer ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                            <div class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted expansion-chevrons" role="button">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                         class="svg-inline--fa fa-chevron-right fa-fw fa-sm sl-icon" role="img"
+                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path>
+                    </svg>
+                </div>
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">students</div>
+                                            <span class="sl-truncate sl-text-muted">object[]</span>
+                                    </div>
+                                            <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                        <div class="sl-flex sl-items-center">
+                                                            <span class="sl-ml-2 sl-text-warning">required</span>
+                                                                                </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must have at least 1 items.</p>
+        </div>
+                                    </div>
+</div>
+
+                    <div class="children" style="display: none;">
+                <div class="expandable sl-text-sm sl-border-l sl-ml-7">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">student_id</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                            <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                        <div class="sl-flex sl-items-center">
+                                                            <span class="sl-ml-2 sl-text-warning">required</span>
+                                                                                </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must be 36 characters.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        rwtujwvlxjklqppwqbewtnnoqitpxntltcvi
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-7">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">nim</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                            <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                        <div class="sl-flex sl-items-center">
+                                                            <span class="sl-ml-2 sl-text-warning">required</span>
+                                                                                </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must not be greater than 10 characters.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        pojsau
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-7">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">name</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                            <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                        <div class="sl-flex sl-items-center">
+                                                            <span class="sl-ml-2 sl-text-warning">required</span>
+                                                                                </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must not be greater than 255 characters.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        s
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+            </div>
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">course_code</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                            <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                        <div class="sl-flex sl-items-center">
+                                                            <span class="sl-ml-2 sl-text-warning">required</span>
+                                                                                </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must not be greater than 10 characters.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        bngzmi
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">course_name</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                            <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                        <div class="sl-flex sl-items-center">
+                                                            <span class="sl-ml-2 sl-text-warning">required</span>
+                                                                                </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must not be greater than 255 characters.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        y
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">class_id</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                            <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                        <div class="sl-flex sl-items-center">
+                                                            <span class="sl-ml-2 sl-text-warning">required</span>
+                                                                                </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must be 36 characters.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        vdljnikhwaykcmyuwpwlvqwrsitcpscqldzs
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">class_name</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                            <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                        <div class="sl-flex sl-items-center">
+                                                            <span class="sl-ml-2 sl-text-warning">required</span>
+                                                                                </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must not be greater than 255 characters.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        n
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+                            </div>
+                        </div>
+                    
+                                    </div>
+            </div>
+        </div>
+
+        <div data-testid="two-column-right" class="sl-relative sl-w-2/5 sl-ml-16" style="max-width: 500px;">
+            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
+
+                                    <div class="sl-inverted">
+    <div class="sl-overflow-y-hidden sl-rounded-lg">
+        <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
+              data-method="POST"
+              data-path="api/grade-exports"
+              data-hasfiles="0"
+              data-hasjsonbody="1">
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Auth
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="ParameterGrid sl-p-4">
+                            <label aria-hidden="true"
+                                   for="auth-POSTapi-grade-exports">Authorization</label>
+                            <span class="sl-mx-3">:</span>
+                            <div class="sl-flex sl-flex-1">
+                                <div class="sl-input sl-flex-1 sl-relative">
+                                    <code>Bearer </code>
+                                    <input aria-label="Authorization"
+                                           id="auth-POSTapi-grade-exports"
+                                           data-component="header"
+                                           data-prefix="Bearer "
+                                           name="Authorization"
+                                           placeholder="{JWT here}"
+                                           class="auth-value sl-relative sl-w-3/5 sl-h-md sl-text-base sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Headers
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="ParameterGrid sl-p-4">
+                                                                                                                            <label aria-hidden="true"
+                                       for="header-POSTapi-grade-exports-Content-Type">Content-Type</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="Content-Type" name="Content-Type"
+                                               id="header-POSTapi-grade-exports-Content-Type"
+                                               value="application/json" data-component="header"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                                                            <label aria-hidden="true"
+                                       for="header-POSTapi-grade-exports-Accept">Accept</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="Accept" name="Accept"
+                                               id="header-POSTapi-grade-exports-Accept"
+                                               value="application/json" data-component="header"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            
+            
+            
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Body
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                                                    <div class="TextRequestBody sl-p-4">
+                                <div class="code-editor language-json"
+                                     id="json-body-POSTapi-grade-exports"
+                                     style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
+                                >{
+    "students": [
+        {
+            "student_id": "rwtujwvlxjklqppwqbewtnnoqitpxntltcvi",
+            "nim": "pojsau",
+            "name": "s"
+        }
+    ],
+    "course_code": "bngzmi",
+    "course_name": "y",
+    "class_id": "vdljnikhwaykcmyuwpwlvqwrsitcpscqldzs",
+    "class_name": "n"
+}</div>
+                            </div>
+                                            </div>
+                </div>
+            
+            <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
+                <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
+                    <button type="button" data-endpoint="POSTapi-grade-exports"
+                            class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
+                    >
+                        Send Request 💥
+                    </button>
+                </div>
+            </div>
+
+            <div data-endpoint="POSTapi-grade-exports"
+                 class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
+                <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                     role="button">
+                    <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                        <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                 data-icon="caret-down"
+                                 class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor"
+                                      d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                            </svg>
+                        </div>
+                        Request failed with error
+                    </div>
+                </div>
+                <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                    <div class="sl-panel__content sl-p-4">
+                        <p class="sl-pb-2"><strong class="error-message"></strong></p>
+                        <p class="sl-pb-2">Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</p>
+                    </div>
+                </div>
+            </div>
+
+                <div data-endpoint="POSTapi-grade-exports"
+                     class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Received response
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="sl-panel__content sl-p-4">
+                            <p class="sl-pb-2 response-status"></p>
+                            <pre><code class="sl-pb-2 response-content language-json"
+                                       data-empty-response-text="<Empty response>"
+                                       style="max-height: 300px;"></code></pre>
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+                
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                                    <div class="sl--ml-2">
+                                        Example request:
+                                        <select class="example-request-lang-toggle sl-text-base"
+                                                aria-label="Request Sample Language"
+                                                onchange="switchExampleLanguage(event.target.value);">
+                                                                                            <option>bash</option>
+                                                                                            <option>javascript</option>
+                                                                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                                                            <div class="sl-bg-canvas-100 example-request example-request-bash"
+                                     style="">
+                                    <div class="sl-px-0 sl-py-1">
+                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
+                                            <pre><code class="language-bash">curl --request POST \
+    "http://localhost:1234/api/grade-exports" \
+    --header "Authorization: Bearer {JWT here}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"students\": [
+        {
+            \"student_id\": \"rwtujwvlxjklqppwqbewtnnoqitpxntltcvi\",
+            \"nim\": \"pojsau\",
+            \"name\": \"s\"
+        }
+    ],
+    \"course_code\": \"bngzmi\",
+    \"course_name\": \"y\",
+    \"class_id\": \"vdljnikhwaykcmyuwpwlvqwrsitcpscqldzs\",
+    \"class_name\": \"n\"
+}"
+</code></pre>                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="sl-bg-canvas-100 example-request example-request-javascript"
+                                     style="display: none;">
+                                    <div class="sl-px-0 sl-py-1">
+                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
+                                            <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:1234/api/grade-exports"
+);
+
+const headers = {
+    "Authorization": "Bearer {JWT here}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "students": [
+        {
+            "student_id": "rwtujwvlxjklqppwqbewtnnoqitpxntltcvi",
+            "nim": "pojsau",
+            "name": "s"
+        }
+    ],
+    "course_code": "bngzmi",
+    "course_name": "y",
+    "class_id": "vdljnikhwaykcmyuwpwlvqwrsitcpscqldzs",
+    "class_name": "n"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>                                        </div>
+                                    </div>
+                                </div>
+                                                    </div>
+                    
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-py-2">
+                                    <div class="sl--ml-2">
+                                        <div class="sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-text-muted sl-rounded sl-border-transparent sl-border">
+                                            <div class="sl-mb-2 sl-inline-block">Example response:</div>
+                                            <div class="sl-mb-2 sl-inline-block">
+                                                <select
+                                                        class="example-response-POSTapi-grade-exports-toggle sl-text-base"
+                                                        aria-label="Response sample"
+                                                        onchange="switchExampleResponse('POSTapi-grade-exports', event.target.value);">
+                                                                                                            <option value="0">401, Tidak terotentikasi</option>
+                                                                                                            <option value="1">401, Token expired</option>
+                                                                                                            <option value="2">403, Tidak memiliki izin</option>
+                                                                                                    </select></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button"
+                                        class="sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 hover:sl-bg-canvas-50 active:sl-bg-canvas-100 sl-text-muted hover:sl-text-body focus:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70">
+                                    <div class="sl-mx-0">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
+                                             class="svg-inline--fa fa-copy fa-fw fa-sm sl-icon" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                  d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-grade-exports example-response-POSTapi-grade-exports-0"
+                                     style=" "
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;You are not logged in&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-grade-exports example-response-POSTapi-grade-exports-1"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;Token is Expired&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-grade-exports example-response-POSTapi-grade-exports-2"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 403,
+    &quot;message&quot;: &quot;Forbidden&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                    </div>
+                            </div>
+    </div>
+</div>
+
+                    <div class="sl-stack sl-stack--vertical sl-stack--8 HttpOperation sl-flex sl-flex-col sl-items-stretch sl-w-full">
+    <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
+        <div class="sl-relative">
+            <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
+                <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
+                    id="nilai-POSTapi-grade-imports">
+                    Upload Template Excel Nilai
+                </h2>
+            </div>
+        </div>
+
+        <div class="sl-relative">
+            <div title="http://localhost:1234/api/grade-imports"
+                     class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
+                >
+                                            <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
+                             style="background-color: black;"
+                        >
+                            POST
+                        </div>
+                                        <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
+                        <div dir="rtl"
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://localhost:1234</div>
+                        <div class="sl-flex-1 sl-font-semibold">/api/grade-imports</div>
+                    </div>
+
+                                                    <div class="sl-font-prose sl-font-semibold sl-px-1.5 sl-py-0.5 sl-text-on-primary sl-rounded-lg"
+                                 style="background-color: darkred"
+                            >requires authentication
+                            </div>
+                                                                                    </div>
+        </div>
+
+        <p>Endpoint ini digunakan untuk mengupload template excel nilai</p>
+<p>Fitur ini <strong>hanya bisa dijalankan</strong> oleh user <strong>dosen yang mengajar di sesi kelas tersebut</strong>.</p>
+    </div>
+    <div class="sl-flex">
+        <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
+            <div class="sl-stack sl-stack--vertical sl-stack--10 sl-flex sl-flex-col sl-items-stretch">
+                <div class="sl-stack sl-stack--vertical sl-stack--8 sl-flex sl-flex-col sl-items-stretch">
+                                            <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
+                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">
+                                Headers
+                            </h3>
+                            <div class="sl-text-sm">
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Authorization</div>
+                                    </div>
+                                        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        Bearer {JWT here}
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Content-Type</div>
+                                    </div>
+                                        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        multipart/form-data
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Accept</div>
+                                    </div>
+                                        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        application/json
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                            </div>
+                        </div>
+                    
+                    
+
+                    
+                                            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
+                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">Body Parameters</h3>
+
+                                <div class="sl-text-sm">
+                                    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">file</div>
+                                            <span class="sl-truncate sl-text-muted">file</span>
+                                    </div>
+                                            <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                        <div class="sl-flex sl-items-center">
+                                                            <span class="sl-ml-2 sl-text-warning">required</span>
+                                                                                </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must be a file. Must not be greater than 2048 kilobytes.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        /tmp/phpn9flsua69ta3dDogEAE
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">class_id</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                            <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                        <div class="sl-flex sl-items-center">
+                                                            <span class="sl-ml-2 sl-text-warning">required</span>
+                                                                                </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must be 36 characters.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">class_name</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                            <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                        <div class="sl-flex sl-items-center">
+                                                            <span class="sl-ml-2 sl-text-warning">required</span>
+                                                                                </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must not be greater than 255 characters.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        s
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">course_code</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                            <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                        <div class="sl-flex sl-items-center">
+                                                            <span class="sl-ml-2 sl-text-warning">required</span>
+                                                                                </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must not be greater than 10 characters.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        cqldzs
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">course_name</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                            <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                        <div class="sl-flex sl-items-center">
+                                                            <span class="sl-ml-2 sl-text-warning">required</span>
+                                                                                </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must not be greater than 255 characters.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        n
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+                            </div>
+                        </div>
+                    
+                                    </div>
+            </div>
+        </div>
+
+        <div data-testid="two-column-right" class="sl-relative sl-w-2/5 sl-ml-16" style="max-width: 500px;">
+            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
+
+                                    <div class="sl-inverted">
+    <div class="sl-overflow-y-hidden sl-rounded-lg">
+        <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
+              data-method="POST"
+              data-path="api/grade-imports"
+              data-hasfiles="1"
+              data-hasjsonbody="0">
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Auth
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="ParameterGrid sl-p-4">
+                            <label aria-hidden="true"
+                                   for="auth-POSTapi-grade-imports">Authorization</label>
+                            <span class="sl-mx-3">:</span>
+                            <div class="sl-flex sl-flex-1">
+                                <div class="sl-input sl-flex-1 sl-relative">
+                                    <code>Bearer </code>
+                                    <input aria-label="Authorization"
+                                           id="auth-POSTapi-grade-imports"
+                                           data-component="header"
+                                           data-prefix="Bearer "
+                                           name="Authorization"
+                                           placeholder="{JWT here}"
+                                           class="auth-value sl-relative sl-w-3/5 sl-h-md sl-text-base sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Headers
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="ParameterGrid sl-p-4">
+                                                                                                                            <label aria-hidden="true"
+                                       for="header-POSTapi-grade-imports-Content-Type">Content-Type</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="Content-Type" name="Content-Type"
+                                               id="header-POSTapi-grade-imports-Content-Type"
+                                               value="multipart/form-data" data-component="header"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                                                            <label aria-hidden="true"
+                                       for="header-POSTapi-grade-imports-Accept">Accept</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="Accept" name="Accept"
+                                               id="header-POSTapi-grade-imports-Accept"
+                                               value="application/json" data-component="header"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            
+            
+            
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Body
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                                                    <div class="ParameterGrid sl-p-4">
+                                                                                                        <label aria-hidden="true"
+                                           for="bodyparam-POSTapi-grade-imports-file">file</label>
+                                    <span class="sl-mx-3">:</span>
+                                    <div class="sl-flex sl-flex-1">
+                                        <div class="sl-input sl-flex-1 sl-relative">
+                                                                                            <input aria-label="file" name="file"
+                                                       id="bodyparam-POSTapi-grade-imports-file"
+                                                       type="file" data-component="body"
+                                                       class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
+                                                >
+                                                                                    </div>
+                                    </div>
+                                                                                                        <label aria-hidden="true"
+                                           for="bodyparam-POSTapi-grade-imports-class_id">class_id</label>
+                                    <span class="sl-mx-3">:</span>
+                                    <div class="sl-flex sl-flex-1">
+                                        <div class="sl-input sl-flex-1 sl-relative">
+                                                                                            <input aria-label="class_id" name="class_id"
+                                                       id="bodyparam-POSTapi-grade-imports-class_id"
+                                                       placeholder="Must be 36 characters."
+                                                       value="bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp" data-component="body"
+                                                       class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
+                                                >
+                                                                                    </div>
+                                    </div>
+                                                                                                        <label aria-hidden="true"
+                                           for="bodyparam-POSTapi-grade-imports-class_name">class_name</label>
+                                    <span class="sl-mx-3">:</span>
+                                    <div class="sl-flex sl-flex-1">
+                                        <div class="sl-input sl-flex-1 sl-relative">
+                                                                                            <input aria-label="class_name" name="class_name"
+                                                       id="bodyparam-POSTapi-grade-imports-class_name"
+                                                       placeholder="Must not be greater than 255 characters."
+                                                       value="s" data-component="body"
+                                                       class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
+                                                >
+                                                                                    </div>
+                                    </div>
+                                                                                                        <label aria-hidden="true"
+                                           for="bodyparam-POSTapi-grade-imports-course_code">course_code</label>
+                                    <span class="sl-mx-3">:</span>
+                                    <div class="sl-flex sl-flex-1">
+                                        <div class="sl-input sl-flex-1 sl-relative">
+                                                                                            <input aria-label="course_code" name="course_code"
+                                                       id="bodyparam-POSTapi-grade-imports-course_code"
+                                                       placeholder="Must not be greater than 10 characters."
+                                                       value="cqldzs" data-component="body"
+                                                       class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
+                                                >
+                                                                                    </div>
+                                    </div>
+                                                                                                        <label aria-hidden="true"
+                                           for="bodyparam-POSTapi-grade-imports-course_name">course_name</label>
+                                    <span class="sl-mx-3">:</span>
+                                    <div class="sl-flex sl-flex-1">
+                                        <div class="sl-input sl-flex-1 sl-relative">
+                                                                                            <input aria-label="course_name" name="course_name"
+                                                       id="bodyparam-POSTapi-grade-imports-course_name"
+                                                       placeholder="Must not be greater than 255 characters."
+                                                       value="n" data-component="body"
+                                                       class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
+                                                >
+                                                                                    </div>
+                                    </div>
+                                                            </div>
+                                            </div>
+                </div>
+            
+            <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
+                <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
+                    <button type="button" data-endpoint="POSTapi-grade-imports"
+                            class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
+                    >
+                        Send Request 💥
+                    </button>
+                </div>
+            </div>
+
+            <div data-endpoint="POSTapi-grade-imports"
+                 class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
+                <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                     role="button">
+                    <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                        <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                 data-icon="caret-down"
+                                 class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor"
+                                      d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                            </svg>
+                        </div>
+                        Request failed with error
+                    </div>
+                </div>
+                <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                    <div class="sl-panel__content sl-p-4">
+                        <p class="sl-pb-2"><strong class="error-message"></strong></p>
+                        <p class="sl-pb-2">Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</p>
+                    </div>
+                </div>
+            </div>
+
+                <div data-endpoint="POSTapi-grade-imports"
+                     class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Received response
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="sl-panel__content sl-p-4">
+                            <p class="sl-pb-2 response-status"></p>
+                            <pre><code class="sl-pb-2 response-content language-json"
+                                       data-empty-response-text="<Empty response>"
+                                       style="max-height: 300px;"></code></pre>
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+                
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                                    <div class="sl--ml-2">
+                                        Example request:
+                                        <select class="example-request-lang-toggle sl-text-base"
+                                                aria-label="Request Sample Language"
+                                                onchange="switchExampleLanguage(event.target.value);">
+                                                                                            <option>bash</option>
+                                                                                            <option>javascript</option>
+                                                                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                                                            <div class="sl-bg-canvas-100 example-request example-request-bash"
+                                     style="">
+                                    <div class="sl-px-0 sl-py-1">
+                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
+                                            <pre><code class="language-bash">curl --request POST \
+    "http://localhost:1234/api/grade-imports" \
+    --header "Authorization: Bearer {JWT here}" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --form "class_id=bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp"\
+    --form "class_name=s"\
+    --form "course_code=cqldzs"\
+    --form "course_name=n"\
+    --form "file=@/tmp/phpn9flsua69ta3dDogEAE" </code></pre>                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="sl-bg-canvas-100 example-request example-request-javascript"
+                                     style="display: none;">
+                                    <div class="sl-px-0 sl-py-1">
+                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
+                                            <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:1234/api/grade-imports"
+);
+
+const headers = {
+    "Authorization": "Bearer {JWT here}",
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+};
+
+const body = new FormData();
+body.append('class_id', 'bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp');
+body.append('class_name', 's');
+body.append('course_code', 'cqldzs');
+body.append('course_name', 'n');
+body.append('file', document.querySelector('input[name="file"]').files[0]);
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre>                                        </div>
+                                    </div>
+                                </div>
+                                                    </div>
+                    
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-py-2">
+                                    <div class="sl--ml-2">
+                                        <div class="sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-text-muted sl-rounded sl-border-transparent sl-border">
+                                            <div class="sl-mb-2 sl-inline-block">Example response:</div>
+                                            <div class="sl-mb-2 sl-inline-block">
+                                                <select
+                                                        class="example-response-POSTapi-grade-imports-toggle sl-text-base"
+                                                        aria-label="Response sample"
+                                                        onchange="switchExampleResponse('POSTapi-grade-imports', event.target.value);">
+                                                                                                            <option value="0">201, Sukses membuat aturan nilai</option>
+                                                                                                            <option value="1">401, Tidak terotentikasi</option>
+                                                                                                            <option value="2">401, Token expired</option>
+                                                                                                            <option value="3">403, Tidak memiliki izin</option>
+                                                                                                    </select></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button"
+                                        class="sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 hover:sl-bg-canvas-50 active:sl-bg-canvas-100 sl-text-muted hover:sl-text-body focus:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70">
+                                    <div class="sl-mx-0">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
+                                             class="svg-inline--fa fa-copy fa-fw fa-sm sl-icon" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                  d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-grade-imports example-response-POSTapi-grade-imports-0"
+                                     style=" "
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;data has been imported and saved&quot;,
+    &quot;code&quot;: 200
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-grade-imports example-response-POSTapi-grade-imports-1"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;You are not logged in&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-grade-imports example-response-POSTapi-grade-imports-2"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;Token is Expired&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-grade-imports example-response-POSTapi-grade-imports-3"
                                      style=" display: none;"
                                 >
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
@@ -6305,7 +7757,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019ea818-108d-7186-bbcd-4135b8623257
+                        019ebef9-13de-7320-807c-9e624eedc4cf
                     </div>
                 </div>
             </div>
@@ -6464,7 +7916,7 @@ fetch(url, {
                                         <input aria-label="employee_id" name="employee_id"
                                                id="urlparam-DELETEapi-employees--employee_id--employee_id"
                                                placeholder="The ID of the employee."
-                                               value="019ea818-108d-7186-bbcd-4135b8623257" data-component="url"
+                                               value="019ebef9-13de-7320-807c-9e624eedc4cf" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -6572,7 +8024,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:1234/api/employees/019ea818-108d-7186-bbcd-4135b8623257" \
+    "http://localhost:1234/api/employees/019ebef9-13de-7320-807c-9e624eedc4cf" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -6583,7 +8035,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/employees/019ea818-108d-7186-bbcd-4135b8623257"
+    "http://localhost:1234/api/employees/019ebef9-13de-7320-807c-9e624eedc4cf"
 );
 
 const headers = {
@@ -7204,104 +8656,100 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;success&quot;: true,
-    &quot;message&quot;: &quot;Data genereated successfully&quot;,
-    &quot;code&quot;: 201,
+    &quot;message&quot;: &quot;Data retrieved successfully&quot;,
+    &quot;code&quot;: 200,
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;019e3519-544c-722e-b475-2d49b10a3942&quot;,
-            &quot;pengampu_id&quot;: &quot;237e1c51-1818-7123-85d4-6880f9ff4a21&quot;,
+            &quot;id&quot;: &quot;019ebefb-253b-72b3-a5cb-6a5344ffbb09&quot;,
+            &quot;pengampu_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
             &quot;session_number&quot;: 1,
-            &quot;class_id&quot;: &quot;309e6c61-1812-7123-65d3-6880f9ff4a2e&quot;,
-            &quot;class_name&quot;: &quot;TI-4A&quot;,
-            &quot;course_code&quot;: &quot;MK001&quot;,
-            &quot;course_name&quot;: &quot;Pemrograman Perangkat Web&quot;,
+            &quot;class_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+            &quot;class_name&quot;: &quot;SIPIL-4A&quot;,
+            &quot;course_code&quot;: &quot;mk-kl1-001&quot;,
+            &quot;course_name&quot;: &quot;Kalkulus I&quot;,
             &quot;topic&quot;: null,
-            &quot;session_date&quot;: &quot;2026-05-14&quot;,
-            &quot;start_time&quot;: &quot;13:30:00&quot;,
-            &quot;end_time&quot;: &quot;16:30:00&quot;,
+            &quot;session_date&quot;: &quot;2026-06-01&quot;,
+            &quot;start_time&quot;: &quot;08:30:00&quot;,
+            &quot;end_time&quot;: &quot;10:30:00&quot;,
             &quot;status&quot;: &quot;closed&quot;,
             &quot;is_already_opened&quot;: 0,
-            &quot;lecturer_id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
+            &quot;lecturer_id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
             &quot;lecturer&quot;: {
-                &quot;id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
-                &quot;nip&quot;: &quot;645210164499760257&quot;,
-                &quot;nik&quot;: &quot;1607991812998041&quot;,
-                &quot;employee_name&quot;: &quot;Bambang Kurniawan M.Pd&quot;,
-                &quot;address&quot;: &quot;Kpg. Asia Afrika No. 325, Padang 78123, Sultra&quot;,
-                &quot;birth_place&quot;: &quot;Administrasi Jakarta Pusat&quot;,
-                &quot;birth_date&quot;: &quot;1996-10-29&quot;,
-                &quot;gender&quot;: &quot;male&quot;,
-                &quot;phone_number&quot;: &quot;081564987306&quot;,
-                &quot;village_code&quot;: &quot;1115032025&quot;,
-                &quot;district_code&quot;: &quot;111503&quot;,
-                &quot;city_code&quot;: &quot;1115&quot;,
-                &quot;province_code&quot;: &quot;11&quot;,
-                &quot;citizen_code&quot;: &quot;11&quot;
-            }
+                &quot;id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
+                &quot;nip&quot;: &quot;613603008739246341&quot;,
+                &quot;nik&quot;: &quot;3214925301111133&quot;,
+                &quot;employee_name&quot;: &quot;Nadia Usada&quot;,
+                &quot;address&quot;: &quot;Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung&quot;,
+                &quot;birth_place&quot;: &quot;Sibolga&quot;,
+                &quot;birth_date&quot;: &quot;1999-01-08&quot;,
+                &quot;gender&quot;: &quot;female&quot;,
+                &quot;phone_number&quot;: &quot;085552818314&quot;,
+                &quot;village_code&quot;: &quot;3205332006&quot;,
+                &quot;district_code&quot;: &quot;320533&quot;,
+                &quot;city_code&quot;: &quot;3205&quot;,
+                &quot;province_code&quot;: &quot;32&quot;,
+                &quot;citizen_code&quot;: &quot;32&quot;
+            },
+            &quot;learning_materials&quot;: [
+                {
+                    &quot;id&quot;: &quot;019ebf26-a390-7139-95fb-071706236007&quot;,
+                    &quot;original_file_name&quot;: &quot;Modul Flutter Consultation APP.pdf&quot;,
+                    &quot;file_size&quot;: 940422,
+                    &quot;mime_type&quot;: &quot;application/pdf&quot;,
+                    &quot;uploaded_at&quot;: &quot;2026-06-13T04:04:01.000000Z&quot;,
+                    &quot;created_as_material_at&quot;: &quot;2026-06-13T04:04:18.000000Z&quot;
+                }
+            ],
+            &quot;assignments&quot;: [
+                {
+                    &quot;id&quot;: &quot;019ebefb-dc61-70a6-8228-242188b285a4&quot;,
+                    &quot;title&quot;: &quot;Tugas Dasar 1&quot;,
+                    &quot;description&quot;: &quot;Kerjakan Tugas Dasar 1&quot;,
+                    &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
+                    &quot;created_at&quot;: &quot;2026-06-13T03:17:17.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;019ebefb-f829-73a5-9fc8-60ac378b1cb5&quot;,
+                    &quot;title&quot;: &quot;Tugas Dasar 2&quot;,
+                    &quot;description&quot;: &quot;Kerjakan Tugas Dasar 2&quot;,
+                    &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
+                    &quot;created_at&quot;: &quot;2026-06-13T03:17:24.000000Z&quot;
+                }
+            ]
         },
         {
-            &quot;id&quot;: &quot;019e3519-544c-722e-b475-2d49b1ebe7e4&quot;,
-            &quot;pengampu_id&quot;: &quot;237e1c51-1818-7123-85d4-6880f9ff4a21&quot;,
+            &quot;id&quot;: &quot;019ebefb-253b-72b3-a5cb-6a534524b8d0&quot;,
+            &quot;pengampu_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
             &quot;session_number&quot;: 2,
-            &quot;class_id&quot;: &quot;309e6c61-1812-7123-65d3-6880f9ff4a2e&quot;,
-            &quot;class_name&quot;: &quot;TI-4A&quot;,
-            &quot;course_code&quot;: &quot;MK001&quot;,
-            &quot;course_name&quot;: &quot;Pemrograman Perangkat Web&quot;,
+            &quot;class_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+            &quot;class_name&quot;: &quot;SIPIL-4A&quot;,
+            &quot;course_code&quot;: &quot;mk-kl1-001&quot;,
+            &quot;course_name&quot;: &quot;Kalkulus I&quot;,
             &quot;topic&quot;: null,
-            &quot;session_date&quot;: &quot;2026-05-21&quot;,
-            &quot;start_time&quot;: &quot;13:30:00&quot;,
-            &quot;end_time&quot;: &quot;16:30:00&quot;,
+            &quot;session_date&quot;: &quot;2026-06-08&quot;,
+            &quot;start_time&quot;: &quot;08:30:00&quot;,
+            &quot;end_time&quot;: &quot;10:30:00&quot;,
             &quot;status&quot;: &quot;closed&quot;,
             &quot;is_already_opened&quot;: 0,
-            &quot;lecturer_id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
+            &quot;lecturer_id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
             &quot;lecturer&quot;: {
-                &quot;id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
-                &quot;nip&quot;: &quot;645210164499760257&quot;,
-                &quot;nik&quot;: &quot;1607991812998041&quot;,
-                &quot;employee_name&quot;: &quot;Bambang Kurniawan M.Pd&quot;,
-                &quot;address&quot;: &quot;Kpg. Asia Afrika No. 325, Padang 78123, Sultra&quot;,
-                &quot;birth_place&quot;: &quot;Administrasi Jakarta Pusat&quot;,
-                &quot;birth_date&quot;: &quot;1996-10-29&quot;,
-                &quot;gender&quot;: &quot;male&quot;,
-                &quot;phone_number&quot;: &quot;081564987306&quot;,
-                &quot;village_code&quot;: &quot;1115032025&quot;,
-                &quot;district_code&quot;: &quot;111503&quot;,
-                &quot;city_code&quot;: &quot;1115&quot;,
-                &quot;province_code&quot;: &quot;11&quot;,
-                &quot;citizen_code&quot;: &quot;11&quot;
-            }
-        },
-        {
-            &quot;id&quot;: &quot;019e3519-544c-722e-b475-2d49b2e31359&quot;,
-            &quot;pengampu_id&quot;: &quot;237e1c51-1818-7123-85d4-6880f9ff4a21&quot;,
-            &quot;session_number&quot;: 3,
-            &quot;class_id&quot;: &quot;309e6c61-1812-7123-65d3-6880f9ff4a2e&quot;,
-            &quot;class_name&quot;: &quot;TI-4A&quot;,
-            &quot;course_code&quot;: &quot;MK001&quot;,
-            &quot;course_name&quot;: &quot;Pemrograman Perangkat Web&quot;,
-            &quot;topic&quot;: null,
-            &quot;session_date&quot;: &quot;2026-05-28&quot;,
-            &quot;start_time&quot;: &quot;13:30:00&quot;,
-            &quot;end_time&quot;: &quot;16:30:00&quot;,
-            &quot;status&quot;: &quot;closed&quot;,
-            &quot;is_already_opened&quot;: 0,
-            &quot;lecturer_id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
-            &quot;lecturer&quot;: {
-                &quot;id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
-                &quot;nip&quot;: &quot;645210164499760257&quot;,
-                &quot;nik&quot;: &quot;1607991812998041&quot;,
-                &quot;employee_name&quot;: &quot;Bambang Kurniawan M.Pd&quot;,
-                &quot;address&quot;: &quot;Kpg. Asia Afrika No. 325, Padang 78123, Sultra&quot;,
-                &quot;birth_place&quot;: &quot;Administrasi Jakarta Pusat&quot;,
-                &quot;birth_date&quot;: &quot;1996-10-29&quot;,
-                &quot;gender&quot;: &quot;male&quot;,
-                &quot;phone_number&quot;: &quot;081564987306&quot;,
-                &quot;village_code&quot;: &quot;1115032025&quot;,
-                &quot;district_code&quot;: &quot;111503&quot;,
-                &quot;city_code&quot;: &quot;1115&quot;,
-                &quot;province_code&quot;: &quot;11&quot;,
-                &quot;citizen_code&quot;: &quot;11&quot;
-            }
+                &quot;id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
+                &quot;nip&quot;: &quot;613603008739246341&quot;,
+                &quot;nik&quot;: &quot;3214925301111133&quot;,
+                &quot;employee_name&quot;: &quot;Nadia Usada&quot;,
+                &quot;address&quot;: &quot;Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung&quot;,
+                &quot;birth_place&quot;: &quot;Sibolga&quot;,
+                &quot;birth_date&quot;: &quot;1999-01-08&quot;,
+                &quot;gender&quot;: &quot;female&quot;,
+                &quot;phone_number&quot;: &quot;085552818314&quot;,
+                &quot;village_code&quot;: &quot;3205332006&quot;,
+                &quot;district_code&quot;: &quot;320533&quot;,
+                &quot;city_code&quot;: &quot;3205&quot;,
+                &quot;province_code&quot;: &quot;32&quot;,
+                &quot;citizen_code&quot;: &quot;32&quot;
+            },
+            &quot;learning_materials&quot;: [],
+            &quot;assignments&quot;: []
         }
     ],
     &quot;meta&quot;: {
@@ -7316,25 +8764,25 @@ fetch(url, {
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions/generate?page=1&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;page&quot;: 1,
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions/generate?page=2&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions?page=2&quot;,
                 &quot;label&quot;: &quot;2&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions/generate?page=2&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions?page=2&quot;,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost:1234/api/class-sessions/generate&quot;,
+        &quot;path&quot;: &quot;http://localhost:1234/api/class-sessions&quot;,
         &quot;per_page&quot;: 10,
         &quot;to&quot;: 10,
         &quot;total&quot;: 16
@@ -7811,34 +9259,62 @@ fetch(url, {
     &quot;message&quot;: &quot;Data retrieved successfully&quot;,
     &quot;code&quot;: 200,
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;019e33e7-993d-7376-9c5a-c3c8078d697b&quot;,
-        &quot;pengampu_id&quot;: &quot;237e1c51-1818-7123-85d4-6880f9ff4a21&quot;,
-        &quot;class_id&quot;: &quot;309e6c61-1812-7123-65d3-6880f9ff4a2e&quot;,
-        &quot;class_name&quot;: null,
-        &quot;course_name&quot;: &quot;Pemrograman Perangkat Bergerak&quot;,
-        &quot;topic&quot;: &quot;Dart Dasar&quot;,
-        &quot;session_date&quot;: &quot;2026-05-14&quot;,
-        &quot;start_time&quot;: &quot;13:30:00&quot;,
-        &quot;end_time&quot;: &quot;16:30:00&quot;,
-        &quot;status&quot;: &quot;opened&quot;,
+        &quot;id&quot;: &quot;019ebefb-253b-72b3-a5cb-6a5344ffbb09&quot;,
+        &quot;pengampu_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+        &quot;session_number&quot;: 1,
+        &quot;class_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+        &quot;class_name&quot;: &quot;SIPIL-4A&quot;,
+        &quot;course_code&quot;: &quot;mk-kl1-001&quot;,
+        &quot;course_name&quot;: &quot;Kalkulus I&quot;,
+        &quot;topic&quot;: null,
+        &quot;session_date&quot;: &quot;2026-06-01&quot;,
+        &quot;start_time&quot;: &quot;08:30:00&quot;,
+        &quot;end_time&quot;: &quot;10:30:00&quot;,
+        &quot;status&quot;: &quot;closed&quot;,
         &quot;is_already_opened&quot;: 0,
-        &quot;lecturer_id&quot;: &quot;019e2446-7fc4-72de-8392-d22978eea84a&quot;,
+        &quot;lecturer_id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
         &quot;lecturer&quot;: {
-            &quot;id&quot;: &quot;019e2446-7fc4-72de-8392-d22978eea84a&quot;,
-            &quot;nip&quot;: &quot;377377633780957275&quot;,
-            &quot;nik&quot;: &quot;1674900508152465&quot;,
-            &quot;employee_name&quot;: &quot;Samiah Mayasari M.Pd&quot;,
-            &quot;address&quot;: &quot;Ds. Salam No. 429, Bitung 13428, Sulbar&quot;,
-            &quot;birth_place&quot;: &quot;Binjai&quot;,
-            &quot;birth_date&quot;: &quot;2000-08-26&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;phone_number&quot;: &quot;088430472369&quot;,
-            &quot;village_code&quot;: &quot;1307032002&quot;,
-            &quot;district_code&quot;: &quot;130703&quot;,
-            &quot;city_code&quot;: &quot;1307&quot;,
-            &quot;province_code&quot;: &quot;13&quot;,
-            &quot;citizen_code&quot;: &quot;13&quot;
-        }
+            &quot;id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
+            &quot;nip&quot;: &quot;613603008739246341&quot;,
+            &quot;nik&quot;: &quot;3214925301111133&quot;,
+            &quot;employee_name&quot;: &quot;Nadia Usada&quot;,
+            &quot;address&quot;: &quot;Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung&quot;,
+            &quot;birth_place&quot;: &quot;Sibolga&quot;,
+            &quot;birth_date&quot;: &quot;1999-01-08&quot;,
+            &quot;gender&quot;: &quot;female&quot;,
+            &quot;phone_number&quot;: &quot;085552818314&quot;,
+            &quot;village_code&quot;: &quot;3205332006&quot;,
+            &quot;district_code&quot;: &quot;320533&quot;,
+            &quot;city_code&quot;: &quot;3205&quot;,
+            &quot;province_code&quot;: &quot;32&quot;,
+            &quot;citizen_code&quot;: &quot;32&quot;
+        },
+        &quot;learning_materials&quot;: [
+            {
+                &quot;id&quot;: &quot;019ebf26-a390-7139-95fb-071706236007&quot;,
+                &quot;original_file_name&quot;: &quot;Modul Flutter Consultation APP.pdf&quot;,
+                &quot;file_size&quot;: 940422,
+                &quot;mime_type&quot;: &quot;application/pdf&quot;,
+                &quot;uploaded_at&quot;: &quot;2026-06-13T04:04:01.000000Z&quot;,
+                &quot;created_as_material_at&quot;: &quot;2026-06-13T04:04:18.000000Z&quot;
+            }
+        ],
+        &quot;assignments&quot;: [
+            {
+                &quot;id&quot;: &quot;019ebefb-dc61-70a6-8228-242188b285a4&quot;,
+                &quot;title&quot;: &quot;Tugas Dasar 1&quot;,
+                &quot;description&quot;: &quot;Kerjakan Tugas Dasar 1&quot;,
+                &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
+                &quot;created_at&quot;: &quot;2026-06-13T03:17:17.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: &quot;019ebefb-f829-73a5-9fc8-60ac378b1cb5&quot;,
+                &quot;title&quot;: &quot;Tugas Dasar 2&quot;,
+                &quot;description&quot;: &quot;Kerjakan Tugas Dasar 2&quot;,
+                &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
+                &quot;created_at&quot;: &quot;2026-06-13T03:17:24.000000Z&quot;
+            }
+        ]
     }
 }</code></pre>
                                                                             </div>
@@ -8319,104 +9795,100 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;success&quot;: true,
-    &quot;message&quot;: &quot;Data genereated successfully&quot;,
-    &quot;code&quot;: 201,
+    &quot;message&quot;: &quot;Data retrieved successfully&quot;,
+    &quot;code&quot;: 200,
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;019e3519-544c-722e-b475-2d49b10a3942&quot;,
-            &quot;pengampu_id&quot;: &quot;237e1c51-1818-7123-85d4-6880f9ff4a21&quot;,
+            &quot;id&quot;: &quot;019ebefb-253b-72b3-a5cb-6a5344ffbb09&quot;,
+            &quot;pengampu_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
             &quot;session_number&quot;: 1,
-            &quot;class_id&quot;: &quot;309e6c61-1812-7123-65d3-6880f9ff4a2e&quot;,
-            &quot;class_name&quot;: &quot;TI-4A&quot;,
-            &quot;course_code&quot;: &quot;MK001&quot;,
-            &quot;course_name&quot;: &quot;Pemrograman Perangkat Web&quot;,
+            &quot;class_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+            &quot;class_name&quot;: &quot;SIPIL-4A&quot;,
+            &quot;course_code&quot;: &quot;mk-kl1-001&quot;,
+            &quot;course_name&quot;: &quot;Kalkulus I&quot;,
             &quot;topic&quot;: null,
-            &quot;session_date&quot;: &quot;2026-05-14&quot;,
-            &quot;start_time&quot;: &quot;13:30:00&quot;,
-            &quot;end_time&quot;: &quot;16:30:00&quot;,
+            &quot;session_date&quot;: &quot;2026-06-01&quot;,
+            &quot;start_time&quot;: &quot;08:30:00&quot;,
+            &quot;end_time&quot;: &quot;10:30:00&quot;,
             &quot;status&quot;: &quot;closed&quot;,
             &quot;is_already_opened&quot;: 0,
-            &quot;lecturer_id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
+            &quot;lecturer_id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
             &quot;lecturer&quot;: {
-                &quot;id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
-                &quot;nip&quot;: &quot;645210164499760257&quot;,
-                &quot;nik&quot;: &quot;1607991812998041&quot;,
-                &quot;employee_name&quot;: &quot;Bambang Kurniawan M.Pd&quot;,
-                &quot;address&quot;: &quot;Kpg. Asia Afrika No. 325, Padang 78123, Sultra&quot;,
-                &quot;birth_place&quot;: &quot;Administrasi Jakarta Pusat&quot;,
-                &quot;birth_date&quot;: &quot;1996-10-29&quot;,
-                &quot;gender&quot;: &quot;male&quot;,
-                &quot;phone_number&quot;: &quot;081564987306&quot;,
-                &quot;village_code&quot;: &quot;1115032025&quot;,
-                &quot;district_code&quot;: &quot;111503&quot;,
-                &quot;city_code&quot;: &quot;1115&quot;,
-                &quot;province_code&quot;: &quot;11&quot;,
-                &quot;citizen_code&quot;: &quot;11&quot;
-            }
+                &quot;id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
+                &quot;nip&quot;: &quot;613603008739246341&quot;,
+                &quot;nik&quot;: &quot;3214925301111133&quot;,
+                &quot;employee_name&quot;: &quot;Nadia Usada&quot;,
+                &quot;address&quot;: &quot;Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung&quot;,
+                &quot;birth_place&quot;: &quot;Sibolga&quot;,
+                &quot;birth_date&quot;: &quot;1999-01-08&quot;,
+                &quot;gender&quot;: &quot;female&quot;,
+                &quot;phone_number&quot;: &quot;085552818314&quot;,
+                &quot;village_code&quot;: &quot;3205332006&quot;,
+                &quot;district_code&quot;: &quot;320533&quot;,
+                &quot;city_code&quot;: &quot;3205&quot;,
+                &quot;province_code&quot;: &quot;32&quot;,
+                &quot;citizen_code&quot;: &quot;32&quot;
+            },
+            &quot;learning_materials&quot;: [
+                {
+                    &quot;id&quot;: &quot;019ebf26-a390-7139-95fb-071706236007&quot;,
+                    &quot;original_file_name&quot;: &quot;Modul Flutter Consultation APP.pdf&quot;,
+                    &quot;file_size&quot;: 940422,
+                    &quot;mime_type&quot;: &quot;application/pdf&quot;,
+                    &quot;uploaded_at&quot;: &quot;2026-06-13T04:04:01.000000Z&quot;,
+                    &quot;created_as_material_at&quot;: &quot;2026-06-13T04:04:18.000000Z&quot;
+                }
+            ],
+            &quot;assignments&quot;: [
+                {
+                    &quot;id&quot;: &quot;019ebefb-dc61-70a6-8228-242188b285a4&quot;,
+                    &quot;title&quot;: &quot;Tugas Dasar 1&quot;,
+                    &quot;description&quot;: &quot;Kerjakan Tugas Dasar 1&quot;,
+                    &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
+                    &quot;created_at&quot;: &quot;2026-06-13T03:17:17.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;019ebefb-f829-73a5-9fc8-60ac378b1cb5&quot;,
+                    &quot;title&quot;: &quot;Tugas Dasar 2&quot;,
+                    &quot;description&quot;: &quot;Kerjakan Tugas Dasar 2&quot;,
+                    &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
+                    &quot;created_at&quot;: &quot;2026-06-13T03:17:24.000000Z&quot;
+                }
+            ]
         },
         {
-            &quot;id&quot;: &quot;019e3519-544c-722e-b475-2d49b1ebe7e4&quot;,
-            &quot;pengampu_id&quot;: &quot;237e1c51-1818-7123-85d4-6880f9ff4a21&quot;,
+            &quot;id&quot;: &quot;019ebefb-253b-72b3-a5cb-6a534524b8d0&quot;,
+            &quot;pengampu_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
             &quot;session_number&quot;: 2,
-            &quot;class_id&quot;: &quot;309e6c61-1812-7123-65d3-6880f9ff4a2e&quot;,
-            &quot;class_name&quot;: &quot;TI-4A&quot;,
-            &quot;course_code&quot;: &quot;MK001&quot;,
-            &quot;course_name&quot;: &quot;Pemrograman Perangkat Web&quot;,
+            &quot;class_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+            &quot;class_name&quot;: &quot;SIPIL-4A&quot;,
+            &quot;course_code&quot;: &quot;mk-kl1-001&quot;,
+            &quot;course_name&quot;: &quot;Kalkulus I&quot;,
             &quot;topic&quot;: null,
-            &quot;session_date&quot;: &quot;2026-05-21&quot;,
-            &quot;start_time&quot;: &quot;13:30:00&quot;,
-            &quot;end_time&quot;: &quot;16:30:00&quot;,
+            &quot;session_date&quot;: &quot;2026-06-08&quot;,
+            &quot;start_time&quot;: &quot;08:30:00&quot;,
+            &quot;end_time&quot;: &quot;10:30:00&quot;,
             &quot;status&quot;: &quot;closed&quot;,
             &quot;is_already_opened&quot;: 0,
-            &quot;lecturer_id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
+            &quot;lecturer_id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
             &quot;lecturer&quot;: {
-                &quot;id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
-                &quot;nip&quot;: &quot;645210164499760257&quot;,
-                &quot;nik&quot;: &quot;1607991812998041&quot;,
-                &quot;employee_name&quot;: &quot;Bambang Kurniawan M.Pd&quot;,
-                &quot;address&quot;: &quot;Kpg. Asia Afrika No. 325, Padang 78123, Sultra&quot;,
-                &quot;birth_place&quot;: &quot;Administrasi Jakarta Pusat&quot;,
-                &quot;birth_date&quot;: &quot;1996-10-29&quot;,
-                &quot;gender&quot;: &quot;male&quot;,
-                &quot;phone_number&quot;: &quot;081564987306&quot;,
-                &quot;village_code&quot;: &quot;1115032025&quot;,
-                &quot;district_code&quot;: &quot;111503&quot;,
-                &quot;city_code&quot;: &quot;1115&quot;,
-                &quot;province_code&quot;: &quot;11&quot;,
-                &quot;citizen_code&quot;: &quot;11&quot;
-            }
-        },
-        {
-            &quot;id&quot;: &quot;019e3519-544c-722e-b475-2d49b2e31359&quot;,
-            &quot;pengampu_id&quot;: &quot;237e1c51-1818-7123-85d4-6880f9ff4a21&quot;,
-            &quot;session_number&quot;: 3,
-            &quot;class_id&quot;: &quot;309e6c61-1812-7123-65d3-6880f9ff4a2e&quot;,
-            &quot;class_name&quot;: &quot;TI-4A&quot;,
-            &quot;course_code&quot;: &quot;MK001&quot;,
-            &quot;course_name&quot;: &quot;Pemrograman Perangkat Web&quot;,
-            &quot;topic&quot;: null,
-            &quot;session_date&quot;: &quot;2026-05-28&quot;,
-            &quot;start_time&quot;: &quot;13:30:00&quot;,
-            &quot;end_time&quot;: &quot;16:30:00&quot;,
-            &quot;status&quot;: &quot;closed&quot;,
-            &quot;is_already_opened&quot;: 0,
-            &quot;lecturer_id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
-            &quot;lecturer&quot;: {
-                &quot;id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
-                &quot;nip&quot;: &quot;645210164499760257&quot;,
-                &quot;nik&quot;: &quot;1607991812998041&quot;,
-                &quot;employee_name&quot;: &quot;Bambang Kurniawan M.Pd&quot;,
-                &quot;address&quot;: &quot;Kpg. Asia Afrika No. 325, Padang 78123, Sultra&quot;,
-                &quot;birth_place&quot;: &quot;Administrasi Jakarta Pusat&quot;,
-                &quot;birth_date&quot;: &quot;1996-10-29&quot;,
-                &quot;gender&quot;: &quot;male&quot;,
-                &quot;phone_number&quot;: &quot;081564987306&quot;,
-                &quot;village_code&quot;: &quot;1115032025&quot;,
-                &quot;district_code&quot;: &quot;111503&quot;,
-                &quot;city_code&quot;: &quot;1115&quot;,
-                &quot;province_code&quot;: &quot;11&quot;,
-                &quot;citizen_code&quot;: &quot;11&quot;
-            }
+                &quot;id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
+                &quot;nip&quot;: &quot;613603008739246341&quot;,
+                &quot;nik&quot;: &quot;3214925301111133&quot;,
+                &quot;employee_name&quot;: &quot;Nadia Usada&quot;,
+                &quot;address&quot;: &quot;Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung&quot;,
+                &quot;birth_place&quot;: &quot;Sibolga&quot;,
+                &quot;birth_date&quot;: &quot;1999-01-08&quot;,
+                &quot;gender&quot;: &quot;female&quot;,
+                &quot;phone_number&quot;: &quot;085552818314&quot;,
+                &quot;village_code&quot;: &quot;3205332006&quot;,
+                &quot;district_code&quot;: &quot;320533&quot;,
+                &quot;city_code&quot;: &quot;3205&quot;,
+                &quot;province_code&quot;: &quot;32&quot;,
+                &quot;citizen_code&quot;: &quot;32&quot;
+            },
+            &quot;learning_materials&quot;: [],
+            &quot;assignments&quot;: []
         }
     ],
     &quot;meta&quot;: {
@@ -8431,25 +9903,25 @@ fetch(url, {
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions/generate?page=1&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;page&quot;: 1,
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions/generate?page=2&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions?page=2&quot;,
                 &quot;label&quot;: &quot;2&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions/generate?page=2&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions?page=2&quot;,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost:1234/api/class-sessions/generate&quot;,
+        &quot;path&quot;: &quot;http://localhost:1234/api/class-sessions&quot;,
         &quot;per_page&quot;: 10,
         &quot;to&quot;: 10,
         &quot;total&quot;: 16
@@ -9194,104 +10666,100 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;success&quot;: true,
-    &quot;message&quot;: &quot;Data genereated successfully&quot;,
-    &quot;code&quot;: 201,
+    &quot;message&quot;: &quot;Data retrieved successfully&quot;,
+    &quot;code&quot;: 200,
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;019e3519-544c-722e-b475-2d49b10a3942&quot;,
-            &quot;pengampu_id&quot;: &quot;237e1c51-1818-7123-85d4-6880f9ff4a21&quot;,
+            &quot;id&quot;: &quot;019ebefb-253b-72b3-a5cb-6a5344ffbb09&quot;,
+            &quot;pengampu_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
             &quot;session_number&quot;: 1,
-            &quot;class_id&quot;: &quot;309e6c61-1812-7123-65d3-6880f9ff4a2e&quot;,
-            &quot;class_name&quot;: &quot;TI-4A&quot;,
-            &quot;course_code&quot;: &quot;MK001&quot;,
-            &quot;course_name&quot;: &quot;Pemrograman Perangkat Web&quot;,
+            &quot;class_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+            &quot;class_name&quot;: &quot;SIPIL-4A&quot;,
+            &quot;course_code&quot;: &quot;mk-kl1-001&quot;,
+            &quot;course_name&quot;: &quot;Kalkulus I&quot;,
             &quot;topic&quot;: null,
-            &quot;session_date&quot;: &quot;2026-05-14&quot;,
-            &quot;start_time&quot;: &quot;13:30:00&quot;,
-            &quot;end_time&quot;: &quot;16:30:00&quot;,
+            &quot;session_date&quot;: &quot;2026-06-01&quot;,
+            &quot;start_time&quot;: &quot;08:30:00&quot;,
+            &quot;end_time&quot;: &quot;10:30:00&quot;,
             &quot;status&quot;: &quot;closed&quot;,
             &quot;is_already_opened&quot;: 0,
-            &quot;lecturer_id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
+            &quot;lecturer_id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
             &quot;lecturer&quot;: {
-                &quot;id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
-                &quot;nip&quot;: &quot;645210164499760257&quot;,
-                &quot;nik&quot;: &quot;1607991812998041&quot;,
-                &quot;employee_name&quot;: &quot;Bambang Kurniawan M.Pd&quot;,
-                &quot;address&quot;: &quot;Kpg. Asia Afrika No. 325, Padang 78123, Sultra&quot;,
-                &quot;birth_place&quot;: &quot;Administrasi Jakarta Pusat&quot;,
-                &quot;birth_date&quot;: &quot;1996-10-29&quot;,
-                &quot;gender&quot;: &quot;male&quot;,
-                &quot;phone_number&quot;: &quot;081564987306&quot;,
-                &quot;village_code&quot;: &quot;1115032025&quot;,
-                &quot;district_code&quot;: &quot;111503&quot;,
-                &quot;city_code&quot;: &quot;1115&quot;,
-                &quot;province_code&quot;: &quot;11&quot;,
-                &quot;citizen_code&quot;: &quot;11&quot;
-            }
+                &quot;id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
+                &quot;nip&quot;: &quot;613603008739246341&quot;,
+                &quot;nik&quot;: &quot;3214925301111133&quot;,
+                &quot;employee_name&quot;: &quot;Nadia Usada&quot;,
+                &quot;address&quot;: &quot;Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung&quot;,
+                &quot;birth_place&quot;: &quot;Sibolga&quot;,
+                &quot;birth_date&quot;: &quot;1999-01-08&quot;,
+                &quot;gender&quot;: &quot;female&quot;,
+                &quot;phone_number&quot;: &quot;085552818314&quot;,
+                &quot;village_code&quot;: &quot;3205332006&quot;,
+                &quot;district_code&quot;: &quot;320533&quot;,
+                &quot;city_code&quot;: &quot;3205&quot;,
+                &quot;province_code&quot;: &quot;32&quot;,
+                &quot;citizen_code&quot;: &quot;32&quot;
+            },
+            &quot;learning_materials&quot;: [
+                {
+                    &quot;id&quot;: &quot;019ebf26-a390-7139-95fb-071706236007&quot;,
+                    &quot;original_file_name&quot;: &quot;Modul Flutter Consultation APP.pdf&quot;,
+                    &quot;file_size&quot;: 940422,
+                    &quot;mime_type&quot;: &quot;application/pdf&quot;,
+                    &quot;uploaded_at&quot;: &quot;2026-06-13T04:04:01.000000Z&quot;,
+                    &quot;created_as_material_at&quot;: &quot;2026-06-13T04:04:18.000000Z&quot;
+                }
+            ],
+            &quot;assignments&quot;: [
+                {
+                    &quot;id&quot;: &quot;019ebefb-dc61-70a6-8228-242188b285a4&quot;,
+                    &quot;title&quot;: &quot;Tugas Dasar 1&quot;,
+                    &quot;description&quot;: &quot;Kerjakan Tugas Dasar 1&quot;,
+                    &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
+                    &quot;created_at&quot;: &quot;2026-06-13T03:17:17.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;019ebefb-f829-73a5-9fc8-60ac378b1cb5&quot;,
+                    &quot;title&quot;: &quot;Tugas Dasar 2&quot;,
+                    &quot;description&quot;: &quot;Kerjakan Tugas Dasar 2&quot;,
+                    &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
+                    &quot;created_at&quot;: &quot;2026-06-13T03:17:24.000000Z&quot;
+                }
+            ]
         },
         {
-            &quot;id&quot;: &quot;019e3519-544c-722e-b475-2d49b1ebe7e4&quot;,
-            &quot;pengampu_id&quot;: &quot;237e1c51-1818-7123-85d4-6880f9ff4a21&quot;,
+            &quot;id&quot;: &quot;019ebefb-253b-72b3-a5cb-6a534524b8d0&quot;,
+            &quot;pengampu_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
             &quot;session_number&quot;: 2,
-            &quot;class_id&quot;: &quot;309e6c61-1812-7123-65d3-6880f9ff4a2e&quot;,
-            &quot;class_name&quot;: &quot;TI-4A&quot;,
-            &quot;course_code&quot;: &quot;MK001&quot;,
-            &quot;course_name&quot;: &quot;Pemrograman Perangkat Web&quot;,
+            &quot;class_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+            &quot;class_name&quot;: &quot;SIPIL-4A&quot;,
+            &quot;course_code&quot;: &quot;mk-kl1-001&quot;,
+            &quot;course_name&quot;: &quot;Kalkulus I&quot;,
             &quot;topic&quot;: null,
-            &quot;session_date&quot;: &quot;2026-05-21&quot;,
-            &quot;start_time&quot;: &quot;13:30:00&quot;,
-            &quot;end_time&quot;: &quot;16:30:00&quot;,
+            &quot;session_date&quot;: &quot;2026-06-08&quot;,
+            &quot;start_time&quot;: &quot;08:30:00&quot;,
+            &quot;end_time&quot;: &quot;10:30:00&quot;,
             &quot;status&quot;: &quot;closed&quot;,
             &quot;is_already_opened&quot;: 0,
-            &quot;lecturer_id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
+            &quot;lecturer_id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
             &quot;lecturer&quot;: {
-                &quot;id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
-                &quot;nip&quot;: &quot;645210164499760257&quot;,
-                &quot;nik&quot;: &quot;1607991812998041&quot;,
-                &quot;employee_name&quot;: &quot;Bambang Kurniawan M.Pd&quot;,
-                &quot;address&quot;: &quot;Kpg. Asia Afrika No. 325, Padang 78123, Sultra&quot;,
-                &quot;birth_place&quot;: &quot;Administrasi Jakarta Pusat&quot;,
-                &quot;birth_date&quot;: &quot;1996-10-29&quot;,
-                &quot;gender&quot;: &quot;male&quot;,
-                &quot;phone_number&quot;: &quot;081564987306&quot;,
-                &quot;village_code&quot;: &quot;1115032025&quot;,
-                &quot;district_code&quot;: &quot;111503&quot;,
-                &quot;city_code&quot;: &quot;1115&quot;,
-                &quot;province_code&quot;: &quot;11&quot;,
-                &quot;citizen_code&quot;: &quot;11&quot;
-            }
-        },
-        {
-            &quot;id&quot;: &quot;019e3519-544c-722e-b475-2d49b2e31359&quot;,
-            &quot;pengampu_id&quot;: &quot;237e1c51-1818-7123-85d4-6880f9ff4a21&quot;,
-            &quot;session_number&quot;: 3,
-            &quot;class_id&quot;: &quot;309e6c61-1812-7123-65d3-6880f9ff4a2e&quot;,
-            &quot;class_name&quot;: &quot;TI-4A&quot;,
-            &quot;course_code&quot;: &quot;MK001&quot;,
-            &quot;course_name&quot;: &quot;Pemrograman Perangkat Web&quot;,
-            &quot;topic&quot;: null,
-            &quot;session_date&quot;: &quot;2026-05-28&quot;,
-            &quot;start_time&quot;: &quot;13:30:00&quot;,
-            &quot;end_time&quot;: &quot;16:30:00&quot;,
-            &quot;status&quot;: &quot;closed&quot;,
-            &quot;is_already_opened&quot;: 0,
-            &quot;lecturer_id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
-            &quot;lecturer&quot;: {
-                &quot;id&quot;: &quot;019e3511-0c15-73a0-8056-3dc7f626ce60&quot;,
-                &quot;nip&quot;: &quot;645210164499760257&quot;,
-                &quot;nik&quot;: &quot;1607991812998041&quot;,
-                &quot;employee_name&quot;: &quot;Bambang Kurniawan M.Pd&quot;,
-                &quot;address&quot;: &quot;Kpg. Asia Afrika No. 325, Padang 78123, Sultra&quot;,
-                &quot;birth_place&quot;: &quot;Administrasi Jakarta Pusat&quot;,
-                &quot;birth_date&quot;: &quot;1996-10-29&quot;,
-                &quot;gender&quot;: &quot;male&quot;,
-                &quot;phone_number&quot;: &quot;081564987306&quot;,
-                &quot;village_code&quot;: &quot;1115032025&quot;,
-                &quot;district_code&quot;: &quot;111503&quot;,
-                &quot;city_code&quot;: &quot;1115&quot;,
-                &quot;province_code&quot;: &quot;11&quot;,
-                &quot;citizen_code&quot;: &quot;11&quot;
-            }
+                &quot;id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
+                &quot;nip&quot;: &quot;613603008739246341&quot;,
+                &quot;nik&quot;: &quot;3214925301111133&quot;,
+                &quot;employee_name&quot;: &quot;Nadia Usada&quot;,
+                &quot;address&quot;: &quot;Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung&quot;,
+                &quot;birth_place&quot;: &quot;Sibolga&quot;,
+                &quot;birth_date&quot;: &quot;1999-01-08&quot;,
+                &quot;gender&quot;: &quot;female&quot;,
+                &quot;phone_number&quot;: &quot;085552818314&quot;,
+                &quot;village_code&quot;: &quot;3205332006&quot;,
+                &quot;district_code&quot;: &quot;320533&quot;,
+                &quot;city_code&quot;: &quot;3205&quot;,
+                &quot;province_code&quot;: &quot;32&quot;,
+                &quot;citizen_code&quot;: &quot;32&quot;
+            },
+            &quot;learning_materials&quot;: [],
+            &quot;assignments&quot;: []
         }
     ],
     &quot;meta&quot;: {
@@ -9306,25 +10774,25 @@ fetch(url, {
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions/generate?page=1&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;page&quot;: 1,
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions/generate?page=2&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions?page=2&quot;,
                 &quot;label&quot;: &quot;2&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions/generate?page=2&quot;,
+                &quot;url&quot;: &quot;http://localhost:1234/api/class-sessions?page=2&quot;,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost:1234/api/class-sessions/generate&quot;,
+        &quot;path&quot;: &quot;http://localhost:1234/api/class-sessions&quot;,
         &quot;per_page&quot;: 10,
         &quot;to&quot;: 10,
         &quot;total&quot;: 16
@@ -9998,34 +11466,62 @@ fetch(url, {
     &quot;message&quot;: &quot;Data retrieved successfully&quot;,
     &quot;code&quot;: 200,
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;019e33e7-993d-7376-9c5a-c3c8078d697b&quot;,
-        &quot;pengampu_id&quot;: &quot;237e1c51-1818-7123-85d4-6880f9ff4a21&quot;,
-        &quot;class_id&quot;: &quot;309e6c61-1812-7123-65d3-6880f9ff4a2e&quot;,
-        &quot;class_name&quot;: null,
-        &quot;course_name&quot;: &quot;Pemrograman Perangkat Bergerak&quot;,
-        &quot;topic&quot;: &quot;Dart Dasar&quot;,
-        &quot;session_date&quot;: &quot;2026-05-14&quot;,
-        &quot;start_time&quot;: &quot;13:30:00&quot;,
-        &quot;end_time&quot;: &quot;16:30:00&quot;,
-        &quot;status&quot;: &quot;opened&quot;,
+        &quot;id&quot;: &quot;019ebefb-253b-72b3-a5cb-6a5344ffbb09&quot;,
+        &quot;pengampu_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+        &quot;session_number&quot;: 1,
+        &quot;class_id&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;,
+        &quot;class_name&quot;: &quot;SIPIL-4A&quot;,
+        &quot;course_code&quot;: &quot;mk-kl1-001&quot;,
+        &quot;course_name&quot;: &quot;Kalkulus I&quot;,
+        &quot;topic&quot;: null,
+        &quot;session_date&quot;: &quot;2026-06-01&quot;,
+        &quot;start_time&quot;: &quot;08:30:00&quot;,
+        &quot;end_time&quot;: &quot;10:30:00&quot;,
+        &quot;status&quot;: &quot;closed&quot;,
         &quot;is_already_opened&quot;: 0,
-        &quot;lecturer_id&quot;: &quot;019e2446-7fc4-72de-8392-d22978eea84a&quot;,
+        &quot;lecturer_id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
         &quot;lecturer&quot;: {
-            &quot;id&quot;: &quot;019e2446-7fc4-72de-8392-d22978eea84a&quot;,
-            &quot;nip&quot;: &quot;377377633780957275&quot;,
-            &quot;nik&quot;: &quot;1674900508152465&quot;,
-            &quot;employee_name&quot;: &quot;Samiah Mayasari M.Pd&quot;,
-            &quot;address&quot;: &quot;Ds. Salam No. 429, Bitung 13428, Sulbar&quot;,
-            &quot;birth_place&quot;: &quot;Binjai&quot;,
-            &quot;birth_date&quot;: &quot;2000-08-26&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;phone_number&quot;: &quot;088430472369&quot;,
-            &quot;village_code&quot;: &quot;1307032002&quot;,
-            &quot;district_code&quot;: &quot;130703&quot;,
-            &quot;city_code&quot;: &quot;1307&quot;,
-            &quot;province_code&quot;: &quot;13&quot;,
-            &quot;citizen_code&quot;: &quot;13&quot;
-        }
+            &quot;id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
+            &quot;nip&quot;: &quot;613603008739246341&quot;,
+            &quot;nik&quot;: &quot;3214925301111133&quot;,
+            &quot;employee_name&quot;: &quot;Nadia Usada&quot;,
+            &quot;address&quot;: &quot;Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung&quot;,
+            &quot;birth_place&quot;: &quot;Sibolga&quot;,
+            &quot;birth_date&quot;: &quot;1999-01-08&quot;,
+            &quot;gender&quot;: &quot;female&quot;,
+            &quot;phone_number&quot;: &quot;085552818314&quot;,
+            &quot;village_code&quot;: &quot;3205332006&quot;,
+            &quot;district_code&quot;: &quot;320533&quot;,
+            &quot;city_code&quot;: &quot;3205&quot;,
+            &quot;province_code&quot;: &quot;32&quot;,
+            &quot;citizen_code&quot;: &quot;32&quot;
+        },
+        &quot;learning_materials&quot;: [
+            {
+                &quot;id&quot;: &quot;019ebf26-a390-7139-95fb-071706236007&quot;,
+                &quot;original_file_name&quot;: &quot;Modul Flutter Consultation APP.pdf&quot;,
+                &quot;file_size&quot;: 940422,
+                &quot;mime_type&quot;: &quot;application/pdf&quot;,
+                &quot;uploaded_at&quot;: &quot;2026-06-13T04:04:01.000000Z&quot;,
+                &quot;created_as_material_at&quot;: &quot;2026-06-13T04:04:18.000000Z&quot;
+            }
+        ],
+        &quot;assignments&quot;: [
+            {
+                &quot;id&quot;: &quot;019ebefb-dc61-70a6-8228-242188b285a4&quot;,
+                &quot;title&quot;: &quot;Tugas Dasar 1&quot;,
+                &quot;description&quot;: &quot;Kerjakan Tugas Dasar 1&quot;,
+                &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
+                &quot;created_at&quot;: &quot;2026-06-13T03:17:17.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: &quot;019ebefb-f829-73a5-9fc8-60ac378b1cb5&quot;,
+                &quot;title&quot;: &quot;Tugas Dasar 2&quot;,
+                &quot;description&quot;: &quot;Kerjakan Tugas Dasar 2&quot;,
+                &quot;deadline&quot;: &quot;2026-06-15 00:00:00&quot;,
+                &quot;created_at&quot;: &quot;2026-06-13T03:17:24.000000Z&quot;
+            }
+        ]
     }
 }</code></pre>
                                                                             </div>
@@ -10706,7 +12202,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019eab01-b22a-7114-af06-8131fe9a9fc9
+                        019ebefb-253b-72b3-a5cb-6a5344ffbb09
                     </div>
                 </div>
             </div>
@@ -10874,7 +12370,7 @@ fetch(url, {
                                         <input aria-label="classSession_id" name="classSession_id"
                                                id="urlparam-POSTapi-class-sessions--classSession_id--learning-materials-classSession_id"
                                                placeholder="The ID of the classSession."
-                                               value="019eab01-b22a-7114-af06-8131fe9a9fc9" data-component="url"
+                                               value="019ebefb-253b-72b3-a5cb-6a5344ffbb09" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -11000,7 +12496,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:1234/api/class-sessions/019eab01-b22a-7114-af06-8131fe9a9fc9/learning-materials" \
+    "http://localhost:1234/api/class-sessions/019ebefb-253b-72b3-a5cb-6a5344ffbb09/learning-materials" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -11018,7 +12514,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/class-sessions/019eab01-b22a-7114-af06-8131fe9a9fc9/learning-materials"
+    "http://localhost:1234/api/class-sessions/019ebefb-253b-72b3-a5cb-6a5344ffbb09/learning-materials"
 );
 
 const headers = {
@@ -11304,7 +12800,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019eab01-b22a-7114-af06-8131fe9a9fc9
+                        019ebefb-253b-72b3-a5cb-6a5344ffbb09
                     </div>
                 </div>
             </div>
@@ -11472,7 +12968,7 @@ fetch(url, {
                                         <input aria-label="classSession_id" name="classSession_id"
                                                id="urlparam-POSTapi-class-sessions--classSession_id--learning-materials-delete-classSession_id"
                                                placeholder="The ID of the classSession."
-                                               value="019eab01-b22a-7114-af06-8131fe9a9fc9" data-component="url"
+                                               value="019ebefb-253b-72b3-a5cb-6a5344ffbb09" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -11598,7 +13094,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:1234/api/class-sessions/019eab01-b22a-7114-af06-8131fe9a9fc9/learning-materials/delete" \
+    "http://localhost:1234/api/class-sessions/019ebefb-253b-72b3-a5cb-6a5344ffbb09/learning-materials/delete" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -11616,7 +13112,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/class-sessions/019eab01-b22a-7114-af06-8131fe9a9fc9/learning-materials/delete"
+    "http://localhost:1234/api/class-sessions/019ebefb-253b-72b3-a5cb-6a5344ffbb09/learning-materials/delete"
 );
 
 const headers = {
@@ -11710,6 +13206,1722 @@ fetch(url, {
                                                                             </div>
                                 </div>
                                                             <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-class-sessions--classSession_id--learning-materials-delete example-response-POSTapi-class-sessions--classSession_id--learning-materials-delete-3"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 403,
+    &quot;message&quot;: &quot;Forbidden&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                    </div>
+                            </div>
+    </div>
+</div>
+
+                <h1 id="setting-nilai"
+        class="sl-text-5xl sl-leading-tight sl-font-prose sl-text-heading"
+    >
+        Setting Nilai
+    </h1>
+
+    <p>Endpoint terkait operasi CRUD untuk data Setting nilai.</p>
+
+                                <div class="sl-stack sl-stack--vertical sl-stack--8 HttpOperation sl-flex sl-flex-col sl-items-stretch sl-w-full">
+    <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
+        <div class="sl-relative">
+            <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
+                <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
+                    id="setting-nilai-GETapi-grade-settings">
+                    Ambil Semua Data Aturan Nilai
+                </h2>
+            </div>
+        </div>
+
+        <div class="sl-relative">
+            <div title="http://localhost:1234/api/grade-settings"
+                     class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
+                >
+                                            <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
+                             style="background-color: green;"
+                        >
+                            GET
+                        </div>
+                                        <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
+                        <div dir="rtl"
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://localhost:1234</div>
+                        <div class="sl-flex-1 sl-font-semibold">/api/grade-settings</div>
+                    </div>
+
+                                                    <div class="sl-font-prose sl-font-semibold sl-px-1.5 sl-py-0.5 sl-text-on-primary sl-rounded-lg"
+                                 style="background-color: darkred"
+                            >requires authentication
+                            </div>
+                                                                                    </div>
+        </div>
+
+        <p>Endpoint ini digunakan untuk mengambil semua data aturan nilai</p>
+<p>Fitur ini <strong>hanya bisa dijalankan</strong> oleh user <strong>dosen yang mengajar di sesi kelas tersebut</strong>.</p>
+    </div>
+    <div class="sl-flex">
+        <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
+            <div class="sl-stack sl-stack--vertical sl-stack--10 sl-flex sl-flex-col sl-items-stretch">
+                <div class="sl-stack sl-stack--vertical sl-stack--8 sl-flex sl-flex-col sl-items-stretch">
+                                            <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
+                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">
+                                Headers
+                            </h3>
+                            <div class="sl-text-sm">
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Authorization</div>
+                                    </div>
+                                        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        Bearer {JWT here}
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Content-Type</div>
+                                    </div>
+                                        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        application/json
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Accept</div>
+                                    </div>
+                                        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        application/json
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                            </div>
+                        </div>
+                    
+                    
+
+                    
+                    
+                                    </div>
+            </div>
+        </div>
+
+        <div data-testid="two-column-right" class="sl-relative sl-w-2/5 sl-ml-16" style="max-width: 500px;">
+            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
+
+                                    <div class="sl-inverted">
+    <div class="sl-overflow-y-hidden sl-rounded-lg">
+        <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
+              data-method="GET"
+              data-path="api/grade-settings"
+              data-hasfiles="0"
+              data-hasjsonbody="0">
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Auth
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="ParameterGrid sl-p-4">
+                            <label aria-hidden="true"
+                                   for="auth-GETapi-grade-settings">Authorization</label>
+                            <span class="sl-mx-3">:</span>
+                            <div class="sl-flex sl-flex-1">
+                                <div class="sl-input sl-flex-1 sl-relative">
+                                    <code>Bearer </code>
+                                    <input aria-label="Authorization"
+                                           id="auth-GETapi-grade-settings"
+                                           data-component="header"
+                                           data-prefix="Bearer "
+                                           name="Authorization"
+                                           placeholder="{JWT here}"
+                                           class="auth-value sl-relative sl-w-3/5 sl-h-md sl-text-base sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Headers
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="ParameterGrid sl-p-4">
+                                                                                                                            <label aria-hidden="true"
+                                       for="header-GETapi-grade-settings-Content-Type">Content-Type</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="Content-Type" name="Content-Type"
+                                               id="header-GETapi-grade-settings-Content-Type"
+                                               value="application/json" data-component="header"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                                                            <label aria-hidden="true"
+                                       for="header-GETapi-grade-settings-Accept">Accept</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="Accept" name="Accept"
+                                               id="header-GETapi-grade-settings-Accept"
+                                               value="application/json" data-component="header"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            
+            
+            
+            
+            <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
+                <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
+                    <button type="button" data-endpoint="GETapi-grade-settings"
+                            class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
+                    >
+                        Send Request 💥
+                    </button>
+                </div>
+            </div>
+
+            <div data-endpoint="GETapi-grade-settings"
+                 class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
+                <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                     role="button">
+                    <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                        <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                 data-icon="caret-down"
+                                 class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor"
+                                      d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                            </svg>
+                        </div>
+                        Request failed with error
+                    </div>
+                </div>
+                <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                    <div class="sl-panel__content sl-p-4">
+                        <p class="sl-pb-2"><strong class="error-message"></strong></p>
+                        <p class="sl-pb-2">Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</p>
+                    </div>
+                </div>
+            </div>
+
+                <div data-endpoint="GETapi-grade-settings"
+                     class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Received response
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="sl-panel__content sl-p-4">
+                            <p class="sl-pb-2 response-status"></p>
+                            <pre><code class="sl-pb-2 response-content language-json"
+                                       data-empty-response-text="<Empty response>"
+                                       style="max-height: 300px;"></code></pre>
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+                
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                                    <div class="sl--ml-2">
+                                        Example request:
+                                        <select class="example-request-lang-toggle sl-text-base"
+                                                aria-label="Request Sample Language"
+                                                onchange="switchExampleLanguage(event.target.value);">
+                                                                                            <option>bash</option>
+                                                                                            <option>javascript</option>
+                                                                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                                                            <div class="sl-bg-canvas-100 example-request example-request-bash"
+                                     style="">
+                                    <div class="sl-px-0 sl-py-1">
+                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
+                                            <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:1234/api/grade-settings" \
+    --header "Authorization: Bearer {JWT here}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="sl-bg-canvas-100 example-request example-request-javascript"
+                                     style="display: none;">
+                                    <div class="sl-px-0 sl-py-1">
+                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
+                                            <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:1234/api/grade-settings"
+);
+
+const headers = {
+    "Authorization": "Bearer {JWT here}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>                                        </div>
+                                    </div>
+                                </div>
+                                                    </div>
+                    
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-py-2">
+                                    <div class="sl--ml-2">
+                                        <div class="sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-text-muted sl-rounded sl-border-transparent sl-border">
+                                            <div class="sl-mb-2 sl-inline-block">Example response:</div>
+                                            <div class="sl-mb-2 sl-inline-block">
+                                                <select
+                                                        class="example-response-GETapi-grade-settings-toggle sl-text-base"
+                                                        aria-label="Response sample"
+                                                        onchange="switchExampleResponse('GETapi-grade-settings', event.target.value);">
+                                                                                                            <option value="0">201, Sukses mengambil aturan nilai</option>
+                                                                                                            <option value="1">401, Tidak terotentikasi</option>
+                                                                                                            <option value="2">401, Token expired</option>
+                                                                                                            <option value="3">403, Tidak memiliki izin</option>
+                                                                                                    </select></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button"
+                                        class="sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 hover:sl-bg-canvas-50 active:sl-bg-canvas-100 sl-text-muted hover:sl-text-body focus:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70">
+                                    <div class="sl-mx-0">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
+                                             class="svg-inline--fa fa-copy fa-fw fa-sm sl-icon" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                  d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-grade-settings example-response-GETapi-grade-settings-0"
+                                     style=" "
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data retrieved successfully&quot;,
+    &quot;code&quot;: 200,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;019ebf13-f4ef-7224-81d9-15e2cfc26ef1&quot;,
+            &quot;course_code&quot;: &quot;mk-kl1-001&quot;,
+            &quot;course_name&quot;: &quot;Kalkulus I&quot;,
+            &quot;assignment&quot;: &quot;5.00&quot;,
+            &quot;uts&quot;: &quot;45.00&quot;,
+            &quot;uas&quot;: &quot;50.00&quot;,
+            &quot;lecturer_id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
+            &quot;lecturer&quot;: {
+                &quot;id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
+                &quot;nip&quot;: &quot;613603008739246341&quot;,
+                &quot;nik&quot;: &quot;3214925301111133&quot;,
+                &quot;employee_name&quot;: &quot;Nadia Usada&quot;,
+                &quot;address&quot;: &quot;Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung&quot;,
+                &quot;birth_place&quot;: &quot;Sibolga&quot;,
+                &quot;birth_date&quot;: &quot;1999-01-08&quot;,
+                &quot;gender&quot;: &quot;female&quot;,
+                &quot;phone_number&quot;: &quot;085552818314&quot;,
+                &quot;village_code&quot;: &quot;3205332006&quot;,
+                &quot;district_code&quot;: &quot;320533&quot;,
+                &quot;city_code&quot;: &quot;3205&quot;,
+                &quot;province_code&quot;: &quot;32&quot;,
+                &quot;citizen_code&quot;: &quot;32&quot;
+            }
+        }
+    ],
+    &quot;meta&quot;: []
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-grade-settings example-response-GETapi-grade-settings-1"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;You are not logged in&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-grade-settings example-response-GETapi-grade-settings-2"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;Token is Expired&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-GETapi-grade-settings example-response-GETapi-grade-settings-3"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 403,
+    &quot;message&quot;: &quot;Forbidden&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                    </div>
+                            </div>
+    </div>
+</div>
+
+                    <div class="sl-stack sl-stack--vertical sl-stack--8 HttpOperation sl-flex sl-flex-col sl-items-stretch sl-w-full">
+    <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
+        <div class="sl-relative">
+            <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
+                <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
+                    id="setting-nilai-POSTapi-grade-settings">
+                    Buat Aturan Nilai
+                </h2>
+            </div>
+        </div>
+
+        <div class="sl-relative">
+            <div title="http://localhost:1234/api/grade-settings"
+                     class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
+                >
+                                            <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
+                             style="background-color: black;"
+                        >
+                            POST
+                        </div>
+                                        <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
+                        <div dir="rtl"
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://localhost:1234</div>
+                        <div class="sl-flex-1 sl-font-semibold">/api/grade-settings</div>
+                    </div>
+
+                                                    <div class="sl-font-prose sl-font-semibold sl-px-1.5 sl-py-0.5 sl-text-on-primary sl-rounded-lg"
+                                 style="background-color: darkred"
+                            >requires authentication
+                            </div>
+                                                                                    </div>
+        </div>
+
+        <p>Endpoint ini digunakan untuk membuat aturan nilai</p>
+<p>Fitur ini <strong>hanya bisa dijalankan</strong> oleh user <strong>dosen yang mengajar di sesi kelas tersebut</strong>.</p>
+    </div>
+    <div class="sl-flex">
+        <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
+            <div class="sl-stack sl-stack--vertical sl-stack--10 sl-flex sl-flex-col sl-items-stretch">
+                <div class="sl-stack sl-stack--vertical sl-stack--8 sl-flex sl-flex-col sl-items-stretch">
+                                            <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
+                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">
+                                Headers
+                            </h3>
+                            <div class="sl-text-sm">
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Authorization</div>
+                                    </div>
+                                        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        Bearer {JWT here}
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Content-Type</div>
+                                    </div>
+                                        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        application/json
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Accept</div>
+                                    </div>
+                                        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        application/json
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                            </div>
+                        </div>
+                    
+                    
+
+                    
+                                            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
+                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">Body Parameters</h3>
+
+                                <div class="sl-text-sm">
+                                    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">course_code</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must not be greater than 10 characters. Must be at least 1 character.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        bngzmiyvdljnikhw
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">course_name</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must not be greater than 100 characters.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        a
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">assignment</div>
+                                            <span class="sl-truncate sl-text-muted">integer</span>
+                                    </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must be at least 1. Must not be greater than 100.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        24
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">uts</div>
+                                            <span class="sl-truncate sl-text-muted">integer</span>
+                                    </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must be at least 1. Must not be greater than 100.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        18
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">uas</div>
+                                            <span class="sl-truncate sl-text-muted">integer</span>
+                                    </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must be at least 1. Must not be greater than 100.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        8
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+                            </div>
+                        </div>
+                    
+                                    </div>
+            </div>
+        </div>
+
+        <div data-testid="two-column-right" class="sl-relative sl-w-2/5 sl-ml-16" style="max-width: 500px;">
+            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
+
+                                    <div class="sl-inverted">
+    <div class="sl-overflow-y-hidden sl-rounded-lg">
+        <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
+              data-method="POST"
+              data-path="api/grade-settings"
+              data-hasfiles="0"
+              data-hasjsonbody="1">
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Auth
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="ParameterGrid sl-p-4">
+                            <label aria-hidden="true"
+                                   for="auth-POSTapi-grade-settings">Authorization</label>
+                            <span class="sl-mx-3">:</span>
+                            <div class="sl-flex sl-flex-1">
+                                <div class="sl-input sl-flex-1 sl-relative">
+                                    <code>Bearer </code>
+                                    <input aria-label="Authorization"
+                                           id="auth-POSTapi-grade-settings"
+                                           data-component="header"
+                                           data-prefix="Bearer "
+                                           name="Authorization"
+                                           placeholder="{JWT here}"
+                                           class="auth-value sl-relative sl-w-3/5 sl-h-md sl-text-base sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Headers
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="ParameterGrid sl-p-4">
+                                                                                                                            <label aria-hidden="true"
+                                       for="header-POSTapi-grade-settings-Content-Type">Content-Type</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="Content-Type" name="Content-Type"
+                                               id="header-POSTapi-grade-settings-Content-Type"
+                                               value="application/json" data-component="header"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                                                            <label aria-hidden="true"
+                                       for="header-POSTapi-grade-settings-Accept">Accept</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="Accept" name="Accept"
+                                               id="header-POSTapi-grade-settings-Accept"
+                                               value="application/json" data-component="header"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            
+            
+            
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Body
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                                                    <div class="TextRequestBody sl-p-4">
+                                <div class="code-editor language-json"
+                                     id="json-body-POSTapi-grade-settings"
+                                     style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
+                                >{
+    "course_code": "bngzmiyvdljnikhw",
+    "course_name": "a",
+    "assignment": 24,
+    "uts": 18,
+    "uas": 8
+}</div>
+                            </div>
+                                            </div>
+                </div>
+            
+            <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
+                <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
+                    <button type="button" data-endpoint="POSTapi-grade-settings"
+                            class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
+                    >
+                        Send Request 💥
+                    </button>
+                </div>
+            </div>
+
+            <div data-endpoint="POSTapi-grade-settings"
+                 class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
+                <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                     role="button">
+                    <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                        <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                 data-icon="caret-down"
+                                 class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor"
+                                      d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                            </svg>
+                        </div>
+                        Request failed with error
+                    </div>
+                </div>
+                <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                    <div class="sl-panel__content sl-p-4">
+                        <p class="sl-pb-2"><strong class="error-message"></strong></p>
+                        <p class="sl-pb-2">Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</p>
+                    </div>
+                </div>
+            </div>
+
+                <div data-endpoint="POSTapi-grade-settings"
+                     class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Received response
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="sl-panel__content sl-p-4">
+                            <p class="sl-pb-2 response-status"></p>
+                            <pre><code class="sl-pb-2 response-content language-json"
+                                       data-empty-response-text="<Empty response>"
+                                       style="max-height: 300px;"></code></pre>
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+                
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                                    <div class="sl--ml-2">
+                                        Example request:
+                                        <select class="example-request-lang-toggle sl-text-base"
+                                                aria-label="Request Sample Language"
+                                                onchange="switchExampleLanguage(event.target.value);">
+                                                                                            <option>bash</option>
+                                                                                            <option>javascript</option>
+                                                                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                                                            <div class="sl-bg-canvas-100 example-request example-request-bash"
+                                     style="">
+                                    <div class="sl-px-0 sl-py-1">
+                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
+                                            <pre><code class="language-bash">curl --request POST \
+    "http://localhost:1234/api/grade-settings" \
+    --header "Authorization: Bearer {JWT here}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"course_code\": \"bngzmiyvdljnikhw\",
+    \"course_name\": \"a\",
+    \"assignment\": 24,
+    \"uts\": 18,
+    \"uas\": 8
+}"
+</code></pre>                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="sl-bg-canvas-100 example-request example-request-javascript"
+                                     style="display: none;">
+                                    <div class="sl-px-0 sl-py-1">
+                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
+                                            <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:1234/api/grade-settings"
+);
+
+const headers = {
+    "Authorization": "Bearer {JWT here}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "course_code": "bngzmiyvdljnikhw",
+    "course_name": "a",
+    "assignment": 24,
+    "uts": 18,
+    "uas": 8
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>                                        </div>
+                                    </div>
+                                </div>
+                                                    </div>
+                    
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-py-2">
+                                    <div class="sl--ml-2">
+                                        <div class="sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-text-muted sl-rounded sl-border-transparent sl-border">
+                                            <div class="sl-mb-2 sl-inline-block">Example response:</div>
+                                            <div class="sl-mb-2 sl-inline-block">
+                                                <select
+                                                        class="example-response-POSTapi-grade-settings-toggle sl-text-base"
+                                                        aria-label="Response sample"
+                                                        onchange="switchExampleResponse('POSTapi-grade-settings', event.target.value);">
+                                                                                                            <option value="0">201, Sukses membuat aturan nilai</option>
+                                                                                                            <option value="1">401, Tidak terotentikasi</option>
+                                                                                                            <option value="2">401, Token expired</option>
+                                                                                                            <option value="3">403, Tidak memiliki izin</option>
+                                                                                                    </select></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button"
+                                        class="sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 hover:sl-bg-canvas-50 active:sl-bg-canvas-100 sl-text-muted hover:sl-text-body focus:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70">
+                                    <div class="sl-mx-0">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
+                                             class="svg-inline--fa fa-copy fa-fw fa-sm sl-icon" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                  d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-grade-settings example-response-POSTapi-grade-settings-0"
+                                     style=" "
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data created successfully&quot;,
+    &quot;code&quot;: 201,
+    &quot;data&quot;: {
+        &quot;id&quot;: &quot;019ebf13-f4ef-7224-81d9-15e2cfc26ef1&quot;,
+        &quot;course_code&quot;: &quot;mk-kl1-001&quot;,
+        &quot;course_name&quot;: &quot;Kalkulus I&quot;,
+        &quot;assignment&quot;: 20,
+        &quot;uts&quot;: 30,
+        &quot;uas&quot;: 50,
+        &quot;lecturer_id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
+        &quot;lecturer&quot;: {
+            &quot;id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
+            &quot;nip&quot;: &quot;613603008739246341&quot;,
+            &quot;nik&quot;: &quot;3214925301111133&quot;,
+            &quot;employee_name&quot;: &quot;Nadia Usada&quot;,
+            &quot;address&quot;: &quot;Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung&quot;,
+            &quot;birth_place&quot;: &quot;Sibolga&quot;,
+            &quot;birth_date&quot;: &quot;1999-01-08&quot;,
+            &quot;gender&quot;: &quot;female&quot;,
+            &quot;phone_number&quot;: &quot;085552818314&quot;,
+            &quot;village_code&quot;: &quot;3205332006&quot;,
+            &quot;district_code&quot;: &quot;320533&quot;,
+            &quot;city_code&quot;: &quot;3205&quot;,
+            &quot;province_code&quot;: &quot;32&quot;,
+            &quot;citizen_code&quot;: &quot;32&quot;
+        }
+    }
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-grade-settings example-response-POSTapi-grade-settings-1"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;You are not logged in&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-grade-settings example-response-POSTapi-grade-settings-2"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;Token is Expired&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-grade-settings example-response-POSTapi-grade-settings-3"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 403,
+    &quot;message&quot;: &quot;Forbidden&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                    </div>
+                            </div>
+    </div>
+</div>
+
+                    <div class="sl-stack sl-stack--vertical sl-stack--8 HttpOperation sl-flex sl-flex-col sl-items-stretch sl-w-full">
+    <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
+        <div class="sl-relative">
+            <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
+                <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
+                    id="setting-nilai-PUTapi-grade-settings--gradeSetting_id-">
+                    Update Aturan Nilai
+                </h2>
+            </div>
+        </div>
+
+        <div class="sl-relative">
+            <div title="http://localhost:1234/api/grade-settings/{gradeSetting_id}"
+                     class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
+                >
+                                            <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
+                             style="background-color: darkblue;"
+                        >
+                            PUT
+                        </div>
+                                        <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
+                        <div dir="rtl"
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://localhost:1234</div>
+                        <div class="sl-flex-1 sl-font-semibold">/api/grade-settings/{gradeSetting_id}</div>
+                    </div>
+
+                                                    <div class="sl-font-prose sl-font-semibold sl-px-1.5 sl-py-0.5 sl-text-on-primary sl-rounded-lg"
+                                 style="background-color: darkred"
+                            >requires authentication
+                            </div>
+                                                                                    </div>
+        </div>
+
+        <p>Endpoint ini digunakan untuk update aturan nilai</p>
+<p>Fitur ini <strong>hanya bisa dijalankan</strong> oleh user <strong>dosen yang mengajar di sesi kelas tersebut</strong>.</p>
+    </div>
+    <div class="sl-flex">
+        <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
+            <div class="sl-stack sl-stack--vertical sl-stack--10 sl-flex sl-flex-col sl-items-stretch">
+                <div class="sl-stack sl-stack--vertical sl-stack--8 sl-flex sl-flex-col sl-items-stretch">
+                                            <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
+                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">
+                                Headers
+                            </h3>
+                            <div class="sl-text-sm">
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Authorization</div>
+                                    </div>
+                                        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        Bearer {JWT here}
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Content-Type</div>
+                                    </div>
+                                        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        application/json
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Accept</div>
+                                    </div>
+                                        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        application/json
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                            </div>
+                        </div>
+                    
+                                            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
+                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">URL Parameters</h3>
+
+                            <div class="sl-text-sm">
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">gradeSetting_id</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                            <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                        <div class="sl-flex sl-items-center">
+                                                            <span class="sl-ml-2 sl-text-warning">required</span>
+                                                                                </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>The ID of the gradeSetting.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        019ebf13-f4ef-7224-81d9-15e2cfc26ef1
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                            </div>
+                        </div>
+                    
+
+                    
+                                            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
+                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">Body Parameters</h3>
+
+                                <div class="sl-text-sm">
+                                    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">course_code</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must not be greater than 10 characters. Must be at least 1 character.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        bngzmiyvdljnikhw
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">course_name</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must not be greater than 100 characters.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        a
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">assignment</div>
+                                            <span class="sl-truncate sl-text-muted">integer</span>
+                                    </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must be at least 1. Must not be greater than 100.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        24
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">uts</div>
+                                            <span class="sl-truncate sl-text-muted">integer</span>
+                                    </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must be at least 1. Must not be greater than 100.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        18
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">uas</div>
+                                            <span class="sl-truncate sl-text-muted">integer</span>
+                                    </div>
+                                        </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Must be at least 1. Must not be greater than 100.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        8
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+                            </div>
+                        </div>
+                    
+                                    </div>
+            </div>
+        </div>
+
+        <div data-testid="two-column-right" class="sl-relative sl-w-2/5 sl-ml-16" style="max-width: 500px;">
+            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
+
+                                    <div class="sl-inverted">
+    <div class="sl-overflow-y-hidden sl-rounded-lg">
+        <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
+              data-method="PUT"
+              data-path="api/grade-settings/{gradeSetting_id}"
+              data-hasfiles="0"
+              data-hasjsonbody="1">
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Auth
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="ParameterGrid sl-p-4">
+                            <label aria-hidden="true"
+                                   for="auth-PUTapi-grade-settings--gradeSetting_id-">Authorization</label>
+                            <span class="sl-mx-3">:</span>
+                            <div class="sl-flex sl-flex-1">
+                                <div class="sl-input sl-flex-1 sl-relative">
+                                    <code>Bearer </code>
+                                    <input aria-label="Authorization"
+                                           id="auth-PUTapi-grade-settings--gradeSetting_id-"
+                                           data-component="header"
+                                           data-prefix="Bearer "
+                                           name="Authorization"
+                                           placeholder="{JWT here}"
+                                           class="auth-value sl-relative sl-w-3/5 sl-h-md sl-text-base sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Headers
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="ParameterGrid sl-p-4">
+                                                                                                                            <label aria-hidden="true"
+                                       for="header-PUTapi-grade-settings--gradeSetting_id--Content-Type">Content-Type</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="Content-Type" name="Content-Type"
+                                               id="header-PUTapi-grade-settings--gradeSetting_id--Content-Type"
+                                               value="application/json" data-component="header"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                                                            <label aria-hidden="true"
+                                       for="header-PUTapi-grade-settings--gradeSetting_id--Accept">Accept</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="Accept" name="Accept"
+                                               id="header-PUTapi-grade-settings--gradeSetting_id--Accept"
+                                               value="application/json" data-component="header"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            URL Parameters
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="ParameterGrid sl-p-4">
+                                                            <label aria-hidden="true"
+                                       for="urlparam-PUTapi-grade-settings--gradeSetting_id--gradeSetting_id">gradeSetting_id</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="gradeSetting_id" name="gradeSetting_id"
+                                               id="urlparam-PUTapi-grade-settings--gradeSetting_id--gradeSetting_id"
+                                               placeholder="The ID of the gradeSetting."
+                                               value="019ebf13-f4ef-7224-81d9-15e2cfc26ef1" data-component="url"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            
+            
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Body
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                                                    <div class="TextRequestBody sl-p-4">
+                                <div class="code-editor language-json"
+                                     id="json-body-PUTapi-grade-settings--gradeSetting_id-"
+                                     style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
+                                >{
+    "course_code": "bngzmiyvdljnikhw",
+    "course_name": "a",
+    "assignment": 24,
+    "uts": 18,
+    "uas": 8
+}</div>
+                            </div>
+                                            </div>
+                </div>
+            
+            <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
+                <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
+                    <button type="button" data-endpoint="PUTapi-grade-settings--gradeSetting_id-"
+                            class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
+                    >
+                        Send Request 💥
+                    </button>
+                </div>
+            </div>
+
+            <div data-endpoint="PUTapi-grade-settings--gradeSetting_id-"
+                 class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
+                <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                     role="button">
+                    <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                        <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                 data-icon="caret-down"
+                                 class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor"
+                                      d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                            </svg>
+                        </div>
+                        Request failed with error
+                    </div>
+                </div>
+                <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                    <div class="sl-panel__content sl-p-4">
+                        <p class="sl-pb-2"><strong class="error-message"></strong></p>
+                        <p class="sl-pb-2">Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</p>
+                    </div>
+                </div>
+            </div>
+
+                <div data-endpoint="PUTapi-grade-settings--gradeSetting_id-"
+                     class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Received response
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="sl-panel__content sl-p-4">
+                            <p class="sl-pb-2 response-status"></p>
+                            <pre><code class="sl-pb-2 response-content language-json"
+                                       data-empty-response-text="<Empty response>"
+                                       style="max-height: 300px;"></code></pre>
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+                
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                                    <div class="sl--ml-2">
+                                        Example request:
+                                        <select class="example-request-lang-toggle sl-text-base"
+                                                aria-label="Request Sample Language"
+                                                onchange="switchExampleLanguage(event.target.value);">
+                                                                                            <option>bash</option>
+                                                                                            <option>javascript</option>
+                                                                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                                                            <div class="sl-bg-canvas-100 example-request example-request-bash"
+                                     style="">
+                                    <div class="sl-px-0 sl-py-1">
+                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
+                                            <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:1234/api/grade-settings/019ebf13-f4ef-7224-81d9-15e2cfc26ef1" \
+    --header "Authorization: Bearer {JWT here}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"course_code\": \"bngzmiyvdljnikhw\",
+    \"course_name\": \"a\",
+    \"assignment\": 24,
+    \"uts\": 18,
+    \"uas\": 8
+}"
+</code></pre>                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="sl-bg-canvas-100 example-request example-request-javascript"
+                                     style="display: none;">
+                                    <div class="sl-px-0 sl-py-1">
+                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
+                                            <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:1234/api/grade-settings/019ebf13-f4ef-7224-81d9-15e2cfc26ef1"
+);
+
+const headers = {
+    "Authorization": "Bearer {JWT here}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "course_code": "bngzmiyvdljnikhw",
+    "course_name": "a",
+    "assignment": 24,
+    "uts": 18,
+    "uas": 8
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>                                        </div>
+                                    </div>
+                                </div>
+                                                    </div>
+                    
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-py-2">
+                                    <div class="sl--ml-2">
+                                        <div class="sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-text-muted sl-rounded sl-border-transparent sl-border">
+                                            <div class="sl-mb-2 sl-inline-block">Example response:</div>
+                                            <div class="sl-mb-2 sl-inline-block">
+                                                <select
+                                                        class="example-response-PUTapi-grade-settings--gradeSetting_id--toggle sl-text-base"
+                                                        aria-label="Response sample"
+                                                        onchange="switchExampleResponse('PUTapi-grade-settings--gradeSetting_id-', event.target.value);">
+                                                                                                            <option value="0">201, Sukses menambahkan materi</option>
+                                                                                                            <option value="1">401, Tidak terotentikasi</option>
+                                                                                                            <option value="2">401, Token expired</option>
+                                                                                                            <option value="3">403, Tidak memiliki izin</option>
+                                                                                                    </select></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button"
+                                        class="sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 hover:sl-bg-canvas-50 active:sl-bg-canvas-100 sl-text-muted hover:sl-text-body focus:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70">
+                                    <div class="sl-mx-0">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
+                                             class="svg-inline--fa fa-copy fa-fw fa-sm sl-icon" role="img"
+                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                  d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-PUTapi-grade-settings--gradeSetting_id- example-response-PUTapi-grade-settings--gradeSetting_id--0"
+                                     style=" "
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data created successfully&quot;,
+    &quot;code&quot;: 201,
+    &quot;data&quot;: {
+        &quot;id&quot;: &quot;019ebf13-f4ef-7224-81d9-15e2cfc26ef1&quot;,
+        &quot;course_code&quot;: &quot;mk-kl1-001&quot;,
+        &quot;course_name&quot;: &quot;Kalkulus I&quot;,
+        &quot;assignment&quot;: 5,
+        &quot;uts&quot;: 45,
+        &quot;uas&quot;: 50,
+        &quot;lecturer_id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
+        &quot;lecturer&quot;: {
+            &quot;id&quot;: &quot;019ebef9-13de-7320-807c-9e624eedc4cf&quot;,
+            &quot;nip&quot;: &quot;613603008739246341&quot;,
+            &quot;nik&quot;: &quot;3214925301111133&quot;,
+            &quot;employee_name&quot;: &quot;Nadia Usada&quot;,
+            &quot;address&quot;: &quot;Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung&quot;,
+            &quot;birth_place&quot;: &quot;Sibolga&quot;,
+            &quot;birth_date&quot;: &quot;1999-01-08&quot;,
+            &quot;gender&quot;: &quot;female&quot;,
+            &quot;phone_number&quot;: &quot;085552818314&quot;,
+            &quot;village_code&quot;: &quot;3205332006&quot;,
+            &quot;district_code&quot;: &quot;320533&quot;,
+            &quot;city_code&quot;: &quot;3205&quot;,
+            &quot;province_code&quot;: &quot;32&quot;,
+            &quot;citizen_code&quot;: &quot;32&quot;
+        }
+    }
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-PUTapi-grade-settings--gradeSetting_id- example-response-PUTapi-grade-settings--gradeSetting_id--1"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;You are not logged in&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-PUTapi-grade-settings--gradeSetting_id- example-response-PUTapi-grade-settings--gradeSetting_id--2"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;success&quot;: false,
+    &quot;code&quot;: 401,
+    &quot;message&quot;: &quot;Token is Expired&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-PUTapi-grade-settings--gradeSetting_id- example-response-PUTapi-grade-settings--gradeSetting_id--3"
                                      style=" display: none;"
                                 >
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
@@ -11861,7 +15073,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019eab01-b22a-7114-af06-8131fe9a9fc9
+                        019ebefb-253b-72b3-a5cb-6a5344ffbb09
                     </div>
                 </div>
             </div>
@@ -12116,7 +15328,7 @@ fetch(url, {
                                         <input aria-label="classSession_id" name="classSession_id"
                                                id="urlparam-POSTapi-class-sessions--classSession_id--assignments-classSession_id"
                                                placeholder="The ID of the classSession."
-                                               value="019eab01-b22a-7114-af06-8131fe9a9fc9" data-component="url"
+                                               value="019ebefb-253b-72b3-a5cb-6a5344ffbb09" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -12245,7 +15457,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:1234/api/class-sessions/019eab01-b22a-7114-af06-8131fe9a9fc9/assignments" \
+    "http://localhost:1234/api/class-sessions/019ebefb-253b-72b3-a5cb-6a5344ffbb09/assignments" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -12266,7 +15478,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/class-sessions/019eab01-b22a-7114-af06-8131fe9a9fc9/assignments"
+    "http://localhost:1234/api/class-sessions/019ebefb-253b-72b3-a5cb-6a5344ffbb09/assignments"
 );
 
 const headers = {
@@ -12555,7 +15767,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019eab01-b22a-7114-af06-8131fe9a9fc9
+                        019ebefb-253b-72b3-a5cb-6a5344ffbb09
                     </div>
                 </div>
             </div>
@@ -12723,7 +15935,7 @@ fetch(url, {
                                         <input aria-label="classSession_id" name="classSession_id"
                                                id="urlparam-POSTapi-class-sessions--classSession_id--assignments-delete-classSession_id"
                                                placeholder="The ID of the classSession."
-                                               value="019eab01-b22a-7114-af06-8131fe9a9fc9" data-component="url"
+                                               value="019ebefb-253b-72b3-a5cb-6a5344ffbb09" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -12849,7 +16061,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:1234/api/class-sessions/019eab01-b22a-7114-af06-8131fe9a9fc9/assignments/delete" \
+    "http://localhost:1234/api/class-sessions/019ebefb-253b-72b3-a5cb-6a5344ffbb09/assignments/delete" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -12867,7 +16079,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/class-sessions/019eab01-b22a-7114-af06-8131fe9a9fc9/assignments/delete"
+    "http://localhost:1234/api/class-sessions/019ebefb-253b-72b3-a5cb-6a5344ffbb09/assignments/delete"
 );
 
 const headers = {
@@ -13103,7 +16315,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019eab05-cb0b-716c-aeb9-94758d2bfad6
+                        019ebefb-dc61-70a6-8228-242188b285a4
                     </div>
                 </div>
             </div>
@@ -13236,7 +16448,7 @@ fetch(url, {
                                         <input aria-label="studentAssignment_id" name="studentAssignment_id"
                                                id="urlparam-GETapi-assignments--studentAssignment_id--submission-studentAssignment_id"
                                                placeholder="The ID of the studentAssignment."
-                                               value="019eab05-cb0b-716c-aeb9-94758d2bfad6" data-component="url"
+                                               value="019ebefb-dc61-70a6-8228-242188b285a4" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -13332,7 +16544,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:1234/api/assignments/019eab05-cb0b-716c-aeb9-94758d2bfad6/submission" \
+    --get "http://localhost:1234/api/assignments/019ebefb-dc61-70a6-8228-242188b285a4/submission" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -13343,7 +16555,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/assignments/019eab05-cb0b-716c-aeb9-94758d2bfad6/submission"
+    "http://localhost:1234/api/assignments/019ebefb-dc61-70a6-8228-242188b285a4/submission"
 );
 
 const headers = {
@@ -14077,7 +17289,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019eab05-cb0b-716c-aeb9-94758d2bfad6
+                        019ebefb-dc61-70a6-8228-242188b285a4
                     </div>
                 </div>
             </div>
@@ -14245,7 +17457,7 @@ fetch(url, {
                                         <input aria-label="studentAssignment_id" name="studentAssignment_id"
                                                id="urlparam-POSTapi-assignments--studentAssignment_id--submission-studentAssignment_id"
                                                placeholder="The ID of the studentAssignment."
-                                               value="019eab05-cb0b-716c-aeb9-94758d2bfad6" data-component="url"
+                                               value="019ebefb-dc61-70a6-8228-242188b285a4" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -14371,7 +17583,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:1234/api/assignments/019eab05-cb0b-716c-aeb9-94758d2bfad6/submission" \
+    "http://localhost:1234/api/assignments/019ebefb-dc61-70a6-8228-242188b285a4/submission" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -14389,7 +17601,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/assignments/019eab05-cb0b-716c-aeb9-94758d2bfad6/submission"
+    "http://localhost:1234/api/assignments/019ebefb-dc61-70a6-8228-242188b285a4/submission"
 );
 
 const headers = {
@@ -14647,7 +17859,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019eab05-cb0b-716c-aeb9-94758d2bfad6
+                        019ebefb-dc61-70a6-8228-242188b285a4
                     </div>
                 </div>
             </div>
@@ -14780,7 +17992,7 @@ fetch(url, {
                                         <input aria-label="studentAssignment_id" name="studentAssignment_id"
                                                id="urlparam-DELETEapi-assignments--studentAssignment_id--submission-studentAssignment_id"
                                                placeholder="The ID of the studentAssignment."
-                                               value="019eab05-cb0b-716c-aeb9-94758d2bfad6" data-component="url"
+                                               value="019ebefb-dc61-70a6-8228-242188b285a4" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -14876,7 +18088,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:1234/api/assignments/019eab05-cb0b-716c-aeb9-94758d2bfad6/submission" \
+    "http://localhost:1234/api/assignments/019ebefb-dc61-70a6-8228-242188b285a4/submission" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -14887,7 +18099,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/assignments/019eab05-cb0b-716c-aeb9-94758d2bfad6/submission"
+    "http://localhost:1234/api/assignments/019ebefb-dc61-70a6-8228-242188b285a4/submission"
 );
 
 const headers = {
@@ -16730,7 +19942,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019ea818-348c-718f-a5b5-3340997c125e
+                        019ebef9-4d03-7385-8aec-f8fe0ca872d2
                     </div>
                 </div>
             </div>
@@ -16923,7 +20135,7 @@ fetch(url, {
                                         <input aria-label="changeRequest_id" name="changeRequest_id"
                                                id="urlparam-PUTapi-change-requests--changeRequest_id--changeRequest_id"
                                                placeholder="The ID of the changeRequest."
-                                               value="019ea818-348c-718f-a5b5-3340997c125e" data-component="url"
+                                               value="019ebef9-4d03-7385-8aec-f8fe0ca872d2" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -17058,7 +20270,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:1234/api/change-requests/019ea818-348c-718f-a5b5-3340997c125e" \
+    "http://localhost:1234/api/change-requests/019ebef9-4d03-7385-8aec-f8fe0ca872d2" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -17073,7 +20285,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:1234/api/change-requests/019ea818-348c-718f-a5b5-3340997c125e"
+    "http://localhost:1234/api/change-requests/019ebef9-4d03-7385-8aec-f8fe0ca872d2"
 );
 
 const headers = {

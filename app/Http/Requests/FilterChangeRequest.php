@@ -3,7 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Contracts\Validation\ValidationRule;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 use Knuckles\Scribe\Attributes\QueryParam;
 
 #[QueryParam("page", "status", "Filter berdasarakan status verifikasi, required: false")]
@@ -43,5 +45,17 @@ class FilterChangeRequest extends FormRequest
                 'example' => 'john doe',
             ],
         ];
+    }
+
+    protected function failedValidation(Validator $validator)
+    {
+        throw new HttpResponseException(
+            response()->json([
+                'success' => false,
+                'message' => "The given data was invalid",
+                'code' => 422,
+                'errors' => $validator->errors()->toArray()
+            ], 422)
+        );
     }
 }

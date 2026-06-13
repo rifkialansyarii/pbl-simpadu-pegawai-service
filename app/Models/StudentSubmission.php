@@ -15,6 +15,7 @@ class StudentSubmission extends Model
         'assignment_id',
         'student_id',
         'submitted_at',
+        'score',
     ];
 
     protected $guarded = [

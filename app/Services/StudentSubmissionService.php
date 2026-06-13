@@ -35,6 +35,14 @@ final class StudentSubmissionService
         });
     }
 
+    public function addScore(array $attributes)
+    {
+        return DB::transaction(function () use ($attributes) {
+            return $this->repository->addScore($attributes);
+
+        });
+    }
+
     public function deleteSubmission(StudentAssignment $studentAssignment, User $user)
     {
         return DB::transaction(function () use ($studentAssignment, $user) {

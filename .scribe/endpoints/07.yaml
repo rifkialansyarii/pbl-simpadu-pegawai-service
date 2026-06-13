@@ -1,0 +1,314 @@
+name: Nilai
+description: 'Endpoint terkait operasi CRUD untuk data Setting nilai.'
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/grade-exports
+    metadata:
+      custom: []
+      groupName: Nilai
+      groupDescription: 'Endpoint terkait operasi CRUD untuk data Setting nilai.'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Download Template Excel Nilai'
+      description: |-
+        Endpoint ini digunakan untuk mengunduh template excel nilai
+
+        Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {JWT here}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      students:
+        custom: []
+        name: students
+        description: 'Must have at least 1 items.'
+        required: true
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      course_code:
+        custom: []
+        name: course_code
+        description: 'Must not be greater than 10 characters.'
+        required: true
+        example: bngzmi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      course_name:
+        custom: []
+        name: course_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: 'y'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      class_id:
+        custom: []
+        name: class_id
+        description: 'Must be 36 characters.'
+        required: true
+        example: vdljnikhwaykcmyuwpwlvqwrsitcpscqldzs
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      class_name:
+        custom: []
+        name: class_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'students[].student_id':
+        custom: []
+        name: 'students[].student_id'
+        description: 'Must be 36 characters.'
+        required: true
+        example: rwtujwvlxjklqppwqbewtnnoqitpxntltcvi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'students[].nim':
+        custom: []
+        name: 'students[].nim'
+        description: 'Must not be greater than 10 characters.'
+        required: true
+        example: pojsau
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'students[].name':
+        custom: []
+        name: 'students[].name'
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: s
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      students:
+        -
+          student_id: rwtujwvlxjklqppwqbewtnnoqitpxntltcvi
+          nim: pojsau
+          name: s
+      course_code: bngzmi
+      course_name: 'y'
+      class_id: vdljnikhwaykcmyuwpwlvqwrsitcpscqldzs
+      class_name: 'n'
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "You are not logged in"
+          }
+        headers: []
+        description: 'Tidak terotentikasi'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "Token is Expired"
+          }
+        headers: []
+        description: 'Token expired'
+      -
+        custom: []
+        status: 403
+        content: |-
+          {
+              "success": false,
+              "code": 403,
+              "message": "Forbidden"
+          }
+        headers: []
+        description: 'Tidak memiliki izin'
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/grade-imports
+    metadata:
+      custom: []
+      groupName: Nilai
+      groupDescription: 'Endpoint terkait operasi CRUD untuk data Setting nilai.'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Upload Template Excel Nilai'
+      description: |-
+        Endpoint ini digunakan untuk mengupload template excel nilai
+
+        Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {JWT here}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      file:
+        custom: []
+        name: file
+        description: 'Must be a file. Must not be greater than 2048 kilobytes.'
+        required: true
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      class_id:
+        custom: []
+        name: class_id
+        description: 'Must be 36 characters.'
+        required: true
+        example: bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      class_name:
+        custom: []
+        name: class_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: s
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      course_code:
+        custom: []
+        name: course_code
+        description: 'Must not be greater than 10 characters.'
+        required: true
+        example: cqldzs
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      course_name:
+        custom: []
+        name: course_name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      class_id: bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp
+      class_name: s
+      course_code: cqldzs
+      course_name: 'n'
+    fileParameters:
+      file: null
+    responses:
+      -
+        custom: []
+        status: 201
+        content: |-
+          {
+              "success": true,
+              "message": "data has been imported and saved",
+              "code": 200
+          }
+        headers: []
+        description: 'Sukses membuat aturan nilai'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "You are not logged in"
+          }
+        headers: []
+        description: 'Tidak terotentikasi'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "Token is Expired"
+          }
+        headers: []
+        description: 'Token expired'
+      -
+        custom: []
+        status: 403
+        content: |-
+          {
+              "success": false,
+              "code": 403,
+              "message": "Forbidden"
+          }
+        headers: []
+        description: 'Tidak memiliki izin'
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null

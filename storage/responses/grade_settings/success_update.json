@@ -1,0 +1,30 @@
+{
+    "success": true,
+    "message": "Data created successfully",
+    "code": 201,
+    "data": {
+        "id": "019ebf13-f4ef-7224-81d9-15e2cfc26ef1",
+        "course_code": "mk-kl1-001",
+        "course_name": "Kalkulus I",
+        "assignment": 5,
+        "uts": 45,
+        "uas": 50,
+        "lecturer_id": "019ebef9-13de-7320-807c-9e624eedc4cf",
+        "lecturer": {
+            "id": "019ebef9-13de-7320-807c-9e624eedc4cf",
+            "nip": "613603008739246341",
+            "nik": "3214925301111133",
+            "employee_name": "Nadia Usada",
+            "address": "Gg. Baya Kali Bungur No. 739, Bitung 28944, Lampung",
+            "birth_place": "Sibolga",
+            "birth_date": "1999-01-08",
+            "gender": "female",
+            "phone_number": "085552818314",
+            "village_code": "3205332006",
+            "district_code": "320533",
+            "city_code": "3205",
+            "province_code": "32",
+            "citizen_code": "32"
+        }
+    }
+}
