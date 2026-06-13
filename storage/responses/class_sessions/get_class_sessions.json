@@ -43,6 +43,22 @@
                     "uploaded_at": "2026-06-13T04:04:01.000000Z",
                     "created_as_material_at": "2026-06-13T04:04:18.000000Z"
                 }
+            ],
+            "assignments": [
+                {
+                    "id": "019ebefb-dc61-70a6-8228-242188b285a4",
+                    "title": "Tugas Dasar 1",
+                    "description": "Kerjakan Tugas Dasar 1",
+                    "deadline": "2026-06-15 00:00:00",
+                    "created_at": "2026-06-13T03:17:17.000000Z"
+                },
+                {
+                    "id": "019ebefb-f829-73a5-9fc8-60ac378b1cb5",
+                    "title": "Tugas Dasar 2",
+                    "description": "Kerjakan Tugas Dasar 2",
+                    "deadline": "2026-06-15 00:00:00",
+                    "created_at": "2026-06-13T03:17:24.000000Z"
+                }
             ]
         },
         {
@@ -76,7 +92,8 @@
                 "province_code": "32",
                 "citizen_code": "32"
             },
-            "learning_materials": []
+            "learning_materials": [],
+            "assignments": []
         }
     ],
     "meta": {

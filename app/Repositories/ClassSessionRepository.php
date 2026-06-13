@@ -31,7 +31,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             $query->whereDate('session_date', '<=', $filters['end_date']);
         })->paginate(10);
 
-        $classSession->load(['lecturer', 'learningMaterials']);
+        $classSession->load(['lecturer', 'learningMaterials', 'studentAssignments']);
 
         return $classSession;
     }
@@ -60,7 +60,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
                 $query->whereDate('session_date', '<=', $filters['end_date']);
             })->paginate(10);
 
-        $classSession->load(['lecturer', 'learningMaterials']);
+        $classSession->load(['lecturer', 'learningMaterials', 'studentAssignments']);
 
         return $classSession;
     }
@@ -89,7 +89,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
                 $query->whereDate('session_date', '<=', $filters['end_date']);
             })->paginate(10);
 
-        $classSession->load(['lecturer', 'learningMaterials']);
+        $classSession->load(['lecturer', 'learningMaterials', 'studentAssignments']);
 
         return $classSession;
     }
@@ -113,7 +113,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'is_already_opened',
         ]);
 
-        $classSession->load(['lecturer', 'learningMaterials']);
+        $classSession->load(['lecturer', 'learningMaterials', 'studentAssignments']);
 
         return $classSession;
     }
@@ -137,7 +137,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             'is_already_opened',
         ])->where('pengampu_id', $pengampuId)->paginate(10);
 
-        $classSession->load(['lecturer', 'learningMaterials']);
+        $classSession->load(['lecturer', 'learningMaterials', 'studentAssignments']);
 
         return $classSession;
     }
@@ -162,7 +162,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
         ClassSession::fillAndInsert($data);
 
         $classSession = ClassSession::latest()->take($sessionAmount)->paginate(10);
-        $classSession->load(['lecturer', 'learningMaterials']);
+        $classSession->load(['lecturer']);
 
         return $classSession;
     }
