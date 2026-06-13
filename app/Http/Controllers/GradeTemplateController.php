@@ -6,14 +6,13 @@ use App\Exports\GradeTemplateExport;
 use App\Http\Requests\DownloadTemplateRequest;
 use App\Http\Requests\UploadTemplateRequest;
 use App\Imports\GradeTemplateImport;
-use App\Models\StudentAssignment;
+use App\Models\ClassSession;
 use App\Services\ClassSessionService;
 use App\Services\GradeService;
 use App\Services\GradeSettingService;
-use App\Services\StudentAssignmentService;
 use App\Services\StudentSubmissionService;
 use Exception;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use Knuckles\Scribe\Attributes\ResponseFromFile;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -41,9 +40,11 @@ class GradeTemplateController extends Controller
     #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
     public function downloadTemplate(DownloadTemplateRequest $request)
     {
-        try {
-            $validated = $request->validated();
+        $validated = $request->validated();
 
+        Gate::authorize('manage-grades', $validated['class_id']);
+
+        try {
             $setting = $this->gradeSettingService->getByField('course_code', $validated);
 
             if (!$setting || $setting->count() === 0) {
@@ -99,6 +100,11 @@ class GradeTemplateController extends Controller
     #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
     public function uploadTemplate(UploadTemplateRequest $request)
     {
+        $validated = $request->validated();
+
+        Gate::authorize('manage-grades', $validated['class_id']);
+
+
         try {
             $assignments = $this->classSessionService->getAssignmentByCourse($request->validated());
 

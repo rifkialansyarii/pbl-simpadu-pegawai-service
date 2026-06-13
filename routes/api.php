@@ -52,9 +52,12 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
     Route::post('/file-uploads', [FileUploadController::class, 'store'])->middleware('can:create, App\Models\FileUpload');
     Route::post('/file-uploads/delete', [FileUploadController::class, 'destroy'])->middleware('can:delete, App\Models\FileUpload');
 
-    Route::get('grade-settings', [GradeSettingController::class, 'index']);
-    Route::post('grade-settings', [GradeSettingController::class, 'store']);
-    Route::put('grade-settings/{gradeSetting}', [GradeSettingController::class, 'update']);
+    Route::get('grade-settings', [GradeSettingController::class, 'index'])->middleware('can:viewAny, App\Models\GradeSetting');
+    Route::post('grade-settings', [GradeSettingController::class, 'store'])->middleware('can:create, App\Models\GradeSetting');
+    Route::put('grade-settings/{gradeSetting}', [GradeSettingController::class, 'update'])->middleware('can:update,gradeSetting');
+
+    Route::post('/grade-exports', [GradeTemplateController::class, 'downloadTemplate']);
+    Route::post('/grade-imports', [GradeTemplateController::class, 'uploadTemplate']);
 
 
 });
@@ -70,6 +73,3 @@ Route::get('/districts/{cityCode}', [DistrictController::class, 'showByCity']);
 
 Route::get('/villages', [VillageController::class, 'index']);
 Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);
-
-Route::post('/grade-exports', [GradeTemplateController::class, 'downloadTemplate']);
-Route::post('/grade-imports', [GradeTemplateController::class, 'uploadTemplate']);

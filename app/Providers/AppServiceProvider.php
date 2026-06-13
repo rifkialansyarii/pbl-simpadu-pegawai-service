@@ -2,15 +2,13 @@
 
 namespace App\Providers;
 
+use App\Models\ClassSession;
 use App\Models\User;
 use Auth;
-use Exception;
-use Firebase\JWT\ExpiredException;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
-use Firebase\JWT\SignatureInvalidException;
 use Illuminate\Http\Request;
-use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -60,5 +58,18 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->customAuthJwt();
+
+        Gate::define('manage-grades', function (User $user, string $classId) {
+
+            $classSession = ClassSession::where('class_id', $classId)
+                ->where('lecturer_id', $user->detail_id)
+                ->exists();
+            if (!$classSession) {
+                return false;
+            }
+
+            return true;
+
+        });
     }
 }
