@@ -3,11 +3,13 @@
 namespace App\Exports;
 
 use Maatwebsite\Excel\Concerns\FromArray;
+use Maatwebsite\Excel\Concerns\WithEvents;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
+use Maatwebsite\Excel\Events\AfterSheet;
 use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
 
-class GradeTemplateExport implements FromArray, WithHeadings, WithMapping
+class GradeTemplateExport implements FromArray, WithHeadings, WithMapping, WithEvents
 {
     protected $rowNumber = 2;
     public function __construct(protected $students, protected $assignments, protected $setting)
@@ -38,6 +40,7 @@ class GradeTemplateExport implements FromArray, WithHeadings, WithMapping
     {
         $headings = [
             'NO',
+            'ID Mahasiswa',
             'NIM',
             'Nama',
         ];
@@ -47,9 +50,9 @@ class GradeTemplateExport implements FromArray, WithHeadings, WithMapping
         }
 
 
-        $headings[] = "Tugas " . $this->getWeight()['assignment'];
-        $headings[] = "UTS " . $this->getWeight()['uts'];
-        $headings[] = 'UAS ' . $this->getWeight()['uas'];
+        $headings[] = "Tugas";
+        $headings[] = "UTS";
+        $headings[] = 'UAS';
         $headings[] = 'Nilai Akhir';
 
         return $headings;
@@ -78,6 +81,7 @@ class GradeTemplateExport implements FromArray, WithHeadings, WithMapping
 
         $rowData = [
             $row - 1,
+            $student['student_id'],
             $student['nim'],
             $student['name'],
         ];
@@ -95,6 +99,15 @@ class GradeTemplateExport implements FromArray, WithHeadings, WithMapping
         $this->rowNumber++;
         return $rowData;
 
+    }
+
+    public function registerEvents(): array
+    {
+        return [
+            AfterSheet::class => function (AfterSheet $event){
+                $event->sheet->getDelegate()->getColumnDimension('B')->setVisible(false);
+            }
+        ];
     }
 }
 

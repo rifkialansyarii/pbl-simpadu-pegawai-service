@@ -19,6 +19,27 @@ class StudentSubmissionRepository implements StudentSubmissionRepositoryInterfac
         return $submission;
     }
 
+    public function addScore(array $attributes)
+    {
+        $submission = StudentSubmission::where('student_id', $attributes['student_id'])
+            ->where('assignment_id', $attributes['assignment_id'])
+            ->first();
+        if ($submission->count() !== 0) {
+            $submission->update([
+                'score' => $attributes['score']
+            ]);
+
+            return $submission;
+        } else {
+            return StudentSubmission::create([
+                'student_id' => $attributes['student_id'],
+                'assignment_id' => $attributes['assignment_id'],
+                'score' => $attributes['score'],
+                'submitted_at' => null,
+            ]);
+        }
+    }
+
     public function createSubmission(array $attributes, StudentAssignment $studentAssignment, User $user)
     {
         $submission = StudentSubmission::create([

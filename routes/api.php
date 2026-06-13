@@ -72,3 +72,4 @@ Route::get('/villages', [VillageController::class, 'index']);
 Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);
 
 Route::post('/grade-exports', [GradeTemplateController::class, 'downloadTemplate']);
+Route::post('/grade-imports', [GradeTemplateController::class, 'uploadTemplate']);
