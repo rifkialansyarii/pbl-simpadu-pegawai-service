@@ -162,7 +162,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
         ClassSession::fillAndInsert($data);
 
         $classSession = ClassSession::latest()->take($sessionAmount)->paginate(10);
-        $classSession->load(['lecturer']);
+        $classSession->load(['lecturer', 'learningMaterials', 'studentAssignments.fileUploads']);
 
         return $classSession;
     }
@@ -171,7 +171,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
     {
         $classSession->update($data);
 
-        $classSession = $classSession->refresh()->load(['lecturer']);
+        $classSession = $classSession->refresh()->load(['lecturer', 'learningMaterials', 'studentAssignments.fileUploads']);
 
         if ($classSession->status === 'opened') {
             $classSession->update([
@@ -189,6 +189,7 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
 
     public function createSessionMaterial(ClassSession $classSession, array $data)
     {
+        dd($data);
         $classSession->learningMaterials()->syncWithoutDetaching($data);
 
         $classSession->load(['lecturer', 'learningMaterials']);

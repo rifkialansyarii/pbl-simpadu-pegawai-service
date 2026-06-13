@@ -47,6 +47,7 @@ class UpdateClassSessionRequest extends FormRequest
 
         if($role === 'dosen') {
             $rules = [
+                'topic' => ['string', 'max:255'],
                 'status' => [Rule::enum(ClassSessionStatus::class)]
             ];
         }
