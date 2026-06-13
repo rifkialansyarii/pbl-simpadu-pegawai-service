@@ -64,9 +64,9 @@ class GradeTemplateExport implements FromArray, WithHeadings, WithMapping, WithE
         $AssignmentTotal = $this->assignments->count();
         $row = $this->rowNumber;
 
-        $startAssignmentLetter = 'D';
+        $startAssignmentLetter = 'E';
 
-        $endAssignmentIndex = 3 + $AssignmentTotal;
+        $endAssignmentIndex = 4 + $AssignmentTotal;
 
         $endAssignmentLetter = Coordinate::stringFromColumnIndex($endAssignmentIndex);
         Coordinate::stringFromColumnIndex($endAssignmentIndex + 1);

@@ -29,7 +29,7 @@ class GradeTemplateController extends Controller
 
             $setting = $this->gradeSettingService->getByField('course_code', $validated);
 
-            if ($setting->count() === 0) {
+            if (!$setting || $setting->count() === 0) {
                 return response()->json([
                     'success' => false,
                     'message' => 'grade is not set',
