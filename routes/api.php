@@ -7,6 +7,7 @@ use App\Http\Controllers\CountryController;
 use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\FileUploadController;
+use App\Http\Controllers\GradeController;
 use App\Http\Controllers\GradeSettingController;
 use App\Http\Controllers\GradeTemplateController;
 use App\Http\Controllers\ProvinceController;
@@ -60,6 +61,10 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
     Route::post('/grade-exports', [GradeTemplateController::class, 'downloadTemplate']);
     Route::post('/grade-imports', [GradeTemplateController::class, 'uploadTemplate']);
 
+    Route::get('/classes/{classId}/{courseCode}/grades', [GradeController::class, 'index']);
+
+
+
 
 });
 
@@ -74,3 +79,4 @@ Route::get('/districts/{cityCode}', [DistrictController::class, 'showByCity']);
 
 Route::get('/villages', [VillageController::class, 'index']);
 Route::get('/villages/{districtCode}', [VillageController::class, 'showByDistrict']);
+

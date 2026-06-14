@@ -13,7 +13,6 @@ class Grade extends Model
         'student_id',
         'nim',
         'student_name',
-        'pengampud_id',
         'class_id',
         'class_name',
         'course_code',

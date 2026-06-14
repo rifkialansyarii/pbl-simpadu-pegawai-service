@@ -1,0 +1,98 @@
+{
+    "success": true,
+    "message": "Data retrieved successfully",
+    "code": 200,
+    "data": [
+        {
+            "id": "019ec622-3e4e-72a7-a453-bc1d9f424b00",
+            "course_code": "mk-kl1-001",
+            "course_name": "Kalkulus I",
+            "assignment": null,
+            "uts": null,
+            "uas": null,
+            "lecturer_id": null
+        },
+        {
+            "id": "019ec622-3e53-7225-838d-2b77c9dc4a55",
+            "course_code": "mk-kl1-001",
+            "course_name": "Kalkulus I",
+            "assignment": null,
+            "uts": null,
+            "uas": null,
+            "lecturer_id": null
+        },
+        {
+            "id": "019ec622-3e55-7261-b379-9433e93839c0",
+            "course_code": "mk-kl1-001",
+            "course_name": "Kalkulus I",
+            "assignment": null,
+            "uts": null,
+            "uas": null,
+            "lecturer_id": null
+        },
+        {
+            "id": "019ec622-3e58-7295-bed6-a992a4035287",
+            "course_code": "mk-kl1-001",
+            "course_name": "Kalkulus I",
+            "assignment": null,
+            "uts": null,
+            "uas": null,
+            "lecturer_id": null
+        },
+        {
+            "id": "019ec622-3e5b-7371-bb8e-aad765f802dd",
+            "course_code": "mk-kl1-001",
+            "course_name": "Kalkulus I",
+            "assignment": null,
+            "uts": null,
+            "uas": null,
+            "lecturer_id": null
+        },
+        {
+            "id": "019ec622-3e5d-72ff-91d8-7e59049bfa09",
+            "course_code": "mk-kl1-001",
+            "course_name": "Kalkulus I",
+            "assignment": null,
+            "uts": null,
+            "uas": null,
+            "lecturer_id": null
+        },
+        {
+            "id": "019ec622-3e60-7134-bb6b-b4904c58e8ce",
+            "course_code": "mk-kl1-001",
+            "course_name": "Kalkulus I",
+            "assignment": null,
+            "uts": null,
+            "uas": null,
+            "lecturer_id": null
+        },
+        {
+            "id": "019ec622-3e64-7074-94f0-c88a6be7fdb3",
+            "course_code": "mk-kl1-001",
+            "course_name": "Kalkulus I",
+            "assignment": null,
+            "uts": null,
+            "uas": null,
+            "lecturer_id": null
+        },
+        {
+            "id": "019ec622-3e66-71a7-895c-b237922be58c",
+            "course_code": "mk-kl1-001",
+            "course_name": "Kalkulus I",
+            "assignment": null,
+            "uts": null,
+            "uas": null,
+            "lecturer_id": null
+        },
+        {
+            "id": "019ec622-3e68-715f-b795-2ba24df8135e",
+            "course_code": "mk-kl1-001",
+            "course_name": "Kalkulus I",
+            "assignment": null,
+            "uts": null,
+            "uas": null,
+            "lecturer_id": null
+        }
+    ],
+    "meta": []
+}

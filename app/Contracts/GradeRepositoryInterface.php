@@ -7,5 +7,6 @@ use App\Models\User;
 
 interface GradeRepositoryInterface
 {   
+    public function getAll($classId, $courseCode);
     public function storeGrade(array $attributes);
 }

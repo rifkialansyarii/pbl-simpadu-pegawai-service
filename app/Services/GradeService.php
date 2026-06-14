@@ -14,6 +14,11 @@ final class GradeService
     ) {
     }
 
+    public function getAll($classId, $courseCode)
+    {
+        return $this->repository->getAll($classId, $courseCode);
+    }
+
     public function storeGrade(array $attributes)
     {
         return DB::transaction(function () use ($attributes) {
