@@ -41,8 +41,8 @@ class StudentAssignmentPolicy
      * Determine whether the user can update the model.
      */
     public function update(User $user, StudentAssignment $studentAssignment): bool
-    {
-        return false;
+    {  
+        return $user->role === 'mahasiswa' && $studentAssignment->studentSubmissions->contains('student_id', $user->detail_id);
     }
 
     /**

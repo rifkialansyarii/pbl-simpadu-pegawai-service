@@ -44,8 +44,8 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
     Route::get('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'index'])->middleware('can:viewAny,studentAssignment');
     Route::get('/assignments/pending', [StudentSubmissionController::class, 'showPendingSubmission'])->middleware('can:viewPending, App\Models\StudentAssignment');
     Route::post('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'store'])->middleware('can:create,studentAssignment');
+    Route::put('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'update'])->middleware('can:update,studentAssignment');
     Route::delete('/assignments/{studentAssignment}/submission', [StudentSubmissionController::class, 'destroy'])->middleware('can:delete,studentAssignment');
-
 
     Route::get('/file-uploads', [FileUploadController::class, 'index'])->middleware('can:viewAny, App\Models\FileUpload');
     Route::get('/file-uploads/{fileUpload}/download', [FileUploadController::class, 'download'])->middleware('can:download,fileUpload');

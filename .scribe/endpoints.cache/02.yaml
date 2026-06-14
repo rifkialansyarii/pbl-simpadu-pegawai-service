@@ -32,6 +32,17 @@ endpoints:
     urlParameters: []
     cleanUrlParameters: []
     queryParameters:
+      search:
+        custom: []
+        name: search
+        description: 'Search by nama dosen dan mata kuliah. Must not be greater than 150 characters.'
+        required: false
+        example: 'john doe OR pemrograman web'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
       page:
         custom: []
         name: page
@@ -66,6 +77,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanQueryParameters:
+      search: 'john doe OR pemrograman web'
       page: 16
       start_date: architecto
       end_date: architecto
@@ -1358,14 +1370,14 @@ endpoints:
         name: classSession_id
         description: 'The ID of the classSession.'
         required: true
-        example: 019ebefb-253b-72b3-a5cb-6a5344ffbb09
+        example: 019ec502-2d43-714e-9278-f99f7d4aafea
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      classSession_id: 019ebefb-253b-72b3-a5cb-6a5344ffbb09
+      classSession_id: 019ec502-2d43-714e-9278-f99f7d4aafea
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -1520,14 +1532,14 @@ endpoints:
         name: classSession_id
         description: 'The ID of the classSession.'
         required: true
-        example: 019ebefb-253b-72b3-a5cb-6a5344ffbb09
+        example: 019ec502-2d43-714e-9278-f99f7d4aafea
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      classSession_id: 019ebefb-253b-72b3-a5cb-6a5344ffbb09
+      classSession_id: 019ec502-2d43-714e-9278-f99f7d4aafea
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -1562,6 +1574,17 @@ endpoints:
           }
         headers: []
         description: 'Sukses menghapus materi'
+      -
+        custom: []
+        status: 400
+        content: |-
+          {
+              "success": false,
+              "message": "class session is not opened yet",
+              "code": 400
+          }
+        headers: []
+        description: 'Sesi Kelas Belum Dibuka'
       -
         custom: []
         status: 401

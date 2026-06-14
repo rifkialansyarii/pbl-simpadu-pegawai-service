@@ -14,7 +14,7 @@ endpoints:
       groupDescription: 'Endpoint terkait operasi CRUD untuk data Tugas, termasuk membuat, penghapusan, pengumpulan dan batal pengumpulan.'
       subgroup: ''
       subgroupDescription: ''
-      title: 'Tambah Tugas'
+      title: 'Membuat Tugas'
       description: |-
         Endpoint ini digunakan untuk membuat tugas pada sesi kelas
 
@@ -33,14 +33,14 @@ endpoints:
         name: classSession_id
         description: 'The ID of the classSession.'
         required: true
-        example: 019ebefb-253b-72b3-a5cb-6a5344ffbb09
+        example: 019ec502-2d43-714e-9278-f99f7d4aafea
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      classSession_id: 019ebefb-253b-72b3-a5cb-6a5344ffbb09
+      classSession_id: 019ec502-2d43-714e-9278-f99f7d4aafea
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -162,6 +162,17 @@ endpoints:
         description: 'Sukses menambahkan materi'
       -
         custom: []
+        status: 400
+        content: |-
+          {
+              "success": false,
+              "message": "class session is not opened yet",
+              "code": 400
+          }
+        headers: []
+        description: 'Sesi Kelas Belum Dibuka'
+      -
+        custom: []
         status: 401
         content: |-
           {
@@ -231,14 +242,14 @@ endpoints:
         name: classSession_id
         description: 'The ID of the classSession.'
         required: true
-        example: 019ebefb-253b-72b3-a5cb-6a5344ffbb09
+        example: 019ec502-2d43-714e-9278-f99f7d4aafea
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      classSession_id: 019ebefb-253b-72b3-a5cb-6a5344ffbb09
+      classSession_id: 019ec502-2d43-714e-9278-f99f7d4aafea
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -342,14 +353,14 @@ endpoints:
         name: studentAssignment_id
         description: 'The ID of the studentAssignment.'
         required: true
-        example: 019ebefb-dc61-70a6-8228-242188b285a4
+        example: 019ec504-4f55-7249-8a44-ad5ef4ec63a9
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      studentAssignment_id: 019ebefb-dc61-70a6-8228-242188b285a4
+      studentAssignment_id: 019ec504-4f55-7249-8a44-ad5ef4ec63a9
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -604,11 +615,11 @@ endpoints:
       groupDescription: 'Endpoint terkait operasi CRUD untuk data Tugas, termasuk membuat, penghapusan, pengumpulan dan batal pengumpulan.'
       subgroup: ''
       subgroupDescription: ''
-      title: 'Kumpul Tugas'
+      title: 'Generate Pengumpulan Tugas'
       description: |-
-        Endpoint ini digunakan untuk mengumpulkan tugas
+        Endpoint ini digunakan untuk generate data pengumpulan tugas mahasiswa, sehingga nanti mahasiswa tinggal update data pengumpulan ini.
 
-        Fitur ini **hanya bisa dijalankan** oleh user **mahasiswa yang mengikuti mata kuliah di suatu kelas**.
+        Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar mata kuliah di suatu kelas**.
       authenticated: true
       deprecated: false
     headers:
@@ -621,17 +632,61 @@ endpoints:
         name: studentAssignment_id
         description: 'The ID of the studentAssignment.'
         required: true
-        example: 019ebefb-dc61-70a6-8228-242188b285a4
+        example: 019ec504-4f55-7249-8a44-ad5ef4ec63a9
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      studentAssignment_id: 019ebefb-dc61-70a6-8228-242188b285a4
+      studentAssignment_id: 019ec504-4f55-7249-8a44-ad5ef4ec63a9
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
+      students:
+        custom: []
+        name: students
+        description: 'Must have at least 1 items.'
+        required: false
+        example: bngzmiyvdljnikhw
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'students.*student_id':
+        custom: []
+        name: 'students.*student_id'
+        description: 'Must be 10 characters.'
+        required: true
+        example: aykcmyuwpw
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'students.*nim':
+        custom: []
+        name: 'students.*nim'
+        description: 'Must be 10 characters.'
+        required: true
+        example: lvqwrsitcp
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'students.*student_name':
+        custom: []
+        name: 'students.*student_name'
+        description: 'Must not be greater than 100 characters.'
+        required: true
+        example: s
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
       file_uuids:
         custom: []
         name: file_uuids
@@ -646,6 +701,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanBodyParameters:
+      students: bngzmiyvdljnikhw
       file_uuids:
         - 019e33e7-993d-7376-9c5a-c3c8078d697b
         - 019e33e7-993d-7376-9c5a-c3c8078d697b
@@ -728,6 +784,135 @@ endpoints:
   -
     custom: []
     httpMethods:
+      - PUT
+    uri: 'api/assignments/{studentAssignment_id}/submission'
+    metadata:
+      custom: []
+      groupName: Tugas
+      groupDescription: 'Endpoint terkait operasi CRUD untuk data Tugas, termasuk membuat, penghapusan, pengumpulan dan batal pengumpulan.'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Kumpul Tugas'
+      description: |-
+        Endpoint ini digunakan untuk mengumpulkan tugas. Jadi mahasiswa hanya update data pengumpulan yang sudah di generate.
+
+        Fitur ini **hanya bisa dijalankan** oleh user **mahasiswa yang mengikuti mata kuliah di suatu kelas**.
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {JWT here}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      studentAssignment_id:
+        custom: []
+        name: studentAssignment_id
+        description: 'The ID of the studentAssignment.'
+        required: true
+        example: 019ec504-4f55-7249-8a44-ad5ef4ec63a9
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      studentAssignment_id: 019ec504-4f55-7249-8a44-ad5ef4ec63a9
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      file_uuids:
+        custom: []
+        name: file_uuids
+        description: 'Must have at least 1 items.'
+        required: false
+        example: null
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      filed_uuids:
+        custom: []
+        name: filed_uuids
+        description: ''
+        required: false
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'filed_uuids.*file_upload_id':
+        custom: []
+        name: 'filed_uuids.*file_upload_id'
+        description: 'The <code>id</code> of an existing record in the file_uploads table. Must be 36 characters.'
+        required: true
+        example: bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      filed_uuids:
+        '*file_upload_id': bngzmiyvdljnikhwaykcmyuwpwlvqwrsitcp
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: |-
+          {
+              "success": true,
+              "message": "Data deleted successfully",
+              "code": 200
+          }
+        headers: []
+        description: 'Sukses menghapus data'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "You are not logged in"
+          }
+        headers: []
+        description: 'Tidak terotentikasi'
+      -
+        custom: []
+        status: 401
+        content: |-
+          {
+              "success": false,
+              "code": 401,
+              "message": "Token is Expired"
+          }
+        headers: []
+        description: 'Token expired'
+      -
+        custom: []
+        status: 403
+        content: |-
+          {
+              "success": false,
+              "code": 403,
+              "message": "Forbidden"
+          }
+        headers: []
+        description: 'Tidak memiliki izin'
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
       - DELETE
     uri: 'api/assignments/{studentAssignment_id}/submission'
     metadata:
@@ -755,14 +940,14 @@ endpoints:
         name: studentAssignment_id
         description: 'The ID of the studentAssignment.'
         required: true
-        example: 019ebefb-dc61-70a6-8228-242188b285a4
+        example: 019ec504-4f55-7249-8a44-ad5ef4ec63a9
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      studentAssignment_id: 019ebefb-dc61-70a6-8228-242188b285a4
+      studentAssignment_id: 019ec504-4f55-7249-8a44-ad5ef4ec63a9
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

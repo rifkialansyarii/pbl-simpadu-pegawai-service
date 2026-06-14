@@ -28,19 +28,18 @@ final class StudentSubmissionService
         });
     }
 
-    // public function updateSubmission(array $attributes, StudentAssignment $studentAssignment, User $user)
-    // {
-    //     return DB::transaction(function () use ($attributes, $studentAssignment, $user) {
+    public function updateSubmission(array $attributes, StudentAssignment $studentAssignment, User $user)
+    {
+        return DB::transaction(function () use ($attributes, $studentAssignment, $user) {
 
-    //         if (!$this->repository->checkIsSubmitted($studentAssignment, $user)) {
-    //             return $this->repository->updateSubmission($attributes, $studentAssignment, $user);
-    //         } else {
-    //             throw new Exception("data has been created");
+            if (!$this->repository->checkIsSubmitted($studentAssignment, $user)) {
+                return $this->repository->updateSubmission($attributes, $studentAssignment, $user);
+            } else {
+                throw new Exception("data has been created");
+            }
 
-    //         }
-
-    //     });
-    // }
+        });
+    }
 
     public function addScore(array $attributes)
     {

@@ -52,16 +52,14 @@ class StudentSubmissionRepository implements StudentSubmissionRepositoryInterfac
 
     public function updateSubmission(array $attributes, StudentAssignment $studentAssignment, User $user)
     {
-        $submission = StudentSubmission::create([
-            'assignment_id' => $studentAssignment->id,
-            'student_id' => $user->detail_id,
+        $submission = StudentSubmission::where('student_id', $user->detail_id)->where('assignment_id', $studentAssignment->id)->first();
+
+        $submission->update([
             'submitted_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
-
         $submission->submissionFiles()->syncWithoutDetaching($attributes['file_uuids']);
 
         $submission->load(['submissionFiles', 'assignment']);
-
         return $submission;
     }
 
@@ -69,6 +67,7 @@ class StudentSubmissionRepository implements StudentSubmissionRepositoryInterfac
     {
         return StudentSubmission::where('assignment_id', $studentAssignment->id)
             ->where('student_id', $user->detail_id)
+            ->where('submitted_at', '!=', null)
             ->exists();
     }
 
