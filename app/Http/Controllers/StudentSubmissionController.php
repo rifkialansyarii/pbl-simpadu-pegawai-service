@@ -110,11 +110,11 @@ class StudentSubmissionController extends Controller
 
 
     /**
-     * Kumpul Tugas
+     * Generate Pengumpulan Tugas
      *
-     * Endpoint ini digunakan untuk mengumpulkan tugas
+     * Endpoint ini digunakan untuk generate data pengumpulan tugas mahasiswa, sehingga nanti mahasiswa tinggal update data pengumpulan ini.
      * 
-     * Fitur ini **hanya bisa dijalankan** oleh user **mahasiswa yang mengikuti mata kuliah di suatu kelas**.
+     * Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar mata kuliah di suatu kelas**.
      *  
      */
     #[ResponseFromFile(file: 'responses/submission/success_submit.json', status: 201, description: 'Sukses membuat data')]
@@ -137,10 +137,10 @@ class StudentSubmissionController extends Controller
             //     return response()->json($response, 403);
             // }
 
-            $submissionResource = new StudentSubmissionResource($this->service->createSubmission($request->validated(), $studentAssignment, $request->user()));
-            return $submissionResource->additional([
+            $submissionCollection = new StudentSubmissionCollection($this->service->generateSubmission($request->validated(), $studentAssignment));
+            return $submissionCollection->additional([
                 'success' => true,
-                'message' => 'Data created successfully',
+                'message' => 'Data generated successfully',
                 'code' => 201,
             ]);
         } catch (Exception $e) {

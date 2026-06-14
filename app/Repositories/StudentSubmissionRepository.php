@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Contracts\StudentSubmissionRepositoryInterface;
+use App\Models\ClassSession;
 use App\Models\StudentAssignment;
 use App\Models\StudentSubmission;
 use App\Models\User;
@@ -40,7 +41,16 @@ class StudentSubmissionRepository implements StudentSubmissionRepositoryInterfac
         }
     }
 
-    public function createSubmission(array $attributes, StudentAssignment $studentAssignment, User $user)
+    public function generateSubmission(array $attributes, StudentAssignment $studentAssignment)
+    {
+        $submission = $studentAssignment->studentSubmissions()->createMany($attributes["students"]);
+
+        $submission->load(['submissionFiles', 'assignment']);
+
+        return $submission;
+    }
+
+    public function updateSubmission(array $attributes, StudentAssignment $studentAssignment, User $user)
     {
         $submission = StudentSubmission::create([
             'assignment_id' => $studentAssignment->id,

@@ -15,6 +15,8 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->foreignUUid('assignment_id')->constrained('student_assignments')->restrictOnDelete();
             $table->uuid('student_id');
+            $table->char('nim', 10);
+            $table->string('student_name');
             $table->datetime('submitted_at');
             $table->decimal('score', 5, 2)->default(0);
             $table->timestamps();

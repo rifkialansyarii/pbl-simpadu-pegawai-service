@@ -29,14 +29,21 @@ class StoreStudentSubmission extends FormRequest
     public function rules(): array
     {
         return [
-            "file_uuids" => ['array', 'required', 'min:1'],
-            "file_uuids.*" => [
+            "students" => ['array', 'sometimes', 'min:1'],
+            "students.*student_id" => [
                 'required',
                 'string',
-                'size:36',
-                Rule::exists('file_uploads', 'id')->where(function (Builder $query) {
-                    return $query->where('user_id', $this->user()->id);
-                }),
+                'size:10',
+            ],
+            "students.*nim" => [
+                'required',
+                'string',
+                'size:10',
+            ],
+            "students.*student_name" => [
+                'required',
+                'string',
+                'max:100',
             ],
         ];
     }

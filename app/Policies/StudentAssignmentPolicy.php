@@ -34,7 +34,7 @@ class StudentAssignmentPolicy
      */
     public function create(User $user, StudentAssignment $studentAssignment): bool
     {
-        return $user->role === 'mahasiswa' && $user->class_id === $studentAssignment->classSession->class_id;
+        return $user->role === 'dosen' && $user->detail_id === $studentAssignment->classSession->lecturer_id;
     }
 
     /**
