@@ -185,11 +185,13 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
 
     public function update(ClassSession $classSession, array $data)
     {
+        $classSessionStatusBefore = $classSession->status;
+
         $classSession->update($data);
 
         $classSession = $classSession->refresh()->load(['lecturer', 'learningMaterials', 'studentAssignments.fileUploads']);
 
-        if ($classSession->status === 'opened') {
+        if ($classSessionStatusBefore === 'opened' && $classSession->status === 'closed') {
             $classSession->update([
                 'is_already_opened' => true,
             ]);
