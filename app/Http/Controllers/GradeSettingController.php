@@ -14,8 +14,8 @@ use Knuckles\Scribe\Attributes\ResponseFromFile;
 
 /**
  * 
- * @group Setting Nilai
- * Endpoint terkait operasi CRUD untuk data Setting nilai.
+ * @group Nilai
+ * Endpoint terkait operasi CRUD untuk data nilai hingga aturannya (setting nilai).
  */
 class GradeSettingController extends Controller
 {
