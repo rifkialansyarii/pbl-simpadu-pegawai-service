@@ -25,15 +25,21 @@ class StudentAssignmentRepository implements StudentAssignmentRepositoryInterfac
 
     public function createStudentAssignment(ClassSession $classSession, array $data)
     {
-        $assignment = $classSession->studentAssignments()->updateOrCreate(Arr::except($data, ['file_upload_id']));
+        if($classSession->status === 'opened')
+        {
+            $assignment = $classSession->studentAssignments()->updateOrCreate(Arr::except($data, ['file_upload_id']));
 
-        if (!empty($data['file_upload_id'])) {
-            $assignment->fileUploads()->sync($data['file_upload_id']);
+            if (!empty($data['file_upload_id'])) {
+                $assignment->fileUploads()->sync($data['file_upload_id']);
+            }
+
+            $classSession->load(['lecturer', 'studentAssignments.fileUploads']);
+
+            return $classSession;
         }
 
-        $classSession->load(['lecturer', 'studentAssignments.fileUploads']);
-
-        return $classSession;
+        return false;
+        
     }
 
     public function deleteStudentAssignment(array $data)

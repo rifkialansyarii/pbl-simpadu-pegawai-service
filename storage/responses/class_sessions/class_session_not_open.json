@@ -1,0 +1,5 @@
+{
+    "success": false,
+    "message": "class session is not opened yet",
+    "code": 400
+}
