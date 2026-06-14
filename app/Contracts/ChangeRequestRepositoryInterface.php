@@ -11,6 +11,7 @@ interface ChangeRequestRepositoryInterface
     public function getAllByUser(User $user, array $filters = []);
     public function getNewlyData();
     public function getTotalPendingStatus();
+    public function getTotal();
     public function filterData(array $filters = [], $changeRequest);
     public function searchData(array $filters = [], $changeRequest);
     public function create(array $attributes);

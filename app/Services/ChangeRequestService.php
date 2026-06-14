@@ -46,4 +46,9 @@ final class ChangeRequestService
         return $this->repository->getTotalPendingStatus();
     }
 
+    public function getTotal()
+    {
+        return $this->repository->getTotal();
+    }
+
 }

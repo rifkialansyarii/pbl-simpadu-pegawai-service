@@ -153,4 +153,48 @@ class ChangeRequestController extends Controller
             ]
         ]);
     }
+
+
+    /**
+     * Mengambil total data
+     * 
+     * Endpoint bertujuan untuk **mengambil total data permintaan perubahan**.
+     * 
+     * Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
+     * 
+     */
+    #[ResponseFromFile(file: 'responses/change_request/success_get_total_pending.json', status: 200, description: 'Sukses mendapatkan total')]
+    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
+    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
+
+    public function showTotal()
+    {
+        try {
+            return response()->json([
+                'success' => true,
+                'code' => 200,
+                'message' => 'Data retrieved successfully',
+                'data' => [
+                    'total' => $this->service->getTotal()
+                ]
+            ]);
+
+        } catch (Exception $e) {
+            $isDebug = config('app.debug');
+
+            $response = [
+                'success' => false,
+                'message' => 'an error occurred while processing',
+                'code' => 500,
+                'errrors' => $e->getMessage()
+            ];
+
+            if ($isDebug) {
+                $response['errors'] = $e->getMessage();
+                $response['trace'] = $e->getTrace();
+            }
+
+            return response()->json($response, 500);
+        }
+    }
 }

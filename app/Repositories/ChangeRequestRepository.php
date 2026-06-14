@@ -81,6 +81,13 @@ class ChangeRequestRepository implements ChangeRequestRepositoryInterface
         return $totalPendingChangeRequest;
     }
 
+    public function getTotal()
+    {
+        $total = ChangeRequest::count();
+
+        return $total;
+    }
+
     public function filterData(array $filters = [], $changeRequest){
 
         if(isset($filters['status'])){

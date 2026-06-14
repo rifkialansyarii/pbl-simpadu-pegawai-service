@@ -73,4 +73,9 @@ class ChangeRequestPolicy
     {
         return $user->role === 'admin-pegawai' || $user->role === 'super-admin';
     }
+
+    public function viewTotal(User $user): bool
+    {
+        return $user->role === 'admin-pegawai' || $user->role === 'super-admin';
+    }
 }
