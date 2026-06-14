@@ -245,7 +245,18 @@ class ClassSessionController extends Controller
     {
         try {
             $attributes = $request->validated()['file_uuids'];
-            $classSessionResource = new ClassSessionResource($this->service->addSessionMaterial($classSession, $attributes));
+
+            $classSession = $this->service->addSessionMaterial($classSession, $attributes);
+
+            if ($classSession === false) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'class session is not opened yet',
+                    'code' => 400,
+                ], 400);
+            }
+
+            $classSessionResource = new ClassSessionResource($classSession);
             return $classSessionResource->additional([
                 'success' => true,
                 'message' => 'Data created successfully',
