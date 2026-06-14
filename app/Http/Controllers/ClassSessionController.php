@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AddLearningMaterialRequest;
 use App\Http\Requests\BulkDeleteClassSessionRequest;
 use App\Http\Requests\DeleteLearningMaterialRequest;
+use App\Http\Requests\FilterClassSession;
 use App\Http\Requests\GenerateClassSessionRequest;
 use App\Http\Requests\UpdateClassSessionRequest;
 use App\Http\Resources\ClassSessionCollection;
@@ -48,9 +49,10 @@ class ClassSessionController extends Controller
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
-    public function index(Request $request)
+    public function index(FilterClassSession $request)
     {
         $filters = [
+            "search" => $request->query('search'),
             "start_date" => $request->query('start_date'),
             "end_date" => $request->query('end_date')
         ];
