@@ -29,7 +29,7 @@ class StudentAssignmentRepository implements StudentAssignmentRepositoryInterfac
         {
             $assignment = $classSession->studentAssignments()->updateOrCreate(Arr::except($data, ['file_upload_id']));
 
-            if (!empty($data['file_upload_id'])) {
+            if (!empty($data['file_upload_id']) || isset($data['file_upload_id'])) {
                 $assignment->fileUploads()->sync($data['file_upload_id']);
             }
 
