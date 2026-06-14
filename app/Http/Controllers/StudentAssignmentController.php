@@ -42,7 +42,7 @@ class StudentAssignmentController extends Controller
         try {
             $validated = $request->validated();
             $attributes = [
-                'file_upload_id' => $validated['file_uuids'],
+                'file_upload_id' => $validated['file_uuids'] ?? null,
                 'title' => $validated['title'],
                 'description' => $validated['description'],
                 'deadline' => $validated['deadline'],

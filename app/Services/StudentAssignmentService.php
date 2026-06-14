@@ -24,7 +24,6 @@ final class StudentAssignmentService
     {
         return DB::transaction(function () use ($classSession, $attributes) {
             return $this->repository->createStudentAssignment($classSession, $attributes);
-            ;
         });
     }
 
