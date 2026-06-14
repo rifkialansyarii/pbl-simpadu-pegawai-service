@@ -245,7 +245,18 @@ class ClassSessionController extends Controller
     {
         try {
             $attributes = $request->validated()['file_uuids'];
-            $classSessionResource = new ClassSessionResource($this->service->addSessionMaterial($classSession, $attributes));
+
+            $classSession = $this->service->addSessionMaterial($classSession, $attributes);
+
+            if ($classSession === false) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'class session is not opened yet',
+                    'code' => 400,
+                ], 400);
+            }
+
+            $classSessionResource = new ClassSessionResource($classSession);
             return $classSessionResource->additional([
                 'success' => true,
                 'message' => 'Data created successfully',
@@ -285,6 +296,7 @@ class ClassSessionController extends Controller
     #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
     #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
     #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
+    #[ResponseFromFile(file: 'responses/class_sessions/class_session_not_open.json', status: 400, description: 'Sesi Kelas Belum Dibuka')]
     public function destroyMaterial(DeleteLearningMaterialRequest $request, ClassSession $classSession)
     {
         try {

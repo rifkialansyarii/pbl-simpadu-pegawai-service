@@ -6,6 +6,7 @@ use App\Contracts\StudentAssignmentRepositoryInterface;
 use App\Models\ClassSession;
 use App\Models\User;
 use DB;
+use Exception;
 
 final class StudentAssignmentService
 {
@@ -23,6 +24,7 @@ final class StudentAssignmentService
     {
         return DB::transaction(function () use ($classSession, $attributes) {
             return $this->repository->createStudentAssignment($classSession, $attributes);
+            ;
         });
     }
 

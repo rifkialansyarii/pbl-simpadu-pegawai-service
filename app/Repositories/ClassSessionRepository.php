@@ -189,12 +189,16 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
 
     public function createSessionMaterial(ClassSession $classSession, array $data)
     {
-        dd($data);
-        $classSession->learningMaterials()->syncWithoutDetaching($data);
+        if ($classSession->status === 'opened') {
+            $classSession->learningMaterials()->syncWithoutDetaching($data);
 
-        $classSession->load(['lecturer', 'learningMaterials']);
+            $classSession->load(['lecturer', 'learningMaterials']);
 
-        return $classSession;
+            return $classSession;
+        }
+
+        return false;
+
     }
 
     public function deleteSessionMaterial(ClassSession $classSession, array $data)

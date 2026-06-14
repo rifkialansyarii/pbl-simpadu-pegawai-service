@@ -31,7 +31,7 @@ class AddStudentAssignmentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "file_uuids" => ['array', 'required', 'min:1'],
+            "file_uuids" => ['array', 'sometimes', 'min:0'],
             "file_uuids.*" => [
                 'required',
                 'string',
@@ -40,7 +40,7 @@ class AddStudentAssignmentRequest extends FormRequest
             ],
             "title" => ['string', 'required', 'max:255'],
             "description" => ['string', 'required', 'max:255'],
-            'deadline' => ['required', Rule::date()->format('Y-m-d')],
+            'deadline' => ['required', Rule::date()->format('Y-m-d H:i')],
         ];
     }
 

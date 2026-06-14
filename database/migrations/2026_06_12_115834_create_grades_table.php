@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('grades', function (Blueprint $table) {
             $table->uuid('id')->primary();
+            $table->uuid('pengampu_id');
             $table->uuid('student_id');
             $table->char('nim', 10);
             $table->string('student_name');
