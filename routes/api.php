@@ -27,6 +27,7 @@ Route::middleware(['auth:auth-jwt'])->group(function () {
 
     Route::get('/change-requests', [ChangeRequestController::class, 'index'])->middleware('can:viewAny, App\Models\ChangeRequest');
     Route::get('/change-requests/info/newly', [ChangeRequestController::class, 'showNewly'])->middleware('can:viewNewly, App\Models\ChangeRequest');
+    Route::get('/change-requests/info/total', [ChangeRequestController::class, 'showTotal'])->middleware('can:viewTotal, App\Models\ChangeRequest');
     Route::get('/change-requests/info/pending', [ChangeRequestController::class, 'showTotalPendingStatus'])->middleware('can:viewTotalPendingStatus, App\Models\ChangeRequest');
     Route::put('/change-requests/{changeRequest}', [ChangeRequestController::class, 'update'])->middleware('can:update,changeRequest');
 
