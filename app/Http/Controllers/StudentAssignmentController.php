@@ -23,7 +23,7 @@ class StudentAssignmentController extends Controller
     }
 
     /**
-     * Tambah Tugas
+     * Membuat Tugas
      *
      * Endpoint ini digunakan untuk membuat tugas pada sesi kelas
      * 

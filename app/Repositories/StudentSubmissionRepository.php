@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Contracts\StudentSubmissionRepositoryInterface;
+use App\Models\ClassSession;
 use App\Models\StudentAssignment;
 use App\Models\StudentSubmission;
 use App\Models\User;
@@ -40,18 +41,25 @@ class StudentSubmissionRepository implements StudentSubmissionRepositoryInterfac
         }
     }
 
-    public function createSubmission(array $attributes, StudentAssignment $studentAssignment, User $user)
+    public function generateSubmission(array $attributes, StudentAssignment $studentAssignment)
     {
-        $submission = StudentSubmission::create([
-            'assignment_id' => $studentAssignment->id,
-            'student_id' => $user->detail_id,
-            'submitted_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
-
-        $submission->submissionFiles()->syncWithoutDetaching($attributes['file_uuids']);
+        $submission = $studentAssignment->studentSubmissions()->createMany($attributes["students"]);
 
         $submission->load(['submissionFiles', 'assignment']);
 
+        return $submission;
+    }
+
+    public function updateSubmission(array $attributes, StudentAssignment $studentAssignment, User $user)
+    {
+        $submission = StudentSubmission::where('student_id', $user->detail_id)->where('assignment_id', $studentAssignment->id)->first();
+
+        $submission->update([
+            'submitted_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ]);
+        $submission->submissionFiles()->syncWithoutDetaching($attributes['file_uuids']);
+
+        $submission->load(['submissionFiles', 'assignment']);
         return $submission;
     }
 
@@ -59,6 +67,7 @@ class StudentSubmissionRepository implements StudentSubmissionRepositoryInterfac
     {
         return StudentSubmission::where('assignment_id', $studentAssignment->id)
             ->where('student_id', $user->detail_id)
+            ->where('submitted_at', '!=', null)
             ->exists();
     }
 

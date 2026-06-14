@@ -4,14 +4,11 @@ namespace App\Http\Requests;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Contracts\Validation\Validator;
-use Illuminate\Database\Query\Builder;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rule;
-use Knuckles\Scribe\Attributes\BodyParam;
 
-#[BodyParam(name: 'file_uuids', type: 'string[]', description: 'Masukkan file uuids yang ingin disubmit sebagai tugas', example: ['019e33e7-993d-7376-9c5a-c3c8078d697b', '019e33e7-993d-7376-9c5a-c3c8078d697b'])]
-class StoreStudentSubmission extends FormRequest
+class UpdateStudentSubmission extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,24 +23,15 @@ class StoreStudentSubmission extends FormRequest
      *
      * @return array<string, ValidationRule|array<mixed>|string>
      */
-    public function rules(): array
+     public function rules(): array
     {
         return [
-            "students" => ['array', 'sometimes', 'min:1'],
-            "students.*student_id" => [
+            "file_uuids" => ['array', 'sometimes', 'min:1'],
+            "filed_uuids.*file_upload_id" => [
                 'required',
                 'string',
-                'size:10',
-            ],
-            "students.*nim" => [
-                'required',
-                'string',
-                'size:10',
-            ],
-            "students.*student_name" => [
-                'required',
-                'string',
-                'max:100',
+                'size:36',
+                Rule::exists('file_uploads', 'id'),
             ],
         ];
     }

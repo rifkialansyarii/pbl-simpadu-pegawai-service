@@ -21,15 +21,21 @@ final class StudentSubmissionService
         return $this->repository->getAllSubmission($studentAssignment);
     }
 
-    public function createSubmission(array $attributes, StudentAssignment $studentAssignment, User $user)
+    public function generateSubmission(array $attributes, StudentAssignment $studentAssignment)
+    {
+        return DB::transaction(function () use ($attributes, $studentAssignment) {
+            return $this->repository->generateSubmission($attributes, $studentAssignment);
+        });
+    }
+
+    public function updateSubmission(array $attributes, StudentAssignment $studentAssignment, User $user)
     {
         return DB::transaction(function () use ($attributes, $studentAssignment, $user) {
 
             if (!$this->repository->checkIsSubmitted($studentAssignment, $user)) {
-                return $this->repository->createSubmission($attributes, $studentAssignment, $user);
+                return $this->repository->updateSubmission($attributes, $studentAssignment, $user);
             } else {
                 throw new Exception("data has been created");
-
             }
 
         });

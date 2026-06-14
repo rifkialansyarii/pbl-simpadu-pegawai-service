@@ -17,6 +17,8 @@ class StudentSubmissionResource extends JsonResource
         return [
             "id" => (string) $this->id,
             "student_id" => $this->student_id,
+            "nim" => $this->nim,
+            "student_name" => $this->student_name,
             "submitted_at" => $this->submitted_at,
             "assignment_id" => $this->assignment_id,
             "assignment" => StudentAssignmentResource::make($this->whenLoaded('assignment')),

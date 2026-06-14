@@ -1,0 +1,168 @@
+{
+    "success": true,
+    "message": "Data generated successfully",
+    "code": 201,
+    "data": [
+        {
+            "id": "019ec5b9-49af-7007-9f12-2f6c67c5693b",
+            "student_id": "550e8400-e29b-41d4-a716-446655440000",
+            "nim": "2010110001",
+            "student_name": "Budi Santoso",
+            "submitted_at": null,
+            "assignment_id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+            "assignment": {
+                "id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+                "title": "Tugas Dasar 1",
+                "description": "Kerjakan Tugas Dasar 1",
+                "deadline": "2026-06-20 12:30:00",
+                "created_at": "2026-06-14T07:24:14.000000Z"
+            },
+            "attachment": []
+        },
+        {
+            "id": "019ec5b9-49b2-72f6-9123-b08660dd6916",
+            "student_id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+            "nim": "2010110002",
+            "student_name": "Siti Aminah",
+            "submitted_at": null,
+            "assignment_id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+            "assignment": {
+                "id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+                "title": "Tugas Dasar 1",
+                "description": "Kerjakan Tugas Dasar 1",
+                "deadline": "2026-06-20 12:30:00",
+                "created_at": "2026-06-14T07:24:14.000000Z"
+            },
+            "attachment": []
+        },
+        {
+            "id": "019ec5b9-49b3-703d-86ad-9c681b3d57a4",
+            "student_id": "b4a3a60c-255e-4369-a35c-22340b07f877",
+            "nim": "2010110003",
+            "student_name": "Ahmad Fauzi",
+            "submitted_at": null,
+            "assignment_id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+            "assignment": {
+                "id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+                "title": "Tugas Dasar 1",
+                "description": "Kerjakan Tugas Dasar 1",
+                "deadline": "2026-06-20 12:30:00",
+                "created_at": "2026-06-14T07:24:14.000000Z"
+            },
+            "attachment": []
+        },
+        {
+            "id": "019ec5b9-49b4-705f-b1fb-efe179937c93",
+            "student_id": "c3d8b291-14ab-4c2d-9481-6893b890f55a",
+            "nim": "2010110004",
+            "student_name": "Dewi Lestari",
+            "submitted_at": null,
+            "assignment_id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+            "assignment": {
+                "id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+                "title": "Tugas Dasar 1",
+                "description": "Kerjakan Tugas Dasar 1",
+                "deadline": "2026-06-20 12:30:00",
+                "created_at": "2026-06-14T07:24:14.000000Z"
+            },
+            "attachment": []
+        },
+        {
+            "id": "019ec5b9-49b5-707e-a5b7-64fd94805756",
+            "student_id": "d5f9c4b2-26cc-4d3e-8592-7904c901e66b",
+            "nim": "2010110005",
+            "student_name": "Reza Rahadian",
+            "submitted_at": null,
+            "assignment_id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+            "assignment": {
+                "id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+                "title": "Tugas Dasar 1",
+                "description": "Kerjakan Tugas Dasar 1",
+                "deadline": "2026-06-20 12:30:00",
+                "created_at": "2026-06-14T07:24:14.000000Z"
+            },
+            "attachment": []
+        },
+        {
+            "id": "019ec5b9-49b6-71c7-8abe-91d406d36daa",
+            "student_id": "e7a0d5c3-37dd-4e4f-96a3-8015d012f77c",
+            "nim": "2010110006",
+            "student_name": "Ayu Wandira",
+            "submitted_at": null,
+            "assignment_id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+            "assignment": {
+                "id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+                "title": "Tugas Dasar 1",
+                "description": "Kerjakan Tugas Dasar 1",
+                "deadline": "2026-06-20 12:30:00",
+                "created_at": "2026-06-14T07:24:14.000000Z"
+            },
+            "attachment": []
+        },
+        {
+            "id": "019ec5b9-49b6-71c7-8abe-91d4078553eb",
+            "student_id": "f8b1e6d4-48ee-4f50-a7b4-9126e123a88d",
+            "nim": "2010110007",
+            "student_name": "Dandi Saputra",
+            "submitted_at": null,
+            "assignment_id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+            "assignment": {
+                "id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+                "title": "Tugas Dasar 1",
+                "description": "Kerjakan Tugas Dasar 1",
+                "deadline": "2026-06-20 12:30:00",
+                "created_at": "2026-06-14T07:24:14.000000Z"
+            },
+            "attachment": []
+        },
+        {
+            "id": "019ec5b9-49b7-7297-ba17-6dd9b839f4b1",
+            "student_id": "09c2f7e5-59ff-4061-b8c5-0237f234b99e",
+            "nim": "2010110008",
+            "student_name": "Rina Marlina",
+            "submitted_at": null,
+            "assignment_id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+            "assignment": {
+                "id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+                "title": "Tugas Dasar 1",
+                "description": "Kerjakan Tugas Dasar 1",
+                "deadline": "2026-06-20 12:30:00",
+                "created_at": "2026-06-14T07:24:14.000000Z"
+            },
+            "attachment": []
+        },
+        {
+            "id": "019ec5b9-49b8-72e9-8e68-1cb42c46e70a",
+            "student_id": "1ad308f6-6a00-4172-c9d6-13480345c00f",
+            "nim": "2010110009",
+            "student_name": "Hendra Wijaya",
+            "submitted_at": null,
+            "assignment_id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+            "assignment": {
+                "id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+                "title": "Tugas Dasar 1",
+                "description": "Kerjakan Tugas Dasar 1",
+                "deadline": "2026-06-20 12:30:00",
+                "created_at": "2026-06-14T07:24:14.000000Z"
+            },
+            "attachment": []
+        },
+        {
+            "id": "019ec5b9-49b8-72e9-8e68-1cb42ca37af6",
+            "student_id": "2be41907-7b11-4283-dae7-24591456d110",
+            "nim": "2010110010",
+            "student_name": "Maya Indah",
+            "submitted_at": null,
+            "assignment_id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+            "assignment": {
+                "id": "019ec504-4f55-7249-8a44-ad5ef4ec63a9",
+                "title": "Tugas Dasar 1",
+                "description": "Kerjakan Tugas Dasar 1",
+                "deadline": "2026-06-20 12:30:00",
+                "created_at": "2026-06-14T07:24:14.000000Z"
+            },
+            "attachment": []
+        }
+    ],
+    "meta": []
+}

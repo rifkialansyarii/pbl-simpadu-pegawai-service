@@ -14,6 +14,8 @@ class StudentSubmission extends Model
     protected $fillable = [
         'assignment_id',
         'student_id',
+        'nim',
+        'student_name',
         'submitted_at',
         'score',
     ];

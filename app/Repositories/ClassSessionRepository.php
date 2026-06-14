@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Contracts\ClassSessionRepositoryInterface;
 use App\Models\ClassSession;
+use App\Models\Employee;
 use App\Models\StudentAssignment;
 
 class ClassSessionRepository implements ClassSessionRepositoryInterface
@@ -29,8 +30,13 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
             $query->whereDate('session_date', '>=', $filters['start_date']);
         })->when(isset($filters['end_date']), function ($query) use ($filters) {
             $query->whereDate('session_date', '<=', $filters['end_date']);
-        })->paginate(10);
+        });
 
+        if (isset($filters['search'])) {
+            $classSession = $this->searchData($filters, $classSession);
+        }
+
+        $classSession = $classSession->paginate(10);
         $classSession->load(['lecturer', 'learningMaterials', 'studentAssignments.fileUploads']);
 
         return $classSession;
@@ -58,8 +64,13 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
                 $query->whereDate('session_date', '>=', $filters['start_date']);
             })->when(isset($filters['end_date']), function ($query) use ($filters) {
                 $query->whereDate('session_date', '<=', $filters['end_date']);
-            })->paginate(10);
+            });
 
+        if (isset($filters['search'])) {
+            $classSession = $this->searchData($filters, $classSession);
+        }
+
+        $classSession = $classSession->paginate(10);
         $classSession->load(['lecturer', 'learningMaterials', 'studentAssignments.fileUploads']);
 
         return $classSession;
@@ -87,8 +98,13 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
                 $query->whereDate('session_date', '>=', $filters['start_date']);
             })->when(isset($filters['end_date']), function ($query) use ($filters) {
                 $query->whereDate('session_date', '<=', $filters['end_date']);
-            })->paginate(10);
+            });
 
+        if (isset($filters['search'])) {
+            $classSession = $this->searchData($filters, $classSession);
+        }
+
+        $classSession = $classSession->paginate(10);
         $classSession->load(['lecturer', 'learningMaterials', 'studentAssignments.fileUploads']);
 
         return $classSession;
@@ -208,6 +224,18 @@ class ClassSessionRepository implements ClassSessionRepositoryInterface
 
     public function searchData(array $filters = [], $classSession)
     {
+        $keyword = $filters['search'];
 
+        $classSession->with('lecturer');
+
+        if (isset($keyword)) {
+            $classSession->when($keyword, function ($query, $keyword) {
+                return $query->where('course_name', 'like', "%{$keyword}%")
+                    ->orWhereHas('lecturer', function ($q) use ($keyword) {
+                        $q->where('employee_name', 'like', "%{$keyword}%");
+                    });
+            });
+        }
+        return $classSession;
     }
 }
