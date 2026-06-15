@@ -31,14 +31,14 @@ endpoints:
         name: classSession_id
         description: 'The ID of the classSession.'
         required: true
-        example: 019ec502-2d43-714e-9278-f99f7d4aafea
+        example: 019e3a0f-c5b8-71b7-8f8c-234261fecb74
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      classSession_id: 019ec502-2d43-714e-9278-f99f7d4aafea
+      classSession_id: 019e3a0f-c5b8-71b7-8f8c-234261fecb74
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -240,14 +240,14 @@ endpoints:
         name: classSession_id
         description: 'The ID of the classSession.'
         required: true
-        example: 019ec502-2d43-714e-9278-f99f7d4aafea
+        example: 019e3a0f-c5b8-71b7-8f8c-234261fecb74
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      classSession_id: 019ec502-2d43-714e-9278-f99f7d4aafea
+      classSession_id: 019e3a0f-c5b8-71b7-8f8c-234261fecb74
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -351,14 +351,14 @@ endpoints:
         name: studentAssignment_id
         description: 'The ID of the studentAssignment.'
         required: true
-        example: 019ec504-4f55-7249-8a44-ad5ef4ec63a9
+        example: 019e8b59-9a04-7173-b827-6b8e63bc07b4
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      studentAssignment_id: 019ec504-4f55-7249-8a44-ad5ef4ec63a9
+      studentAssignment_id: 019e8b59-9a04-7173-b827-6b8e63bc07b4
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -630,14 +630,14 @@ endpoints:
         name: studentAssignment_id
         description: 'The ID of the studentAssignment.'
         required: true
-        example: 019ec504-4f55-7249-8a44-ad5ef4ec63a9
+        example: 019e8b59-9a04-7173-b827-6b8e63bc07b4
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      studentAssignment_id: 019ec504-4f55-7249-8a44-ad5ef4ec63a9
+      studentAssignment_id: 019e8b59-9a04-7173-b827-6b8e63bc07b4
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -809,14 +809,14 @@ endpoints:
         name: studentAssignment_id
         description: 'The ID of the studentAssignment.'
         required: true
-        example: 019ec504-4f55-7249-8a44-ad5ef4ec63a9
+        example: 019e8b59-9a04-7173-b827-6b8e63bc07b4
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      studentAssignment_id: 019ec504-4f55-7249-8a44-ad5ef4ec63a9
+      studentAssignment_id: 019e8b59-9a04-7173-b827-6b8e63bc07b4
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -940,14 +940,14 @@ endpoints:
         name: studentAssignment_id
         description: 'The ID of the studentAssignment.'
         required: true
-        example: 019ec504-4f55-7249-8a44-ad5ef4ec63a9
+        example: 019e8b59-9a04-7173-b827-6b8e63bc07b4
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      studentAssignment_id: 019ec504-4f55-7249-8a44-ad5ef4ec63a9
+      studentAssignment_id: 019e8b59-9a04-7173-b827-6b8e63bc07b4
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

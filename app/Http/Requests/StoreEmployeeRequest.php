@@ -58,7 +58,7 @@ class StoreEmployeeRequest extends FormRequest
             'district_code' => 'string|size:6',
             'city_code' => 'string|size:4',
             'province_code' => 'string|size:2',
-            'citizen_code' => 'string|size:2',
+            'citizen_code' => 'string|size:2|sometimes',
         ];
     }
 

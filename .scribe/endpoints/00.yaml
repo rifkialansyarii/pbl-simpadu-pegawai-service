@@ -1062,7 +1062,7 @@ endpoints:
         name: employee_id
         description: 'The ID of the employee.'
         required: true
-        example: 019ec500-542a-7399-8a84-36d2cc858676
+        example: 019e39ea-4cf6-7107-b87f-07b34131182e
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1080,7 +1080,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      employee_id: 019ec500-542a-7399-8a84-36d2cc858676
+      employee_id: 019e39ea-4cf6-7107-b87f-07b34131182e
       employee: 123e4567-e89b-12d3-a456-426614174000
     queryParameters: []
     cleanQueryParameters: []

@@ -1368,14 +1368,14 @@ endpoints:
         name: classSession_id
         description: 'The ID of the classSession.'
         required: true
-        example: 019ec502-2d43-714e-9278-f99f7d4aafea
+        example: 019e3a0f-c5b8-71b7-8f8c-234261fecb74
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      classSession_id: 019ec502-2d43-714e-9278-f99f7d4aafea
+      classSession_id: 019e3a0f-c5b8-71b7-8f8c-234261fecb74
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -1530,14 +1530,14 @@ endpoints:
         name: classSession_id
         description: 'The ID of the classSession.'
         required: true
-        example: 019ec502-2d43-714e-9278-f99f7d4aafea
+        example: 019e3a0f-c5b8-71b7-8f8c-234261fecb74
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      classSession_id: 019ec502-2d43-714e-9278-f99f7d4aafea
+      classSession_id: 019e3a0f-c5b8-71b7-8f8c-234261fecb74
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
