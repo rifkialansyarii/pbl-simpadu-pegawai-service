@@ -963,7 +963,7 @@
 
         </div>
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
-            Last updated: June 14, 2026
+            Last updated: June 15, 2026
         </div>
 
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
@@ -1562,7 +1562,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019e8850-c907-7120-987c-f5d8b7c72a16
+                        architecto
                     </div>
                 </div>
             </div>
@@ -1695,7 +1695,7 @@ fetch(url, {
                                         <input aria-label="fileUpload_id" name="fileUpload_id"
                                                id="urlparam-GETapi-file-uploads--fileUpload_id--download-fileUpload_id"
                                                placeholder="The ID of the fileUpload."
-                                               value="019e8850-c907-7120-987c-f5d8b7c72a16" data-component="url"
+                                               value="architecto" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -1791,7 +1791,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://api-pegawai-4a.akufarish.my.id:1234/api/file-uploads/019e8850-c907-7120-987c-f5d8b7c72a16/download" \
+    --get "https://api-pegawai-4a.akufarish.my.id:1234/api/file-uploads/architecto/download" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -1802,7 +1802,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/file-uploads/019e8850-c907-7120-987c-f5d8b7c72a16/download"
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/file-uploads/architecto/download"
 );
 
 const headers = {
@@ -2054,7 +2054,7 @@ access-control-allow-origin: *</code></pre>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/phpuc3j0ntck3judCEAIFI
+                        /tmp/phpnbgrdsq1vf179JIEpJM
                     </div>
                 </div>
             </div>
@@ -2286,7 +2286,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "files=@/tmp/phpuc3j0ntck3judCEAIFI" </code></pre>                                        </div>
+    --form "files=@/tmp/phpnbgrdsq1vf179JIEpJM" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -5435,7 +5435,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/phpji5o242vg3k32enAMOM
+                        /tmp/php5tj747l0p31p6oKdLIO
                     </div>
                 </div>
             </div>
@@ -5839,7 +5839,7 @@ You can check the Dev Tools console for debugging information.</p>
     --form "class_name=s"\
     --form "course_code=cqldzs"\
     --form "course_name=n"\
-    --form "file=@/tmp/phpji5o242vg3k32enAMOM" </code></pre>                                        </div>
+    --form "file=@/tmp/php5tj747l0p31p6oKdLIO" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -10076,7 +10076,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019e39ea-4cf6-7107-b87f-07b34131182e
+                        019ec8c0-cd6a-72d8-ae86-1e0af344b582
                     </div>
                 </div>
             </div>
@@ -10235,7 +10235,7 @@ fetch(url, {
                                         <input aria-label="employee_id" name="employee_id"
                                                id="urlparam-DELETEapi-employees--employee_id--employee_id"
                                                placeholder="The ID of the employee."
-                                               value="019e39ea-4cf6-7107-b87f-07b34131182e" data-component="url"
+                                               value="019ec8c0-cd6a-72d8-ae86-1e0af344b582" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -10343,7 +10343,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/employees/019e39ea-4cf6-7107-b87f-07b34131182e" \
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/employees/019ec8c0-cd6a-72d8-ae86-1e0af344b582" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -10354,7 +10354,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/employees/019e39ea-4cf6-7107-b87f-07b34131182e"
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/employees/019ec8c0-cd6a-72d8-ae86-1e0af344b582"
 );
 
 const headers = {
@@ -14557,7 +14557,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019e3a0f-c5b8-71b7-8f8c-234261fecb74
+                        architecto
                     </div>
                 </div>
             </div>
@@ -14725,7 +14725,7 @@ fetch(url, {
                                         <input aria-label="classSession_id" name="classSession_id"
                                                id="urlparam-POSTapi-class-sessions--classSession_id--learning-materials-classSession_id"
                                                placeholder="The ID of the classSession."
-                                               value="019e3a0f-c5b8-71b7-8f8c-234261fecb74" data-component="url"
+                                               value="architecto" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -14851,7 +14851,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/class-sessions/019e3a0f-c5b8-71b7-8f8c-234261fecb74/learning-materials" \
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/class-sessions/architecto/learning-materials" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -14869,7 +14869,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/class-sessions/019e3a0f-c5b8-71b7-8f8c-234261fecb74/learning-materials"
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/class-sessions/architecto/learning-materials"
 );
 
 const headers = {
@@ -15155,7 +15155,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019e3a0f-c5b8-71b7-8f8c-234261fecb74
+                        architecto
                     </div>
                 </div>
             </div>
@@ -15323,7 +15323,7 @@ fetch(url, {
                                         <input aria-label="classSession_id" name="classSession_id"
                                                id="urlparam-POSTapi-class-sessions--classSession_id--learning-materials-delete-classSession_id"
                                                placeholder="The ID of the classSession."
-                                               value="019e3a0f-c5b8-71b7-8f8c-234261fecb74" data-component="url"
+                                               value="architecto" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -15449,7 +15449,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/class-sessions/019e3a0f-c5b8-71b7-8f8c-234261fecb74/learning-materials/delete" \
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/class-sessions/architecto/learning-materials/delete" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -15467,7 +15467,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/class-sessions/019e3a0f-c5b8-71b7-8f8c-234261fecb74/learning-materials/delete"
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/class-sessions/architecto/learning-materials/delete"
 );
 
 const headers = {
@@ -15725,7 +15725,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019e3a0f-c5b8-71b7-8f8c-234261fecb74
+                        architecto
                     </div>
                 </div>
             </div>
@@ -15980,7 +15980,7 @@ fetch(url, {
                                         <input aria-label="classSession_id" name="classSession_id"
                                                id="urlparam-POSTapi-class-sessions--classSession_id--assignments-classSession_id"
                                                placeholder="The ID of the classSession."
-                                               value="019e3a0f-c5b8-71b7-8f8c-234261fecb74" data-component="url"
+                                               value="architecto" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -16109,7 +16109,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/class-sessions/019e3a0f-c5b8-71b7-8f8c-234261fecb74/assignments" \
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/class-sessions/architecto/assignments" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -16130,7 +16130,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/class-sessions/019e3a0f-c5b8-71b7-8f8c-234261fecb74/assignments"
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/class-sessions/architecto/assignments"
 );
 
 const headers = {
@@ -16432,7 +16432,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019e3a0f-c5b8-71b7-8f8c-234261fecb74
+                        architecto
                     </div>
                 </div>
             </div>
@@ -16600,7 +16600,7 @@ fetch(url, {
                                         <input aria-label="classSession_id" name="classSession_id"
                                                id="urlparam-POSTapi-class-sessions--classSession_id--assignments-delete-classSession_id"
                                                placeholder="The ID of the classSession."
-                                               value="019e3a0f-c5b8-71b7-8f8c-234261fecb74" data-component="url"
+                                               value="architecto" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -16726,7 +16726,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/class-sessions/019e3a0f-c5b8-71b7-8f8c-234261fecb74/assignments/delete" \
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/class-sessions/architecto/assignments/delete" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -16744,7 +16744,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/class-sessions/019e3a0f-c5b8-71b7-8f8c-234261fecb74/assignments/delete"
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/class-sessions/architecto/assignments/delete"
 );
 
 const headers = {
@@ -16980,7 +16980,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019e8b59-9a04-7173-b827-6b8e63bc07b4
+                        architecto
                     </div>
                 </div>
             </div>
@@ -17113,7 +17113,7 @@ fetch(url, {
                                         <input aria-label="studentAssignment_id" name="studentAssignment_id"
                                                id="urlparam-GETapi-assignments--studentAssignment_id--submission-studentAssignment_id"
                                                placeholder="The ID of the studentAssignment."
-                                               value="019e8b59-9a04-7173-b827-6b8e63bc07b4" data-component="url"
+                                               value="architecto" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -17209,7 +17209,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "https://api-pegawai-4a.akufarish.my.id:1234/api/assignments/019e8b59-9a04-7173-b827-6b8e63bc07b4/submission" \
+    --get "https://api-pegawai-4a.akufarish.my.id:1234/api/assignments/architecto/submission" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -17220,7 +17220,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/assignments/019e8b59-9a04-7173-b827-6b8e63bc07b4/submission"
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/assignments/architecto/submission"
 );
 
 const headers = {
@@ -17954,7 +17954,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019e8b59-9a04-7173-b827-6b8e63bc07b4
+                        architecto
                     </div>
                 </div>
             </div>
@@ -18236,7 +18236,7 @@ fetch(url, {
                                         <input aria-label="studentAssignment_id" name="studentAssignment_id"
                                                id="urlparam-POSTapi-assignments--studentAssignment_id--submission-studentAssignment_id"
                                                placeholder="The ID of the studentAssignment."
-                                               value="019e8b59-9a04-7173-b827-6b8e63bc07b4" data-component="url"
+                                               value="architecto" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -18367,7 +18367,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/assignments/019e8b59-9a04-7173-b827-6b8e63bc07b4/submission" \
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/assignments/architecto/submission" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -18386,7 +18386,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/assignments/019e8b59-9a04-7173-b827-6b8e63bc07b4/submission"
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/assignments/architecto/submission"
 );
 
 const headers = {
@@ -18646,7 +18646,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019e8b59-9a04-7173-b827-6b8e63bc07b4
+                        architecto
                     </div>
                 </div>
             </div>
@@ -18855,7 +18855,7 @@ fetch(url, {
                                         <input aria-label="studentAssignment_id" name="studentAssignment_id"
                                                id="urlparam-PUTapi-assignments--studentAssignment_id--submission-studentAssignment_id"
                                                placeholder="The ID of the studentAssignment."
-                                               value="019e8b59-9a04-7173-b827-6b8e63bc07b4" data-component="url"
+                                               value="architecto" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -18981,7 +18981,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/assignments/019e8b59-9a04-7173-b827-6b8e63bc07b4/submission" \
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/assignments/architecto/submission" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -18998,7 +18998,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/assignments/019e8b59-9a04-7173-b827-6b8e63bc07b4/submission"
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/assignments/architecto/submission"
 );
 
 const headers = {
@@ -19233,7 +19233,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019e8b59-9a04-7173-b827-6b8e63bc07b4
+                        architecto
                     </div>
                 </div>
             </div>
@@ -19366,7 +19366,7 @@ fetch(url, {
                                         <input aria-label="studentAssignment_id" name="studentAssignment_id"
                                                id="urlparam-DELETEapi-assignments--studentAssignment_id--submission-studentAssignment_id"
                                                placeholder="The ID of the studentAssignment."
-                                               value="019e8b59-9a04-7173-b827-6b8e63bc07b4" data-component="url"
+                                               value="architecto" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -19462,7 +19462,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/assignments/019e8b59-9a04-7173-b827-6b8e63bc07b4/submission" \
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/assignments/architecto/submission" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -19473,7 +19473,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/assignments/019e8b59-9a04-7173-b827-6b8e63bc07b4/submission"
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/assignments/architecto/submission"
 );
 
 const headers = {
@@ -21709,7 +21709,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        019e39ea-523e-7091-9ccc-593e5a09d6ee
+                        architecto
                     </div>
                 </div>
             </div>
@@ -21770,7 +21770,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        rejected
+                        pending
                     </div>
                 </div>
             </div>
@@ -21902,7 +21902,7 @@ fetch(url, {
                                         <input aria-label="changeRequest_id" name="changeRequest_id"
                                                id="urlparam-PUTapi-change-requests--changeRequest_id--changeRequest_id"
                                                placeholder="The ID of the changeRequest."
-                                               value="019e39ea-523e-7091-9ccc-593e5a09d6ee" data-component="url"
+                                               value="architecto" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -21945,7 +21945,7 @@ fetch(url, {
                                      id="json-body-PUTapi-change-requests--changeRequest_id-"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "status": "rejected"
+    "status": "pending"
 }</div>
                             </div>
                                             </div>
@@ -22037,12 +22037,12 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/change-requests/019e39ea-523e-7091-9ccc-593e5a09d6ee" \
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/change-requests/architecto" \
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"status\": \"rejected\"
+    \"status\": \"pending\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -22052,7 +22052,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "https://api-pegawai-4a.akufarish.my.id:1234/api/change-requests/019e39ea-523e-7091-9ccc-593e5a09d6ee"
+    "https://api-pegawai-4a.akufarish.my.id:1234/api/change-requests/architecto"
 );
 
 const headers = {
@@ -22062,7 +22062,7 @@ const headers = {
 };
 
 let body = {
-    "status": "rejected"
+    "status": "pending"
 };
 
 fetch(url, {

@@ -37,36 +37,36 @@ final class EmployeeService
         $userId = $request->user()->detail_id;
         if ($request->user()->role === 'dosen') {
             $employee = Employee::find($userId);
-            if ($request->has('nip') && $request->nip !== $employee->nip ) {
+            if ($request->has('nip') && $request->validated()['nip'] !== $employee->nip ) {
                 $attributesChangeRequest = [
                     'employee_id' => $userId,
                     'field_name' => 'nip',
                     'old_value' => $employee->value('nip'),
-                    'new_value' => $request->nip,
+                    'new_value' => $request->validated()['nip'],
                 ];
 
                 $this->changeRequestRepository->create($attributesChangeRequest);
 
             } 
             
-            if ($request->has('nik') && $request->nik !== $employee->nik) {
+            if ($request->has('nik') && $request->validated()['nik'] !== $employee->nik) {
                 $attributesChangeRequest = [
                     'employee_id' => $userId,
                     'field_name' => 'nik',
                     'old_value' => $employee->value('nik'),
-                    'new_value' => $request->nik,
+                    'new_value' => $request->validated()['nik'],
                 ];
 
                 $this->changeRequestRepository->create($attributesChangeRequest);
 
             } 
             
-            if ($request->has('employee_name') && $request->employee_name !== $employee->employee_name) {
+            if ($request->has('employee_name') && $request->validated('employee_name') !== $employee->employee_name) {
                 $attributesChangeRequest = [
                     'employee_id' => $userId,
                     'field_name' => 'employee_name',
                     'old_value' => $employee->value('employee_name'),
-                    'new_value' => $request->employee_name,
+                    'new_value' => $request->validated('employee_name'),
                 ];
                 $this->changeRequestRepository->create($attributesChangeRequest);
             }
