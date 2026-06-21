@@ -33,7 +33,7 @@ class StoreStudentSubmission extends FormRequest
             "students.*student_id" => [
                 'required',
                 'string',
-                'size:10',
+                'max:36',
             ],
             "students.*nim" => [
                 'required',
