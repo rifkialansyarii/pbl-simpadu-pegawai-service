@@ -19,10 +19,10 @@ final class GradeService
         return $this->repository->getAll($classId, $courseCode);
     }
 
-    public function storeGrade(array $attributes)
+    public function storeGrade(User $user, array $attributes)
     {
-        return DB::transaction(function () use ($attributes) {
-            return $this->repository->storeGrade($attributes);
+        return DB::transaction(function () use ($user, $attributes) {
+            return $this->repository->storeGrade($user,$attributes);
         });
     }
 }

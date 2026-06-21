@@ -17,7 +17,7 @@ return new class extends Migration
             $table->uuid('student_id');
             $table->char('nim', 10);
             $table->string('student_name');
-            $table->datetime('submitted_at');
+            $table->datetime('submitted_at')->nullable();
             $table->decimal('score', 5, 2)->default(0);
             $table->timestamps();
         });

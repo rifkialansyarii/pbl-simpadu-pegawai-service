@@ -11,6 +11,7 @@ class Grade extends Model
 
     protected $fillable = [
         'student_id',
+        'pengampu_id',
         'nim',
         'student_name',
         'class_id',
