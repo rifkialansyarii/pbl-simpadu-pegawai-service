@@ -23,8 +23,10 @@ class GradeRepository implements GradeRepositoryInterface
         return $grades;
     }
 
-    public function storeGrade(array $attributes)
+    public function storeGrade(User $user, array $attributes)
     {
+        $attributes['pengampu_id'] = $user->id;
+        
         return Grade::updateOrCreate(
             [
                 'class_id' => $attributes['class_id'],

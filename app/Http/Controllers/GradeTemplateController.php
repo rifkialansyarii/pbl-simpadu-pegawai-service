@@ -109,7 +109,7 @@ class GradeTemplateController extends Controller
             $assignments = $this->classSessionService->getAssignmentByCourse($request->validated());
 
             Excel::import(
-                new GradeTemplateImport($request->validated(), $this->gradeService, $this->submissionService, $assignments),
+                new GradeTemplateImport($request->user(), $request->validated(), $this->gradeService, $this->submissionService, $assignments),
                 $request->validated()['file']
             );
 

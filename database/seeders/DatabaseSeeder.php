@@ -20,8 +20,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             CountrySeeder::class,
-            // EmployeeSeeder::class,
-            // ChangeRequestSeeder::class,
+            EmployeeSeeder::class,
+            ChangeRequestSeeder::class,
         ]);   
     }
 }

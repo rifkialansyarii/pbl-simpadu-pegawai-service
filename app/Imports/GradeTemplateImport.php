@@ -3,6 +3,7 @@
 namespace App\Imports;
 
 use App\Models\StudentSubmission;
+use App\Models\User;
 use App\Services\GradeService;
 use App\Services\StudentSubmissionService;
 use Illuminate\Support\Collection;
@@ -13,7 +14,7 @@ use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
 class GradeTemplateImport implements ToCollection, WithHeadingRow, WithCalculatedFormulas
 {
-    public function __construct(protected array $validated, private GradeService $gradeService, private StudentSubmissionService $submissionService, private $assignments) {
+    public function __construct(private User $user, protected array $validated, private GradeService $gradeService, private StudentSubmissionService $submissionService, private $assignments) {
     }
 
     /**
@@ -42,7 +43,7 @@ class GradeTemplateImport implements ToCollection, WithHeadingRow, WithCalculate
                 'final_score' => $row['nilai_akhir'] ?? 0,
             ];
 
-            $this->gradeService->storeGrade($attributes);
+            $this->gradeService->storeGrade($this->user, $attributes);
 
         }
 
