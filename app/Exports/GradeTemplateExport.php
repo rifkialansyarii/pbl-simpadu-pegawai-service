@@ -88,7 +88,7 @@ class GradeTemplateExport implements FromArray, WithHeadings, WithMapping, WithE
 
 
         foreach($this->assignments as $assignment) {
-            $score = $student['assignment_scores'][$assignment->id] ??2 '';
+            $score = $student['assignment_scores'][$assignment->id] ?? '';
             $rowData[] = $score; 
         }
 
