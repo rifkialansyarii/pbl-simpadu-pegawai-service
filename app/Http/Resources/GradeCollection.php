@@ -7,7 +7,7 @@ use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class GradeCollection extends ResourceCollection
 {
-    public $collects = GradeSettingResource::class;
+    public $collects = GradeResource::class;
 
     /**
      * Transform the resource collection into an array.
