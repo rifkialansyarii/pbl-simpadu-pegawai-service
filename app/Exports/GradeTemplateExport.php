@@ -87,13 +87,14 @@ class GradeTemplateExport implements FromArray, WithHeadings, WithMapping, WithE
         ];
 
 
-        for ($i = 0; $i < $AssignmentTotal; $i++) {
-            $rowData[] = '';
+        foreach($this->assignments as $assignment) {
+            $score = $student['assignment_scores'][$assignment->id] ?? '';
+            $rowData[] = $score; 
         }
 
         $rowData[] = '=' . $assignmentFormula;
-        $rowData[] = '';
-        $rowData[] = '';
+        $rowData[] = $student['uts_score'];
+        $rowData[] = $student['uas_score'];
         $rowData[] = $gradeTotalFormula;
 
         $this->rowNumber++;

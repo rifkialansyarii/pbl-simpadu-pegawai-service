@@ -7,7 +7,8 @@ use App\Models\User;
 
 interface StudentSubmissionRepositoryInterface
 {
-    public function getAllSubmission(StudentAssignment $studentAssignment);
+    public function getAllSubmission(string $studentAssignmentId);
+    public function getAllGroupByStudentIds($studentAssignmentIds);
     public function addScore(array $attributes);
     public function generateSubmission(array $attributes, StudentAssignment $studentAssignment);
     public function updateSubmission(array $attributes, StudentAssignment $studentAssignment, User $user);

@@ -18,8 +18,14 @@ final class StudentSubmissionService
 
     public function getSubmission(StudentAssignment $studentAssignment)
     {
-        return $this->repository->getAllSubmission($studentAssignment);
+        return $this->repository->getAllSubmission($studentAssignment->id);
     }
+    
+    public function getExistingSubmission($studentAssignmentIds){
+        return $this->repository->getAllGroupByStudentIds($studentAssignmentIds);
+    }
+
+    
 
     public function generateSubmission(array $attributes, StudentAssignment $studentAssignment)
     {

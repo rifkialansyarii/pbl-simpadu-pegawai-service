@@ -16,11 +16,15 @@ class GradeRepository implements GradeRepositoryInterface
         $classSession = ClassSession::where('class_id', $classId)->first();
 
         $grades->map(function ($grade) use ($classSession) {
-            $grade->pengampu_id = $classSession->pengampu_id; // Membuat properti virtual
+            $grade->pengampu_id = $classSession->pengampu_id;
             return $grade;
         });
 
         return $grades;
+    }
+
+    public function getAllKeyByStudentIds($classId, $courseCode){
+        return $this->getAll($classId, $courseCode)->keyBy('student_id');
     }
 
     public function storeGrade(User $user, array $attributes)

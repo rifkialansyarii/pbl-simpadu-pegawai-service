@@ -55,6 +55,12 @@ class GradeTemplateController extends Controller
                 ], 400);
             }
             $assignments = $this->classSessionService->getAssignmentByCourse($validated);
+            
+            $existingGrades = $this->gradeService->getExistingGrade($validated['class_id'], $validated['course_code']);
+
+            $existingSubmissions = $this->submissionService->getExistingSubmission($assignments->pluck('id'));
+
+            $enrichedStudents = $this->gradeService->encrichedStudents($validated['students'], $existingGrades, $existingSubmissions);
             $fileName = 'Template_Nilai_' . $validated['class_name'] . '.xlsx';
 
             if (ob_get_length()) {
@@ -63,7 +69,7 @@ class GradeTemplateController extends Controller
             ob_start();
 
             return Excel::download(
-                new GradeTemplateExport(students: $validated['students'], assignments: $assignments, setting: $setting),
+                new GradeTemplateExport(students: $enrichedStudents, assignments: $assignments, setting: $setting),
                 $fileName,
                 \Maatwebsite\Excel\Excel::XLSX
             );
