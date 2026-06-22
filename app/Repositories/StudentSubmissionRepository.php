@@ -39,6 +39,7 @@ class StudentSubmissionRepository implements StudentSubmissionRepositoryInterfac
         } else {
             return StudentSubmission::create([
                 'student_id' => $attributes['student_id'],
+                'nim' => $attributes['nim'],
                 'assignment_id' => $attributes['assignment_id'],
                 'score' => $attributes['score'],
                 'submitted_at' => null,
