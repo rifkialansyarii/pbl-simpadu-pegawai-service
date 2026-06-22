@@ -13,10 +13,15 @@ use Illuminate\Database\Eloquent\Builder;
 class StudentSubmissionRepository implements StudentSubmissionRepositoryInterface
 {
 
-    public function getAllSubmission(StudentAssignment $studentAssignment)
+    public function getAllSubmission(string $studentAssignmentId)
     {
-        $submission = StudentSubmission::where('assignment_id', $studentAssignment->id)->get();
+        $submission = StudentSubmission::where('assignment_id', $studentAssignmentId)->get();
         $submission->load('submissionFiles');
+        return $submission;
+    }
+
+    public function getAllGroupByStudentIds($studentAssignmentIds){
+        $submission = StudentSubmission::whereIn('assignment_id', $studentAssignmentIds)->get()->groupBy('student_id');        
         return $submission;
     }
 
