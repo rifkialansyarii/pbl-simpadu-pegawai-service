@@ -54,6 +54,7 @@ class GradeTemplateImport implements ToCollection, WithHeadingRow, WithCalculate
             {
                 $this->submissionService->addScore([
                     'student_id' => $row['id_mahasiswa'],
+                    'nim' => $row['nim'],
                     'assignment_id' => $assignment->id,
                     'score' => $row[$excelKey] ?: 0,
                 ]);
