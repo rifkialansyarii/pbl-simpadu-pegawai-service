@@ -308,14 +308,14 @@ endpoints:
         name: gradeSetting_id
         description: 'The ID of the gradeSetting.'
         required: true
-        example: architecto
+        example: 019eeaee-f07c-71ff-b81f-248c0b7c5ba0
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      gradeSetting_id: architecto
+      gradeSetting_id: 019eeaee-f07c-71ff-b81f-248c0b7c5ba0
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:

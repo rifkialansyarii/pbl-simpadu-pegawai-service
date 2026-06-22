@@ -134,14 +134,14 @@ endpoints:
         name: fileUpload_id
         description: 'The ID of the fileUpload.'
         required: true
-        example: architecto
+        example: 019eeafe-8cf1-7180-be10-d47baed41965
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      fileUpload_id: architecto
+      fileUpload_id: 019eeafe-8cf1-7180-be10-d47baed41965
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

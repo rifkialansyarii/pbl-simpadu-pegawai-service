@@ -30,7 +30,7 @@ class StudentSubmissionRepository implements StudentSubmissionRepositoryInterfac
         $submission = StudentSubmission::where('student_id', $attributes['student_id'])
             ->where('assignment_id', $attributes['assignment_id'])
             ->first();
-        if ($submission->count() !== 0) {
+        if ($submission !== null && $submission->count() !== 0) {
             $submission->update([
                 'score' => $attributes['score']
             ]);
@@ -39,6 +39,7 @@ class StudentSubmissionRepository implements StudentSubmissionRepositoryInterfac
         } else {
             return StudentSubmission::create([
                 'student_id' => $attributes['student_id'],
+                'student_name' => $attributes['student_name'],
                 'nim' => $attributes['nim'],
                 'assignment_id' => $attributes['assignment_id'],
                 'score' => $attributes['score'],

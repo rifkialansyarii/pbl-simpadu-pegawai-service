@@ -33,14 +33,14 @@ endpoints:
         name: classSession_id
         description: 'The ID of the classSession.'
         required: true
-        example: architecto
+        example: 019eea9d-a289-736c-9b3c-2fa3f80bcc6d
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      classSession_id: architecto
+      classSession_id: 019eea9d-a289-736c-9b3c-2fa3f80bcc6d
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -242,14 +242,14 @@ endpoints:
         name: classSession_id
         description: 'The ID of the classSession.'
         required: true
-        example: architecto
+        example: 019eea9d-a289-736c-9b3c-2fa3f80bcc6d
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      classSession_id: architecto
+      classSession_id: 019eea9d-a289-736c-9b3c-2fa3f80bcc6d
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -353,14 +353,14 @@ endpoints:
         name: studentAssignment_id
         description: 'The ID of the studentAssignment.'
         required: true
-        example: architecto
+        example: 019eeafe-a508-733b-9c36-36cb378401e2
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      studentAssignment_id: architecto
+      studentAssignment_id: 019eeafe-a508-733b-9c36-36cb378401e2
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -632,14 +632,14 @@ endpoints:
         name: studentAssignment_id
         description: 'The ID of the studentAssignment.'
         required: true
-        example: architecto
+        example: 019eeafe-a508-733b-9c36-36cb378401e2
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      studentAssignment_id: architecto
+      studentAssignment_id: 019eeafe-a508-733b-9c36-36cb378401e2
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -657,9 +657,9 @@ endpoints:
       'students.*student_id':
         custom: []
         name: 'students.*student_id'
-        description: 'Must be 10 characters.'
+        description: 'Must not be greater than 36 characters.'
         required: true
-        example: aykcmyuwpw
+        example: a
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -670,7 +670,7 @@ endpoints:
         name: 'students.*nim'
         description: 'Must be 10 characters.'
         required: true
-        example: lvqwrsitcp
+        example: ykcmyuwpwl
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -681,7 +681,7 @@ endpoints:
         name: 'students.*student_name'
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: s
+        example: v
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -811,14 +811,14 @@ endpoints:
         name: studentAssignment_id
         description: 'The ID of the studentAssignment.'
         required: true
-        example: architecto
+        example: 019eeafe-a508-733b-9c36-36cb378401e2
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      studentAssignment_id: architecto
+      studentAssignment_id: 019eeafe-a508-733b-9c36-36cb378401e2
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -942,14 +942,14 @@ endpoints:
         name: studentAssignment_id
         description: 'The ID of the studentAssignment.'
         required: true
-        example: architecto
+        example: 019eeafe-a508-733b-9c36-36cb378401e2
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      studentAssignment_id: architecto
+      studentAssignment_id: 019eeafe-a508-733b-9c36-36cb378401e2
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

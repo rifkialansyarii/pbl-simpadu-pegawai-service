@@ -1370,14 +1370,14 @@ endpoints:
         name: classSession_id
         description: 'The ID of the classSession.'
         required: true
-        example: architecto
+        example: 019eea9d-a289-736c-9b3c-2fa3f80bcc6d
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      classSession_id: architecto
+      classSession_id: 019eea9d-a289-736c-9b3c-2fa3f80bcc6d
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -1532,14 +1532,14 @@ endpoints:
         name: classSession_id
         description: 'The ID of the classSession.'
         required: true
-        example: architecto
+        example: 019eea9d-a289-736c-9b3c-2fa3f80bcc6d
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      classSession_id: architecto
+      classSession_id: 019eea9d-a289-736c-9b3c-2fa3f80bcc6d
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:

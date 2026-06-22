@@ -659,7 +659,7 @@ endpoints:
         name: changeRequest_id
         description: 'The ID of the changeRequest.'
         required: true
-        example: architecto
+        example: 019eea54-ee26-7370-a573-84002ec9300d
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -677,7 +677,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      changeRequest_id: architecto
+      changeRequest_id: 019eea54-ee26-7370-a573-84002ec9300d
       change-request: 123e4567-e89b-12d3-a456-426614174000
     queryParameters: []
     cleanQueryParameters: []
