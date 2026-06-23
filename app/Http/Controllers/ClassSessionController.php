@@ -377,7 +377,7 @@ class ClassSessionController extends Controller
                 );
             }
             if (
-                $request->validated()["status"] === "opened" &&
+                $request->user()->role === "dosen" &&
                 now()->format("Y-m-d") !== $classSession->session_date
             ) {
                 return response()->json(
