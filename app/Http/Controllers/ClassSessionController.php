@@ -20,175 +20,388 @@ use Knuckles\Scribe\Attributes\ResponseFromFile;
 use Knuckles\Scribe\Attributes\UrlParam;
 
 /**
- * 
+ *
  * @group Sesi Kelas
  * Endpoint terkait operasi CRUD untuk data sesi kelas, termasuk generate, pembaruan, penghapusan, dan pengambilan data sesi kelas.
  */
 class ClassSessionController extends Controller
 {
-    public function __construct(private ClassSessionService $service)
-    {
-    }
+    public function __construct(private ClassSessionService $service) {}
 
     /**
      * Ambil Semua Sesi Kelas
-     * 
+     *
      * Endpoint bertujuan untuk **mengambil seluruh data sesi kelas**.
-     * 
+     *
      * Jika usernya adalah **admin-pegawai** atau **super-admin** maka akan menampilkan **SEMUA DATA** sesi kelas.
-     * 
+     *
      * Jika usernya adalah **dosen** maka hanya akan menampilkan semua **data sesi kelas milik dosen**.
-     * 
+     *
      * Jika usernya adalah **mahasiswa** maka hanya akan menampilkan semua **data sesi kelas milik mahasiswa**.
-     *  
+     *
      */
     #[QueryParam("page", "int", "Nomor Halaman, required: false, Default: 1")]
-    #[QueryParam("start_date", "string", "Tanggal Mulai Sesi Perkuliahan, required: false, Default: Tanggal Saat Ini, Format: YYYY-MM-DD")]
-    #[QueryParam("end_date", "string", "Tanggal Selesai Sesi Perkuliahan, required: false, Default: Tanggal Saat Ini, Format: YYYY-MM-DD")]
-    #[ResponseFromFile(file: 'responses/class_sessions/get_class_sessions.json', status: 200, description: 'Sukses mendapatkan data sesi kelas')]
-    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
-    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
-    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
+    #[
+        QueryParam(
+            "start_date",
+            "string",
+            "Tanggal Mulai Sesi Perkuliahan, required: false, Default: Tanggal Saat Ini, Format: YYYY-MM-DD",
+        ),
+    ]
+    #[
+        QueryParam(
+            "end_date",
+            "string",
+            "Tanggal Selesai Sesi Perkuliahan, required: false, Default: Tanggal Saat Ini, Format: YYYY-MM-DD",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/class_sessions/get_class_sessions.json",
+            status: 200,
+            description: "Sukses mendapatkan data sesi kelas",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unauthenticated.json",
+            status: 401,
+            description: "Tidak terotentikasi",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unauthorized.json",
+            status: 403,
+            description: "Tidak memiliki izin",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/expired_token.json",
+            status: 401,
+            description: "Token expired",
+        ),
+    ]
     public function index(FilterClassSession $request)
     {
         $filters = [
-            "search" => $request->query('search'),
-            "start_date" => $request->query('start_date'),
-            "end_date" => $request->query('end_date')
+            "search" => $request->query("search"),
+            "start_date" => $request->query("start_date"),
+            "end_date" => $request->query("end_date"),
         ];
 
-        $classSessionCollection = new ClassSessionCollection($this->service->getAllClassSessions($request->user(), $filters));
+        $classSessionCollection = new ClassSessionCollection(
+            $this->service->getAllClassSessions($request->user(), $filters),
+        );
         return $classSessionCollection->additional([
-            'success' => true,
-            'message' => 'Data retrieved successfully',
-            'code' => 200,
+            "success" => true,
+            "message" => "Data retrieved successfully",
+            "code" => 200,
         ]);
     }
 
     /**
      * Detail Sesi Kelas
-     * 
+     *
      * Endpoint bertujuan untuk **melihat detail sesi kelas**.
-     * 
+     *
      * Jika usernya adalah **admin-pegawai** atau **super-admin** maka bisa melihat **SEMUA DETAIL** sesi kelas.
-     * 
+     *
      * Jika usernya adalah **dosen** maka hanya akan bisa melihat **data sesi kelas milik dosen tersebut**.
-     * 
+     *
      * Jika usernya adalah **mahasiswa** maka hanya akan bisa melihat **data sesi kelas milik mahasiswa tersebut** atau **sesuai kelas yang ia tempati**.
-     *  
+     *
      */
-    #[ResponseFromFile(file: 'responses/class_sessions/detail_class_session.json', status: 200, description: 'Sukses mendapatkan detail sesi kelas')]
-    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
-    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
-    #[ResponseFromFile(file: 'responses/not_found.json', status: 404, description: 'Data tidak ditemukan')]
-    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
-    #[UrlParam("classSession_id", "string", "UUID Sesi Kelas", example: "123e4567-e89b-12d3-a456-426614174000")]
+    #[
+        ResponseFromFile(
+            file: "responses/class_sessions/detail_class_session.json",
+            status: 200,
+            description: "Sukses mendapatkan detail sesi kelas",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unauthenticated.json",
+            status: 401,
+            description: "Tidak terotentikasi",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unauthorized.json",
+            status: 403,
+            description: "Tidak memiliki izin",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/not_found.json",
+            status: 404,
+            description: "Data tidak ditemukan",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/expired_token.json",
+            status: 401,
+            description: "Token expired",
+        ),
+    ]
+    #[
+        UrlParam(
+            "classSession_id",
+            "string",
+            "UUID Sesi Kelas",
+            example: "123e4567-e89b-12d3-a456-426614174000",
+        ),
+    ]
     public function show(ClassSession $classSession)
     {
-        $classSessionResource = new ClassSessionResource($this->service->getClassSessionById($classSession));
+        $classSessionResource = new ClassSessionResource(
+            $this->service->getClassSessionById($classSession),
+        );
         return $classSessionResource->additional([
-            'success' => true,
-            'message' => 'Data retrieved successfully',
-            'code' => 200,
+            "success" => true,
+            "message" => "Data retrieved successfully",
+            "code" => 200,
         ]);
     }
 
     /**
      * Ambil Sesi Kelas Berdasarkan Pengampu
-     * 
+     *
      * Endpoint bertujuan untuk **mengambil data sesi kelas berdasarkan id pengampu**.
-     * 
+     *
      * Hanya bisa diakses **super-admin**, **admin-pegawai**, **dosen** dan **mahasiswa**.
      */
-    #[ResponseFromFile(file: 'responses/class_sessions/get_class_sessions.json', status: 200, description: 'Sukses mendapatkan sesi kelas')]
-    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
-    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
-    #[ResponseFromFile(file: 'responses/not_found.json', status: 404, description: 'Data tidak ditemukan')]
-    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
-    #[UrlParam("pengampuId", "string", "UUID Pengampu", example: "123e4567-e89b-12d3-a456-426614174000")]
-
+    #[
+        ResponseFromFile(
+            file: "responses/class_sessions/get_class_sessions.json",
+            status: 200,
+            description: "Sukses mendapatkan sesi kelas",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unauthenticated.json",
+            status: 401,
+            description: "Tidak terotentikasi",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unauthorized.json",
+            status: 403,
+            description: "Tidak memiliki izin",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/not_found.json",
+            status: 404,
+            description: "Data tidak ditemukan",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/expired_token.json",
+            status: 401,
+            description: "Token expired",
+        ),
+    ]
+    #[
+        UrlParam(
+            "pengampuId",
+            "string",
+            "UUID Pengampu",
+            example: "123e4567-e89b-12d3-a456-426614174000",
+        ),
+    ]
     public function showByPengampu(string $pengampuId)
     {
-        $classSessionCollection = new ClassSessionCollection($this->service->getClassSessionByPengampu($pengampuId));
+        $classSessionCollection = new ClassSessionCollection(
+            $this->service->getClassSessionByPengampu($pengampuId),
+        );
         return $classSessionCollection->additional([
-            'success' => true,
-            'message' => 'Data retrieved successfully',
-            'code' => 200,
+            "success" => true,
+            "message" => "Data retrieved successfully",
+            "code" => 200,
         ]);
     }
 
     /**
      * Generate sesi kelas
-     * 
+     *
      * Endpoint bertujuan untuk **melakukan generate 16 data sesi kelas**.
-     * 
+     *
      * Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
-     *  
+     *
      */
-    #[ResponseFromFile(file: 'responses/class_sessions/get_class_sessions.json', status: 201, description: 'Sukses generate data sesi kelas')]
-    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
-    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
-    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
-    #[ResponseFromFile(file: 'responses/unprocessable.json', status: 422, description: 'Inputan tidak valid')]
+    #[
+        ResponseFromFile(
+            file: "responses/class_sessions/get_class_sessions.json",
+            status: 201,
+            description: "Sukses generate data sesi kelas",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unauthenticated.json",
+            status: 401,
+            description: "Tidak terotentikasi",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unauthorized.json",
+            status: 403,
+            description: "Tidak memiliki izin",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/expired_token.json",
+            status: 401,
+            description: "Token expired",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unprocessable.json",
+            status: 422,
+            description: "Inputan tidak valid",
+        ),
+    ]
     public function generate(GenerateClassSessionRequest $request)
     {
         try {
-            $classSessionCollection = new ClassSessionCollection($this->service->generateClassSession($request->validated()));
+            $classSessionCollection = new ClassSessionCollection(
+                $this->service->generateClassSession($request->validated()),
+            );
             return $classSessionCollection->additional([
-                'success' => true,
-                'message' => 'Data generated successfully',
-                'code' => 201,
+                "success" => true,
+                "message" => "Data generated successfully",
+                "code" => 201,
             ]);
         } catch (Exception $e) {
-            $isDebug = config('app.debug');
+            $isDebug = config("app.debug");
 
             $response = [
-                'success' => false,
-                'message' => 'an error occurred while processing',
-                'code' => 500,
-                'errors' => $e->getMessage()
+                "success" => false,
+                "message" => "an error occurred while processing",
+                "code" => 500,
+                "errors" => $e->getMessage(),
             ];
 
             if ($isDebug) {
-                $response['errors'] = $e->getMessage();
-                $response['trace'] = $e->getTrace();
+                $response["errors"] = $e->getMessage();
+                $response["trace"] = $e->getTrace();
             }
 
             return response()->json($response, 500);
         }
-
     }
 
     /**
      * Update sesi kelas
      *
      * Jika user adalah **dosen** maka **hanya dapat mengubah field status**.
-     * 
+     *
      * Jika user adalah **admin-pegawai** atau **super-admin** maka **hanya dapat mengubah field topic, session_date, start_time, end_time**.
-     *  
+     *
      */
-    #[ResponseFromFile(file: 'responses/class_sessions/detail_class_session.json', status: 200, description: 'Sukses mengubah data sesi kelas')]
-    #[ResponseFromFile(file: 'responses/class_sessions/conflict.json', status: 409, description: 'Sesi sudah pernah dibuka')]
-    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
-    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
-    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
-    #[ResponseFromFile(file: 'responses/not_found.json', status: 404, description: 'Data tidak ditemukan')]
-    #[UrlParam("classSession_id", "string", "UUID Pegawai", example: "123e4567-e89b-12d3-a456-426614174000")]
-    public function update(UpdateClassSessionRequest $request, ClassSession $classSession)
-    {
+    #[
+        ResponseFromFile(
+            file: "responses/class_sessions/detail_class_session.json",
+            status: 200,
+            description: "Sukses mengubah data sesi kelas",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/class_sessions/conflict.json",
+            status: 409,
+            description: "Sesi sudah pernah dibuka",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unauthenticated.json",
+            status: 401,
+            description: "Tidak terotentikasi",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unauthorized.json",
+            status: 403,
+            description: "Tidak memiliki izin",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/expired_token.json",
+            status: 401,
+            description: "Token expired",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/not_found.json",
+            status: 404,
+            description: "Data tidak ditemukan",
+        ),
+    ]
+    #[
+        UrlParam(
+            "classSession_id",
+            "string",
+            "UUID Pegawai",
+            example: "123e4567-e89b-12d3-a456-426614174000",
+        ),
+    ]
+    public function update(
+        UpdateClassSessionRequest $request,
+        ClassSession $classSession,
+    ) {
         try {
-            $classSessionResource = new ClassSessionResource($this->service->updateClassSession($request->validated(), $classSession));
+            if ($classSession->is_already_opened) {
+                return response()->json([
+                    "success" => false,
+                    "message" => "class session has been opened",
+                    "code" => 409,
+                ]);
+            }
+            if (now()->format("Y-m-d") !== $classSession->session_date) {
+                return response()->json([
+                    "success" => false,
+                    "message" => "class session date not started yet",
+                    "code" => 400,
+                ]);
+            }
+
+            $classSessionResource = new ClassSessionResource(
+                $this->service->updateClassSession(
+                    $request->validated(),
+                    $classSession,
+                ),
+            );
             return $classSessionResource->additional([
-                'success' => true,
-                'message' => 'Data updated successfully',
-                'code' => 200,
+                "success" => true,
+                "message" => "Data updated successfully",
+                "code" => 200,
             ]);
         } catch (Exception $e) {
-            return response()->json([
-                'success' => false,
-                'message' => $e->getMessage(),
-                'code' => 409,
-            ], 409);
+            return response()->json(
+                [
+                    "success" => false,
+                    "message" => "an error occurred while processing",
+                    "code" => 500,
+                    "errors" => $e->getMessage(),
+                ],
+                500,
+            );
         }
     }
 
@@ -196,36 +409,73 @@ class ClassSessionController extends Controller
      * Hapus sesi kelas
      *
      * Endpoint ini **TERPAKSA** harus menggunakan **method POST** dibandingkan DELETE.
-     * 
+     *
      * Hal ini dikarenakan endpoint ini mendukung *multiple delete* data atau *bulk delete*. Sehingga memerlukan body parameter / body request.
-     * 
+     *
      * Fitur ini **hanya bisa dijalankan** oleh user **admin-pegawai** dan **super-admin**.
-     *  
+     *
      */
-    #[ResponseFromFile(file: 'responses/class_sessions/bulk_delete_class_session.json', status: 200, description: 'Sukses menghapus data sesi kelas')]
-    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
-    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
-    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
-    #[BodyParam(name: 'uuids', type: 'string[]', description: 'Masukkan uuids data yang ingin dihapus', example: ['019e33e7-993d-7376-9c5a-c3c8078d697b', '019e33e7-993d-7376-9c5a-c3c8078d697b'])]
+    #[
+        ResponseFromFile(
+            file: "responses/class_sessions/bulk_delete_class_session.json",
+            status: 200,
+            description: "Sukses menghapus data sesi kelas",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unauthenticated.json",
+            status: 401,
+            description: "Tidak terotentikasi",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unauthorized.json",
+            status: 403,
+            description: "Tidak memiliki izin",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/expired_token.json",
+            status: 401,
+            description: "Token expired",
+        ),
+    ]
+    #[
+        BodyParam(
+            name: "uuids",
+            type: "string[]",
+            description: "Masukkan uuids data yang ingin dihapus",
+            example: [
+                "019e33e7-993d-7376-9c5a-c3c8078d697b",
+                "019e33e7-993d-7376-9c5a-c3c8078d697b",
+            ],
+        ),
+    ]
     public function destroy(BulkDeleteClassSessionRequest $request)
     {
         try {
-            $attributes = $request->validated()['uuids'];
+            $attributes = $request->validated()["uuids"];
 
             $this->service->deleteClassSession($attributes);
             return response()->json([
-                'success' => true,
-                'message' => 'Data deleted successfully',
-                'code' => 200,
-                'deleted_count' => count($attributes),
+                "success" => true,
+                "message" => "Data deleted successfully",
+                "code" => 200,
+                "deleted_count" => count($attributes),
             ]);
         } catch (Exception $e) {
-            return response()->json([
-                'success' => false,
-                'message' => 'an error occurred while processing',
-                'code' => 500,
-                'errors' => $e->getMessage()
-            ], 500);
+            return response()->json(
+                [
+                    "success" => false,
+                    "message" => "an error occurred while processing",
+                    "code" => 500,
+                    "errors" => $e->getMessage(),
+                ],
+                500,
+            );
         }
     }
 
@@ -233,97 +483,160 @@ class ClassSessionController extends Controller
      * Tambah Materi Kelas
      *
      * Endpoint ini digunakan untuk membuat materi pada sesi kelas
-     * 
+     *
      * Endpoint ini mendukung multiple insert
-     * 
+     *
      * Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
-     *  
+     *
      */
-    #[ResponseFromFile(file: 'responses/class_sessions/success_add_material.json', status: 200, description: 'Sukses menambahkan materi')]
-    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
-    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
-    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
-    public function storeMaterial(AddLearningMaterialRequest $request, ClassSession $classSession)
-    {
+    #[
+        ResponseFromFile(
+            file: "responses/class_sessions/success_add_material.json",
+            status: 200,
+            description: "Sukses menambahkan materi",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unauthenticated.json",
+            status: 401,
+            description: "Tidak terotentikasi",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unauthorized.json",
+            status: 403,
+            description: "Tidak memiliki izin",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/expired_token.json",
+            status: 401,
+            description: "Token expired",
+        ),
+    ]
+    public function storeMaterial(
+        AddLearningMaterialRequest $request,
+        ClassSession $classSession,
+    ) {
         try {
-            $attributes = $request->validated()['file_uuids'];
+            $attributes = $request->validated()["file_uuids"];
 
-            $classSession = $this->service->addSessionMaterial($classSession, $attributes);
+            $classSession = $this->service->addSessionMaterial(
+                $classSession,
+                $attributes,
+            );
 
             if ($classSession === false) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'class session is not opened yet',
-                    'code' => 400,
-                ], 400);
+                return response()->json(
+                    [
+                        "success" => false,
+                        "message" => "class session is not opened yet",
+                        "code" => 400,
+                    ],
+                    400,
+                );
             }
 
             $classSessionResource = new ClassSessionResource($classSession);
             return $classSessionResource->additional([
-                'success' => true,
-                'message' => 'Data created successfully',
-                'code' => 201,
+                "success" => true,
+                "message" => "Data created successfully",
+                "code" => 201,
             ]);
         } catch (Exception $e) {
-            $isDebug = config('app.debug');
+            $isDebug = config("app.debug");
 
             $response = [
-                'success' => false,
-                'message' => 'an error occurred while processing',
-                'code' => 500,
-                'errors' => $e->getMessage()
+                "success" => false,
+                "message" => "an error occurred while processing",
+                "code" => 500,
+                "errors" => $e->getMessage(),
             ];
 
             if ($isDebug) {
-                $response['errors'] = $e->getMessage();
-                $response['trace'] = $e->getTrace();
+                $response["errors"] = $e->getMessage();
+                $response["trace"] = $e->getTrace();
             }
 
             return response()->json($response, 500);
         }
-
     }
 
     /**
      * Hapus Materi Kelas
      *
      * Endpoint ini digunakan untuk menghapus materi pada sesi kelas
-     * 
+     *
      * Endpoint ini mendukung multiple delete
-     * 
+     *
      * Fitur ini **hanya bisa dijalankan** oleh user **dosen yang mengajar di sesi kelas tersebut**.
-     *  
+     *
      */
-    #[ResponseFromFile(file: 'responses/file_upload/success_delete.json', status: 200, description: 'Sukses menghapus materi')]
-    #[ResponseFromFile(file: 'responses/unauthenticated.json', status: 401, description: 'Tidak terotentikasi')]
-    #[ResponseFromFile(file: 'responses/unauthorized.json', status: 403, description: 'Tidak memiliki izin')]
-    #[ResponseFromFile(file: 'responses/expired_token.json', status: 401, description: 'Token expired')]
-    #[ResponseFromFile(file: 'responses/class_sessions/class_session_not_open.json', status: 400, description: 'Sesi Kelas Belum Dibuka')]
-    public function destroyMaterial(DeleteLearningMaterialRequest $request, ClassSession $classSession)
-    {
+    #[
+        ResponseFromFile(
+            file: "responses/file_upload/success_delete.json",
+            status: 200,
+            description: "Sukses menghapus materi",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unauthenticated.json",
+            status: 401,
+            description: "Tidak terotentikasi",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/unauthorized.json",
+            status: 403,
+            description: "Tidak memiliki izin",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/expired_token.json",
+            status: 401,
+            description: "Token expired",
+        ),
+    ]
+    #[
+        ResponseFromFile(
+            file: "responses/class_sessions/class_session_not_open.json",
+            status: 400,
+            description: "Sesi Kelas Belum Dibuka",
+        ),
+    ]
+    public function destroyMaterial(
+        DeleteLearningMaterialRequest $request,
+        ClassSession $classSession,
+    ) {
         try {
-            $attributes = $request->validated()['file_uuids'];
+            $attributes = $request->validated()["file_uuids"];
 
             $this->service->deleteSessionMaterial($classSession, $attributes);
             return response()->json([
-                'success' => true,
-                'message' => 'Data deleted successfully',
-                'code' => 200,
-                'deleted_count' => count($attributes)
+                "success" => true,
+                "message" => "Data deleted successfully",
+                "code" => 200,
+                "deleted_count" => count($attributes),
             ]);
         } catch (Exception $e) {
-            $isDebug = config('app.debug');
+            $isDebug = config("app.debug");
 
             $response = [
-                'success' => false,
-                'message' => 'an error occurred while processing',
-                'code' => 500,
-                'errors' => $e->getMessage()
+                "success" => false,
+                "message" => "an error occurred while processing",
+                "code" => 500,
+                "errors" => $e->getMessage(),
             ];
 
             if ($isDebug) {
-                $response['errors'] = $e->getMessage();
-                $response['trace'] = $e->getTrace();
+                $response["errors"] = $e->getMessage();
+                $response["trace"] = $e->getTrace();
             }
 
             return response()->json($response, 500);
