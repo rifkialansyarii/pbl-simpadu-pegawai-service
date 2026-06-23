@@ -378,7 +378,8 @@ class ClassSessionController extends Controller
             }
             if (
                 $request->user()->role === "dosen" &&
-                now()->format("Y-m-d") !== $classSession->session_date
+                now("Asia/Jakarta")->format("Y-m-d") !==
+                    $classSession->session_date
             ) {
                 return response()->json(
                     [
