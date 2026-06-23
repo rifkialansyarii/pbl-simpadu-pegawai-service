@@ -376,7 +376,10 @@ class ClassSessionController extends Controller
                     409,
                 );
             }
-            if (now()->format("Y-m-d") !== $classSession->session_date) {
+            if (
+                $request->validated()["status"] === "opened" &&
+                now()->format("Y-m-d") !== $classSession->session_date
+            ) {
                 return response()->json(
                     [
                         "success" => false,
