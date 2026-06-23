@@ -367,18 +367,24 @@ class ClassSessionController extends Controller
     ) {
         try {
             if ($classSession->is_already_opened) {
-                return response()->json([
-                    "success" => false,
-                    "message" => "class session has been opened",
-                    "code" => 409,
-                ]);
+                return response()->json(
+                    [
+                        "success" => false,
+                        "message" => "class session has been opened",
+                        "code" => 409,
+                    ],
+                    409,
+                );
             }
             if (now()->format("Y-m-d") !== $classSession->session_date) {
-                return response()->json([
-                    "success" => false,
-                    "message" => "class session date not started yet",
-                    "code" => 400,
-                ]);
+                return response()->json(
+                    [
+                        "success" => false,
+                        "message" => "class session date not started yet",
+                        "code" => 400,
+                    ],
+                    400,
+                );
             }
 
             $classSessionResource = new ClassSessionResource(
