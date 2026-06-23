@@ -8,7 +8,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class StripHTML
 {
-    
     /**
      * Handle an incoming request.
      *
@@ -18,7 +17,7 @@ class StripHTML
     {
         $input = $request->all();
         array_walk_recursive($input, function (&$value) {
-            if(is_string($value)) {
+            if (is_string($value)) {
                 $value = strip_tags($value);
             }
         });

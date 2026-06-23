@@ -12,32 +12,29 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
-        web: __DIR__ . '/../routes/web.php',
-        api: __DIR__ . '/../routes/api.php',
-        commands: __DIR__ . '/../routes/console.php',
-        health: '/up',
+        web: __DIR__ . "/../routes/web.php",
+        api: __DIR__ . "/../routes/api.php",
+        commands: __DIR__ . "/../routes/console.php",
+        health: "/up",
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->append(
-            \App\Http\Middleware\StripHTML::class
-        );
+        $middleware->api->append(\App\Http\Middleware\StripHTML::class);
     })
 
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->render(function (ExpiredException $e, Request $request) {
-            if ($request->is('api/*')) {
-
-                $isDebug = config('app.debug');
+            if ($request->is("api/*")) {
+                $isDebug = config("app.debug");
 
                 $response = [
-                    'success' => false,
-                    'code' => 401,
-                    'message' => 'Token is expired',
+                    "success" => false,
+                    "code" => 401,
+                    "message" => "Token is expired",
                 ];
 
                 if ($isDebug) {
-                    $response['errors'] = $e->getMessage();
-                    $response['trace'] = $e->getTrace();
+                    $response["errors"] = $e->getMessage();
+                    $response["trace"] = $e->getTrace();
                 }
 
                 return response()->json($response, 401);
@@ -46,20 +43,22 @@ return Application::configure(basePath: dirname(__DIR__))
     })
 
     ->withExceptions(function (Exceptions $exceptions): void {
-        $exceptions->render(function (SignatureInvalidException $e, Request $request) {
-            if ($request->is('api/*')) {
-
-                $isDebug = config('app.debug');
+        $exceptions->render(function (
+            SignatureInvalidException $e,
+            Request $request,
+        ) {
+            if ($request->is("api/*")) {
+                $isDebug = config("app.debug");
 
                 $response = [
-                    'success' => false,
-                    'code' => 401,
-                    'message' => 'You are not logged in',
+                    "success" => false,
+                    "code" => 401,
+                    "message" => "You are not logged in",
                 ];
 
                 if ($isDebug) {
-                    $response['errors'] = $e->getMessage();
-                    $response['trace'] = $e->getTrace();
+                    $response["errors"] = $e->getMessage();
+                    $response["trace"] = $e->getTrace();
                 }
 
                 return response()->json($response, 401);
@@ -68,20 +67,22 @@ return Application::configure(basePath: dirname(__DIR__))
     })
 
     ->withExceptions(function (Exceptions $exceptions): void {
-        $exceptions->render(function (AuthenticationException $e, Request $request) {
-            if ($request->is('api/*')) {
-
-                $isDebug = config('app.debug');
+        $exceptions->render(function (
+            AuthenticationException $e,
+            Request $request,
+        ) {
+            if ($request->is("api/*")) {
+                $isDebug = config("app.debug");
 
                 $response = [
-                    'success' => false,
-                    'code' => 401,
-                    'message' => 'You are not logged in',
+                    "success" => false,
+                    "code" => 401,
+                    "message" => "You are not logged in",
                 ];
 
                 if ($isDebug) {
-                    $response['errors'] = $e->getMessage();
-                    $response['trace'] = $e->getTrace();
+                    $response["errors"] = $e->getMessage();
+                    $response["trace"] = $e->getTrace();
                 }
 
                 return response()->json($response, 401);
@@ -90,20 +91,22 @@ return Application::configure(basePath: dirname(__DIR__))
     })
 
     ->withExceptions(function (Exceptions $exceptions): void {
-        $exceptions->render(function (NotFoundHttpException $e, Request $request) {
-            if ($request->is('*')) {
-
-                $isDebug = config('app.debug');
+        $exceptions->render(function (
+            NotFoundHttpException $e,
+            Request $request,
+        ) {
+            if ($request->is("*")) {
+                $isDebug = config("app.debug");
 
                 $response = [
-                    'success' => false,
-                    'code' => 404,
-                    'message' => 'Resource not found',
+                    "success" => false,
+                    "code" => 404,
+                    "message" => "Resource not found",
                 ];
 
                 if ($isDebug) {
-                    $response['errors'] = $e->getMessage();
-                    $response['trace'] = $e->getTrace();
+                    $response["errors"] = $e->getMessage();
+                    $response["trace"] = $e->getTrace();
                 }
 
                 return response()->json($response, 404);
@@ -112,20 +115,22 @@ return Application::configure(basePath: dirname(__DIR__))
     })
 
     ->withExceptions(function (Exceptions $exceptions): void {
-        $exceptions->render(function (AccessDeniedHttpException $e, Request $request) {
-            if ($request->is('api/*')) {
-
-                $isDebug = config('app.debug');
+        $exceptions->render(function (
+            AccessDeniedHttpException $e,
+            Request $request,
+        ) {
+            if ($request->is("api/*")) {
+                $isDebug = config("app.debug");
 
                 $response = [
-                    'success' => false,
-                    'code' => 403,
-                    'message' => 'Forbidden',
+                    "success" => false,
+                    "code" => 403,
+                    "message" => "Forbidden",
                 ];
 
                 if ($isDebug) {
-                    $response['errors'] = $e->getMessage();
-                    $response['trace'] = $e->getTrace();
+                    $response["errors"] = $e->getMessage();
+                    $response["trace"] = $e->getTrace();
                 }
 
                 return response()->json($response, 403);
