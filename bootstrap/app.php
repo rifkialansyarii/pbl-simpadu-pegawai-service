@@ -40,13 +40,8 @@ return Application::configure(basePath: dirname(__DIR__))
                 return response()->json($response, 401);
             }
         });
-    })
 
-    ->withExceptions(function (Exceptions $exceptions): void {
-        $exceptions->render(function (
-            SignatureInvalidException $e,
-            Request $request,
-        ) {
+        $exceptions->render(function (SignatureInvalidException $e, Request $request, ) {
             if ($request->is("api/*")) {
                 $isDebug = config("app.debug");
 
@@ -64,13 +59,8 @@ return Application::configure(basePath: dirname(__DIR__))
                 return response()->json($response, 401);
             }
         });
-    })
 
-    ->withExceptions(function (Exceptions $exceptions): void {
-        $exceptions->render(function (
-            AuthenticationException $e,
-            Request $request,
-        ) {
+        $exceptions->render(function (AuthenticationException $e, Request $request, ) {
             if ($request->is("api/*")) {
                 $isDebug = config("app.debug");
 
@@ -88,13 +78,8 @@ return Application::configure(basePath: dirname(__DIR__))
                 return response()->json($response, 401);
             }
         });
-    })
 
-    ->withExceptions(function (Exceptions $exceptions): void {
-        $exceptions->render(function (
-            NotFoundHttpException $e,
-            Request $request,
-        ) {
+        $exceptions->render(function (NotFoundHttpException $e, Request $request, ) {
             if ($request->is("*")) {
                 $isDebug = config("app.debug");
 
@@ -112,13 +97,8 @@ return Application::configure(basePath: dirname(__DIR__))
                 return response()->json($response, 404);
             }
         });
-    })
 
-    ->withExceptions(function (Exceptions $exceptions): void {
-        $exceptions->render(function (
-            AccessDeniedHttpException $e,
-            Request $request,
-        ) {
+        $exceptions->render(function (AccessDeniedHttpException $e, Request $request, ) {
             if ($request->is("api/*")) {
                 $isDebug = config("app.debug");
 
