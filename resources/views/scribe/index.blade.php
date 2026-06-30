@@ -963,7 +963,7 @@
 
         </div>
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
-            Last updated: June 22, 2026
+            Last updated: June 23, 2026
         </div>
 
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
@@ -2054,7 +2054,7 @@ access-control-allow-origin: *</code></pre>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/phpek8pusl2pr225ICDooJ
+                        /tmp/phpgnh1hr4bel0s3llnFHA
                     </div>
                 </div>
             </div>
@@ -2286,7 +2286,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Authorization: Bearer {JWT here}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "files=@/tmp/phpek8pusl2pr225ICDooJ" </code></pre>                                        </div>
+    --form "files=@/tmp/phpgnh1hr4bel0s3llnFHA" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -5435,7 +5435,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/php28r3cvj9tc9jdGElNiL
+                        /tmp/php4tpjefuffm0e1HkcNcC
                     </div>
                 </div>
             </div>
@@ -5839,7 +5839,7 @@ You can check the Dev Tools console for debugging information.</p>
     --form "class_name=s"\
     --form "course_code=cqldzs"\
     --form "course_name=n"\
-    --form "file=@/tmp/php28r3cvj9tc9jdGElNiL" </code></pre>                                        </div>
+    --form "file=@/tmp/php4tpjefuffm0e1HkcNcC" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -21770,7 +21770,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        pending
+                        approved
                     </div>
                 </div>
             </div>
@@ -21945,7 +21945,7 @@ fetch(url, {
                                      id="json-body-PUTapi-change-requests--changeRequest_id-"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "status": "pending"
+    "status": "approved"
 }</div>
                             </div>
                                             </div>
@@ -22042,7 +22042,7 @@ You can check the Dev Tools console for debugging information.</p>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"status\": \"pending\"
+    \"status\": \"approved\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -22062,7 +22062,7 @@ const headers = {
 };
 
 let body = {
-    "status": "pending"
+    "status": "approved"
 };
 
 fetch(url, {
